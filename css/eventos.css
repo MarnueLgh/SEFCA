@@ -1,0 +1,336 @@
+/* 
+   EVENTOS & GALERÍA — SEFCA UNAM
+   Autor: @anuar
+   Fecha: 23/03/2026
+ */
+
+/* ---- Hero Header ---- */
+.eventos-hero {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.85)),
+                url('../img/fca/FCA_UNAM_letras.jpg') center center / cover no-repeat;
+    color: #FDF5EB;
+    padding: 100px 1rem 3rem;
+}
+
+.eventos-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    color: #EAA636;
+}
+
+.eventos-hero p {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ---- Contenedor principal de eventos ---- */
+.eventos-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+/* ---- Grid de cards de noticias ---- */
+.eventos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ---- Card individual (estilo noticia) ---- */
+.evento-card {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen de la card */
+.evento-card__img {
+    flex: 0 0 340px;
+    max-width: 340px;
+    overflow: hidden;
+}
+
+.evento-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.evento-card:hover .evento-card__img img {
+    transform: scale(1.05);
+}
+
+/* Contenido de la card */
+.evento-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.8rem 2rem;
+}
+
+.evento-card__date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #EAA636;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.evento-card__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1E1916;
+    margin-bottom: 0.65rem;
+    line-height: 1.35;
+}
+
+.evento-card__desc {
+    font-size: 0.92rem;
+    color: #545454;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.evento-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #EAA636;
+    text-decoration: none;
+    transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.evento-card__link:hover {
+    color: #1E1916;
+    gap: 10px;
+}
+
+.evento-card__link i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.evento-card__link:hover i {
+    transform: translateX(3px);
+}
+
+/* ---- Responsive cards ---- */
+@media (max-width: 768px) {
+    .evento-card {
+        flex-direction: column;
+    }
+
+    .evento-card__img {
+        flex: 0 0 220px;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .evento-card__body {
+        padding: 1.3rem 1.5rem;
+    }
+
+    .evento-card__title {
+        font-size: 1.15rem;
+    }
+}
+
+/* =============================================
+   GALERÍA INDIVIDUAL
+   ============================================= */
+
+/* Header de galería */
+.galeria-header {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.85)),
+                url('../img/aulas.jpg') center center / cover no-repeat;
+    color: #FDF5EB;
+    padding: 100px 1rem 2.5rem;
+}
+
+.galeria-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #EAA636;
+}
+
+.galeria-header p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Botón volver */
+.galeria-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 2rem 0 0;
+    padding: 0.55rem 1.4rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    color: #FDF5EB;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    backdrop-filter: blur(6px);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.galeria-back:hover {
+    background: rgba(234, 166, 54, 0.25);
+    border-color: #EAA636;
+    color: #FDF5EB;
+}
+
+/* Contenedor de galería */
+.galeria-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+/* Grid de fotos con flexbox */
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.galeria-item {
+    flex: 1 1 calc(33.333% - 12px);
+    min-width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Alternar tamaños para efecto masonry */
+.galeria-item:nth-child(5n + 1) {
+    flex: 1 1 calc(55% - 12px);
+}
+
+.galeria-item:nth-child(5n + 2) {
+    flex: 1 1 calc(45% - 12px);
+}
+
+.galeria-item:nth-child(5n + 3),
+.galeria-item:nth-child(5n + 4),
+.galeria-item:nth-child(5n + 5) {
+    flex: 1 1 calc(33.333% - 12px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    aspect-ratio: 4 / 3;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.06);
+}
+
+/* Overlay sutil en hover */
+.galeria-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 25, 22, 0);
+    transition: background 0.35s ease;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.galeria-item:hover::after {
+    background: rgba(30, 25, 22, 0.15);
+}
+
+/* Responsive galería */
+@media (max-width: 768px) {
+    .galeria-item,
+    .galeria-item:nth-child(5n + 1),
+    .galeria-item:nth-child(5n + 2),
+    .galeria-item:nth-child(5n + 3),
+    .galeria-item:nth-child(5n + 4),
+    .galeria-item:nth-child(5n + 5) {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-item,
+    .galeria-item:nth-child(5n + 1),
+    .galeria-item:nth-child(5n + 2),
+    .galeria-item:nth-child(5n + 3),
+    .galeria-item:nth-child(5n + 4),
+    .galeria-item:nth-child(5n + 5) {
+        flex: 1 1 100%;
+    }
+
+    .galeria-grid {
+        gap: 10px;
+    }
+}
+
+/* ---- Sección info del evento en galería ---- */
+.galeria-info {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.galeria-info__date {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #EAA636;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.galeria-info__desc {
+    font-size: 0.95rem;
+    color: #545454;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}

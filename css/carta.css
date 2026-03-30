@@ -1,0 +1,328 @@
+/* 
+   CARTA ESTRATÉGICA — SEFCA UNAM
+   Autor: @anuar
+   Fecha: 23/03/2026
+   Rediseño: Estilo editorial split-layout
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+
+:root {
+    --carta-serif: 'DM Serif Display', 'Playfair Display', serif;
+    --carta-sans: 'DM Sans', sans-serif;
+    --carta-dark: #1a1714;
+    --carta-warm: #f8f3ed;
+    --carta-crema: #fdf8f2;
+    --carta-gold: #d4a039;
+    --carta-gold-light: rgba(212, 160, 57, 0.12);
+    --carta-text: #3d3831;
+    --carta-muted: #8a7f72;
+    --carta-border: rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Hero ---- */
+.carta-hero {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(160deg, rgba(26, 23, 20, 0.78), rgba(26, 23, 20, 0.9)),
+        url('../img/fca/COPIA_FCA_UNAM_letras.jpg') center center / cover no-repeat;
+    color: var(--carta-crema);
+    padding: 110px 1.5rem 3.5rem;
+}
+
+.carta-hero h1 {
+    font-family: var(--carta-serif);
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+    color: var(--carta-gold);
+}
+
+.carta-hero p {
+    font-family: var(--carta-sans);
+    font-size: 1rem;
+    opacity: 0.7;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* ---- Main container ---- */
+.carta-main {
+    background: var(--carta-crema);
+}
+
+/* ============================================
+   SECCIONES SPLIT-LAYOUT
+   ============================================ */
+.carta-section {
+    display: flex;
+    align-items: stretch;
+    min-height: 520px;
+    overflow: hidden;
+}
+
+.carta-section--reverse {
+    flex-direction: row-reverse;
+}
+
+/* Lado de texto */
+.carta-section__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 5rem;
+    position: relative;
+}
+
+/* Pill / tag */
+.carta-tag {
+    display: inline-block;
+    font-family: var(--carta-sans);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: var(--carta-muted);
+    background: var(--carta-border);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--carta-border);
+    margin-bottom: 1.5rem;
+    width: fit-content;
+}
+
+/* Título de sección */
+.carta-section__title {
+    font-family: var(--carta-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: var(--carta-dark);
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.3px;
+}
+
+.carta-section__title em {
+    font-style: italic;
+    color: var(--carta-gold);
+}
+
+/* Texto de contenido */
+.carta-section__body {
+    font-family: var(--carta-sans);
+    font-size: 0.95rem;
+    color: var(--carta-muted);
+    line-height: 1.85;
+    max-width: 460px;
+    font-weight: 300;
+}
+
+/* Lado visual (imagen) */
+.carta-section__visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ---- Gradientes de fondo para cada sección ---- */
+.carta-section__visual--mision {
+    background: linear-gradient(145deg, #f0ebe4, #e8dfd4 40%, #d9cfc2);
+}
+
+.carta-section__visual--vision {
+    background: linear-gradient(145deg, #e4e8f0, #d4dbe8 40%, #c5cfdf);
+}
+
+.carta-section__visual--valores {
+    background: linear-gradient(145deg, #f0e8e4, #e8dbd4 40%, #dfd0c2);
+}
+
+.carta-section__visual--ejes {
+    background: linear-gradient(145deg, #e4f0e8, #d4e8db 40%, #c2dfc8);
+}
+
+/* ---- Imagen dentro del visual ---- */
+.carta-section__img {
+    position: relative;
+    z-index: 1;
+    max-width: 85%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.carta-section__img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 56px rgba(0, 0, 0, 0.15),
+                0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ---- Divider entre secciones ---- */
+.carta-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 5%, var(--carta-border) 50%, transparent 95%);
+    margin: 0;
+}
+
+/* ============================================
+   SECCIÓN DE ESTATUTOS (full width, dark)
+   ============================================ */
+.carta-estatutos {
+    background: #1a1714;
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow decorativo */
+.carta-estatutos::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 160, 57, 0.08) 0%, transparent 60%);
+    filter: blur(60px);
+}
+
+.carta-estatutos__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.carta-estatutos__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    background: rgba(212, 160, 57, 0.12);
+    color: var(--carta-gold);
+    margin: 0 auto 1.5rem;
+}
+
+.carta-estatutos__title {
+    font-family: var(--carta-serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--carta-gold);
+    margin-bottom: 0.8rem;
+}
+
+.carta-estatutos__desc {
+    font-family: var(--carta-sans);
+    font-size: 0.92rem;
+    color: rgba(253, 248, 242, 0.55);
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Botón */
+.carta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.75rem 2.2rem;
+    background: var(--carta-gold);
+    color: var(--carta-dark);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--carta-sans);
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.carta-btn:hover {
+    background: #c4922e;
+    transform: scale(1.04);
+    color: var(--carta-dark);
+    box-shadow: 0 8px 24px rgba(212, 160, 57, 0.3);
+}
+
+.carta-btn i {
+    font-size: 0.8rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+    .carta-section {
+        flex-direction: column !important;
+        min-height: auto;
+    }
+
+    .carta-section__text {
+        padding: 2.5rem 1.8rem;
+        order: 1;
+    }
+
+    .carta-section__visual {
+        padding: 2.5rem 1.5rem;
+        min-height: 280px;
+        order: 2;
+    }
+
+    .carta-section__img {
+        max-width: 92%;
+    }
+
+    .carta-section__body {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carta-section__text {
+        padding: 2rem 1.2rem;
+    }
+
+    .carta-section__visual {
+        padding: 1.5rem 1rem;
+        min-height: 220px;
+    }
+
+    .carta-section__img {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .carta-estatutos {
+        padding: 3.5rem 1.2rem;
+    }
+}
+
+.carta-animate {
+    animation: carta-fadeUp 0.7s ease-out both;
+}
+
+.carta-animate-delay-1 { animation-delay: 0.1s; }
+.carta-animate-delay-2 { animation-delay: 0.2s; }
+.carta-animate-delay-3 { animation-delay: 0.35s; }
