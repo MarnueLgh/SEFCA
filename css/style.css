@@ -114,6 +114,45 @@ h6,
 
 
 /*** Navbar ***/
+
+/* Contenedor de logos */
+.navbar-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-logo-link:hover {
+    opacity: 0.8;
+}
+
+.navbar-logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-logo--unam {
+    height: 48px;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-logo--fca {
+    height: 42px;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-logo--sefca {
+    height: 40px;
+}
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -145,11 +184,30 @@ h6,
     .navbar .navbar-nav {
         margin-top: 10px;
         border-top: 1px solid rgba(255, 255, 255, .3);
-        background: var(--dark);
     }
 
     .navbar .navbar-nav .nav-link {
         padding: 10px 0;
+    }
+
+    .navbar-logos {
+        gap: 8px;
+    }
+
+    .navbar-logo {
+        height: 35px;
+    }
+
+    .navbar-logo--unam {
+        height: 38px;
+    }
+
+    .navbar-logo--fca {
+        height: 32px;
+    }
+
+    .navbar-logo--sefca {
+        height: 30px;
     }
 }
 
@@ -434,14 +492,73 @@ h6,
     box-shadow: none;
 }
 
-/*** Footer ***/
+/*** Footer — Sección superior ***/
+.footer-top {
+    background: #f7f6f2;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    padding: 2.5rem 0;
+}
+
+.footer-visitas {
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.footer-visitas__item {
+    margin-bottom: 0.25rem;
+}
+
+.footer-visitas__item strong {
+    color: var(--primary);
+}
+
+.footer-redes__titulo {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-redes__link {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:1px solid rgba(0,0,0,.18);
+  background:#fff;
+  color:#1a1a1a;
+  text-decoration:none;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+
+.footer-redes__link:hover {
+    transform: translateY(-2px);
+    background: rgba(2, 16, 36, .06);
+    border-color: rgba(2, 16, 36, .35);
+}
+
+.footer-unam-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/*** Footer — Copyright ***/
 footer {
     width: 100%;
     margin-top: auto;
 }
 
 .copyright {
-    background: var(--dark);
+    background: #0a1e33;
     font-size: 0.85rem;
     width: 100%;
 }
@@ -456,40 +573,6 @@ footer {
     color: var(--light);
     text-decoration: underline;
 }
-
-/* Logo e iconos sociales en el footer */
-.footer-logo {
-    max-height: 55px;
-    width: auto;
-}
-
-.footer-social-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
-    color: var(--light);
-    background: rgba(255, 255, 255, 0.06);
-    text-decoration: none;
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-.footer-social-btn:hover {
-    color: var(--primary);
-    border-color: var(--primary);
-    background: rgba(234, 166, 54, 0.12);
-    text-decoration: none;
-}
-
-
-
-
-
-
-
 
 .destination {
     position: relative;
