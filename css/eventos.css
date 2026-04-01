@@ -4,35 +4,8 @@
    Fecha: 23/03/2026
  */
 
-/* ---- Hero Header ---- */
-.eventos-hero {
-    position: relative;
-    min-height: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.85)),
-                url('../img/fca/FCA_UNAM_letras.jpg') center center / cover no-repeat;
-    color: #FDF5EB;
-    padding: 100px 1rem 3rem;
-}
+/* ---- Hero: ahora usa el componente global .hero-pagina (ver style.css) ---- */
 
-.eventos-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-    color: #EAA636;
-}
-
-.eventos-hero p {
-    font-size: 1.05rem;
-    opacity: 0.85;
-    max-width: 520px;
-    margin: 0 auto;
-}
 
 /* ---- Contenedor principal de eventos ---- */
 .eventos-container {

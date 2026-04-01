@@ -22,7 +22,6 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="indexANUAR.php" class="nav-item nav-link">Inicio</a>
                 <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
-                <a href="#consejo" class="nav-item nav-link">Consejo directivo</a>
                 <a href="carta_estrategica.php" class="nav-item nav-link">Carta estratégica</a>
                 <a href="galeria_eventos.php" class="nav-item nav-link">Eventos</a>
                 <a href="#proyectos" class="nav-item nav-link">Proyectos</a>

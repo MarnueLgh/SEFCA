@@ -12,12 +12,38 @@
 
     <?php include("includes/navbar.php"); ?>
 
+    <?php
+        $heroTitulo = "Nosotros";
+        $heroTexto  = "Conoce más sobre la historia y visión de la SEFCA.";
+        $heroClase  = "hero-pagina--carta";
+        include("includes/hero-pagina.php");
+    ?>
+
+    <!-- Mensajes -->
+    <?php include("includes/mensajes.php"); ?>
+    
     <!-- Contenido principal -->
     <div class="section-gap" style="margin-top: 100px;">
         <div class="container">
-            <!-- Aquí irá el contenido de la página "Nosotros" -->
+            <?php include("includes/enlaces_relacionados.php"); ?>
         </div>
     </div>
+
+    <!-- Video 30 años de historia (Movido desde indexANUAR.php) -->
+    <div class="section-gap">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <a href="https://www.youtube.com/watch?v=3RzU-kjkvRo" target="_blank">
+                        <img src="img/video_2025.jpg" class="img-fluid rounded shadow-sm" alt="Video SEFCA 2025">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homenajes (Movido desde indexANUAR.php) -->
+    <?php include("includes/homenajes.php"); ?>
 
     <?php require_once("includes/footer.php"); ?>
 

@@ -44,4 +44,7 @@
     <!-- Lightbox2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
+    <!-- CSS Creado para componentes -->
+    <link rel="stylesheet" href="css/link_cards.css">
+
 </head>

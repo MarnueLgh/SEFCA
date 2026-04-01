@@ -7,6 +7,41 @@
     --azul_unam: #112f4b; /* Alias para referencia */
 }
 
+/* ==========================================
+   HERO DE PÁGINA INTERNA (Componente reutilizable)
+   Archivo PHP: includes/hero-pagina.php
+   ========================================== */
+.hero-pagina {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(160deg, rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.88)),
+                url('../img/fca/cifca_labs_paisaje.png') center center / cover no-repeat;
+    color: var(--light);
+    padding: 110px 1.5rem 3.5rem;
+}
+
+.hero-pagina h1 {
+    font-family: 'DM Serif Display', 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.5px;
+    color: var(--primary);
+}
+
+.hero-pagina p {
+    font-size: 1rem;
+    opacity: 0.75;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
 /* ---- Utilidades de espaciado ---- */
 .section-gap {
     padding-top: 3rem;

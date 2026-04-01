@@ -91,17 +91,12 @@ if (isset($evento['fotos'])) {
     <?php include("includes/navbar.php"); ?>
 
     <!-- Hero de la galería -->
-    <section class="galeria-header">
-        <div>
-            <h1><?php echo htmlspecialchars($evento['titulo']); ?></h1>
-            <?php if (!empty($evento['fecha'])): ?>
-                <p><?php echo htmlspecialchars($evento['fecha']); ?></p>
-            <?php endif; ?>
-            <a href="galeria_eventos.php" class="galeria-back">
-                <i class="fas fa-arrow-left"></i> Volver a Eventos
-            </a>
-        </div>
-    </section>
+    <?php
+        $heroTitulo = htmlspecialchars($evento['titulo']);
+        $heroTexto  = htmlspecialchars($evento['fecha']);
+        include("includes/hero-pagina.php");
+    ?>
+
 
     <!-- Galería -->
     <div class="galeria-container">

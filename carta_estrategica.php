@@ -10,12 +10,12 @@
     <?php include("includes/navbar.php"); ?>
 
     <!-- Hero -->
-    <section class="carta-hero">
-        <div>
-            <h1>Carta Estratégica</h1>
-            <p>Principios, visión y ejes que guían el compromiso de la Sociedad de Egresados con la FCA y la UNAM.</p>
-        </div>
-    </section>
+    <?php
+        $heroTitulo = "Carta Estratégica";
+        $heroTexto  = "Principios, visión y ejes que guían el compromiso de la Sociedad de Egresados con la FCA y la UNAM.";
+        $heroClase  = "hero-pagina--carta";
+        include("includes/hero-pagina.php");
+    ?>
 
     <div class="carta-main">
 

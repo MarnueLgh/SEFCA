@@ -20,38 +20,8 @@
     --carta-border: rgba(0, 0, 0, 0.06);
 }
 
-/* ---- Hero ---- */
-.carta-hero {
-    position: relative;
-    min-height: 380px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(160deg, rgba(26, 23, 20, 0.78), rgba(26, 23, 20, 0.9)),
-        url('../img/fca/FCA_UNAM_letras.jpg') center center / cover no-repeat;
-    color: var(--carta-crema);
-    padding: 110px 1.5rem 3.5rem;
-}
+/* ---- Hero: ahora usa el componente global .hero-pagina (ver style.css) ---- */
 
-.carta-hero h1 {
-    font-family: var(--carta-serif);
-    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
-    font-weight: 400;
-    margin-bottom: 0.6rem;
-    letter-spacing: -0.5px;
-    color: var(--carta-gold);
-}
-
-.carta-hero p {
-    font-family: var(--carta-sans);
-    font-size: 1rem;
-    opacity: 0.7;
-    max-width: 480px;
-    margin: 0 auto;
-    line-height: 1.7;
-    font-weight: 300;
-}
 
 /* ---- Main container ---- */
 .carta-main {

@@ -10,12 +10,11 @@
     <?php include("includes/navbar.php"); ?>
 
     <!-- Hero -->
-    <section class="eventos-hero">
-        <div>
-            <h1>Eventos</h1>
-            <p>Actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.</p>
-        </div>
-    </section>
+    <?php
+        $heroTitulo = "Eventos";
+        $heroTexto  = "Actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
+        include("includes/hero-pagina.php");
+    ?>
 
     <!-- Listado de Eventos -->
     <div class="eventos-container">
@@ -102,6 +101,25 @@
                 </div>
             </article>
 
+            <!-- ========== EVENTO: Reconocimiento Paola Reynoso ========== -->
+            <article class="evento-card">
+                <div class="evento-card__img">
+                    <img src="img/paola1.jpg" alt="Entrega de Reconocimiento a Paola Reynoso">
+                </div>
+                <div class="evento-card__body">
+                    <span class="evento-card__date">8 de junio de 2023</span>
+                    <h2 class="evento-card__title">Entrega de Reconocimiento a Paola Reynoso</h2>
+                    <p class="evento-card__desc">
+                        En sesión conjunta del Consejo Directivo y del Consejo Consultivo, se hizo entrega de un 
+                        Diploma SEFCA UNAM a Paola Reynoso, egresada distinguida de la FCA, en reconocimiento a 
+                        que obtuvo el Primer Lugar del Premio Internacional Universia Santander 2023.
+                    </p>
+                    <a class="evento-card__link" href="img/agradecimiento_paola.jpg" target="_blank">
+                        Ver más <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
             <!-- ========== EVENTO: 30 Aniversario de Egresados ========== -->
             <article class="evento-card">
                 <div class="evento-card__img">
@@ -118,11 +136,10 @@
                         Ver galería <i class="fas fa-arrow-right"></i>
                     </a>
                     <a class="evento-card__link" href="img/articulo_30_aniversario_gaceta.jpg" target="_blank" style="margin-top: 0.3rem;">
-                        Ver artículo en Gaceta UNAM <i class="fas fa-arrow-right"></i>
+                        Ver en Gaceta UNAM <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </article>
-
 
         </div>
     </div>
