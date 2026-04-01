@@ -1,16 +1,11 @@
 <!-- Consejo Directivo Start -->
 <div class="consejo section-gap">
     <div class="container">
-        <h2 class="consejo_heading">Consejo Directivo</h2>
-
         <div class="consejo_grid">
-            <!-- Imagen -->
-            <div class="consejo__image-col">
-                <img src="img/30_aniversario/consejo_completo_30.jpg" alt="Facultad de Contaduría y Administración" class="consejo_img">
-            </div>
-
-            <!-- Accordion -->
+            <!-- Columna izquierda: Organigrama + Accordion -->
             <div class="consejo__accordion-col">
+                <h2 class="consejo_heading">Organigrama</h2>
+
                 <div class="custom-accordion" id="accordion_2">
 
                     <div class="accordion-item">
@@ -173,25 +168,17 @@
                         </div>
                     </div>
 
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOnce">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOnce" aria-expanded="false" aria-controls="collapseOnce">
-                                Resumen de Semblanzas
-                            </button>
-                        </h2>
-                        <div id="collapseOnce" class="accordion-collapse collapse" data-bs-parent="#accordion_2">
-                            <div class="accordion-body text-center">
-                                <i class="bi bi-file-earmark-pdf" style="color: var(--primary); font-size: 40px;"></i>
-                                <br>
-                                <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank"
-                                    class="btn-hero mt-2">
-                                    Abrir PDF <i class="fas fa-arrow-right ms-2"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
 
+            <!-- Columna derecha: Foto + Semblanzas -->
+            <div class="consejo__image-col">
+                <img src="img/30_aniversario/consejo_completo_30.jpg" alt="Consejo Directivo SEFCA" class="consejo_img">
+                <div class="consejo__semblanzas">
+                    <span class="consejo__semblanzas-titulo">Resumen de Semblanzas</span>
+                    <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" class="consejo__semblanzas-btn">
+                        Abrir PDF <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
                 </div>
             </div>
         </div>

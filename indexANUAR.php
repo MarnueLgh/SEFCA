@@ -36,16 +36,12 @@
     </div>
 
 
-    <?php include("includes/parallax.php"); ?>
-
-
+    <?php //include("includes/parallax.php"); ?>
 
     <a id="consejo"></a>
 
-    <?php include("includes/consejo.php"); ?>
+    <?php include("includes/consejo.php"); ?> 
 
-
-    <a id="conferencias"></a>
 
     <?php include("includes/conferencias.php"); ?>
 

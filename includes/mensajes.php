@@ -1,5 +1,5 @@
 <!-- Mensajes y Acreditación (Layout Bento Bustos) -->
-<section class="bento-section section-gap mt-5" id="mensajes">
+<section class="bento-section section-gap mt-5">
     <div class="container">
         
         <div class="bento-grid">

@@ -71,12 +71,18 @@
                     Nuestros <em>Valores</em>
                 </h2>
                 <p class="carta-section__body">
-                    Los pilares que definen la identidad y el actuar de la Sociedad de 
+                    Los pilares que definen la identidad y el actuar de la Sociedad de
                     Egresados de la FCA en cada una de sus iniciativas.
                 </p>
+                <ul class="carta-section__list">
+                        <li>Integridad</li>
+                        <li>Compromiso</li>
+                        <li>Fortaleza</li>
+                        <li>Orgullo</li>
+                </ul>
             </div>
             <div class="carta-section__visual carta-section__visual--valores">
-                <img class="carta-section__img" src="img/fca/pasillo_fca.jpg" alt="Pasillo FCA">
+                <img class="carta-section__img" src="img/fca/biblioteca_fca.jpeg" alt="Biblioteca FCA">
             </div>
         </section>
 
@@ -91,12 +97,18 @@
                     Ejes <em>Estratégicos</em>
                 </h2>
                 <p class="carta-section__body">
-                    Las líneas de acción que orientan el trabajo de la SEFCA para cumplir su 
+                    Las líneas de acción que orientan el trabajo de la SEFCA para cumplir su
                     misión y alcanzar su visión a largo plazo.
                 </p>
+                <ul class="carta-section__list">
+                    <li>Afiliación y Registro</li>
+                    <li>Experiencia y Orgullo a compartir</li>
+                    <li>Vinculación con el sector productivo</li>
+                    <li>Atracción de recursos para proyectos prioritarios</li>
+                </ul>
             </div>
             <div class="carta-section__visual carta-section__visual--ejes">
-                <img class="carta-section__img" src="img/fca/fca_atardecer.jpg" alt="FCA Atardecer">
+                <img class="carta-section__img" src="img/fca/posgrado_fca.jpg" alt="FCA Atardecer">
             </div>
         </section>
 
