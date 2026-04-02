@@ -21,7 +21,7 @@
     background: linear-gradient(160deg, rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.88)),
                 url('../img/fca/cifca_labs_paisaje.png') center center / cover no-repeat;
     color: var(--light);
-    padding: 110px 1.5rem 3.5rem;
+    padding: 120px 1.5rem 3.5rem;
 }
 
 .hero-pagina h1 {
@@ -940,7 +940,7 @@ footer {
 
 
 /* ==========================================
-   CONSEJO DIRECTIVO — SPLIT LAYOUT (Design ad hoc SEFCA)
+   CONSEJO DIRECTIVO — SPLIT LAYOUT
    ========================================== */
 .consejo {
     background: var(--light);
@@ -982,11 +982,11 @@ footer {
 .consejo .btn-link:hover,
 .consejo .btn-link:focus,
 .consejo .btn-link:not(.collapsed) {
-    color: var(--dark);
+    color: var(--azul_unam);
     text-decoration: none;
     box-shadow: none;
-    border-left-color: var(--primary);
-    background: rgba(234, 166, 54, 0.08); /* Fondo sutil con el color primario */
+    border-left-color: var(--azul_unam);
+    background: rgba(17, 47, 75, 0.08);
 }
 
 .consejo .accordion-body {

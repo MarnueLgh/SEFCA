@@ -20,9 +20,6 @@
     --carta-border: rgba(0, 0, 0, 0.06);
 }
 
-/* ---- Hero: ahora usa el componente global .hero-pagina (ver style.css) ---- */
-
-
 /* ---- Main container ---- */
 .carta-main {
     background: var(--carta-crema);

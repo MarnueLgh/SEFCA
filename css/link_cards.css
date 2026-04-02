@@ -82,6 +82,39 @@
     margin-top: auto;
 }
 
+/* Modificador para tarjetas grandes (ej. Homenajes con solo 2 columnas) */
+.link-card--large .link-card__image-container {
+    height: 260px;
+}
+
+/* Modificador Azul UNAM */
+.link-card--azul {
+    background-color: #112f4b; /* var(--azul_unam) */
+}
+
+.link-card--azul .link-card__title {
+    color: #ffffff;
+}
+
+.link-card--azul .link-card__text {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.link-card--azul .link-card__badge-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.link-card--azul .link-card__badge-light span {
+    color: #ffffff;
+}
+
+.link-card--azul .link-card__badge-dark {
+    background: #EAA636; /* Color dorado primario */
+    color: #112f4b;
+}
+
 .link-card__image-container img {
     position: absolute;
     top: 0;

@@ -2,7 +2,7 @@
 <html lang="es">
 <!-- 
     Autor: @anuar
-    Fecha: 31/03/2026
+    Fecha: 01/04/2026
     Descripción: Página "Nosotros"
 -->
 <?php require_once("includes/head.php"); ?>
@@ -23,11 +23,14 @@
     <?php include("includes/mensajes.php"); ?>
     
     <!-- Contenido principal -->
-    <div class="section-gap" style="margin-top: 100px;">
+    <div class="section-gap">
         <div class="container">
             <?php include("includes/enlaces_relacionados.php"); ?>
         </div>
     </div>
+
+    <!-- Homenajes (Movido desde indexANUAR.php) -->
+    <?php include("includes/homenajes.php"); ?>
 
     <!-- Video 30 años de historia (Movido desde indexANUAR.php) -->
     <div class="section-gap">
@@ -41,9 +44,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Homenajes (Movido desde indexANUAR.php) -->
-    <?php include("includes/homenajes.php"); ?>
 
     <?php require_once("includes/footer.php"); ?>
 

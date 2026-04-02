@@ -1,7 +1,14 @@
 <!-- Mensajes y Acreditación (Layout Bento Bustos) -->
-<section class="bento-section section-gap mt-5">
+<section class="section-gap">
     <div class="container">
         
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12 text-center">
+                <h2 class="display-6" style="color: var(--dark); font-family: 'DM Serif Display', serif;">Mensajes</h2>
+                <p class="text-muted">Mensajes oficiales de nuestras autoridades.</p>
+            </div>
+        </div>
+
         <div class="bento-grid">
             
             <!-- Bloque Izquierdo: Carta Acreditación -->
