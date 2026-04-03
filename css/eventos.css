@@ -3,6 +3,128 @@
    Autor: @anuar
    Fecha: 23/03/2026
  */
+/* ---- Hero: ahora usa el componente global .hero-pagina (ver style.css) ---- */
+
+/* ==========================================
+   BARRA DE FILTROS
+   ========================================== */
+.filtro-barra {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+}
+
+.filtro-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 140px;
+}
+
+.filtro-etiqueta {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8a8a8a;
+}
+
+.filtro-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: #f5f5f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right 12px center;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 0.55rem 2rem 0.55rem 0.85rem;
+    font-size: 0.88rem;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filtro-select:focus {
+    outline: none;
+    border-color: #EAA636;
+    box-shadow: 0 0 0 3px rgba(234, 166, 54, 0.15);
+}
+
+.filtro-limpiar {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.filtro-limpiar:hover {
+    color: #c0392b;
+    border-color: #c0392b;
+    background: rgba(192, 57, 43, 0.05);
+}
+
+.filtro-vacio {
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+    padding: 3rem 1rem;
+    font-style: italic;
+}
+
+/* ---- Tags de categoría dentro de cada card ---- */
+.evento-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.evento-card__tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.evento-card__tag--evento {
+    background: rgba(17, 47, 75, 0.1);
+    color: #112f4b;
+}
+
+.evento-card__tag--blog {
+    background: rgba(46, 139, 87, 0.1);
+    color: #2e8b57;
+}
+
+.evento-card__tag--convocatoria {
+    background: rgba(234, 166, 54, 0.15);
+    color: #b8841f;
+}
+
+@media (max-width: 600px) {
+    .filtro-barra {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtro-grupo {
+        min-width: 100%;
+    }
+}
 
 /* ---- Contenedor principal de eventos ---- */
 .eventos-container {

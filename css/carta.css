@@ -167,7 +167,6 @@
    SECCIÓN DE ESTATUTOS (full width, dark)
    ============================================ */
 .carta-estatutos {
-    background: #1a1714;
     padding: 5rem 2rem;
     text-align: center;
     position: relative;
@@ -212,14 +211,14 @@
     font-family: var(--carta-serif);
     font-size: clamp(1.6rem, 3vw, 2.4rem);
     font-weight: 400;
-    color: var(--carta-gold);
+    color: var(--carta-dark);
     margin-bottom: 0.8rem;
 }
 
 .carta-estatutos__desc {
     font-family: var(--carta-sans);
     font-size: 0.92rem;
-    color: rgba(253, 248, 242, 0.55);
+    color: var(--carta-dark);
     line-height: 1.75;
     margin-bottom: 2rem;
     font-weight: 300;

@@ -2,32 +2,25 @@
 <html lang="es">
 <!-- 
     Autor: @anuar
-    Fecha: 22/03/2026
-    Descripción: Se modularizó el head
+    Fecha: 01/04/2026
+    Descripción: Página "Nosotros"
 -->
 <?php require_once("includes/head.php"); ?>
 
 <body>
-    <!-- Pantalla de carga -->
     <?php include("includes/spinner.php"); ?>
 
-    <a id="inicio"></a>
-
-    <!-- Navbar -->
     <?php include("includes/navbar.php"); ?>
 
-    <!-- Carousel -->
-    <?php include("includes/carousel.php"); ?>
+    <?php
+        $heroTitulo = "Proyectos";
+        $heroTexto  = "Conoce más sobre los proyectos de la SEFCA.";
+        $heroClase  = "hero-pagina--carta";
+        include("includes/hero-pagina.php");
+    ?>
 
-    <!-- Cita -->
-    <?php include("includes/cita.php"); ?>
+    <?php include("includes/proyectos.php"); ?>
 
-    <!-- Consejo directivo -->
-    <?php include("includes/consejo.php"); ?> 
-
-    <?php //include("includes/parallax.php"); ?>
-
-    <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 
     <!-- Back to Top -->
