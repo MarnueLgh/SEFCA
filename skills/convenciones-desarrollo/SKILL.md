@@ -12,7 +12,7 @@ Estas son las convenciones personales del desarrollador. Deben aplicarse en **to
 ## 1. Idioma
 
 - Todo se escribe en **español**: nombres de variables, funciones, clases, comentarios, carpetas y archivos.
-- **Excepciones permitidas** (términos universales del desarrollo web): `main`, `header`, `footer`, `hero`, `nav`, `index`, `include`, `assets`.
+- **Excepciones permitidas** (términos universales del desarrollo web): `main`, `header`, `footer`, `hero`, `nav`, `index`, `include`, `assets`, `style`. 
 - No mezclar español e inglés en el mismo nombre. Ejemplo incorrecto: `$usuario_list`.
 
 ---
@@ -32,7 +32,7 @@ Estas son las convenciones personales del desarrollador. Deben aplicarse en **to
 - Clases globales reutilizables pueden ser cortas: `.btn`, `.titulo`, `.contenedor`.
 
 ### Archivos y carpetas
-- Usar **guión bajo** para nombres de archivos: `galeria_socios.php`, `estilos_inicio.css`.
+- Usar **guión bajo** para nombres de archivos: `galeria_socios.php`, `proyectos_sefca.php`.
 - Carpetas en minúsculas sin espacios: `includes/`, `css/`, `js/`, `img/`.
 
 ### IDs vs Clases
@@ -79,7 +79,7 @@ Bootstrap + CSS (Flexbox, Grid, Media Queries) + HTML + PHP + JS vanilla.
 - Bootstrap se usa como **base estructural**: layout, grid, componentes y utilidades.
 - El CSS propio **personaliza y extiende** Bootstrap, nunca lo reemplaza completamente.
 - Todo el CSS personalizado va en un **único archivo** `css/style.css`, cargado después de Bootstrap.
-- Al inicio de `estilos.css` se definen las **variables globales** en `:root`:
+- Al inicio de `style.css` se definen las **variables globales** en `:root`:
 
 ```css
 :root {
@@ -89,7 +89,7 @@ Bootstrap + CSS (Flexbox, Grid, Media Queries) + HTML + PHP + JS vanilla.
 }
 ```
 
-- Las secciones dentro de `estilos.css` se delimitan con comentarios:
+- Las secciones dentro de `style.css` se delimitan con comentarios:
 
 ```css
 /* ── Sección: Header ─────────────────────────── */

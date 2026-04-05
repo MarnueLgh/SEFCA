@@ -1,4 +1,10 @@
-<!-- inicio parallax -->
+<!-- 
+    Autor: @MarnueLgh
+    Fecha: 02/04/2026
+    Descripción: Se modularizó el parallax pero no se encuentra en uso
+-->
+
+<!-- Inicio parallax -->
 
 <div class="site-section site-cover-2" style="background-image: url('img/Degrade_transicion.png')">
     <div class="container">
@@ -12,4 +18,4 @@
     </div>
 </div>
 
-<!-- fin parallax -->
+<!-- Fin parallax -->

@@ -1273,3 +1273,65 @@ footer {
         text-align: center;
     }
 }
+
+/* ==========================================
+   PROYECTOS CARD (Escalable)
+   ========================================== */
+.proyecto-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.proyecto-card__img-container {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.proyecto-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.proyecto-card:hover .proyecto-card__img {
+    transform: scale(1.04);
+}
+
+.proyecto-card__body {
+    background: var(--light); /* Tono crema como en el diseño */
+    padding: 1.8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proyecto-card__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 2rem;
+    border: 1px solid var(--dark);
+    border-radius: 50px;
+    color: var(--dark);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card__btn:hover {
+    background: var(--dark);
+    color: #ffffff;
+}

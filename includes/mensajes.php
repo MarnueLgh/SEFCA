@@ -1,3 +1,10 @@
+
+<!-- 
+    Autor: @MarnueLgh
+    Fecha: 02/04/2026
+    Descripción: Se modularizó y rediseñó el apartado de mensajes y la carta de acreditación 
+-->
+
 <!-- Mensajes y Acreditación (Layout Bento Bustos) -->
 <section class="section-gap">
     <div class="container">

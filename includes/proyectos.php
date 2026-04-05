@@ -1,30 +1,32 @@
-
-<!-- Team Start -->
-<div class="container-xxl py-6">
+<!-- Proyectos Start -->
+<div class="container-xxl py-6 section-gap">
     <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="text-primary text-uppercase mb-2">Proyectos</p>
-            <h1 class="display-6 mb-4">Aulas dignas de la FCA</h1>
+        
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="text-uppercase mb-2" style="color: var(--primary); font-weight: 600; letter-spacing: 1px; font-size: 0.85rem;">Proyectos</p>
+            <h1 class="display-5 mb-4" style="font-family: 'DM Serif Display', serif; color: var(--dark);">Aulas dignas de la FCA</h1>
         </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-6 wow fadeInUp mx-auto" data-wow-delay="0.1s">
-                <div class="team-item text-center rounded overflow-hidden">
-                    <img class="img-fluid" src="img/aulas.jpg" alt="">
-                    <div class="team-text">
-                        <div class="team-title">
-                            <a class="btn-hero" href="docs/resumen_aulas.pdf"
-                                target="_blank">Ver información <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                        <div class="team-social">
-                            <a class="btn-hero" href="docs/resumen_aulas.pdf"
-                                target="_blank">Ver información <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
+        
+        <div class="row justify-content-center g-4">
+            
+            <!-- PROYECTO ITEM -->
+            <!-- Recomendación de escalabilidad: Usar col-md-6 o col-lg-5 si se agregan más proyectos, col-md-8 o col-lg-7 para uno solo destacado -->
+            <div class="col-md-8 col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="proyecto-card">
+                    <div class="proyecto-card__img-container">
+                        <img class="proyecto-card__img" src="img/aulas.jpg" alt="Aulas dignas de la FCA">
+                    </div>
+                    <div class="proyecto-card__body">
+                        <a class="proyecto-card__btn" href="docs/resumen_aulas.pdf" target="_blank">
+                            Ver información <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-
-
+            <!-- /PROYECTO ITEM -->
+            
         </div>
+        
     </div>
 </div>
-<!-- Team End -->
+<!-- Proyectos End -->
