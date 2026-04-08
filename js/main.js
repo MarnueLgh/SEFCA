@@ -14,19 +14,24 @@
     
     // Initiate the wowjs
     new WOW().init();
+    
+    /*
+        Autor: @anuar
+        Fecha: 06/04/2026
+        Descripción: Cambio de color del navbar al hacer scroll y su desaparición COMENTADO
 
 
-    // Fixed Navbar
-    $('.fixed-top').css('top', $('.top-bar').height());
-    $(window).scroll(function () {
-        if ($(this).scrollTop()) {
-            $('.fixed-top').addClass('bg-dark').css('top', 0);
-        } else {
-            $('.fixed-top').removeClass('bg-dark').css('top', $('.top-bar').height());
-        }
-    });
-    
-    
+        // Fixed Navbar
+        $('.fixed-top').css('top', $('.top-bar').height());
+        $(window).scroll(function () {
+            if ($(this).scrollTop()) {
+                $('.fixed-top').addClass('bg-dark').css('top', 0);
+            } else {
+                $('.fixed-top').removeClass('bg-dark').css('top', $('.top-bar').height());
+            }
+        });
+    */
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {

@@ -9,7 +9,7 @@
                 <!-- Número de visitas -->
                 <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <div class="footer-visitas">
-                        <p class="footer-visitas__item">&rarr; Número de visitas: <strong>
+                        <p class="footer-visitas-item">&rarr; Número de visitas: <strong>
                             <?php
                                 $archivo_contador = "includes/contador.txt";
                                 if (!file_exists($archivo_contador)) {
@@ -24,24 +24,24 @@
                                 echo number_format($visitas);
                             ?>
                         </strong></p>
-                        <p class="footer-visitas__item">&rarr; Desde: 01/03/2026</p>
+                        <p class="footer-visitas-item">&rarr; Desde: 01/03/2026</p>
                     </div>
                 </div>
 
                 <!-- Redes sociales -->
                 <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <p class="footer-redes__titulo">Síguenos en</p>
+                    <p class="footer-redes-titulo">Síguenos en</p>
                     <div class="footer-redes">
-                        <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" class="footer-redes__link" aria-label="Facebook">
+                        <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" class="footer-redes-enlace" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" class="footer-redes__link" aria-label="X (Twitter)">
+                        <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" class="footer-redes-enlace" aria-label="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/fcaunamoficial/" target="_blank" class="footer-redes__link" aria-label="Instagram">
+                        <a href="https://www.instagram.com/fcaunamoficial/" target="_blank" class="footer-redes-enlace" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.youtube.com/@FCAUNAMOFICIAL" target="_blank" class="footer-redes__link" aria-label="YouTube">
+                        <a href="https://www.youtube.com/@FCAUNAMOFICIAL" target="_blank" class="footer-redes-enlace" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>

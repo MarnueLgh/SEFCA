@@ -2,8 +2,8 @@
 <html lang="es">
 
 <?php require_once("includes/head.php"); ?>
-<!-- CSS de Eventos -->
-<link href="css/eventos.css" rel="stylesheet">
+
+
 
 <?php
 /*
@@ -104,9 +104,9 @@ if (isset($evento['fotos'])) {
         <?php if (!empty($evento['descripcion'])): ?>
             <div class="galeria-info">
                 <?php if (!empty($evento['fecha'])): ?>
-                    <span class="galeria-info__date"><?php echo htmlspecialchars($evento['fecha']); ?></span>
+                    <span class="galeria-info-fecha"><?php echo htmlspecialchars($evento['fecha']); ?></span>
                 <?php endif; ?>
-                <p class="galeria-info__desc"><?php echo htmlspecialchars($evento['descripcion']); ?></p>
+                <p class="galeria-info-desc"><?php echo htmlspecialchars($evento['descripcion']); ?></p>
             </div>
         <?php endif; ?>
 

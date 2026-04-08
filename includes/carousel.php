@@ -1,3 +1,8 @@
+<!--
+    Fecha: 07/04/2026
+    Descripción: Carrusel de la página principal.
+-->
+
 <!-- Hero Start -->
 <section class="hero">
     <img src="img/fca/cifca_labs_paisaje.png" alt="Facultad de Contaduría y Administración UNAM" class="hero_img">

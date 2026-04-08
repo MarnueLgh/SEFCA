@@ -4,13 +4,13 @@
         <!-- Logos: UNAM → FCA → SEFCA -->
         <div class="navbar-logos">
             <a href="https://www.unam.mx/" target="_blank" class="navbar-logo-link">
-                <img src="img/unam_logo.png" alt="UNAM" class="navbar-logo navbar-logo--unam">
+                <img src="img/unam_logo.png" alt="UNAM" class="navbar-logo navbar-logo-unam">
             </a>
             <a href="https://www.fca.unam.mx/" target="_blank" class="navbar-logo-link">
-                <img src="img/fca-unam-logo.png" alt="FCA" class="navbar-logo navbar-logo--fca">
+                <img src="img/fca-unam-logo.png" alt="FCA" class="navbar-logo navbar-logo-fca">
             </a>
             <a href="indexANUAR.php" class="navbar-logo-link">
-                <img src="img/logo.png" alt="SEFCA" class="navbar-logo navbar-logo--sefca">
+                <img src="img/logo.png" alt="SEFCA" class="navbar-logo navbar-logo-sefca">
             </a>
         </div>
 

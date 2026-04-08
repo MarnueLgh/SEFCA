@@ -1,9 +1,14 @@
-<!-- Consejo Directivo Start -->
+<!--
+    Fecha: 07/04/2026
+    Descripción: Consejo Directivo de la página principal.
+-->
+
+<!-- Inicio de Consejo Directivo -->
 <div class="consejo section-gap">
     <div class="container">
         <div class="consejo_grid">
             <!-- Columna izquierda: Organigrama + Accordion -->
-            <div class="consejo__accordion-col">
+            <div class="consejo-accordion-col">
                 <h2 class="consejo_heading">Organigrama</h2>
 
                 <div class="custom-accordion" id="accordion_2">
@@ -172,11 +177,11 @@
             </div>
 
             <!-- Columna derecha: Foto + Semblanzas -->
-            <div class="consejo__image-col">
+            <div class="consejo-imagen-col">
                 <img src="img/30_aniversario/consejo_completo_30.jpg" alt="Consejo Directivo SEFCA" class="consejo_img">
-                <div class="consejo__semblanzas">
-                    <span class="consejo__semblanzas-titulo">Resumen de Semblanzas</span>
-                    <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" class="consejo__semblanzas-btn">
+                <div class="consejo-semblanzas">
+                    <span class="consejo-semblanzas-titulo">Resumen de Semblanzas</span>
+                    <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" class="consejo-semblanzas-btn">
                         Abrir PDF <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -184,4 +189,4 @@
         </div>
     </div>
 </div>
-<!-- Consejo Directivo End -->
+<!-- Fin de Consejo Directivo -->
