@@ -1,6 +1,5 @@
 
 <!-- 
-    Autor: @MarnueLgh
     Fecha: 02/04/2026
     Descripción: Se modularizó y rediseñó el apartado de mensajes y la carta de acreditación 
 -->

@@ -9,7 +9,7 @@
         <div class="consejo_grid">
             <!-- Columna izquierda: Organigrama + Accordion -->
             <div class="consejo-accordion-col">
-                <h2 class="consejo_heading">Organigrama</h2>
+                <!-- <h2 class="consejo_heading">Organigrama</h2> -->
 
                 <div class="custom-accordion" id="accordion_2">
 

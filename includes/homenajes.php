@@ -1,7 +1,7 @@
 <!-- ==========================================
      HOMENAJES (Componente estilo Card)
      ========================================== -->
-<div class="section-gap">
+<div class="section-gap homenajes-section">
     <div class="container">
         <div class="row mb-5" data-aos="fade-up">
             <div class="col-12 text-center">

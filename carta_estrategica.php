@@ -122,8 +122,8 @@
                     Consulta los estatutos vigentes de la Sociedad de Egresados de la 
                     Facultad de Contaduría y Administración de la UNAM.
                 </p>
-                <a class="carta-btn" href="docs/estatutos_v2.pdf" target="_blank">
-                    <i class="fas fa-download"></i> Descargar Estatutos
+                <a class="boton-sm" href="docs/estatutos_v2.pdf" target="_blank">
+                    <i class="fas fa-download"></i> Descargar
                 </a>
             </div>
         </section>

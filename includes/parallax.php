@@ -1,21 +1,31 @@
 <!-- 
-    Autor: @MarnueLgh
-    Fecha: 02/04/2026
-    Descripción: Se modularizó el parallax pero no se encuentra en uso
+    Fecha: 07/04/2026
+    Descripción: CTA de Afiliación
 -->
+<section class="afiliacion-cta">
+    <div class="container container-afiliacion">
+        <div class="row align-items-center">
+            <!-- Izquierda: Texto de invitación y botón -->
+            <div class="col-lg-6 cta-text-col">
+                <h2 class="afiliacion-title">Súmate a la SEFCA</h2>
+                <p class="afiliacion-desc">
+                    Trasciende con tu alma mater. Construye lazos de valor, accede a la mejor bolsa de trabajo y conecta con líderes del sector financiero, contable y administrativo al integrarte a la SEFCA.
+                </p>
+                <a href="docs/afiliate_v2.pdf" target="_blank" class="afiliacion-btn">¡Afíliate!</a>
+            </div>
 
-<!-- Inicio parallax -->
-
-<div class="site-section site-cover-2" style="background-image: url('img/Degrade_transicion.png')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 mx-auto text-center">
-                <h2 class="text-white mb-4">Comunidad FCA-UNAM <br> forma parte de nosotros</h2>
-                <p class="mb-0"><a href="docs/afiliate_v2.pdf" rel="noopener" class="btn btn-primary" target="_blank"
-                        style="font-size:26px">¡Afíliate!</a></p>
+            <!-- Derecha: Estadísticas -->
+            <div class="col-lg-5 offset-lg-1 cta-stats-col">
+                <div class="stat-item">
+                    <h3 class="stat-number">120+</h3>
+                    <p class="stat-label">Miembros activos</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h3 class="stat-number">15,500+</h3>
+                    <p class="stat-label">Estudiantes beneficiados</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Fin parallax -->
+</section>

@@ -17,7 +17,7 @@
                                 }
                                 $visitas = (int)file_get_contents($archivo_contador);
                                 // Incrementar solo en la página principal
-                                if (basename($_SERVER['PHP_SELF']) === 'indexANUAR.php') {
+                                if (basename($_SERVER['PHP_SELF']) === 'index.php') {
                                     $visitas++;
                                     file_put_contents($archivo_contador, $visitas);
                                 }

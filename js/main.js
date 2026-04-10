@@ -16,7 +16,6 @@
     new WOW().init();
     
     /*
-        Autor: @anuar
         Fecha: 06/04/2026
         Descripción: Cambio de color del navbar al hacer scroll y su desaparición COMENTADO
 

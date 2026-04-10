@@ -3,7 +3,6 @@
     <div class="container">
         
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <p class="text-uppercase mb-2" style="color: var(--dorado-unam); font-weight: 600; letter-spacing: 1px; font-size: 0.85rem;">Proyectos</p>
             <h1 class="display-5 mb-4" style="font-family: 'DM Serif Display', serif; color: var(--azul_unam);">Aulas dignas de la FCA</h1>
         </div>
         

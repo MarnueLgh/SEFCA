@@ -2,6 +2,7 @@
     Fecha: 07/04/2026
     Descripción: Enlaces relacionados de la página principal.
 -->
+    
 <div class="row mb-5">
     <div class="col-12 text-center">
         <h2 class="display-6" style="color: var(--azul_unam); font-family: 'DM Serif Display', serif;">Enlaces Relacionados</h2>
@@ -9,12 +10,12 @@
     </div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+<div class="enlaces-relacionados-contenedor mb-5">
     
     <!-- 
         ================================================================================
         INSTRUCCIONES PARA AÑADIR NUEVOS ENLACES:
-        1. Copia todo el bloque `<div class="col"> ... </div>`.
+        1. Copia todo el bloque `<div class="enlaces-relacionados-item"> ... </div>`.
         2. Reemplaza el `href` en el enlace `<a>` con la URL del video de YouTube o sitio web.
         3. Edita la fecha en `link-card-badge-claro` y la etiqueta en `link-card-badge-oscuro`.
         4. Cambia el Título (`<h4 class="link-card-titulo">`) y el texto (`<p class="link-card-texto">`).
@@ -25,7 +26,7 @@
     -->
 
     <!-- ENLACE 1 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/EKT3XU1IW5Q?si=JZuTA5O95GbwRkkG" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -45,7 +46,7 @@
     </div>
 
     <!-- ENLACE 2 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/sbFi8vZTgXY?si=8tZzBsgipxRfUdaU" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -64,7 +65,7 @@
     </div>
 
     <!-- ENLACE 3 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/SZlp8znMxzs?si=O5_SFya7HVQ7N7qK" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -83,7 +84,7 @@
     </div>
 
     <!-- ENLACE 4 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -102,7 +103,7 @@
     </div>
 
     <!-- ENLACE 5 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/sstW5kG18ko?si=17a8AxQW6O_MB27i" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -121,7 +122,7 @@
     </div>
 
     <!-- ENLACE 6 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/aP2MgWw6gAg?si=vP-mGNW11bWiu-y3" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -140,7 +141,7 @@
     </div>
 
     <!-- ENLACE 7 -->
-    <div class="col">
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/cVdH-aO-OuM?si=z0-W82tBotL23I9g" target="_blank" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>

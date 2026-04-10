@@ -1,7 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --dorado-unam: #EAA636; /* Color institucional UNAM*/
-    --azul_unam: #112f4b; /* Color institucional UNAM*/
+    --dorado-unam: #EAA636;
+    /* Color institucional UNAM*/
+    --azul_unam: #112f4b;
+    /* Color institucional UNAM*/
     --secondary: #545454;
     --light: #FDF5EB;
     --dark: #1a1a1a;
@@ -29,8 +31,10 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(160deg, rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.88)),
-                url('../img/fca/cifca_labs_paisaje.png') center center / cover no-repeat;
+    background: linear-gradient(to bottom,
+            rgba(17, 47, 75, 0.55) 0%,
+            rgba(0, 0, 0, 0.45) 100%),
+        url('../img/fca/cifca_labs_paisaje.png') center center / cover no-repeat;
     color: var(--light);
     padding: 120px 1.5rem 3.5rem;
 }
@@ -57,6 +61,10 @@
 .section-gap {
     padding-top: 3rem;
     padding-bottom: 3rem;
+}
+
+.homenajes-section {
+    background: var(--light);
 }
 
 /* Modificadores para contenedores de eventos (reemplazan inline styles) */
@@ -100,7 +108,6 @@ h6,
 }
 
 /* 
-    Autor: @anuar
     Fecha: 22/03/2026
     Descripción: Estilos para el accordion del consejo
 */
@@ -109,7 +116,8 @@ h6,
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    margin-bottom: 6px; /* Reducido para hacer el bloque más corto */
+    margin-bottom: 6px;
+    /* Reducido para hacer el bloque más corto */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     overflow: hidden;
     transition: all 0.3s ease;
@@ -235,7 +243,8 @@ h6,
 
 .navbar.fixed-top {
     transition: .5s;
-    background: var(--azul_unam) !important; /* Necesario: main.js agrega .bg-dark (Bootstrap !important) al hacer scroll */
+    background: var(--azul_unam) !important;
+    /* Necesario: main.js agrega .bg-dark (Bootstrap !important) al hacer scroll */
 }
 
 /*** Header ***/
@@ -515,17 +524,17 @@ h6,
 }
 
 .footer-redes-enlace {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  border:1px solid rgba(0,0,0,.18);
-  background:#fff;
-  color:var(--dark);
-  text-decoration:none;
-  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .18);
+    background: #fff;
+    color: var(--dark);
+    text-decoration: none;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
 }
 
 .footer-redes-enlace:hover {
@@ -767,9 +776,12 @@ footer {
 }
 
 
-/* ==========================================
-   HERO ESTÁTICO
-   ========================================== */
+/* 
+    ===============
+     HERO ESTÁTICO
+    =============== 
+*/
+
 .hero {
     position: relative;
     width: 100%;
@@ -790,11 +802,9 @@ footer {
 .hero_cobertura {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(17, 47, 75, 0.55) 0%,
-        rgba(0, 0, 0, 0.45) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(17, 47, 75, 0.55) 0%,
+            rgba(0, 0, 0, 0.45) 100%);
 }
 
 .hero_contenido {
@@ -841,6 +851,26 @@ footer {
 .hero_btn:hover {
     background: var(--dorado-unam);
     border-color: var(--dorado-unam);
+    color: #fff;
+}
+
+.boton-sm {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--azul_unam);
+    color: var(--azul_unam);
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.35s ease;
+}
+
+.boton-sm:hover {
+    background: var(--azul_unam);
+    border-color: var(--azul_unam);
     color: #fff;
 }
 
@@ -891,7 +921,8 @@ footer {
 }
 
 .consejo_heading {
-    text-align: center; /* Centrado a petición del usuario */
+    text-align: center;
+    /* Centrado a petición del usuario */
     font-family: "DM Serif Display", serif;
     font-size: 2.6rem;
     font-weight: 400;
@@ -901,9 +932,10 @@ footer {
 
 .consejo_grid {
     display: grid;
-    grid-template-columns: 4fr 6fr; /* 40% izquierda (botones), 60% derecha (imagen más grande) */
+    grid-template-columns: 4fr 6fr;
+    /* 40% izquierda (botones), 60% derecha (imagen más grande) */
     gap: 3rem;
-    align-items: center; /* Centra la imagen y los botones verticalmente entre sí */
+    align-items: start;
 }
 
 /* Accordion Buttons — Diseño institucional SEFCA */
@@ -911,10 +943,12 @@ footer {
     width: 100%;
     text-align: left;
     color: var(--azul_unam);
-    font-size: 0.95rem; /* Letra más pequeña */
+    font-size: 0.95rem;
+    /* Letra más pequeña */
     font-weight: 600;
     letter-spacing: 0.5px;
-    padding: 0.75rem 1.2rem; /* Padding reducido para menor altura */
+    padding: 0.75rem 1.2rem;
+    /* Padding reducido para menor altura */
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -931,6 +965,10 @@ footer {
     box-shadow: none;
     border-left-color: var(--azul_unam);
     background: rgba(17, 47, 75, 0.08);
+}
+
+.boton-sm {
+    font-family: "Roboto";
 }
 
 .consejo .accordion-body {
@@ -960,8 +998,10 @@ footer {
     background: white;
     padding: 1.5rem 2rem;
     border-radius: 0 0 12px 12px;
-    border: 1px solid rgba(0, 0, 0, 0.05); /* Agregado para que sea idéntico a los botones */
-    border-top: none; /* Porque la imagen de arriba ya hace el corte visual */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Agregado para que sea idéntico a los botones */
+    border-top: none;
+    /* Porque la imagen de arriba ya hace el corte visual */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -969,7 +1009,8 @@ footer {
     font-family: "DM Serif Display", serif;
     font-size: 1.35rem;
     font-weight: 400;
-    color: var(--azul_unam); /* Cambiado de blanco a oscuro para que se vea sobre el fondo blanco */
+    color: var(--azul_unam);
+    /* Cambiado de blanco a oscuro para que se vea sobre el fondo blanco */
 }
 
 .consejo-semblanzas-btn {
@@ -1066,7 +1107,8 @@ footer {
 
 .bento-grid {
     display: grid;
-    grid-template-columns: 4fr 6fr; /* 40% izquierda, 60% derecha */
+    grid-template-columns: 4fr 6fr;
+    /* 40% izquierda, 60% derecha */
     gap: 1.5rem;
 }
 
@@ -1077,8 +1119,8 @@ footer {
 }
 
 .bento-card {
-    background: #111111; 
-    border: 1px solid #333333; 
+    background: #111111;
+    border: 1px solid #333333;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -1087,7 +1129,7 @@ footer {
 
 /* Panel Izquierdo (Carta) */
 .bento-card-left {
-    min-height: 500px;
+    min-height: 380px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1124,7 +1166,7 @@ footer {
 .bento-fila-img-col {
     width: 40%;
     display: flex;
-    align-items: flex-end; 
+    align-items: flex-end;
     justify-content: center;
     background: linear-gradient(180deg, #1c1c1c 0%, #0d0d0d 100%);
     padding-top: 2rem;
@@ -1144,7 +1186,7 @@ footer {
 
 .bento-fila-contenido {
     width: 60%;
-    padding: 3rem;
+    padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1196,14 +1238,14 @@ footer {
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
 
 .proyecto-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
 }
 
 .proyecto-card-img-contenedor {
@@ -1224,7 +1266,8 @@ footer {
 }
 
 .proyecto-card-cuerpo {
-    background: var(--light); /* Tono crema como en el diseño */
+    background: var(--light);
+    /* Tono crema como en el diseño */
     padding: 1.8rem 2rem;
     display: flex;
     justify-content: center;
@@ -1253,79 +1296,150 @@ footer {
 /* == Seccion: Eventos =============================== */
 
 /* ==========================================
-   BARRA DE FILTROS
+   LAYOUT DE 2 COLUMNAS (Sidebar + Main)
    ========================================== */
-.filtro-barra {
+.galeria-layout {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    gap: 1rem;
-    padding: 1.2rem 1.5rem;
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
-    margin-bottom: 1.5rem;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    align-items: flex-start;
 }
 
-.filtro-grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+/* ---- Sidebar de Filtros ---- */
+.galeria-sidebar {
+    flex: 0 0 260px;
+    max-width: 260px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+    padding: 1.8rem 1.5rem;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    margin-left: 0.5rem;
+}
+
+/* ---- Wrapper con fondo claro (solo artículos) ---- */
+.galeria-wrapper {
     flex: 1;
-    min-width: 140px;
+    min-width: 0;
+    background: var(--light);
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 2rem 1.5rem;
 }
 
-.filtro-etiqueta {
-    font-size: 0.72rem;
-    font-weight: 600;
+/* Header del sidebar */
+.filtro-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.filtro-sidebar-titulo {
+    font-size: 0.78rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #8a8a8a;
-}
-
-.filtro-select {
-    appearance: none;
-    -webkit-appearance: none;
-    background: #f5f5f5 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23888'/%3E%3C/svg%3E") no-repeat right 12px center;
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
-    padding: 0.55rem 2rem 0.55rem 0.85rem;
-    font-size: 0.88rem;
+    letter-spacing: 2px;
     color: #333;
-    cursor: pointer;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.filtro-select:focus {
-    outline: none;
-    border-color: var(--dorado-unam);
-    box-shadow: 0 0 0 3px rgba(234, 166, 54, 0.15);
 }
 
 .filtro-limpiar {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     background: none;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 0.55rem 1.1rem;
-    font-size: 0.85rem;
-    color: #888;
+    border: none;
+    font-size: 0.78rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.25s ease;
+    padding: 0;
+}
+
+.filtro-limpiar:hover {
+    color: #c0392b;
+}
+
+.filtro-limpiar i {
+    font-size: 0.72rem;
+}
+
+/* Grupo de filtros (sección dentro del sidebar) */
+.filtro-grupo {
+    margin-bottom: 1.6rem;
+}
+
+.filtro-grupo:last-child {
+    margin-bottom: 0;
+}
+
+.filtro-etiqueta {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.75rem;
+}
+
+/* Contenedor de píldoras dentro de cada grupo */
+.filtro-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* ---- Botón Píldora de Filtro ---- */
+.boton-sm-filtro {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.38rem 0.9rem;
+    border: 1.5px solid #d5d5d5;
+    background: #fff;
+    color: #666;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.25s ease;
     white-space: nowrap;
 }
 
-.filtro-limpiar:hover {
-    color: #c0392b;
-    border-color: #c0392b;
-    background: rgba(192, 57, 43, 0.05);
+.boton-sm-filtro:hover {
+    border-color: var(--azul_unam);
+    color: var(--azul_unam);
 }
 
+.boton-sm-filtro.activo {
+    border-color: var(--azul_unam);
+    color: var(--azul_unam);
+    background: rgba(17, 47, 75, 0.06);
+    font-weight: 600;
+}
+
+/* Mensaje sin resultados */
 .filtro-vacio {
     text-align: center;
     color: #999;
     font-size: 1rem;
     padding: 3rem 1rem;
     font-style: italic;
+}
+
+/* ---- Área principal (columna derecha) ---- */
+.galeria-main {
+    flex: 1;
+    min-width: 0;
 }
 
 /* ---- Tags de categoría dentro de cada card ---- */
@@ -1362,13 +1476,6 @@ footer {
     color: #b8841f;
 }
 
-/* ---- Contenedor principal de eventos ---- */
-.eventos-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem 4rem;
-}
-
 /* ---- Grid de cards de noticias ---- */
 .eventos-grid {
     display: flex;
@@ -1384,6 +1491,7 @@ footer {
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    height: 225px;
 }
 
 .evento-card:hover {
@@ -1441,6 +1549,10 @@ footer {
     color: #545454;
     line-height: 1.6;
     margin-bottom: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .evento-card-enlace {
@@ -1481,7 +1593,7 @@ footer {
     justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(30, 25, 22, 0.75), rgba(30, 25, 22, 0.85)),
-                url('../img/aulas.jpg') center center / cover no-repeat;
+        url('../img/aulas.jpg') center center / cover no-repeat;
     color: var(--light);
     padding: 100px 1rem 2.5rem;
 }
@@ -1628,7 +1740,7 @@ footer {
 .carta-section {
     display: flex;
     align-items: stretch;
-    min-height: 520px;
+    min-height: 380px;
     overflow: hidden;
 }
 
@@ -1642,7 +1754,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4rem 5rem;
+    padding: 2.5rem 3.5rem;
     position: relative;
 }
 
@@ -1702,7 +1814,8 @@ footer {
     list-style-position: outside;
 }
 
-.carta-section-cuerpo, .carta-section-lista {
+.carta-section-cuerpo,
+.carta-section-lista {
     margin-top: 0.30rem;
 }
 
@@ -1712,7 +1825,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -1723,15 +1836,18 @@ footer {
 }
 
 .carta-section-visual-vision {
-    background: linear-gradient(145deg, #e4e8f0, #d4dbe8 40%, #c5cfdf);
+    background: linear-gradient(145deg, #eeebe8, #e3ddd7 40%, #d4cdc5);
+    /* background: linear-gradient(145deg, #e4e8f0, #d4dbe8 40%, #c5cfdf); */
 }
 
 .carta-section-visual-valores {
-    background: linear-gradient(145deg, #e8e0f0, #d8cee8 40%, #ccc0df);
+    background: linear-gradient(145deg, #f0ebe4, #e8dfd4 40%, #d9cfc2);
+    /* background: linear-gradient(145deg, #e8e0f0, #d8cee8 40%, #ccc0df); */
 }
 
 .carta-section-visual-ejes {
-    background: linear-gradient(145deg, #f0d4c0, #e8c0a0 40%, #dfb090);
+    background: linear-gradient(145deg, #eeebe8, #e3ddd7 40%, #d4cdc5);
+    /* background: linear-gradient(145deg, #f0d4c0, #e8c0a0 40%, #dfb090); */
 }
 
 /* ---- Imagen dentro del visual ---- */
@@ -1743,14 +1859,14 @@ footer {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
-                0 1px 3px rgba(0, 0, 0, 0.06);
+        0 1px 3px rgba(0, 0, 0, 0.06);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .carta-section-img:hover {
     transform: scale(1.03);
     box-shadow: 0 16px 56px rgba(0, 0, 0, 0.15),
-                0 2px 6px rgba(0, 0, 0, 0.06);
+        0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 /* ---- Divider entre secciones ---- */
@@ -1854,26 +1970,65 @@ footer {
     animation: carta-fadeUp 0.7s ease-out both;
 }
 
-.carta-animate-delay-1 { animation-delay: 0.1s; }
-.carta-animate-delay-2 { animation-delay: 0.2s; }
-.carta-animate-delay-3 { animation-delay: 0.35s; }
+.carta-animate-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.carta-animate-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.carta-animate-delay-3 {
+    animation-delay: 0.35s;
+}
 
 
 /* == Seccion: Link Cards ============================ */
+.enlaces-relacionados-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.enlaces-relacionados-item {
+    flex: 1 1 100%;
+    max-width: 420px;
+    display: flex;
+}
+
+.enlaces-relacionados-item .link-card {
+    width: 100%;
+}
+
 .link-card {
     display: flex;
     flex-direction: column;
     background: #ffffff;
     border-radius: 20px;
     padding: 18px 18px 18px 18px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
 
+@media (min-width: 768px) {
+    .enlaces-relacionados-item {
+        flex-basis: calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .enlaces-relacionados-item {
+        flex-basis: calc(33.3333% - 1rem);
+        max-width: calc(33.3333% - 1rem);
+    }
+}
+
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
 }
 
 .link-card-header {
@@ -1933,7 +2088,8 @@ footer {
 }
 
 .link-card-imagen-contenedor {
-    background: black; /* Color temporal de fondo */
+    background: black;
+    /* Color temporal de fondo */
     border-radius: 16px;
     height: 220px;
     position: relative;
@@ -1981,7 +2137,8 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1; /* La imagen debe ir debajo de los textos si los hay */
+    z-index: 1;
+    /* La imagen debe ir debajo de los textos si los hay */
 }
 
 /* Base de fondo cuando no hay imagen, imitando la foto de las montañas según el boceto */
@@ -1992,7 +2149,8 @@ footer {
     align-items: flex-end;
     padding: 24px;
     position: relative;
-    z-index: 2; /* Siempre por encima del fondo / img para que el texto se lea */
+    z-index: 2;
+    /* Siempre por encima del fondo / img para que el texto se lea */
 }
 
 /* Sombra a los lados del bloque para que el texto sea legible frente a cualquier imagen futura */
@@ -2003,7 +2161,7 @@ footer {
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
     z-index: 1;
 }
 
@@ -2012,12 +2170,60 @@ footer {
     margin: 0;
     font-size: 0.95rem;
     font-weight: 400;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+
+/* == Seccion: Call to action ============================ */
+.cta-section {
+    padding: 3rem 1.5rem;
+    color: #ffffff;
+}
+
+.cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cta-image-wrapper {
+    width: 100%;
+    height: 480px;
+    background-color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.cta-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.cta-content-row {
+    padding-top: 1rem;
+}
+
+.cta-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-family: var(--carta-serif, 'Playfair Display', serif);
+    line-height: 1.1;
+    color: var(--azul_unam); /* PRUEBA */
+}
+
+.cta-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--azul_unam); /* PRUEBA */
+    font-weight: 300;
+    text-align: justify;
 }
 
 /* 
@@ -2099,6 +2305,7 @@ footer {
         min-height: 500px;
         height: 80vh;
     }
+
     .hero_contenido {
         bottom: 60px;
     }
@@ -2108,6 +2315,7 @@ footer {
     .consejo_grid {
         grid-template-columns: 1fr;
     }
+
     .consejo_heading {
         text-align: center;
     }
@@ -2123,25 +2331,40 @@ footer {
     .bento-card-fila {
         flex-direction: column;
     }
-    .bento-fila-img-col, .bento-fila-contenido {
+
+    .bento-fila-img-col,
+    .bento-fila-contenido {
         width: 100%;
     }
+
     .bento-fila-img-col {
         padding-top: 3rem;
     }
+
     .bento-fila-texto {
         text-align: center;
     }
 }
 
-@media (max-width: 600px) {
-    .filtro-barra {
+/* ---- Responsive sidebar (colapsa a horizontal) ---- */
+@media (max-width: 992px) {
+    .galeria-layout {
         flex-direction: column;
-        align-items: stretch;
+        padding: 1.5rem 1rem 3rem;
     }
 
-    .filtro-grupo {
-        min-width: 100%;
+    .galeria-sidebar {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+        position: static;
+        max-height: none;
+        border-radius: 14px;
+        margin-left: 0;
+    }
+
+    .galeria-wrapper {
+        border-radius: 16px;
     }
 }
 
@@ -2149,6 +2372,7 @@ footer {
 @media (max-width: 768px) {
     .evento-card {
         flex-direction: column;
+        height: auto;
     }
 
     .evento-card-img {
@@ -2168,6 +2392,7 @@ footer {
 
 /* Responsive galería */
 @media (max-width: 768px) {
+
     .galeria-item,
     .galeria-item:nth-child(5n + 1),
     .galeria-item:nth-child(5n + 2),
@@ -2180,6 +2405,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     .galeria-item,
     .galeria-item:nth-child(5n + 1),
     .galeria-item:nth-child(5n + 2),
@@ -2241,5 +2467,136 @@ footer {
 
     .carta-estatutos {
         padding: 3.5rem 1.2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .cta-image-wrapper {
+        height: 350px;
+    }
+    .cta-right-col {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cta-image-wrapper {
+        height: 250px;
+    }
+}
+
+/* == Seccion: CTA Afiliación (Fondo blanco) ============================ */
+.afiliacion-cta {
+    background-color: #fbfbfb; /* Almost white matching reference */
+    padding: 7rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-afiliacion {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cta-text-col {
+    padding-right: 4rem;
+}
+
+.afiliacion-title {
+    font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--azul_unam);
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.afiliacion-desc {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+}
+
+.afiliacion-btn {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    border: 2px solid var(--azul_unam);
+    background: transparent;
+    color: var(--azul_unam);
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.35s ease;
+}
+
+.afiliacion-btn:hover {
+    background: var(--dorado-unam);
+    border-color: var(--dorado-unam);
+    color: #fff;
+}
+
+.cta-stats-col {
+    padding-left: 2rem;
+    border-left: 1px solid rgba(0,0,0,0.05); /* Optional subtle structural separation just in case */
+}
+
+.stat-item {
+    margin: 2rem 0;
+}
+
+.stat-number {
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    font-weight: 700;
+    color: var(--dorado-unam);
+    margin-bottom: 0.2rem;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-size: 1.3rem;
+    color: var(--dorado-unam);
+    font-weight: 400;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.stat-divider {
+    height: 1px;
+    background-color: rgba(0, 31, 77, 0.2); /* var(--azul_unam) sub-tinte */
+    width: 60%;
+    margin: 2.5rem 0;
+}
+
+@media (max-width: 991px) {
+    .cta-text-col {
+        padding-right: 1.5rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    
+    .afiliacion-desc {
+        margin: 0 auto 2.5rem;
+    }
+
+    .cta-stats-col {
+        padding-left: 1.5rem;
+        border-left: none;
+    }
+    
+    .stat-divider {
+        width: 100%;
+    }
+    
+    .afiliacion-lazo {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        opacity: 0.2;
     }
 }

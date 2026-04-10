@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- 
-    Autor: @anuar
     Fecha: 01/04/2026
     Descripción: Página "Nosotros"
 -->
@@ -21,7 +20,32 @@
 
     <!-- Mensajes -->
     <?php include("includes/mensajes.php"); ?>
-    
+
+    <!-- Consejo directivo -->
+    <?php include("includes/consejo.php"); ?>
+
+    <!-- Video Institucional -->
+    <div class="section-gap mb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden border">
+                        <iframe 
+                            src="https://www.youtube.com/embed/3RzU-kjkvRo" 
+                            title="Celebramos nuestros más de 30 años de historia" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homenajes (Movido desde index.php) -->
+    <?php include("includes/homenajes.php"); ?>
+
     <!-- Contenido principal -->
     <div class="section-gap">
         <div class="container">
@@ -29,22 +53,7 @@
         </div>
     </div>
 
-    <!-- Homenajes (Movido desde indexANUAR.php) -->
-    <?php include("includes/homenajes.php"); ?>
-
-    <!-- Video 30 años de historia (Movido desde indexANUAR.php) -->
-    <div class="section-gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center">
-                    <a href="https://www.youtube.com/watch?v=3RzU-kjkvRo" target="_blank">
-                        <img src="img/video_2025.jpg" class="img-fluid rounded shadow-sm" alt="Video SEFCA 2025">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 
     <!-- Back to Top -->

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- 
-    Autor: @anuar
     Fecha: 01/04/2026
     Descripción: Página "Nosotros"
 -->

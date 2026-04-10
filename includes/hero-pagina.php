@@ -1,6 +1,5 @@
 <?php
 /*
-    Autor: @anuar
     Fecha: 01/04/2026
     Descripción: Componente hero reutilizable para páginas internas.
 
