@@ -132,7 +132,7 @@
 
     <?php require_once("includes/footer.php"); ?>
 
-    <!-- Back to Top -->
+    <!-- Volver a inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a>

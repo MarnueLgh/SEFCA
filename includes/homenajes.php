@@ -10,7 +10,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center g-4 mb-5" data-aos="fade-up">
+        <div class="row justify-content-center g-4" data-aos="fade-up">
             
             <!-- ENLACE 1: Homenaje Murrieta -->
             <div class="col-md-6 col-lg-5">

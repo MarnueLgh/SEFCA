@@ -32,16 +32,8 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!--
-        Fecha: 22/03/2026
-        Descripción: Se agregó comentario descriptivo al CSS de Tiny-slider y se movió el CSS de Lightbox2 desde el body al head para cumplir con el estándar HTML5
-        Version: 1.0
-    -->
     <!-- Tiny-slider -->
     <link rel="stylesheet" href="css/tiny-slider.css">
-
-    <!-- Lightbox2 -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
 
 </head>

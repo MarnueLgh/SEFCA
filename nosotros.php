@@ -24,8 +24,8 @@
     <!-- Consejo directivo -->
     <?php include("includes/consejo.php"); ?>
 
-    <!-- Video Institucional -->
-    <div class="section-gap mb-5">
+    <!-- Video Celebración 30 años -->
+    <div class="section-gap">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -56,7 +56,7 @@
     <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 
-    <!-- Back to Top -->
+    <!-- Volver a inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a>

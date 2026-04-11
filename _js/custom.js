@@ -119,13 +119,4 @@
 	tinyslier();
 
 
-	var lightbox = function() {
-		var lightboxVideo = GLightbox({
-			selector: '.glightbox3'
-		});
-	};
-	lightbox();
-
-
-
 })();

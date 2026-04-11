@@ -750,7 +750,7 @@ Sitio web administrado por el Centro de Inform√°tica de la Facultad de Contadur√
     <!-- Copyright End -->
 
 
-    <!-- Back to Top -->
+    <!-- Volver a inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 

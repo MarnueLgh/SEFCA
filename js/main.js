@@ -96,3 +96,30 @@
     
 })(jQuery);
 
+/* ==========================================
+   SCROLL CARRUSEL DE EVENTOS
+   ========================================== */
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.getElementById('carrusel-eventos-track');
+    const btnPrev = document.getElementById('carrusel-prev');
+    const btnNext = document.getElementById('carrusel-next');
+
+    if (track && btnPrev && btnNext) {
+        const getCardWidth = () => {
+            const card = track.querySelector('.carrusel-eventos-card');
+            if (!card) return 0;
+            const cardWidth = card.offsetWidth;
+            const style = window.getComputedStyle(track);
+            const gap = parseFloat(style.getPropertyValue('gap')) || 0;
+            return cardWidth + gap;
+        };
+
+        btnNext.addEventListener('click', () => {
+            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        });
+
+        btnPrev.addEventListener('click', () => {
+            track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        });
+    }
+});

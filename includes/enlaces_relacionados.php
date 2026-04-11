@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div class="enlaces-relacionados-contenedor mb-5">
+<div class="enlaces-relacionados-contenedor">
     
     <!-- 
         ================================================================================

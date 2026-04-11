@@ -19,8 +19,8 @@
  *     - extension: extensión de las fotos (jpg, JPG, png)      
  *     - cantidad: número de fotos en la carpeta                
  *     - inicio: número del primer archivo (ej: 1 para 01.jpg)  
- *  3. En galeria_eventos.php, agrega un <article> apuntando    
- *     a evento_galeria.php?evento=TU_CLAVE                     
+ *  3. En historico.php, agrega un <article> apuntando    
+ *     a evento.php?evento=TU_CLAVE                     
  * 
  */
 
@@ -66,7 +66,7 @@ $evento = isset($eventos[$clave]) ? $eventos[$clave] : null;
 
 if (!$evento) {
     // Redirigir si no existe
-    header('Location: galeria_eventos.php');
+    header('Location: historico.php');
     exit;
 }
 
@@ -113,9 +113,7 @@ if (isset($evento['fotos'])) {
         <div class="galeria-grid">
             <?php foreach ($fotos as $index => $foto): ?>
                 <div class="galeria-item">
-                    <a href="<?php echo $foto; ?>" data-lightbox="galeria-<?php echo $clave; ?>" data-title="Foto <?php echo $index + 1; ?>">
-                        <img src="<?php echo $foto; ?>" alt="Foto <?php echo $index + 1; ?> - <?php echo htmlspecialchars($evento['titulo']); ?>" loading="lazy">
-                    </a>
+                    <img src="<?php echo $foto; ?>" alt="Foto <?php echo $index + 1; ?> - <?php echo htmlspecialchars($evento['titulo']); ?>" loading="lazy">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -123,7 +121,7 @@ if (isset($evento['fotos'])) {
 
     <?php require_once("includes/footer.php"); ?>
 
-    <!-- Back to Top -->
+    <!-- Volver a inicio -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
         <i class="bi bi-arrow-up"></i>
     </a>

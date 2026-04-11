@@ -35,13 +35,16 @@
                         <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" class="footer-redes-enlace" aria-label="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
+                    <!--                         
                         <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" class="footer-redes-enlace" aria-label="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="https://www.instagram.com/fcaunamoficial/" target="_blank" class="footer-redes-enlace" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@FCAUNAMOFICIAL" target="_blank" class="footer-redes-enlace" aria-label="YouTube">
+                        </a> 
+                    -->
+
+                        <a href="https://www.youtube.com/@SEFCA" target="_blank" class="footer-redes-enlace" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -70,7 +73,7 @@
                     Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se
                     cite la fuente completa y su dirección electrónica. De otra forma requiere permiso previo
                     por escrito de la institución.
-                    <a href="https://www.fca.unam.mx/docs/avisoPrivacidad.pdf" target="_blank">AVISO DE PRIVACIDAD</a>.
+                    <a href="https://www.fca.unam.mx/docs/aviso_privacidad.pdf" target="_blank">AVISO DE PRIVACIDAD</a>.
                     Sitio web administrado por el Centro de Informática de la Facultad de Contaduría y
                     Administración (<a href="https://cifca.fca.unam.mx/" target="_blank">CIFCA</a>).
                 </div>

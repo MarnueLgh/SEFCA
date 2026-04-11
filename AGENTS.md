@@ -5,7 +5,7 @@
 - The project is a server-rendered PHP site with static assets (Bootstrap + custom CSS + vanilla JS). There is no build/codegen pipeline in-repo.
 
 ## Active Surface vs Legacy Files
-- Treat `index.php`, `nosotros.php`, `carta_estrategica.php`, `galeria_eventos.php`, `proyectos.php`, and `evento.php` as the active modular pages.
+- Treat `index.php`, `nosotros.php`, `carta_estrategica.php`, `historico.php`, `proyectos.php`, and `evento.php` as the active modular pages.
 - `index.php` and the many `index_*.php` / `index_prueba_*.php` files are legacy snapshots; avoid editing them unless the task explicitly targets them.
 - `includes/navbar.php` routes Inicio to `index.php`; this is the safest default homepage for ongoing work.
 
@@ -21,10 +21,10 @@
 - Lightbox assets are already global (`includes/head.php` + `includes/scripts.php`); avoid re-adding per-page CDN includes.
 
 ## Event/Gallery Update Flow
-- `galeria_eventos.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
+- `historico.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
 - For events with photo galleries, update both files:
   - `evento.php`: add/update the event entry in `$eventos` and image source config.
-  - `galeria_eventos.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
+  - `historico.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
 - Keep downloadable docs in `docs/` and image assets under `img/`.
 
 ## Conventions Source of Truth

@@ -1466,7 +1466,7 @@ footer {
     color: var(--azul_unam);
 }
 
-.evento-card-tag-blog {
+.evento-card-tag-proyecto {
     background: rgba(46, 139, 87, 0.1);
     color: #2e8b57;
 }
@@ -1474,6 +1474,11 @@ footer {
 .evento-card-tag-convocatoria {
     background: rgba(234, 166, 54, 0.15);
     color: #b8841f;
+}
+
+.evento-card-tag-conferencia {
+    background: rgba(194, 24, 91, 0.1);
+    color: #a0154d;
 }
 
 /* ---- Grid de cards de noticias ---- */
@@ -1578,6 +1583,178 @@ footer {
 
 .evento-card-enlace:hover i {
     transform: translateX(3px);
+}
+
+/* =============================================
+   CARRUSEL DE EVENTOS (Estilo OpenAI)
+   ============================================= */
+
+.carrusel-eventos {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.carrusel-eventos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.carrusel-eventos-titulo {
+    font-family: var(--carta-serif);
+    font-size: clamp(1.8rem, 4vw, 2.3rem);
+    color: var(--azul_unam);
+    margin: 0;
+}
+
+.carrusel-eventos-nav {
+    display: flex;
+    gap: 12px;
+}
+
+.carrusel-eventos-flecha {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: transparent;
+    color: var(--azul_unam);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.carrusel-eventos-flecha:hover {
+    background: var(--azul_unam);
+    color: #fff;
+    border-color: var(--azul_unam);
+}
+
+.carrusel-eventos-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scroll-snap-type: x mandatory;
+    padding-bottom: 2rem; /* Espacio para sombra y scroll */
+}
+
+.carrusel-eventos-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.carrusel-eventos-card {
+    position: relative;
+    flex-shrink: 0;
+    width: 320px;
+    height: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    display: block;
+    text-decoration: none;
+}
+
+.carrusel-eventos-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carrusel-eventos-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(17, 47, 75, 0.9) 0%,
+        rgba(17, 47, 75, 0.4) 50%,
+        transparent 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.carrusel-eventos-card-contenido {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
+}
+
+.carrusel-eventos-card-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carrusel-eventos-card-titulo {
+    font-family: var(--carta-serif);
+    font-size: clamp(1.2rem, 3vw, 1.45rem);
+    color: #fff;
+    margin: 0;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Hover Effects */
+.carrusel-eventos-card:hover .carrusel-eventos-card-img {
+    transform: scale(1.06);
+}
+
+.carrusel-eventos-card:hover .carrusel-eventos-card-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(17, 47, 75, 0.95) 0%,
+        rgba(17, 47, 75, 0.5) 60%,
+        transparent 100%
+    );
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carrusel-eventos-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .carrusel-eventos-card {
+        width: 280px;
+        height: 380px;
+    }
+    
+    .carrusel-eventos-card-contenido {
+        padding: 1.5rem;
+    }
+    
+    .carrusel-eventos-nav {
+        display: none; /* Ocultar flechas en móvil, usan swipe */
+    }
 }
 
 /* =============================================
@@ -1740,7 +1917,7 @@ footer {
 .carta-section {
     display: flex;
     align-items: stretch;
-    min-height: 380px;
+    min-height: 410px;
     overflow: hidden;
 }
 
