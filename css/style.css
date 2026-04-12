@@ -21,6 +21,13 @@
 }
 
 /* ==========================================
+   GLOBAL: prevenir barra horizontal por carrusel arco
+   ========================================== */
+body {
+    overflow-x: hidden;
+}
+
+/* ==========================================
    HERO DE PÁGINA INTERNA (Componente reutilizable)
    Archivo PHP: includes/hero-pagina.php
    ========================================== */
@@ -1214,19 +1221,29 @@ footer {
 }
 
 .bento-fila-enlace {
+    font-weight: 600; /* Texto de enlace más ancho */
     align-self: flex-end;
     margin-top: auto;
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
+    gap: 6px;
 }
 
 .bento-fila-enlace:hover {
     color: var(--dorado-unam);
+    gap: 10px;
+}
+
+.bento-fila-enlace i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.bento-fila-enlace:hover i {
+    transform: translateX(3px);
 }
 
 /* ==========================================
@@ -1568,12 +1585,13 @@ footer {
     font-weight: 600;
     color: var(--dorado-unam);
     text-decoration: none;
-    transition: gap 0.3s ease, color 0.3s ease;
+    transition: gap 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .evento-card-enlace:hover {
     color: #1E1916;
     gap: 10px;
+    transform: translateX(4px);
 }
 
 .evento-card-enlace i {
@@ -1585,20 +1603,133 @@ footer {
     transform: translateX(3px);
 }
 
+/* ==========================================
+   PAGINACIÓN DE EVENTOS
+   ========================================== */
+.paginacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0.5rem 0.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.paginacion-info {
+    font-size: 0.82rem;
+    color: #888;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.paginacion-botones {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.paginacion-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 0.6rem;
+    border: 1.5px solid #d5d5d5;
+    background: #fff;
+    color: #555;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.paginacion-btn:hover:not(:disabled):not(.paginacion-activa) {
+    border-color: var(--azul_unam);
+    color: var(--azul_unam);
+    background: rgba(17, 47, 75, 0.04);
+}
+
+.paginacion-activa {
+    background: var(--azul_unam);
+    border-color: var(--azul_unam);
+    color: #fff;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.paginacion-flecha {
+    min-width: 38px;
+    padding: 0;
+}
+
+.paginacion-flecha:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.paginacion-flecha i {
+    font-size: 0.7rem;
+}
+
+.paginacion-puntos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    color: #aaa;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+/* Bento responsive */
+@media (max-width: 768px) {
+  .bento-card-fila {
+    flex-direction: column;
+  }
+
+  .bento-fila-img-col,
+  .bento-fila-contenido {
+    width: 100%;
+    min-height: 320px;
+  }
+
+  .bento-fila-img-col {
+    height: clamp(240px, 42vw, 320px);
+    padding-top: 1rem;
+    align-items: flex-end;
+  }
+
+  .bento-fila-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  .bento-fila-texto {
+    text-align: center;
+  }
+}
+
 /* =============================================
-   CARRUSEL DE EVENTOS (Estilo OpenAI)
+   CARRUSEL TIPO ARCO (Arc Fan Carousel)
    ============================================= */
 
 .carrusel-eventos {
     background-color: transparent;
-    overflow: hidden;
 }
 
 .carrusel-eventos-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .carrusel-eventos-titulo {
@@ -1606,18 +1737,181 @@ footer {
     font-size: clamp(1.8rem, 4vw, 2.3rem);
     color: var(--azul_unam);
     margin: 0;
+    text-align: center;
 }
 
-.carrusel-eventos-nav {
+/* ------- Escena 3D ------- */
+.carrusel-arco-escena {
+    perspective: 1200px;
+    width: 100%;
     display: flex;
-    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
+    position: relative;
+    overflow: visible;
+    padding: 2rem 0;
 }
 
-.carrusel-eventos-flecha {
+.carrusel-arco-pista {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    transform-style: preserve-3d;
+}
+
+/* ------- Card base ------- */
+.carrusel-arco-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    transform-origin: bottom center;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.7s ease,
+                filter 0.7s ease;
+    will-change: transform, opacity, filter;
+}
+
+/* Imagen de fondo */
+.carrusel-arco-card-fondo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.carrusel-arco-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(17, 47, 75, 0.92) 0%,
+        rgba(17, 47, 75, 0.4) 45%,
+        rgba(17, 47, 75, 0.05) 100%
+    );
+    z-index: 1;
+    transition: background 0.4s ease;
+    border-radius: 20px;
+}
+
+/* Contenido sobre el overlay */
+.carrusel-arco-card-contenido {
+    position: relative;
+    z-index: 2;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.carrusel-arco-card-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.carrusel-arco-card-titulo {
+    font-family: var(--carta-serif);
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0 0 0.8rem 0;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.carrusel-arco-card-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--dorado-unam);
+    text-decoration: none;
+    transition: gap 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s, gap 0.3s ease;
+}
+
+.carrusel-arco-card-enlace i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+/* Card activa (centro) */
+.carrusel-arco-card.arco-activa {
+    z-index: 10;
+    filter: none;
+}
+
+.carrusel-arco-card.arco-activa .carrusel-arco-card-enlace {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-fondo {
+    transform: scale(1.06);
+}
+
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-enlace {
+    gap: 10px;
+}
+
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-enlace i {
+    transform: translateX(3px);
+}
+
+/* Cards no activas */
+.carrusel-arco-card:not(.arco-activa) {
+    pointer-events: none;
+    filter: brightness(0.7) saturate(0.6);
+}
+
+/* Cards ocultas (fuera de rango) */
+.carrusel-arco-card.arco-oculta {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ------- Navegación inferior ------- */
+.carrusel-arco-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.carrusel-arco-flecha {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1.5px solid rgba(0, 0, 0, 0.12);
     background: transparent;
     color: var(--azul_unam);
     display: flex;
@@ -1626,134 +1920,77 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
+    font-size: 0.85rem;
 }
 
-.carrusel-eventos-flecha:hover {
+.carrusel-arco-flecha:hover {
     background: var(--azul_unam);
     color: #fff;
     border-color: var(--azul_unam);
 }
 
-.carrusel-eventos-track {
+/* Indicadores (dots) */
+.carrusel-arco-indicadores {
     display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 1.5rem;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    scroll-snap-type: x mandatory;
-    padding-bottom: 2rem; /* Espacio para sombra y scroll */
+    gap: 8px;
+    align-items: center;
 }
 
-.carrusel-eventos-track::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+.carrusel-arco-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(17, 47, 75, 0.2);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.35s ease;
 }
 
-.carrusel-eventos-card {
-    position: relative;
-    flex-shrink: 0;
-    width: 320px;
-    height: 420px;
-    border-radius: 16px;
-    overflow: hidden;
-    scroll-snap-align: start;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    display: block;
-    text-decoration: none;
-}
-
-.carrusel-eventos-card-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.carrusel-eventos-card-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(17, 47, 75, 0.9) 0%,
-        rgba(17, 47, 75, 0.4) 50%,
-        transparent 100%
-    );
-    transition: background 0.4s ease;
-}
-
-.carrusel-eventos-card-contenido {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 2;
-}
-
-.carrusel-eventos-card-tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: #fff;
-    padding: 5px 14px;
+.carrusel-arco-dot.arco-dot-activo {
+    width: 28px;
     border-radius: 50px;
-    margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--azul_unam);
 }
 
-.carrusel-eventos-card-titulo {
-    font-family: var(--carta-serif);
-    font-size: clamp(1.2rem, 3vw, 1.45rem);
-    color: #fff;
-    margin: 0;
-    line-height: 1.35;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* Hover Effects */
-.carrusel-eventos-card:hover .carrusel-eventos-card-img {
-    transform: scale(1.06);
-}
-
-.carrusel-eventos-card:hover .carrusel-eventos-card-overlay {
-    background: linear-gradient(
-        to top,
-        rgba(17, 47, 75, 0.95) 0%,
-        rgba(17, 47, 75, 0.5) 60%,
-        transparent 100%
-    );
-}
-
-/* Responsive */
+/* ------- Responsive ------- */
 @media (max-width: 768px) {
-    .carrusel-eventos-header {
-        margin-bottom: 1.5rem;
+    .carrusel-arco-escena {
+        min-height: 440px;
     }
-    
-    .carrusel-eventos-card {
-        width: 280px;
-        height: 380px;
+
+    .carrusel-arco-pista {
+        width: 250px;
+        height: 360px;
     }
-    
-    .carrusel-eventos-card-contenido {
-        padding: 1.5rem;
+
+    .carrusel-arco-card {
+        width: 250px;
+        height: 360px;
     }
-    
-    .carrusel-eventos-nav {
-        display: none; /* Ocultar flechas en móvil, usan swipe */
+
+    .carrusel-arco-card-contenido {
+        padding: 1.4rem;
+    }
+
+    .carrusel-arco-card-titulo {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-arco-escena {
+        min-height: 400px;
+    }
+
+    .carrusel-arco-pista {
+        width: 220px;
+        height: 320px;
+    }
+
+    .carrusel-arco-card {
+        width: 220px;
+        height: 320px;
     }
 }
 

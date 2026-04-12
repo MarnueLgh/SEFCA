@@ -99,7 +99,6 @@
                      ========================================== -->
                 <div class="eventos-grid" id="eventos-grid">
 
-
                     <!-- ========== Aulas dignas ========== -->
                     <article class="evento-card" data-tipo="proyecto" data-mes="7" data-anio="2025">
                         <div class="evento-card-img">
@@ -314,6 +313,10 @@
                     </article>
 
                 </div>
+
+                <!-- Barra de paginación -->
+                <nav class="paginacion" id="paginacion" aria-label="Paginación de eventos"></nav>
+
             </div>
         </div><!-- /.galeria-wrapper -->
 
@@ -330,70 +333,189 @@
     <?php require_once("includes/scripts.php"); ?>
 
     <!-- ==========================================
-         SCRIPT DE FILTRADO (Pill buttons)
+         SCRIPT DE FILTRADO + PAGINACIÓN
          ========================================== -->
     
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var gruposPills = document.querySelectorAll('.filtro-pills');
-        var btnLimpiar  = document.getElementById('filtro-limpiar');
+        var gruposPills  = document.querySelectorAll('.filtro-pills');
+        var btnLimpiar   = document.getElementById('filtro-limpiar');
         var mensajeVacio = document.getElementById('filtro-vacio');
-        var tarjetas    = document.querySelectorAll('#eventos-grid .evento-card');
+        var tarjetas     = document.querySelectorAll('#eventos-grid .evento-card');
+        var navPaginacion = document.getElementById('paginacion');
+
+        var POR_PAGINA = 5;
+        var paginaActual = 1;
 
         /* Estado actual de cada filtro */
         var filtrosActivos = { tipo: 'todos', mes: 'todos', anio: 'todos' };
 
         /* Escuchar clics en cada grupo de pills */
         gruposPills.forEach(function (grupo) {
-            var nombreFiltro = grupo.dataset.filter;     /* tipo | mes | anio */
+            var nombreFiltro = grupo.dataset.filter;
             var botones = grupo.querySelectorAll('.boton-sm-filtro');
 
             botones.forEach(function (btn) {
                 btn.addEventListener('click', function () {
-                    /* Activar solo el botón clicado en este grupo */
                     botones.forEach(function (b) { b.classList.remove('activo'); });
                     btn.classList.add('activo');
-
-                    /* Actualizar estado */
                     filtrosActivos[nombreFiltro] = btn.dataset.value;
-                    filtrar();
+                    paginaActual = 1;
+                    filtrarYPaginar();
                 });
             });
         });
 
-        /* Función de filtrado */
-        function filtrar() {
-            var visibles = 0;
-
+        /* Obtener tarjetas que coinciden con los filtros activos */
+        function obtenerFiltradas() {
+            var resultado = [];
             tarjetas.forEach(function (tarjeta) {
                 var coincideTipo = (filtrosActivos.tipo === 'todos' || tarjeta.dataset.tipo === filtrosActivos.tipo);
                 var coincideMes  = (filtrosActivos.mes  === 'todos' || tarjeta.dataset.mes  === filtrosActivos.mes);
                 var coincideAnio = (filtrosActivos.anio === 'todos' || tarjeta.dataset.anio === filtrosActivos.anio);
-
                 if (coincideTipo && coincideMes && coincideAnio) {
-                    tarjeta.style.display = '';
-                    visibles++;
+                    resultado.push(tarjeta);
+                }
+            });
+            return resultado;
+        }
+
+        /* Filtrar + paginar */
+        function filtrarYPaginar() {
+            var filtradas = obtenerFiltradas();
+            var totalPaginas = Math.ceil(filtradas.length / POR_PAGINA) || 1;
+
+            /* Asegurar que la página actual sea válida */
+            if (paginaActual > totalPaginas) paginaActual = totalPaginas;
+            if (paginaActual < 1) paginaActual = 1;
+
+            var inicio = (paginaActual - 1) * POR_PAGINA;
+            var fin    = inicio + POR_PAGINA;
+
+            /* Ocultar todas, luego mostrar solo las de la página actual */
+            tarjetas.forEach(function (t) { t.style.display = 'none'; });
+            filtradas.forEach(function (tarjeta, i) {
+                tarjeta.style.display = (i >= inicio && i < fin) ? '' : 'none';
+            });
+
+            /* Mensaje vacío */
+            mensajeVacio.style.display = (filtradas.length === 0) ? 'block' : 'none';
+
+            /* Renderizar paginación */
+            renderPaginacion(totalPaginas, filtradas.length);
+        }
+
+        /* Renderizar barra de paginación */
+        function renderPaginacion(totalPaginas, totalItems) {
+            navPaginacion.innerHTML = '';
+
+            /* No mostrar paginación si hay 1 página o menos */
+            if (totalPaginas <= 1) return;
+
+            /* Indicador de resultados */
+            var info = document.createElement('span');
+            info.className = 'paginacion-info';
+            var inicio = (paginaActual - 1) * POR_PAGINA + 1;
+            var fin = Math.min(paginaActual * POR_PAGINA, totalItems);
+            info.textContent = inicio + '–' + fin + ' de ' + totalItems;
+            navPaginacion.appendChild(info);
+
+            /* Contenedor de botones */
+            var contenedor = document.createElement('div');
+            contenedor.className = 'paginacion-botones';
+
+            /* Botón anterior */
+            var btnPrev = document.createElement('button');
+            btnPrev.className = 'paginacion-btn paginacion-flecha';
+            btnPrev.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            btnPrev.disabled = (paginaActual === 1);
+            btnPrev.addEventListener('click', function () {
+                if (paginaActual > 1) {
+                    paginaActual--;
+                    filtrarYPaginar();
+                    scrollAlGrid();
+                }
+            });
+            contenedor.appendChild(btnPrev);
+
+            /* Botones de página */
+            var paginas = calcularRangoPaginas(paginaActual, totalPaginas);
+            paginas.forEach(function (p) {
+                if (p === '...') {
+                    var puntos = document.createElement('span');
+                    puntos.className = 'paginacion-puntos';
+                    puntos.textContent = '…';
+                    contenedor.appendChild(puntos);
                 } else {
-                    tarjeta.style.display = 'none';
+                    var btn = document.createElement('button');
+                    btn.className = 'paginacion-btn' + (p === paginaActual ? ' paginacion-activa' : '');
+                    btn.textContent = p;
+                    btn.addEventListener('click', function () {
+                        paginaActual = p;
+                        filtrarYPaginar();
+                        scrollAlGrid();
+                    });
+                    contenedor.appendChild(btn);
                 }
             });
 
-            mensajeVacio.style.display = (visibles === 0) ? 'block' : 'none';
+            /* Botón siguiente */
+            var btnNext = document.createElement('button');
+            btnNext.className = 'paginacion-btn paginacion-flecha';
+            btnNext.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            btnNext.disabled = (paginaActual === totalPaginas);
+            btnNext.addEventListener('click', function () {
+                if (paginaActual < totalPaginas) {
+                    paginaActual++;
+                    filtrarYPaginar();
+                    scrollAlGrid();
+                }
+            });
+            contenedor.appendChild(btnNext);
+
+            navPaginacion.appendChild(contenedor);
         }
 
-        /* Botón limpiar: resetear todos los filtros */
+        /* Calcular el rango de páginas a mostrar (con elipsis) */
+        function calcularRangoPaginas(actual, total) {
+            if (total <= 5) {
+                var arr = [];
+                for (var i = 1; i <= total; i++) arr.push(i);
+                return arr;
+            }
+            var paginas = [1];
+            if (actual > 3) paginas.push('...');
+            var inicio = Math.max(2, actual - 1);
+            var fin = Math.min(total - 1, actual + 1);
+            for (var j = inicio; j <= fin; j++) paginas.push(j);
+            if (actual < total - 2) paginas.push('...');
+            paginas.push(total);
+            return paginas;
+        }
+
+        /* Scroll suave al inicio del grid al cambiar de página */
+        function scrollAlGrid() {
+            var grid = document.getElementById('eventos-grid');
+            var offset = grid.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+
+        /* Botón limpiar: resetear filtros y paginación */
         btnLimpiar.addEventListener('click', function () {
             filtrosActivos = { tipo: 'todos', mes: 'todos', anio: 'todos' };
+            paginaActual = 1;
 
             gruposPills.forEach(function (grupo) {
                 var botones = grupo.querySelectorAll('.boton-sm-filtro');
                 botones.forEach(function (b) { b.classList.remove('activo'); });
-                /* Activar el primer botón (Todos) */
                 botones[0].classList.add('activo');
             });
 
-            filtrar();
+            filtrarYPaginar();
         });
+
+        /* Inicializar */
+        filtrarYPaginar();
     });
     </script>
 </body>
