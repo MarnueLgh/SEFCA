@@ -22,7 +22,6 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Inicio</a>
                 <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
-                <a href="carta_estrategica.php" class="nav-item nav-link">Carta estratégica</a>
                 <a href="historico.php" class="nav-item nav-link">Histórico</a>
             </div>
         </div>

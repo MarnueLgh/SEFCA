@@ -16,52 +16,57 @@
             <div class="carrusel-arco-pista" id="carrusel-arco-pista">
 
                 <!-- Card 1 -->
-                <a href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank" class="carrusel-arco-card">
-                    <div class="carrusel-arco-card-fondo" style="background-image: url('img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg')"></div>
+                <a href="docs/resumen_aulas.pdf" target="_blank" class="carrusel-arco-card">
+                    <div class="carrusel-arco-card-imagen" style="background-image: url('img/fca/aulas_proyecto.jpg')"></div>
                     <div class="carrusel-arco-card-contenido">
-                        <span class="carrusel-arco-card-tag">Conferencia</span>
-                        <h3 class="carrusel-arco-card-titulo">Cuarto ciclo de conferencias magistrales</h3>
-                        <span class="carrusel-arco-card-enlace">Ver más <i class="fas fa-arrow-right"></i></span>
+                        <h3 class="carrusel-arco-card-titulo">Aulas dignas de la FCA</h3>
+                        <div class="carrusel-arco-card-footer">
+                            <span class="carrusel-arco-card-boton">Ver más</span>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Card 2 -->
                 <a href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" class="carrusel-arco-card">
-                    <div class="carrusel-arco-card-fondo" style="background-image: url('img/concurso_ensayo.jpg')"></div>
+                    <div class="carrusel-arco-card-imagen" style="background-image: url('img/concurso_ensayo.jpg')"></div>
                     <div class="carrusel-arco-card-contenido">
-                        <span class="carrusel-arco-card-tag">Convocatoria</span>
                         <h3 class="carrusel-arco-card-titulo">Concurso de Ensayo SEFCA 2025</h3>
-                        <span class="carrusel-arco-card-enlace">Ver más <i class="fas fa-arrow-right"></i></span>
+                        <div class="carrusel-arco-card-footer">
+                            <span class="carrusel-arco-card-boton">Ver más</span>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Card 3 -->
                 <a href="evento.php?evento=alfredo_helu" class="carrusel-arco-card">
-                    <div class="carrusel-arco-card-fondo" style="background-image: url('img/250324_Visita_de_Alfredo_Harp_Helu.jpg')"></div>
+                    <div class="carrusel-arco-card-imagen" style="background-image: url('img/250324_Visita_de_Alfredo_Harp_Helu.jpg')"></div>
                     <div class="carrusel-arco-card-contenido">
-                        <span class="carrusel-arco-card-tag">Evento</span>
                         <h3 class="carrusel-arco-card-titulo">Visita de Alfredo Harp Helú</h3>
-                        <span class="carrusel-arco-card-enlace">Ver galería <i class="fas fa-arrow-right"></i></span>
+                        <div class="carrusel-arco-card-footer">
+                            <span class="carrusel-arco-card-boton">Ver galería</span>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Card 4 -->
                 <a href="docs/toma_protesta_2024-2026.pdf" target="_blank" class="carrusel-arco-card">
-                    <div class="carrusel-arco-card-fondo" style="background-image: url('img/toma_protesta_2024.jpg')"></div>
+                    <div class="carrusel-arco-card-imagen" style="background-image: url('img/toma_protesta_2024.jpg')"></div>
                     <div class="carrusel-arco-card-contenido">
-                        <span class="carrusel-arco-card-tag">Evento</span>
                         <h3 class="carrusel-arco-card-titulo">Toma de protesta 2024-2026</h3>
-                        <span class="carrusel-arco-card-enlace">Ver más <i class="fas fa-arrow-right"></i></span>
+                        <div class="carrusel-arco-card-footer">
+                            <span class="carrusel-arco-card-boton">Ver más</span>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Card 5 -->
                 <a href="docs/informe_actividades.pdf" target="_blank" class="carrusel-arco-card">
-                    <div class="carrusel-arco-card-fondo" style="background-image: url('img/informe_actividades.jpg')"></div>
+                    <div class="carrusel-arco-card-imagen" style="background-image: url('img/informe_actividades.jpg')"></div>
                     <div class="carrusel-arco-card-contenido">
-                        <span class="carrusel-arco-card-tag">Evento</span>
-                        <h3 class="carrusel-arco-card-titulo">Informe de actividades 2022 – 2023</h3>
-                        <span class="carrusel-arco-card-enlace">Ver más <i class="fas fa-arrow-right"></i></span>
+                        <h3 class="carrusel-arco-card-titulo">Informe de actividades 2022 - 2023</h3>
+                        <div class="carrusel-arco-card-footer">
+                            <span class="carrusel-arco-card-boton">Ver más</span>
+                        </div>
                     </div>
                 </a>
 

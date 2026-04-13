@@ -1554,7 +1554,6 @@ footer {
     letter-spacing: 1.5px;
     color: var(--dorado-unam);
     font-weight: 600;
-    margin-bottom: 0.5rem;
 }
 
 .evento-card-titulo {
@@ -1747,16 +1746,17 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 520px;
+    min-height: 580px;
     position: relative;
-    overflow: visible;
-    padding: 2rem 0;
+    overflow: hidden;
+    padding: 2rem 1rem;
+    margin: 0;
 }
 
 .carrusel-arco-pista {
     position: relative;
-    width: 300px;
-    height: 420px;
+    width: 340px;
+    height: 470px;
     transform-style: preserve-3d;
 }
 
@@ -1765,126 +1765,118 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 420px;
-    border-radius: 20px;
+    width: 340px;
+    height: 470px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     cursor: pointer;
     transform-origin: bottom center;
     transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 opacity 0.7s ease,
-                filter 0.7s ease;
+                filter 0.7s ease,
+                box-shadow 0.4s ease;
     will-change: transform, opacity, filter;
 }
 
-/* Imagen de fondo */
-.carrusel-arco-card-fondo {
-    position: absolute;
-    inset: 0;
+/* Imagen superior */
+.carrusel-arco-card-imagen {
+    width: 100%;
+    height: 50%;
     background-size: cover;
     background-position: center;
-    transition: transform 0.5s ease;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 0;
 }
 
-.carrusel-arco-card::before {
+/* Duotone subtle overlay */
+.carrusel-arco-card-imagen::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(17, 47, 75, 0.92) 0%,
-        rgba(17, 47, 75, 0.4) 45%,
-        rgba(17, 47, 75, 0.05) 100%
-    );
-    z-index: 1;
-    transition: background 0.4s ease;
-    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(82, 102, 237, 0.35), rgba(182, 255, 100, 0.35));
+    mix-blend-mode: multiply;
+    transition: opacity 0.4s ease;
 }
 
-/* Contenido sobre el overlay */
+/* Contenido */
 .carrusel-arco-card-contenido {
-    position: relative;
-    z-index: 2;
-    padding: 1.8rem;
+    width: 100%;
+    height: 50%;
+    padding: 1.8rem 1.8rem 1.5rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.carrusel-arco-card-tag {
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    background: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #fff;
-    padding: 5px 14px;
-    border-radius: 50px;
-    margin-bottom: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    justify-content: space-between;
+    background-color: #ffffff;
+    z-index: 2;
 }
 
 .carrusel-arco-card-titulo {
     font-family: var(--carta-serif);
-    font-size: 1.3rem;
-    color: #fff;
-    margin: 0 0 0.8rem 0;
-    line-height: 1.35;
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    margin: 0;
+    line-height: 1.25;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-align: left;
+    font-weight: 500;
 }
 
-.carrusel-arco-card-enlace {
+.carrusel-arco-card-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.carrusel-arco-card-boton {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 0.82rem;
+    justify-content: center;
+    padding: 0;
+    font-family: var(--carta-sans);
+    font-size: 0.9rem;
     font-weight: 600;
-    color: var(--dorado-unam);
-    text-decoration: none;
-    transition: gap 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s, gap 0.3s ease;
-}
-
-.carrusel-arco-card-enlace i {
-    font-size: 0.7rem;
-    transition: transform 0.3s ease;
+    color: #1a1a1a;
+    background: transparent;
+    border: none;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Card activa (centro) */
 .carrusel-arco-card.arco-activa {
     z-index: 10;
     filter: none;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
-.carrusel-arco-card.arco-activa .carrusel-arco-card-enlace {
-    opacity: 1;
-    transform: translateY(0);
+.carrusel-arco-card.arco-activa:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
 }
 
-.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-fondo {
-    transform: scale(1.06);
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-imagen {
+    transform: scale(1.05);
 }
 
-.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-enlace {
-    gap: 10px;
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-imagen::after {
+    opacity: 0; /* remove overlay on hover */
 }
 
-.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-enlace i {
-    transform: translateX(3px);
+.carrusel-arco-card.arco-activa:hover .carrusel-arco-card-boton {
+    color: var(--azul_unam);
+    transform: translateX(-4px);
 }
+
+
 
 /* Cards no activas */
 .carrusel-arco-card:not(.arco-activa) {
@@ -1954,45 +1946,112 @@ footer {
 }
 
 /* ------- Responsive ------- */
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
     .carrusel-arco-escena {
-        min-height: 440px;
+        min-height: 640px;
+        perspective: 1400px;
     }
 
     .carrusel-arco-pista {
-        width: 250px;
-        height: 360px;
+        width: 370px;
+        height: 510px;
     }
 
     .carrusel-arco-card {
-        width: 250px;
-        height: 360px;
-    }
-
-    .carrusel-arco-card-contenido {
-        padding: 1.4rem;
+        width: 370px;
+        height: 510px;
     }
 
     .carrusel-arco-card-titulo {
-        font-size: 1.1rem;
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carrusel-arco-escena {
+        min-height: 480px;
+    }
+
+    .carrusel-arco-pista {
+        width: 280px;
+        height: 400px;
+    }
+
+    .carrusel-arco-card {
+        width: 280px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrusel-arco-escena {
+        min-height: 420px;
+    }
+
+    .carrusel-arco-pista {
+        width: 240px;
+        height: 345px;
+    }
+
+    .carrusel-arco-card {
+        width: 240px;
+        height: 345px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    }
+
+    .carrusel-arco-card-contenido {
+        padding: 1.2rem 1.2rem 1rem;
+    }
+
+    .carrusel-arco-card-titulo {
+        font-size: 1.15rem;
+    }
+
+    .carrusel-arco-card-boton {
+        font-size: 0.82rem;
+        padding: 0;
     }
 }
 
 @media (max-width: 480px) {
     .carrusel-arco-escena {
-        min-height: 400px;
+        min-height: 370px;
+        padding: 1.5rem 0.5rem;
     }
 
     .carrusel-arco-pista {
-        width: 220px;
-        height: 320px;
+        width: 200px;
+        height: 300px;
     }
 
     .carrusel-arco-card {
-        width: 220px;
-        height: 320px;
+        width: 200px;
+        height: 300px;
+        border-radius: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .carrusel-arco-card-contenido {
+        padding: 1rem 1rem 0.8rem;
+    }
+
+    .carrusel-arco-card-titulo {
+        font-size: 1rem;
+        -webkit-line-clamp: 3;
+    }
+
+    .carrusel-arco-card-boton {
+        font-size: 0.78rem;
+        padding: 0;
+    }
+
+    .carrusel-arco-flecha {
+        width: 38px;
+        height: 38px;
+        font-size: 0.75rem;
     }
 }
+
 
 /* =============================================
    GALERÍA INDIVIDUAL

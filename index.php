@@ -20,11 +20,14 @@
     <!-- Hero -->
     <?php include("includes/hero_index.php"); ?>
 
+    <!-- Carta estratégica -->
+    <?php include("includes/carta_estrategica.php"); ?>
+
     <!-- Cita -->
-    <?php include("includes/cita.php"); ?>
+    <?php //include("includes/cita.php"); ?>
 
     <!-- Call to action -->
-    <?php include("includes/call_to_action.php"); ?>
+    <?php //include("includes/call_to_action.php"); ?>
 
     <!-- Carrusel de eventos recientes -->
     <?php include("includes/carrusel.php"); ?>

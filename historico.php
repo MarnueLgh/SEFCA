@@ -318,7 +318,8 @@
                 <nav class="paginacion" id="paginacion" aria-label="Paginación de eventos"></nav>
 
             </div>
-        </div><!-- /.galeria-wrapper -->
+        </div>
+        <!-- /.galeria-wrapper -->
 
     </div><!-- /.galeria-layout -->
 
