@@ -5,8 +5,8 @@
     
 <div class="row mb-5">
     <div class="col-12 text-center">
-        <h2 class="display-6" style="color: var(--azul_unam); font-family: 'DM Serif Display', serif;">Enlaces Relacionados</h2>
-        <p class="text-muted">Conoce más sobre la historia y visión de SEFCA a través de estos videos.</p>
+        <h2 class="display-6" style="color: var(--azul_unam); font-family: 'DM Serif Display', serif;">Entrevistas</h2>
+        <p class="text-muted">Conoce más sobre la historia y visión de SEFCA a través de estas entrevistas.</p>
     </div>
 </div>
 
