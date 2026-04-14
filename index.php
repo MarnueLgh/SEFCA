@@ -26,9 +26,6 @@
     <!-- Cita -->
     <?php //include("includes/cita.php"); ?>
 
-    <!-- Call to action -->
-    <?php //include("includes/call_to_action.php"); ?>
-
     <!-- Carrusel de eventos recientes -->
     <?php include("includes/carrusel.php"); ?>
 
