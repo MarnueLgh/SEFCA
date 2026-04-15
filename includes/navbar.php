@@ -1,5 +1,5 @@
 <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-lg-5">
 
         <!-- Logos: UNAM → FCA → SEFCA -->
         <div class="navbar-logos">
@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Inicio</a>
-                <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
+                <a href="nosotros.php" class="nav-item nav-link">Conócenos</a>
                 <a href="eventos.php" class="nav-item nav-link">Eventos</a>
                 <a href="proyectos.php" class="nav-item nav-link">Proyectos</a>
             </div>

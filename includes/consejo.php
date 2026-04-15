@@ -181,7 +181,7 @@
                 <img src="img/30_aniversario/consejo_completo_30.jpg" alt="Consejo Directivo SEFCA" class="consejo_img">
                 <div class="consejo-semblanzas">
                     <span class="consejo-semblanzas-titulo">Resumen de Semblanzas</span>
-                    <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" class="consejo-semblanzas-btn">
+                    <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" rel="noopener noreferrer" class="consejo-semblanzas-btn">
                         Abrir PDF <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>

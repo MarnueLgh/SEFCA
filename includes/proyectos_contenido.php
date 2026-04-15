@@ -45,7 +45,7 @@ $proyectos = [
                     <p class="proyecto-split-desc"><?= $p['descripcion'] ?></p>
 
                     <?php if (!empty($p['enlace']) && $p['enlace'] !== '#'): ?>
-                        <a href="<?= htmlspecialchars($p['enlace']) ?>" class="boton-sm">
+                        <a href="<?= htmlspecialchars($p['enlace']) ?>" class="boton-sm" target="_blank" rel="noopener noreferrer">
                             <?= htmlspecialchars($p['enlace_texto']) ?>
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>

@@ -9,9 +9,8 @@
     <div class="hero_cobertura"></div>
     <div class="hero_contenido">
         <div class="container">
-            <p class="hero_pretitulo">SEFCA UNAM</p>
             <h1 class="hero_titulo">Sociedad de Egresados<br>de la FCA</h1>
-            <a href="docs/afiliate_v2.pdf" target="_blank" class="hero_btn">¡Afíliate!</a>
+            <a href="docs/afiliate_v2.pdf" target="_blank" rel="noopener noreferrer" class="hero_btn">¡Afíliate!</a>
         </div>
     </div>
     <div class="hero_indicador_scroll">

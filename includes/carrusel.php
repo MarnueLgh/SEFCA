@@ -27,7 +27,7 @@
             <div class="carrusel-pista" id="carrusel-pista">
 
                 <!-- Card 1 -->
-                <a href="docs/resumen_aulas.pdf" target="_blank" class="carrusel-card">
+                <a href="docs/resumen_aulas.pdf" target="_blank" rel="noopener noreferrer" class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Aulas dignas de la FCA</h3>
                         <span class="carrusel-card-arrow">Ver más</span>
@@ -36,7 +36,7 @@
                 </a>
 
                 <!-- Card 2 -->
-                <a href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" class="carrusel-card">
+                <a href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer"class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Concurso de Ensayo SEFCA 2025</h3>
                         <span class="carrusel-card-arrow">Ver más</span>
@@ -54,7 +54,7 @@
                 </a>
 
                 <!-- Card 4 -->
-                <a href="docs/toma_protesta_2024-2026.pdf" target="_blank" class="carrusel-card">
+                <a href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer" class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Toma de protesta 2024-2026</h3>
                         <span class="carrusel-card-arrow">Ver más</span>
@@ -63,7 +63,7 @@
                 </a>
 
                 <!-- Card 5 -->
-                <a href="docs/informe_actividades.pdf" target="_blank" class="carrusel-card">
+                <a href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer"class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Informe de actividades 2022 - 2023</h3>
                         <span class="carrusel-card-arrow">Ver más</span>

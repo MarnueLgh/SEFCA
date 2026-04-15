@@ -27,7 +27,7 @@
 
     <!-- ENLACE 1 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/EKT3XU1IW5Q?si=JZuTA5O95GbwRkkG" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/EKT3XU1IW5Q?si=JZuTA5O95GbwRkkG" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -47,7 +47,7 @@
 
     <!-- ENLACE 2 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/sbFi8vZTgXY?si=8tZzBsgipxRfUdaU" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/sbFi8vZTgXY?si=8tZzBsgipxRfUdaU" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -66,7 +66,7 @@
 
     <!-- ENLACE 3 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/SZlp8znMxzs?si=O5_SFya7HVQ7N7qK" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/SZlp8znMxzs?si=O5_SFya7HVQ7N7qK" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -85,7 +85,7 @@
 
     <!-- ENLACE 4 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -104,7 +104,7 @@
 
     <!-- ENLACE 5 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/sstW5kG18ko?si=17a8AxQW6O_MB27i" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/sstW5kG18ko?si=17a8AxQW6O_MB27i" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -123,7 +123,7 @@
 
     <!-- ENLACE 6 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/aP2MgWw6gAg?si=vP-mGNW11bWiu-y3" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/aP2MgWw6gAg?si=vP-mGNW11bWiu-y3" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>
@@ -142,7 +142,7 @@
 
     <!-- ENLACE 7 -->
     <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/cVdH-aO-OuM?si=z0-W82tBotL23I9g" target="_blank" class="link-card text-decoration-none">
+        <a href="https://youtu.be/cVdH-aO-OuM?si=z0-W82tBotL23I9g" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
             </div>

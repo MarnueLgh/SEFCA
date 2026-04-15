@@ -18,7 +18,7 @@
         <div class="bento-grid">
             
             <!-- Bloque Izquierdo: Carta Acreditación -->
-            <a href="img/carta_acreditacion.jpg" target="_blank" class="bento-card bento-card-left"></a>
+            <a href="img/carta_acreditacion.jpg" target="_blank" rel="noopener noreferrer" class="bento-card bento-card-left"></a>
 
             <!-- Bloque Derecho: Mensajes (Stack) -->
             <div class="bento-stack">
@@ -33,7 +33,7 @@
                         <p class="bento-fila-texto">
                             Mensaje oficial del presidente de la SEFCA. Compartiendo la visión y objetivos de nuestra sociedad para impulsar el desarrollo profesional de nuestros agremiados.
                         </p>
-                        <a href="docs/carta_presidente_v3.pdf" class="bento-fila-enlace" target="_blank">Ver más <i class="fas fa-arrow-right"></i></a>
+                        <a href="docs/carta_presidente_v3.pdf" class="bento-fila-enlace" target="_blank" rel="noopener noreferrer">Ver más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                         <p class="bento-fila-texto">
                             Mensaje oficial del presidente honorario de la SEFCA, dirigido a toda la comunidad de egresados de la FCA. Su liderazgo y experiencia nos guían hacia un futuro consolidado.
                         </p>
-                        <a href="docs/mensaje_presidente.pdf" class="bento-fila-enlace" target="_blank">Ver más <i class="fas fa-arrow-right"></i></a>
+                        <a href="docs/mensaje_presidente.pdf" class="bento-fila-enlace" target="_blank" rel="noopener noreferrer">Ver más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 

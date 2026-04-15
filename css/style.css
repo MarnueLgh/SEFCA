@@ -218,7 +218,7 @@ h6,
 }
 
 .navbar-logo-fca {
-    height: 60px;
+    height: 70px;
     filter: brightness(0) invert(1);
 }
 
@@ -236,10 +236,10 @@ h6,
 }
 
 .navbar .navbar-nav .nav-link {
-    padding: 35px 15px;
+    padding: 40px 15px;
     color: #ffffff;
     outline: none;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
@@ -823,16 +823,6 @@ footer {
     color: #fff;
 }
 
-.hero_pretitulo {
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--dorado-unam);
-    margin-bottom: 1rem;
-    margin-left: 5px;
-}
-
 .hero_titulo {
     font-family: "DM Serif Display", serif;
     font-size: clamp(2.8rem, 6vw, 5rem);
@@ -1221,7 +1211,8 @@ footer {
 }
 
 .bento-fila-enlace {
-    font-weight: 600; /* Texto de enlace más ancho */
+    font-weight: 600;
+    /* Texto de enlace más ancho */
     align-self: flex-end;
     margin-top: auto;
     color: #ffffff;
@@ -1328,6 +1319,7 @@ footer {
 
 /* ---- Responsive ---- */
 @media (max-width: 991.98px) {
+
     .proyecto-split,
     .proyecto-split-invertido {
         flex-direction: column;
@@ -1708,33 +1700,33 @@ footer {
 
 /* Bento responsive */
 @media (max-width: 768px) {
-  .bento-card-fila {
-    flex-direction: column;
-  }
+    .bento-card-fila {
+        flex-direction: column;
+    }
 
-  .bento-fila-img-col,
-  .bento-fila-contenido {
-    width: 100%;
-    min-height: 320px;
-  }
+    .bento-fila-img-col,
+    .bento-fila-contenido {
+        width: 100%;
+        min-height: 320px;
+    }
 
-  .bento-fila-img-col {
-    height: clamp(240px, 42vw, 320px);
-    padding-top: 1rem;
-    align-items: flex-end;
-  }
+    .bento-fila-img-col {
+        height: clamp(240px, 42vw, 320px);
+        padding-top: 1rem;
+        align-items: flex-end;
+    }
 
-  .bento-fila-img {
-    height: 100%;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    object-position: bottom center;
-  }
+    .bento-fila-img {
+        height: 100%;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: bottom center;
+    }
 
-  .bento-fila-texto {
-    text-align: center;
-  }
+    .bento-fila-texto {
+        text-align: center;
+    }
 }
 
 /* =============================================
@@ -1788,10 +1780,10 @@ footer {
 
 /* ------- Viewport + pista ------- */
 .carrusel-viewport {
-	overflow: hidden;
-	width: 100%;
-	padding-top: 12px;
-	padding-bottom: 24px;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 24px;
 }
 
 .carrusel-pista {
@@ -1815,9 +1807,9 @@ footer {
 }
 
 .carrusel-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-	z-index: 2;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
 
 /* Zona superior: título + botón flecha */
@@ -1867,12 +1859,12 @@ footer {
 
 /* Imagen: altura fija, esquinas redondeadas, recorte interno */
 .carrusel-card-img {
-	height: 260px;
-	background-size: cover;
-	background-position: center;
-	border-radius: 14px;
-	margin: auto 0.75rem 0.75rem;
-	overflow: hidden;
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    margin: auto 0.75rem 0.75rem;
+    overflow: hidden;
 }
 
 /* ------- Responsive ------- */
@@ -2574,13 +2566,15 @@ footer {
     margin-bottom: 1.5rem;
     font-family: var(--carta-serif, 'Playfair Display', serif);
     line-height: 1.1;
-    color: var(--azul_unam); /* PRUEBA */
+    color: var(--azul_unam);
+    /* PRUEBA */
 }
 
 .cta-description {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: var(--azul_unam); /* PRUEBA */
+    color: var(--azul_unam);
+    /* PRUEBA */
     font-weight: 300;
     text-align: justify;
 }
@@ -2614,7 +2608,7 @@ footer {
     }
 
     .navbar-logo-fca {
-        height: 32px;
+        height: 45px;
     }
 
     .navbar-logo-sefca {
@@ -2833,6 +2827,7 @@ footer {
     .cta-image-wrapper {
         height: 350px;
     }
+
     .cta-right-col {
         margin-top: 2rem;
     }
@@ -2846,7 +2841,8 @@ footer {
 
 /* == Seccion: CTA Afiliación (Fondo blanco) ============================ */
 .afiliacion-cta {
-    background-color: #fbfbfb; /* Almost white matching reference */
+    background-color: #fbfbfb;
+    /* Almost white matching reference */
     padding: 7rem 1.5rem;
     position: relative;
     overflow: hidden;
@@ -2901,7 +2897,8 @@ footer {
 
 .cta-stats-col {
     padding-left: 2rem;
-    border-left: 1px solid rgba(0,0,0,0.05); /* Optional subtle structural separation just in case */
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    /* Optional subtle structural separation just in case */
 }
 
 .stat-item {
@@ -2927,7 +2924,8 @@ footer {
 
 .stat-divider {
     height: 1px;
-    background-color: rgba(0, 31, 77, 0.2); /* var(--azul_unam) sub-tinte */
+    background-color: rgba(0, 31, 77, 0.2);
+    /* var(--azul_unam) sub-tinte */
     width: 60%;
     margin: 2.5rem 0;
 }
@@ -2938,7 +2936,7 @@ footer {
         margin-bottom: 4rem;
         text-align: center;
     }
-    
+
     .afiliacion-desc {
         margin: 0 auto 2.5rem;
     }
@@ -2947,11 +2945,11 @@ footer {
         padding-left: 1.5rem;
         border-left: none;
     }
-    
+
     .stat-divider {
         width: 100%;
     }
-    
+
     .afiliacion-lazo {
         width: 100%;
         bottom: 0;

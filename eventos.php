@@ -112,7 +112,7 @@
                             <p class="evento-card-desc">
                                 Convocatoria abierta para participar en el Concurso de Ensayo organizado por la SEFCA UNAM.
                             </p>
-                            <a class="evento-card-enlace" href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank">
+                            <a class="evento-card-enlace" href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -151,7 +151,7 @@
                             <p class="evento-card-desc">
                                 Ceremonia de toma de protesta de la mesa directiva de la Sociedad de Egresados de la FCA para el periodo 2024-2026.
                             </p>
-                            <a class="evento-card-enlace" href="docs/toma_protesta_2024-2026.pdf" target="_blank">
+                            <a class="evento-card-enlace" href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -170,7 +170,7 @@
                             <p class="evento-card-desc">
                                 Presentación del informe de actividades de la Sociedad de Egresados correspondiente al periodo 2022-2023.
                             </p>
-                            <a class="evento-card-enlace" href="docs/informe_actividades.pdf" target="_blank">
+                            <a class="evento-card-enlace" href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -190,7 +190,7 @@
                                 Entrega de Diploma SEFCA UNAM a Paola Reynoso, egresada distinguida, en reconocimiento a 
                                 que obtuvo el 1er lugar del Premio Internacional Universia Santander.
                             </p>
-                            <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank">
+                            <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -213,7 +213,7 @@
                             <a class="evento-card-enlace" href="evento.php?evento=30_aniversario">
                                 Ver galería <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="img/articulo_30_aniversario_gaceta.jpg" target="_blank">
+                            <a class="evento-card-enlace evento-card-enlace-secundario" href="img/articulo_30_aniversario_gaceta.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver en Gaceta UNAM <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -232,10 +232,10 @@
                             <p class="evento-card-desc">
                                 Diferentes ponentes tienen la oportunidad de compartir su experiencia y trayectoria en estas ponencias dirigidas a la comunidad FCA.
                             </p>
-                            <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank">
+                            <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=-VPJKdsu_wQ&list=PLEcS-HQTcBAoY--ot6Kw53cZOxbaTi_H8" target="_blank">
+                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=-VPJKdsu_wQ&list=PLEcS-HQTcBAoY--ot6Kw53cZOxbaTi_H8" target="_blank" rel="noopener noreferrer">
                                 Ver en Youtube <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -254,10 +254,10 @@
                             <p class="evento-card-desc">
                                 Diferentes ponentes tienen la oportunidad de compartir su experiencia y trayectoria en estas ponencias dirigidas a la comunidad FCA.
                             </p>
-                            <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank">
+                            <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=HyzQ4AvFVjM&list=PLEcS-HQTcBAqe98ozaZYXusliQhWq8Wmx" target="_blank">
+                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=HyzQ4AvFVjM&list=PLEcS-HQTcBAqe98ozaZYXusliQhWq8Wmx" target="_blank" rel="noopener noreferrer">
                                 Ver en Youtube <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -276,7 +276,7 @@
                             <p class="evento-card-desc">
                                 Presentado por el Lic. Isaac Chertorivski: Estrategia "P". Manejo de una Empresa en Crisis.
                             </p>
-                            <a class="evento-card-enlace" href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank">
+                            <a class="evento-card-enlace" href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>

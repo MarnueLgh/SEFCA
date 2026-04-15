@@ -12,8 +12,8 @@
     <?php include("includes/navbar.php"); ?>
 
     <?php
-        $heroTitulo = "Nosotros";
-        $heroTexto  = "Conoce más sobre la historia y visión de la SEFCA.";
+        $heroTitulo = "Conócenos";
+        $heroTexto  = "Conoce más sobre la historia de la SEFCA y quienes la conforman.";
         $heroClase  = "hero-pagina--carta";
         include("includes/hero-pagina.php");
     ?>
