@@ -19,7 +19,7 @@
  *     - extension: extensión de las fotos (jpg, JPG, png)      
  *     - cantidad: número de fotos en la carpeta                
  *     - inicio: número del primer archivo (ej: 1 para 01.jpg)  
- *  3. En historico.php, agrega un <article> apuntando    
+ *  3. En eventos.php, agrega un <article> apuntando    
  *     a evento.php?evento=TU_CLAVE                     
  * 
  */
@@ -66,7 +66,7 @@ $evento = isset($eventos[$clave]) ? $eventos[$clave] : null;
 
 if (!$evento) {
     // Redirigir si no existe
-    header('Location: historico.php');
+    header('Location: eventos.php');
     exit;
 }
 

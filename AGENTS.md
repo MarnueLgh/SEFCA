@@ -1,13 +1,15 @@
 # AGENTS.md
 
 ## Repo Reality
-- This repo has no README, package/composer manifest, lockfile, CI workflow, or lint/test config. Do not assume npm/composer/test commands exist.
-- The project is a server-rendered PHP site with static assets (Bootstrap + custom CSS + vanilla JS). There is no build/codegen pipeline in-repo.
+- This is a **vanilla PHP site** (server-rendered) with Bootstrap + custom CSS + vanilla JS.
+- No build pipeline, no package manager, no CI, no tests. Deploy via FTP/copy.
+- View pages via `http://localhost/sefca/` (XAMPP) or direct file access.
+- `includes/contador.txt` increments on every `index.php` view (don't commit accidental changes).
 
-## Active Surface vs Legacy Files
-- Treat `index.php`, `nosotros.php`, `carta_estrategica.php`, `historico.php`, `proyectos.php`, and `evento.php` as the active modular pages.
-- `index.php` and the many `index_*.php` / `index_prueba_*.php` files are legacy snapshots; avoid editing them unless the task explicitly targets them.
-- `includes/navbar.php` routes Inicio to `index.php`; this is the safest default homepage for ongoing work.
+## Active Pages vs Legacy
+- Active: `index.php`, `nosotros.php`, `carta_estrategica.php`, `eventos.php`, `evento.php`.
+- Legacy (avoid): `index_*.php`, `index_prueba_*.php` in root and `antiguo/` folder.
+- Navbar (`includes/navbar.php`) links to active pages only.
 
 ## Page Composition (keep this pattern)
 - Full pages stay at repo root; reusable fragments stay in `includes/`.
@@ -21,10 +23,10 @@
 - Lightbox assets are already global (`includes/head.php` + `includes/scripts.php`); avoid re-adding per-page CDN includes.
 
 ## Event/Gallery Update Flow
-- `historico.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
+- `eventos.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
 - For events with photo galleries, update both files:
   - `evento.php`: add/update the event entry in `$eventos` and image source config.
-  - `historico.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
+  - `eventos.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
 - Keep downloadable docs in `docs/` and image assets under `img/`.
 
 ## Conventions Source of Truth

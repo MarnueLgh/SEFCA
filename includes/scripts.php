@@ -17,4 +17,4 @@
 <script src="_js/custom.js"></script>
 
 <!-- Template Javascript -->
-<script src="js/main.js"></script>
+<script src="js/main.js?v=2"></script>

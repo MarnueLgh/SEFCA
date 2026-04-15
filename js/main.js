@@ -97,29 +97,87 @@
 })(jQuery);
 
 /* ==========================================
-   SCROLL CARRUSEL DE EVENTOS
+   CARRUSEL DE EVENTOS RECIENTES
    ========================================== */
-document.addEventListener('DOMContentLoaded', function() {
-    const track = document.getElementById('carrusel-eventos-track');
-    const btnPrev = document.getElementById('carrusel-prev');
-    const btnNext = document.getElementById('carrusel-next');
+(function initCarrusel() {
+    function iniciar() {
+        var pista      = document.getElementById('carrusel-pista');
+        var viewport   = document.getElementById('carrusel-viewport');
+        var btnPrev    = document.getElementById('carrusel-prev');
+        var btnNext    = document.getElementById('carrusel-next');
 
-    if (track && btnPrev && btnNext) {
-        const getCardWidth = () => {
-            const card = track.querySelector('.carrusel-eventos-card');
-            if (!card) return 0;
-            const cardWidth = card.offsetWidth;
-            const style = window.getComputedStyle(track);
-            const gap = parseFloat(style.getPropertyValue('gap')) || 0;
-            return cardWidth + gap;
-        };
+        if (!pista || !viewport || !btnPrev || !btnNext) return;
 
-        btnNext.addEventListener('click', () => {
-            track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+        var cards = pista.querySelectorAll('.carrusel-card');
+        if (!cards.length) return;
+
+        var indice        = 0;
+        var autoplayTimer = null;
+
+        /* Calcular cuántas cards caben y el ancho de desplazamiento */
+        function getDatos() {
+            var gap       = parseFloat(getComputedStyle(pista).gap) || 24;
+            var cardWidth = cards[0].offsetWidth + gap;
+            var visible   = Math.round(viewport.offsetWidth / cardWidth);
+            var maxIndice = Math.max(0, cards.length - visible);
+            return { cardWidth: cardWidth, maxIndice: maxIndice };
+        }
+
+        function posicionar() {
+            var datos = getDatos();
+            if (indice > datos.maxIndice) indice = datos.maxIndice;
+            pista.style.transform = 'translateX(-' + (indice * datos.cardWidth) + 'px)';
+        }
+
+        function siguiente() {
+            var datos = getDatos();
+            indice = indice < datos.maxIndice ? indice + 1 : 0;
+            posicionar();
+            reiniciarAutoplay();
+        }
+
+        function anterior() {
+            var datos = getDatos();
+            indice = indice > 0 ? indice - 1 : datos.maxIndice;
+            posicionar();
+            reiniciarAutoplay();
+        }
+
+        /* Autoplay */
+        function reiniciarAutoplay() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(siguiente, 5000);
+        }
+
+        /* Eventos */
+        btnNext.addEventListener('click', siguiente);
+        btnPrev.addEventListener('click', anterior);
+
+        viewport.addEventListener('mouseenter', function() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+        });
+        viewport.addEventListener('mouseleave', reiniciarAutoplay);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') anterior();
+            if (e.key === 'ArrowRight') siguiente();
         });
 
-        btnPrev.addEventListener('click', () => {
-            track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+        /* Resize */
+        var resizeTimer = null;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(posicionar, 150);
         });
+
+        /* Iniciar */
+        posicionar();
+        reiniciarAutoplay();
     }
-});
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', iniciar);
+    } else {
+        iniciar();
+    }
+})();

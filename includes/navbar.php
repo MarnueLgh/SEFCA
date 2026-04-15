@@ -22,8 +22,8 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Inicio</a>
                 <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
-                <a href="carta_estrategica.php" class="nav-item nav-link">Carta estratégica</a>
-                <a href="historico.php" class="nav-item nav-link">Histórico</a>
+                <a href="eventos.php" class="nav-item nav-link">Eventos</a>
+                <a href="proyectos.php" class="nav-item nav-link">Proyectos</a>
             </div>
         </div>
     </nav>
