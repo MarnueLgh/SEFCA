@@ -108,10 +108,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">4 de septiembre de 2025</span>
                             </div>
-                            <h2 class="evento-card-titulo">Convocatoria Concurso de Ensayo SEFCA 2025</h2>
-                            <p class="evento-card-desc">
-                                Convocatoria abierta para participar en el Concurso de Ensayo organizado por la SEFCA UNAM.
-                            </p>
+							<h2 class="evento-card-titulo">Convocatoria Concurso de Ensayo SEFCA 2025</h2>
+							<p class="evento-card-desc">
+								Convocatoria del Concurso de Ensayo SEFCA 2025 para egresados y comunidad FCA interesada en proponer ideas con impacto académico y social.
+							</p>
                             <a class="evento-card-enlace" href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -127,11 +127,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">24 de marzo de 2025</span>
                             </div>
-                            <h2 class="evento-card-titulo">Visita de Alfredo Harp Helú</h2>
-                            <p class="evento-card-desc">
-                                Visita del empresario y filántropo Alfredo Harp Helú a las instalaciones de la Facultad de 
-                                Contaduría y Administración.
-                            </p>
+							<h2 class="evento-card-titulo">Visita de Alfredo Harp Helú</h2>
+							<p class="evento-card-desc">
+								Visita de Alfredo Harp Helú a la FCA para dialogar sobre liderazgo, compromiso social y el papel de la educación en el desarrollo del país.
+							</p>
                             <a class="evento-card-enlace" href="evento.php?evento=alfredo_helu">
                                 Ver galería <i class="fas fa-arrow-right"></i>
                             </a>
@@ -147,10 +146,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">17 de octubre de 2024</span>
                             </div>
-                            <h2 class="evento-card-titulo">Toma de protesta de la mesa directiva 2024-2026</h2>
-                            <p class="evento-card-desc">
-                                Ceremonia de toma de protesta de la mesa directiva de la Sociedad de Egresados de la FCA para el periodo 2024-2026.
-                            </p>
+							<h2 class="evento-card-titulo">Toma de protesta de la mesa directiva 2024-2026</h2>
+							<p class="evento-card-desc">
+								Ceremonia de toma de protesta de la mesa directiva de la SEFCA para el periodo 2024-2026, con la participación de autoridades y egresados.
+							</p>
                             <a class="evento-card-enlace" href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -166,10 +165,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">8 de junio de 2023</span>
                             </div>
-                            <h2 class="evento-card-titulo">Informe de actividades 2022 – 2023</h2>
-                            <p class="evento-card-desc">
-                                Presentación del informe de actividades de la Sociedad de Egresados correspondiente al periodo 2022-2023.
-                            </p>
+							<h2 class="evento-card-titulo">Informe de actividades 2022 – 2023</h2>
+							<p class="evento-card-desc">
+								Informe de actividades SEFCA 2022-2023 con resultados, logros institucionales y acciones para fortalecer la vinculación con la comunidad.
+							</p>
                             <a class="evento-card-enlace" href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -185,11 +184,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">8 de junio de 2023</span>
                             </div>
-                            <h2 class="evento-card-titulo">Entrega de Reconocimiento a Paola Reynoso</h2>
-                            <p class="evento-card-desc">
-                                Entrega de Diploma SEFCA UNAM a Paola Reynoso, egresada distinguida, en reconocimiento a 
-                                que obtuvo el 1er lugar del Premio Internacional Universia Santander.
-                            </p>
+							<h2 class="evento-card-titulo">Entrega de Reconocimiento a Paola Reynoso</h2>
+							<p class="evento-card-desc">
+								Entrega de reconocimiento a Paola Reynoso por su trayectoria y por obtener el primer lugar del Premio Internacional Universia Santander.
+							</p>
                             <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -205,11 +203,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">1 de marzo de 2023</span>
                             </div>
-                            <h2 class="evento-card-titulo">30 aniversario de egresados de la SEFCA</h2>
-                            <p class="evento-card-desc">
-                                Celebración del trigésimo aniversario de la Sociedad de Egresados en el Palacio de Autonomía. 
-                                Evento conmemorativo con la presencia de autoridades y miembros distinguidos.
-                            </p>
+							<h2 class="evento-card-titulo">30 aniversario de egresados de la SEFCA</h2>
+							<p class="evento-card-desc">
+								Celebración del 30 aniversario de la SEFCA en el Palacio de Autonomía, conmemorando su historia y compromiso con la comunidad de egresados.
+							</p>
                             <a class="evento-card-enlace" href="evento.php?evento=30_aniversario">
                                 Ver galería <i class="fas fa-arrow-right"></i>
                             </a>
@@ -228,10 +225,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">5 de septiembre de 2022</span>
                             </div>
-                            <h2 class="evento-card-titulo">Primer ciclo de conferencias magistrales</h2>
-                            <p class="evento-card-desc">
-                                Diferentes ponentes tienen la oportunidad de compartir su experiencia y trayectoria en estas ponencias dirigidas a la comunidad FCA.
-                            </p>
+							<h2 class="evento-card-titulo">Primer ciclo de conferencias magistrales</h2>
+							<p class="evento-card-desc">
+								Primer ciclo de conferencias magistrales con ponentes invitados que compartieron experiencias y aprendizajes clave para la comunidad FCA.
+							</p>
                             <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -250,10 +247,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">14 de noviembre de 2022</span>
                             </div>
-                            <h2 class="evento-card-titulo">Segundo ciclo de conferencias magistrales</h2>
-                            <p class="evento-card-desc">
-                                Diferentes ponentes tienen la oportunidad de compartir su experiencia y trayectoria en estas ponencias dirigidas a la comunidad FCA.
-                            </p>
+							<h2 class="evento-card-titulo">Segundo ciclo de conferencias magistrales</h2>
+							<p class="evento-card-desc">
+								Segundo ciclo de conferencias magistrales con especialistas que abordaron tendencias, desafíos y oportunidades del entorno profesional.
+							</p>
                             <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>
@@ -272,10 +269,10 @@
                             <div class="evento-card-meta">
                                 <span class="evento-card-tag">30 de septiembre de 2025</span>
                             </div>
-                            <h2 class="evento-card-titulo">Cuarto ciclo de conferencias magistrales</h2>
-                            <p class="evento-card-desc">
-                                Presentado por el Lic. Isaac Chertorivski: Estrategia "P". Manejo de una Empresa en Crisis.
-                            </p>
+							<h2 class="evento-card-titulo">Cuarto ciclo de conferencias magistrales</h2>
+							<p class="evento-card-desc">
+								Conferencia magistral del Lic. Isaac Chertorivski sobre estrategia empresarial y decisiones clave para dirigir una empresa en tiempos de crisis.
+							</p>
                             <a class="evento-card-enlace" href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank" rel="noopener noreferrer">
                                 Ver más <i class="fas fa-arrow-right"></i>
                             </a>

@@ -12,7 +12,7 @@
     <?php include("includes/navbar.php"); ?>
 
     <?php
-        $heroTitulo = "Conócenos";
+        $heroTitulo = "Quiénes somos";
         $heroTexto  = "Conoce más sobre la historia de la SEFCA y quienes la conforman.";
         $heroClase  = "hero-pagina--carta";
         include("includes/hero-pagina.php");
