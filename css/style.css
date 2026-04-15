@@ -213,17 +213,17 @@ h6,
 }
 
 .navbar-logo-unam {
-    height: 48px;
+    height: 60px;
     filter: brightness(0) invert(1);
 }
 
 .navbar-logo-fca {
-    height: 42px;
+    height: 60px;
     filter: brightness(0) invert(1);
 }
 
 .navbar-logo-sefca {
-    height: 40px;
+    height: 50px;
 }
 
 .navbar .dropdown-toggle::after {
@@ -1216,7 +1216,7 @@ footer {
     color: #cccccc;
     line-height: 1.8;
     margin-bottom: 2rem;
-    text-align: right;
+    text-align: justify;
     font-style: italic;
 }
 
@@ -1247,66 +1247,111 @@ footer {
 }
 
 /* ==========================================
-   PROYECTOS CARD (Escalable)
+   PROYECTOS SPLIT LAYOUT (imagen + texto)
+   Archivo PHP: includes/proyectos_contenido.php
    ========================================== */
-.proyecto-card {
-    display: flex;
-    flex-direction: column;
+.proyectos-section {
     background: #ffffff;
-    border-radius: 12px;
+}
+
+.proyecto-split {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
 }
 
-.proyecto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-}
-
-.proyecto-card-img-contenedor {
-    width: 100%;
-    aspect-ratio: 16 / 10;
+/* Columna de imagen */
+.proyecto-split-img-col {
+    flex: 0 0 45%;
+    max-width: 45%;
     overflow: hidden;
 }
 
-.proyecto-card-img {
+.proyecto-split-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     transition: transform 0.6s ease;
 }
 
-.proyecto-card:hover .proyecto-card-img {
-    transform: scale(1.04);
+.proyecto-split:hover .proyecto-split-img {
+    transform: scale(1.03);
 }
 
-.proyecto-card-cuerpo {
-    background: var(--light);
-    /* Tono crema como en el diseño */
-    padding: 1.8rem 2rem;
+/* Columna de contenido */
+.proyecto-split-contenido {
+    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 3rem 3.5rem;
+    background-color: var(--carta-crema);
 }
 
-.proyecto-card-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0.75rem 2rem;
-    border: 1px solid var(--azul_unam);
-    border-radius: 50px;
+.proyecto-split-titulo {
+    font-family: 'DM Serif Display', 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 400;
     color: var(--azul_unam);
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
-.proyecto-card-btn:hover {
-    background: var(--azul_unam);
-    color: #ffffff;
+.proyecto-split-desc {
+    font-size: 0.95rem;
+    color: var(--secondary);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.proyecto-split-contenido .boton-sm {
+    margin-top: 1.8rem;
+    align-self: flex-end;
+}
+
+/* Modificador: imagen a la derecha (filas alternas) */
+.proyecto-split-invertido {
+    flex-direction: row-reverse;
+}
+
+/* Separador entre proyectos */
+.proyecto-split-divider {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin: 3rem 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 991.98px) {
+    .proyecto-split,
+    .proyecto-split-invertido {
+        flex-direction: column;
+    }
+
+    .proyecto-split-img-col {
+        flex: none;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+
+    .proyecto-split-contenido {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .proyecto-split-titulo {
+        font-size: 1.6rem;
+    }
+
+    .proyecto-split-contenido {
+        padding: 1.5rem 1.2rem;
+    }
 }
 
 
@@ -1476,26 +1521,8 @@ footer {
     letter-spacing: 1px;
     padding: 3px 10px;
     border-radius: 50px;
-}
-
-.evento-card-tag-evento {
-    background: rgba(17, 47, 75, 0.1);
-    color: var(--azul_unam);
-}
-
-.evento-card-tag-proyecto {
-    background: rgba(46, 139, 87, 0.1);
-    color: #2e8b57;
-}
-
-.evento-card-tag-convocatoria {
     background: rgba(234, 166, 54, 0.15);
     color: #b8841f;
-}
-
-.evento-card-tag-conferencia {
-    background: rgba(194, 24, 91, 0.1);
-    color: #a0154d;
 }
 
 /* ---- Grid de cards de noticias ---- */
@@ -1548,14 +1575,6 @@ footer {
     padding: 1.8rem 2rem;
 }
 
-.evento-card-fecha {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--dorado-unam);
-    font-weight: 600;
-}
-
 .evento-card-titulo {
     font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
@@ -1568,6 +1587,7 @@ footer {
 .evento-card-desc {
     font-size: 0.92rem;
     color: #545454;
+    text-align: justify;
     line-height: 1.6;
     margin-bottom: 1.2rem;
     display: -webkit-box;
@@ -1578,6 +1598,7 @@ footer {
 
 .evento-card-enlace {
     display: inline-flex;
+    justify-content: right;
     align-items: center;
     gap: 6px;
     font-size: 0.88rem;
@@ -2090,6 +2111,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2.5rem 3.5rem;
     position: relative;
 }
@@ -2135,6 +2157,7 @@ footer {
     line-height: 1.85;
     max-width: 460px;
     font-weight: 300;
+    text-align: justify;
 }
 
 /* Listas alineadas al cuerpo de sección (misma tipografía y color) */
@@ -2340,7 +2363,7 @@ footer {
 .link-card {
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background-color: var(--light);
     border-radius: 20px;
     padding: 18px 18px 18px 18px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);

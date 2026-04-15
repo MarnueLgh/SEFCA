@@ -56,15 +56,8 @@
                     Nuestros <em>Valores</em>
                 </h2>
                 <p class="carta-section-cuerpo">
-                    Los pilares que definen la identidad y el actuar de la Sociedad de
-                    Egresados de la FCA en cada una de sus iniciativas.
+                    La integridad, el compromiso, la fortaleza y el orgullo constituyen los pilares que definen la identidad y el actuar de la Sociedad de Egresados de la FCA en cada una de sus iniciativas.
                 </p>
-                <ul class="carta-section-lista">
-                        <li>Integridad</li>
-                        <li>Compromiso</li>
-                        <li>Fortaleza</li>
-                        <li>Orgullo</li>
-                </ul>
             </div>
             <div class="carta-section-visual carta-section-visual-valores">
                 <img class="carta-section-img" src="img/fca/biblioteca_fca.jpeg" alt="Biblioteca FCA">
@@ -82,15 +75,8 @@
                     Ejes <em>Estratégicos</em>
                 </h2>
                 <p class="carta-section-cuerpo">
-                    Las líneas de acción que orientan el trabajo de la SEFCA para cumplir su
-                    misión y alcanzar su visión a largo plazo.
+                    La afiliación y registro de sus miembros, la experiencia y el orgullo compartido, la vinculación con el sector productivo y la atracción de recursos para proyectos prioritarios constituyen las líneas de acción que orientan el trabajo de la SEFCA para cumplir su misión y alcanzar su visión a largo plazo.
                 </p>
-                <ul class="carta-section-lista">
-                    <li>Afiliación y Registro</li>
-                    <li>Experiencia y Orgullo a compartir</li>
-                    <li>Vinculación con el sector productivo</li>
-                    <li>Atracción de recursos para proyectos prioritarios</li>
-                </ul>
             </div>
             <div class="carta-section-visual carta-section-visual-ejes">
                 <img class="carta-section-img" src="img/fca/posgrado_fca.jpg" alt="FCA Atardecer">

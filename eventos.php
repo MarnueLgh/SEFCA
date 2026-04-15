@@ -11,7 +11,7 @@
 
     <!-- Hero -->
     <?php
-        $heroTitulo = "Histórico";
+        $heroTitulo = "Eventos";
         $heroTexto  = "Actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
         include("includes/hero-pagina.php");
     ?>
@@ -31,8 +31,8 @@
                     <i class="fas fa-trash-alt"></i> Limpiar
                 </button>
             </div>
-
-            <!-- Por tipo -->
+<!-- 
+            Por tipo 
             <div class="filtro-grupo">
                 <span class="filtro-etiqueta">Por tipo:</span>
                 <div class="filtro-pills" data-filter="tipo">
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <!-- Por mes -->
+            Por mes
             <div class="filtro-grupo">
                 <span class="filtro-etiqueta">Por mes:</span>
                 <div class="filtro-pills" data-filter="mes">
@@ -63,7 +63,7 @@
                     <button class="boton-sm-filtro" data-value="12">Dic</button>
                 </div>
             </div>
-
+ -->
             <!-- Por año -->
             <div class="filtro-grupo">
                 <span class="filtro-etiqueta">Por año:</span>
@@ -99,26 +99,6 @@
                      ========================================== -->
                 <div class="eventos-grid" id="eventos-grid">
 
-                    <!-- ========== Aulas dignas ========== -->
-                    <article class="evento-card" data-tipo="proyecto" data-mes="7" data-anio="2025">
-                        <div class="evento-card-img">
-                            <img src="img/fca/aulas_proyecto.jpg" alt="Aulas dignas de la FCA">
-                        </div>
-                        <div class="evento-card-cuerpo">
-                            <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-proyecto">Proyecto</span>
-                                <span class="evento-card-fecha">Fecha por definir</span>
-                            </div>
-                            <h2 class="evento-card-titulo">Aulas dignas de la FCA</h2>
-                            <p class="evento-card-desc">
-                                La SEFCA se complace en presentar el proyecto "Aulas dignas de la FCA", una iniciativa que busca mejorar las condiciones de los espacios académicos de nuestra Facultad.
-                            </p>
-                            <a class="evento-card-enlace" href="docs/resumen_aulas.pdf" target="_blank">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </article>
-
                     <!-- ========== Concurso de Ensayo SEFCA 2025 ========== -->
                     <article class="evento-card" data-tipo="convocatoria" data-mes="9" data-anio="2025">
                         <div class="evento-card-img">
@@ -126,8 +106,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-convocatoria">Convocatoria</span>
-                                <span class="evento-card-fecha">4 de septiembre de 2025</span>
+                                <span class="evento-card-tag">4 de septiembre de 2025</span>
                             </div>
                             <h2 class="evento-card-titulo">Convocatoria Concurso de Ensayo SEFCA 2025</h2>
                             <p class="evento-card-desc">
@@ -146,8 +125,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-evento">Evento</span>
-                                <span class="evento-card-fecha">24 de marzo de 2025</span>
+                                <span class="evento-card-tag">24 de marzo de 2025</span>
                             </div>
                             <h2 class="evento-card-titulo">Visita de Alfredo Harp Helú</h2>
                             <p class="evento-card-desc">
@@ -167,8 +145,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-evento">Evento</span>
-                                <span class="evento-card-fecha">17 de octubre de 2024</span>
+                                <span class="evento-card-tag">17 de octubre de 2024</span>
                             </div>
                             <h2 class="evento-card-titulo">Toma de protesta de la mesa directiva 2024-2026</h2>
                             <p class="evento-card-desc">
@@ -187,8 +164,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-evento">Evento</span>
-                                <span class="evento-card-fecha">8 de junio de 2023</span>
+                                <span class="evento-card-tag">8 de junio de 2023</span>
                             </div>
                             <h2 class="evento-card-titulo">Informe de actividades 2022 – 2023</h2>
                             <p class="evento-card-desc">
@@ -207,14 +183,12 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-evento">Evento</span>
-                                <span class="evento-card-fecha">8 de junio de 2023</span>
+                                <span class="evento-card-tag">8 de junio de 2023</span>
                             </div>
                             <h2 class="evento-card-titulo">Entrega de Reconocimiento a Paola Reynoso</h2>
                             <p class="evento-card-desc">
-                                En sesión conjunta del Consejo Directivo y del Consejo Consultivo, se hizo entrega de un 
-                                Diploma SEFCA UNAM a Paola Reynoso, egresada distinguida de la FCA, en reconocimiento a 
-                                que obtuvo el Primer Lugar del Premio Internacional Universia Santander 2023.
+                                Entrega de Diploma SEFCA UNAM a Paola Reynoso, egresada distinguida, en reconocimiento a 
+                                que obtuvo el 1er lugar del Premio Internacional Universia Santander.
                             </p>
                             <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank">
                                 Ver más <i class="fas fa-arrow-right"></i>
@@ -229,8 +203,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-evento">Evento</span>
-                                <span class="evento-card-fecha">1 de marzo de 2023</span>
+                                <span class="evento-card-tag">1 de marzo de 2023</span>
                             </div>
                             <h2 class="evento-card-titulo">30 aniversario de egresados de la SEFCA</h2>
                             <p class="evento-card-desc">
@@ -253,8 +226,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-conferencia">Conferencia</span>
-                                <span class="evento-card-fecha">5 de septiembre de 2022</span>
+                                <span class="evento-card-tag">5 de septiembre de 2022</span>
                             </div>
                             <h2 class="evento-card-titulo">Primer ciclo de conferencias magistrales</h2>
                             <p class="evento-card-desc">
@@ -276,8 +248,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-conferencia">Conferencia</span>
-                                <span class="evento-card-fecha">14 de noviembre de 2022</span>
+                                <span class="evento-card-tag">14 de noviembre de 2022</span>
                             </div>
                             <h2 class="evento-card-titulo">Segundo ciclo de conferencias magistrales</h2>
                             <p class="evento-card-desc">
@@ -299,8 +270,7 @@
                         </div>
                         <div class="evento-card-cuerpo">
                             <div class="evento-card-meta">
-                                <span class="evento-card-tag evento-card-tag-conferencia">Conferencia</span>
-                                <span class="evento-card-fecha">30 de septiembre de 2025</span>
+                                <span class="evento-card-tag">30 de septiembre de 2025</span>
                             </div>
                             <h2 class="evento-card-titulo">Cuarto ciclo de conferencias magistrales</h2>
                             <p class="evento-card-desc">
@@ -321,7 +291,8 @@
         </div>
         <!-- /.galeria-wrapper -->
 
-    </div><!-- /.galeria-layout -->
+    </div>
+    <!-- /.galeria-layout -->
 
     <!-- ====== Footer ====== -->
     <?php require_once("includes/footer.php"); ?>

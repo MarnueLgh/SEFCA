@@ -7,7 +7,7 @@
 - `includes/contador.txt` increments on every `index.php` view (don't commit accidental changes).
 
 ## Active Pages vs Legacy
-- Active: `index.php`, `nosotros.php`, `carta_estrategica.php`, `historico.php`, `evento.php`.
+- Active: `index.php`, `nosotros.php`, `carta_estrategica.php`, `eventos.php`, `evento.php`.
 - Legacy (avoid): `index_*.php`, `index_prueba_*.php` in root and `antiguo/` folder.
 - Navbar (`includes/navbar.php`) links to active pages only.
 
@@ -23,10 +23,10 @@
 - Lightbox assets are already global (`includes/head.php` + `includes/scripts.php`); avoid re-adding per-page CDN includes.
 
 ## Event/Gallery Update Flow
-- `historico.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
+- `eventos.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
 - For events with photo galleries, update both files:
   - `evento.php`: add/update the event entry in `$eventos` and image source config.
-  - `historico.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
+  - `eventos.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
 - Keep downloadable docs in `docs/` and image assets under `img/`.
 
 ## Conventions Source of Truth

@@ -53,9 +53,6 @@
         </div>
     </div>
 
-    <!-- Call to action -->
-    <?php include("includes/call_to_action.php"); ?>
-
     <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 
