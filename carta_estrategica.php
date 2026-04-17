@@ -2,8 +2,6 @@
 <html lang="es">
 
 <?php require_once("includes/head.php"); ?>
-<!-- Fuentes adicionales para Carta Estratégica -->
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 
 <body>
     <?php include("includes/spinner.php"); ?>
@@ -11,10 +9,10 @@
 
     <!-- Hero -->
     <?php
-        $heroTitulo = "Carta Estratégica";
-        $heroTexto  = "Principios, visión y ejes que guían el compromiso de la Sociedad de Egresados con la FCA y la UNAM.";
-        $heroClase  = "hero-pagina--carta";
-        include("includes/hero-pagina.php");
+    $heroTitulo = "Carta Estratégica";
+    $heroTexto = "Principios, visión y ejes que guían el compromiso de la Sociedad de Egresados con la FCA y la UNAM.";
+    $heroClase = "hero-pagina--carta";
+    include("includes/hero-pagina.php");
     ?>
 
     <div class="carta-main">
@@ -28,8 +26,8 @@
                     Nuestra <em>Misión</em>
                 </h2>
                 <p class="carta-section-cuerpo">
-                    Representar con fuerza y compromiso a quienes egresan de la FCA. Apoyar a nuestra 
-                    Universidad y nuestra Facultad en los temas prioritarios que se nos convoque; así como 
+                    Representar con fuerza y compromiso a quienes egresan de la FCA. Apoyar a nuestra
+                    Universidad y nuestra Facultad en los temas prioritarios que se nos convoque; así como
                     hacer sugerencias de iniciativas valiosas.
                 </p>
             </div>
@@ -49,9 +47,9 @@
                     Nuestra <em>Visión</em>
                 </h2>
                 <p class="carta-section-cuerpo">
-                    Para el término de nuestro primer periodo 2022-2024 tener afiliados 500 universitarios que 
-                    hayan aportado su cuota. Desarrollar acciones para atraer los recursos necesarios para los 
-                    proyectos en que se nos invite a participar. Compartir con egresados y todo el alumnado de la 
+                    Para el término de nuestro primer periodo 2022-2024 tener afiliados 500 universitarios que
+                    hayan aportado su cuota. Desarrollar acciones para atraer los recursos necesarios para los
+                    proyectos en que se nos invite a participar. Compartir con egresados y todo el alumnado de la
                     FCA nuestra experiencia y orgullo.
                 </p>
             </div>
@@ -75,10 +73,10 @@
                     Egresados de la FCA en cada una de sus iniciativas.
                 </p>
                 <ul class="carta-section-lista">
-                        <li>Integridad</li>
-                        <li>Compromiso</li>
-                        <li>Fortaleza</li>
-                        <li>Orgullo</li>
+                    <li>Integridad</li>
+                    <li>Compromiso</li>
+                    <li>Fortaleza</li>
+                    <li>Orgullo</li>
                 </ul>
             </div>
             <div class="carta-section-visual carta-section-visual-valores">
@@ -119,7 +117,7 @@
             <div class="carta-estatutos-inner">
                 <h2 class="carta-estatutos-titulo">Estatutos</h2>
                 <p class="carta-estatutos-desc">
-                    Consulta los estatutos vigentes de la Sociedad de Egresados de la 
+                    Consulta los estatutos vigentes de la Sociedad de Egresados de la
                     Facultad de Contaduría y Administración de la UNAM.
                 </p>
                 <a class="boton-sm" href="docs/estatutos_v2.pdf" target="_blank" rel="noopener noreferrer">

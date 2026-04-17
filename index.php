@@ -21,7 +21,7 @@
     <?php include("includes/hero_index.php"); ?>
     
     <!-- Cita -->
-    <?php //include("includes/cita.php"); ?>
+    <?php include("includes/cita.php"); ?>
 
     <!-- Carta estratégica -->
     <?php include("includes/carta_estrategica.php"); ?>

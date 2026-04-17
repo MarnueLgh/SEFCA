@@ -1,6 +1,8 @@
 /********** Template CSS **********/
 :root {
     --alto-navbar: 110px;
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-texto: 'Roboto', sans-serif;
     --dorado-unam: #EAA636;
     /* Color institucional UNAM*/
     --azul_unam: #112f4b;
@@ -9,8 +11,8 @@
     --light: #FDF5EB;
     --dark: #1a1a1a;
     /* Variables de Carta Estrategica */
-    --carta-serif: 'DM Serif Display', 'Playfair Display', serif;
-    --carta-sans: 'DM Sans', sans-serif;
+    --carta-serif: var(--fuente-titulo);
+    --carta-sans: var(--fuente-texto);
     --carta-dark: #1a1714;
     --carta-warm: #f8f3ed;
     --carta-crema: #fdf8f2;
@@ -27,6 +29,23 @@
 body {
     overflow-x: hidden;
     padding-top: var(--alto-navbar);
+    font-family: var(--fuente-texto);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--fuente-titulo);
+    font-weight: 500;
 }
 
 /* ══════════════════════════════════════════════
@@ -176,7 +195,7 @@ body {
 }
 
 .hero-pagina h1 {
-    font-family: 'DM Serif Display', 'Playfair Display', serif;
+    font-family: var(--fuente-titulo);
     font-size: clamp(2.2rem, 5.5vw, 3.6rem);
     font-weight: 400;
     margin-bottom: 0.6rem;
@@ -222,7 +241,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .py-6 {
@@ -366,6 +385,7 @@ h6,
 
 .navbar .navbar-nav .nav-link {
     padding: 40px 15px;
+    font-family: var(--fuente-texto);
     color: #ffffff;
     outline: none;
     font-weight: 400;
@@ -955,7 +975,7 @@ footer {
 }
 
 .hero_titulo {
-    font-family: "DM Serif Display", serif;
+    font-family: var(--fuente-titulo);
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 400;
     line-height: 1.05;
@@ -987,7 +1007,7 @@ footer {
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--azul_unam);
     color: var(--azul_unam);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--fuente-texto);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -1022,9 +1042,9 @@ footer {
 }
 
 .cita-section-quote {
-    font-family: "DM Serif Display", serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 400;
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.4rem, 2vw, 1.5rem);
+    font-weight: 200;
     line-height: 1.6;
     color: var(--azul_unam);
     text-align: center;
@@ -1051,7 +1071,7 @@ footer {
 .consejo_heading {
     text-align: center;
     /* Centrado a petición del usuario */
-    font-family: "DM Serif Display", serif;
+    font-family: var(--fuente-titulo);
     font-size: 2.6rem;
     font-weight: 400;
     color: var(--azul_unam);
@@ -1096,7 +1116,7 @@ footer {
 }
 
 .boton-sm {
-    font-family: "Roboto";
+    font-family: var(--fuente-texto);
 }
 
 .consejo .accordion-body {
@@ -1134,7 +1154,7 @@ footer {
 }
 
 .consejo-semblanzas-titulo {
-    font-family: "DM Serif Display", serif;
+    font-family: var(--fuente-titulo);
     font-size: 1.35rem;
     font-weight: 400;
     color: var(--azul_unam);
@@ -1416,7 +1436,7 @@ footer {
 }
 
 .proyecto-split-titulo {
-    font-family: 'DM Serif Display', 'Playfair Display', serif;
+    font-family: var(--fuente-titulo);
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 400;
     color: var(--azul_unam);
@@ -1699,9 +1719,9 @@ footer {
 }
 
 .evento-card-titulo {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fuente-titulo);
     font-size: 1.35rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #1E1916;
     margin-bottom: 0.65rem;
     line-height: 1.35;
@@ -2079,9 +2099,9 @@ footer {
 }
 
 .galeria-header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fuente-titulo);
     font-size: clamp(1.6rem, 4vw, 2.6rem);
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.4rem;
     color: var(--dorado-unam);
 }
@@ -2307,7 +2327,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 0;
     position: relative;
     overflow: hidden;
 }
@@ -2340,19 +2360,14 @@ footer {
 .carta-section-img {
     position: relative;
     z-index: 1;
-    max-width: 85%;
-    max-height: 380px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
-        0 1px 3px rgba(0, 0, 0, 0.06);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: transform 0.8s ease;
 }
 
 .carta-section-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 16px 56px rgba(0, 0, 0, 0.15),
-        0 2px 6px rgba(0, 0, 0, 0.06);
+    transform: scale(1.05);
 }
 
 /* ---- Divider entre secciones ---- */
@@ -2923,9 +2938,10 @@ footer {
     }
 
     .carta-section-visual {
-        padding: 2.5rem 1.5rem;
-        min-height: 280px;
+        padding: 0;
+        min-height: 380px;
         order: 2;
+        border-radius: 0;
     }
 
     .carta-section-img {
@@ -2944,13 +2960,14 @@ footer {
     }
 
     .carta-section-visual {
-        padding: 1.5rem 1rem;
-        min-height: 220px;
+        padding: 0;
+        min-height: 250px;
+        border-radius: 0;
     }
 
     .carta-section-img {
         max-width: 100%;
-        border-radius: 14px;
+        border-radius: 0;
     }
 
     .carta-estatutos {
