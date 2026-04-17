@@ -1,33 +1,39 @@
 # AGENTS.md
 
-## Repo Reality
-- This is a **vanilla PHP site** (server-rendered) with Bootstrap + custom CSS + vanilla JS.
-- No build pipeline, no package manager, no CI, no tests. Deploy via FTP/copy.
-- View pages via `http://localhost/sefca/` (XAMPP) or direct file access.
-- `includes/contador.txt` increments on every `index.php` view (don't commit accidental changes).
+## Repo Snapshot
+- Server-rendered PHP site (no framework) with Bootstrap, custom CSS, and vanilla JS.
+- No package manager, build pipeline, tests, lint, or CI config in this repo.
+- Run locally with XAMPP at `http://localhost/sefca/`.
 
-## Active Pages vs Legacy
-- Active: `index.php`, `nosotros.php`, `carta_estrategica.php`, `eventos.php`, `evento.php`.
-- Legacy (avoid): `index_*.php`, `index_prueba_*.php` in root and `antiguo/` folder.
-- Navbar (`includes/navbar.php`) links to active pages only.
+## Where To Work
+- Main navbar pages: `index.php`, `nosotros.php`, `eventos.php`, `proyectos.php`.
+- Additional routed pages: `evento.php?evento=<clave>` and standalone `carta_estrategica.php` (not in current navbar).
+- Reusable fragments belong in `includes/`; full pages stay in repo root.
+- `antiguo/` is legacy snapshots; avoid editing unless explicitly requested.
+- `seguimiento/SeguimientoEgresados.php` is standalone and not linked from the main site.
 
-## Page Composition (keep this pattern)
-- Full pages stay at repo root; reusable fragments stay in `includes/`.
-- Standard page wiring is: `includes/head.php` -> `includes/spinner.php` -> `includes/navbar.php` -> page content -> `includes/footer.php` -> back-to-top button -> `includes/scripts.php`.
-- Keep custom CSS in `css/style.css` (loaded after `css/bootstrap.min.css` in `includes/head.php`).
-- Keep custom JS in `js/main.js`; third-party/vendor scripts are loaded centrally from `includes/scripts.php` (from `lib/` and `_js/`).
+## Page Wiring Contract
+- Keep this page order: `includes/head.php` -> `includes/spinner.php` -> `includes/navbar.php` -> page content -> `includes/footer.php` -> back-to-top button -> `includes/scripts.php`.
+- Shared assets are centralized:
+  - CSS in `includes/head.php` (`css/bootstrap.min.css`, `css/style.css`, `css/tiny-slider.css`)
+  - JS in `includes/scripts.php` (`lib/*`, `_js/*`, then `js/main.js?v=2`)
+- Prefer editing `css/style.css` and `js/main.js`; `scss/` is not compiled inside this repo.
 
 ## High-Risk Gotchas
-- Viewing `index.php` increments `includes/contador.txt` via `includes/footer.php`; this file often changes during manual QA. Do not commit it unless intentionally updating the counter.
-- `includes/hero-pagina.php` currently renders only `$heroTitulo` and `$heroTexto`; `$heroClase` is set by some pages but not used.
-- Lightbox assets are already global (`includes/head.php` + `includes/scripts.php`); avoid re-adding per-page CDN includes.
+- `includes/footer.php` increments `includes/contador.txt` only on `index.php`; this file changes during manual QA. Do not commit accidental counter diffs.
+- Root `visitas.txt` is legacy/unreferenced; active counter storage is `includes/contador.txt`.
+- `includes/hero-pagina.php` currently renders only `$heroTitulo` and `$heroTexto`; `$heroClase` is ignored.
 
-## Event/Gallery Update Flow
-- `eventos.php` filtering depends on each card having valid `data-tipo`, `data-mes`, and `data-anio` attributes.
-- For events with photo galleries, update both files:
-  - `evento.php`: add/update the event entry in `$eventos` and image source config.
-  - `eventos.php`: add/update the `<article>` card and link it to `evento.php?evento=<clave>`.
-- Keep downloadable docs in `docs/` and image assets under `img/`.
+## Events And Galleries
+- `eventos.php` filtering/pagination depends on each card keeping valid `data-tipo`, `data-mes`, and `data-anio`.
+- For gallery-backed events, update both:
+  - `eventos.php` card with link `evento.php?evento=<clave>`
+  - `evento.php` entry in `$eventos` (either sequential `inicio/cantidad/extension` or explicit `fotos` list)
+- Home "Eventos Recientes" is a separate hardcoded list in `includes/carrusel.php`; update it too when relevant.
 
-## Conventions Source of Truth
-- Follow `skills/convenciones-desarrollo/SKILL.md` for project-specific style/naming rules when writing or editing code.
+## Duplicate Content Trap
+- Strategic-letter content exists in both `includes/carta_estrategica.php` (used by `index.php`) and `carta_estrategica.php` (standalone page).
+- If copy/content changes should match, update both files.
+
+## Conventions Source
+- Follow `skills/convenciones-desarrollo/SKILL.md` for project naming/style conventions.

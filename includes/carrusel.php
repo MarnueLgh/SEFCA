@@ -30,7 +30,7 @@
                 <a href="docs/resumen_aulas.pdf" target="_blank" rel="noopener noreferrer" class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Aulas dignas de la FCA</h3>
-                        <span class="carrusel-card-arrow">Ver más</span>
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
                     </div>
                     <div class="carrusel-card-img" style="background-image: url('img/fca/aulas_proyecto.jpg')"></div>
                 </a>
@@ -39,7 +39,7 @@
                 <a href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer"class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Concurso de Ensayo SEFCA 2025</h3>
-                        <span class="carrusel-card-arrow">Ver más</span>
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
                     </div>
                     <div class="carrusel-card-img" style="background-image: url('img/concurso_ensayo.jpg')"></div>
                 </a>
@@ -48,7 +48,7 @@
                 <a href="evento.php?evento=alfredo_helu" class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Visita de Alfredo Harp Helú</h3>
-                        <span class="carrusel-card-arrow">Ver más</span>
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
                     </div>
                     <div class="carrusel-card-img" style="background-image: url('img/250324_Visita_de_Alfredo_Harp_Helu.jpg')"></div>
                 </a>
@@ -57,7 +57,7 @@
                 <a href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer" class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Toma de protesta 2024-2026</h3>
-                        <span class="carrusel-card-arrow">Ver más</span>
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
                     </div>
                     <div class="carrusel-card-img" style="background-image: url('img/toma_protesta_2024.jpg')"></div>
                 </a>
@@ -66,7 +66,7 @@
                 <a href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer"class="carrusel-card">
                     <div class="carrusel-card-top">
                         <h3 class="carrusel-card-titulo">Informe de actividades 2022 - 2023</h3>
-                        <span class="carrusel-card-arrow">Ver más</span>
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
                     </div>
                     <div class="carrusel-card-img" style="background-image: url('img/informe_actividades.jpg')"></div>
                 </a>

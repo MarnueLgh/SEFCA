@@ -10,7 +10,7 @@
                 <img src="img/fca-unam-logo.png" alt="FCA" class="navbar-logo navbar-logo-fca">
             </a>
             <a href="index.php" class="navbar-logo-link">
-                <img src="img/logo.png" alt="SEFCA" class="navbar-logo navbar-logo-sefca">
+                <img src="img/logo_sefca.png" alt="SEFCA" class="navbar-logo navbar-logo-sefca">
             </a>
         </div>
 
@@ -21,9 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Inicio</a>
-                <a href="nosotros.php" class="nav-item nav-link">Conócenos</a>
+                <a href="nosotros.php" class="nav-item nav-link">Directiva</a>
                 <a href="eventos.php" class="nav-item nav-link">Eventos</a>
                 <a href="proyectos.php" class="nav-item nav-link">Proyectos</a>
+                <a href="voces.php" class="nav-item nav-link">Voces</a>
             </div>
         </div>
     </nav>

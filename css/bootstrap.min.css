@@ -379,6 +379,11 @@ select:disabled {
 	display: none
 }
 
+.bi-arrow-up-right-circle-fill {
+	color: #EAA636;
+	font-size: 2rem;
+}
+
 button,
 [type="button"],
 [type="reset"],

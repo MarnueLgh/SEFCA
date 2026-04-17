@@ -97,6 +97,33 @@
 })(jQuery);
 
 /* ==========================================
+   COMPENSACIÓN DE NAVBAR FIJO
+   ========================================== */
+(function compensarNavbarFijo() {
+    var selector_navbar = '.navbar.fixed-top';
+    var raiz = document.documentElement;
+    var temporizador_resize = null;
+
+    function actualizarOffsetNavbar() {
+        var navbar = document.querySelector(selector_navbar);
+        var altura = navbar ? Math.ceil(navbar.getBoundingClientRect().height) : 0;
+        raiz.style.setProperty('--alto-navbar', altura + 'px');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', actualizarOffsetNavbar);
+    } else {
+        actualizarOffsetNavbar();
+    }
+
+    window.addEventListener('load', actualizarOffsetNavbar);
+    window.addEventListener('resize', function () {
+        clearTimeout(temporizador_resize);
+        temporizador_resize = setTimeout(actualizarOffsetNavbar, 120);
+    });
+})();
+
+/* ==========================================
    CARRUSEL DE EVENTOS RECIENTES
    ========================================== */
 (function initCarrusel() {

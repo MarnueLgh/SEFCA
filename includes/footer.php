@@ -33,7 +33,7 @@
                     <p class="footer-redes-titulo">Síguenos en</p>
                     <div class="footer-redes">
                         <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="bi bi-facebook"></i>
                         </a>
                     <!--                         
                         <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="X (Twitter)">

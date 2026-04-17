@@ -19,12 +19,12 @@
 
     <!-- Hero -->
     <?php include("includes/hero_index.php"); ?>
+    
+    <!-- Cita -->
+    <?php //include("includes/cita.php"); ?>
 
     <!-- Carta estratégica -->
     <?php include("includes/carta_estrategica.php"); ?>
-
-    <!-- Cita -->
-    <?php //include("includes/cita.php"); ?>
 
     <!-- Carrusel de eventos recientes -->
     <?php include("includes/carrusel.php"); ?>
