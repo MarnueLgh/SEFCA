@@ -71,16 +71,14 @@ $cards_eventos = [
 
 <section class="carrusel-eventos section-gap">
     <div class="container-fluid px-0">
-        <div class="carrusel-marquee-container">
+        <div>
             <h2 class="carrusel-marquee-header-title text-center mb-5">Eventos Recientes</h2>
             
-            <div class="carrusel-viewport">
-                <div class="carrusel-pista">
-                    <?php
-                    // Se renderizan tres veces para el loop infinito del marquee (clonando de más para asegurar)
-                    for ($i = 0; $i < 3; $i++) {
-                        foreach ($cards_eventos as $card) {
-                            $target = strpos($card['enlace'], 'docs/') !== false ? 'target="_blank" rel="noopener noreferrer"' : '';
+            <div class="owl-carousel eventos-carousel owl-theme">
+                <?php
+                    $eventos_mostrar = array_slice($cards_eventos, 0, 8);
+                    foreach ($eventos_mostrar as $card) {
+                        $target = strpos($card['enlace'], 'docs/') !== false ? 'target="_blank" rel="noopener noreferrer"' : '';
                             // To match design "Analyse Vulnerability"
                             $btnText = $card['boton'];
                             if ($btnText === 'Analyse Event') {
@@ -95,9 +93,6 @@ $cards_eventos = [
                                     <img src="<?= $card['imagen'] ?>" alt="<?= htmlspecialchars($card['titulo']) ?>" class="carrusel-cyber-card-img">
                                 </div>
                                 <div class="carrusel-cyber-card-body">
-                                    <span class="carrusel-cyber-tag" style="color: <?= $card['tag_color'] ?>; background-color: <?= $card['tag_bg'] ?>;">
-                                        <i class="bi <?= $card['tag_icono'] ?> me-1"></i> <?= $card['tag_texto'] ?>
-                                    </span>
                                     <h3 class="carrusel-cyber-title"><?= $card['titulo'] ?></h3>
                                     <p class="carrusel-cyber-excerpt"><?= $card['excerpt'] ?></p>
                                     
@@ -111,9 +106,7 @@ $cards_eventos = [
                             </a>
                             <?php
                         }
-                    }
                     ?>
-                </div>
             </div>
         </div>
     </div>

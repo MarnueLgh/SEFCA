@@ -1,6 +1,8 @@
 <head>
     <meta charset="utf-8">
     <title>SEFCA UNAM</title>
+
+    <!-- Search EO -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta
         content="SEFCA, UNAM, Facultad de Contaduría y Administración, Egresados, Red de Egresados, Vinculación, Desarrollo Profesional, Networking, Comunidad FCA, Alumnos UNAM"

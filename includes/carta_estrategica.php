@@ -8,7 +8,7 @@
              MISIÓN — Texto izq, imagen der
              ============================ -->
     <section class="carta-section">
-        <div class="carta-section-texto">
+        <div class="carta-section-texto wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
                 Nuestra <em>Misión</em>
             </h2>
@@ -18,18 +18,18 @@
                 hacer sugerencias de iniciativas valiosas.
             </p>
         </div>
-        <div class="carta-section-visual carta-section-visual-mision">
+        <div class="carta-section-visual carta-section-visual-mision wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <img class="carta-section-img" src="img/fca/FCA_UNAM_letras.jpg" alt="FCA UNAM">
         </div>
     </section>
 
-    <div class="carta-divider"></div>
+    <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
              VISIÓN — Card izq, texto der
              ============================ -->
     <section class="carta-section carta-section-reversa">
-        <div class="carta-section-texto">
+        <div class="carta-section-texto wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
                 Nuestra <em>Visión</em>
             </h2>
@@ -40,18 +40,18 @@
                 FCA nuestra experiencia y orgullo.
             </p>
         </div>
-        <div class="carta-section-visual carta-section-visual-vision">
+        <div class="carta-section-visual carta-section-visual-vision wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <img class="carta-section-img" src="img/fca/fca_entrada.jpg" alt="Entrada FCA">
         </div>
     </section>
 
-    <div class="carta-divider"></div>
+    <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
              VALORES — Texto izq, card der
              ============================ -->
     <section class="carta-section">
-        <div class="carta-section-texto">
+        <div class="carta-section-texto wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
                 Nuestros <em>Valores</em>
             </h2>
@@ -60,18 +60,18 @@
                 y el actuar de la Sociedad de Egresados de la FCA en cada una de sus iniciativas.
             </p>
         </div>
-        <div class="carta-section-visual carta-section-visual-valores">
+        <div class="carta-section-visual carta-section-visual-valores wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <img class="carta-section-img" src="img/fca/biblioteca_fca.jpeg" alt="Biblioteca FCA">
         </div>
     </section>
 
-    <div class="carta-divider"></div>
+    <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
              EJES — Card izq, texto der
              ============================ -->
     <section class="carta-section carta-section-reversa">
-        <div class="carta-section-texto">
+        <div class="carta-section-texto wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
                 Ejes <em>Estratégicos</em>
             </h2>
@@ -81,7 +81,7 @@
                 acción que orientan el trabajo de la SEFCA para cumplir su misión y alcanzar su visión a largo plazo.
             </p>
         </div>
-        <div class="carta-section-visual carta-section-visual-ejes">
+        <div class="carta-section-visual carta-section-visual-ejes wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
             <img class="carta-section-img" src="img/fca/posgrado_fca.jpg" alt="FCA Atardecer">
         </div>
     </section>
@@ -89,7 +89,7 @@
     <!-- ============================
              ESTATUTOS
              ============================ -->
-    <section class="carta-estatutos">
+    <section class="carta-estatutos wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
         <div class="carta-estatutos-inner">
             <h2 class="carta-estatutos-titulo">Estatutos</h2>
             <p class="carta-estatutos-desc">
