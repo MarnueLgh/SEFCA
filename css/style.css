@@ -218,10 +218,6 @@ h6,
     padding-bottom: 3rem;
 }
 
-.homenajes-section {
-    background: var(--light);
-}
-
 /* Modificadores para contenedores de eventos (reemplazan inline styles) */
 .eventos-container-sin-padding-inferior {
     padding-bottom: 0;
@@ -1093,7 +1089,7 @@ footer {
    CONSEJO DIRECTIVO — SPLIT LAYOUT
    ========================================== */
 .consejo {
-    background: var(--light);
+    background: var(--carta-crema);
 }
 
 .consejo_heading {
@@ -1560,7 +1556,7 @@ footer {
 .galeria-wrapper {
     flex: 1;
     min-width: 0;
-    background: var(--light);
+    background: var(--carta-crema);
     border-radius: 24px;
     overflow: hidden;
     padding: 2rem 1.5rem;
@@ -1939,14 +1935,17 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
+    align-self: center;
     border-radius: 20px;
     padding: 12px;
     text-decoration: none;
     border: 1px solid rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    height: 100%; /* Asegura que tomen toda la altura del row */
+    height: 250px; /* Asegura que tomen toda la altura del row */
     min-height: 380px; 
+    margin: 20px auto;
+    width: 95%;
 }
 
 .carrusel-cyber-card:hover {
@@ -1960,10 +1959,10 @@ footer {
 
 .carrusel-cyber-card-img-wrap {
     width: 100%;
-    height: 140px;
-    border-radius: 6px;
+    height: 250px;
+    border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     background: #f4f4f4; /* Placeholder color */
 }
 
@@ -2256,7 +2255,7 @@ footer {
 
 .carta-section-titulo em {
     font-style: italic;
-    color: var(--carta-gold);
+    color: var(--dorado-unam);
 }
 
 /* Texto de contenido */
@@ -2349,7 +2348,7 @@ footer {
    ============================================ */
     .carta-estatutos {
         background-color: var(--carta-gold);
-        padding: 5rem 2rem;
+        padding: 3rem 2rem;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -2997,12 +2996,12 @@ footer {
 
 .afiliacion-btn {
     display: inline-block;
-    padding: 0.9rem 2.5rem;
-    border: 2px solid var(--azul_unam);
+    padding: 0.5rem 1rem;
+    border: 2px solid #ffffff;
     background: transparent;
-    color: var(--azul_unam);
+    color: #ffffff;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 200;
     letter-spacing: 1px;
     text-decoration: none;
     border-radius: 50px;
@@ -3010,9 +3009,9 @@ footer {
 }
 
 .afiliacion-btn:hover {
-    background: var(--dorado-unam);
-    border-color: var(--dorado-unam);
-    color: #fff;
+    background: #ffffff;
+    border-color: #ffffff;
+    color: var(--azul_unam);
 }
 
 .cta-stats-col {

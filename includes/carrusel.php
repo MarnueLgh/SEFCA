@@ -10,21 +10,17 @@ $cards_eventos = [
     [
         'enlace' => 'docs/resumen_aulas.pdf',
         'imagen' => 'img/fca/aulas_proyecto.jpg',
-        'tag_icono' => 'bi-building',
         'tag_color' => '#EAA636', // Dorado UNAM
         'tag_bg' => '#fdf0d9',
-        'tag_texto' => 'SEFCA • Proyecto',
         'titulo' => 'Aulas dignas de la FCA',
-        'excerpt' => 'Conoce los avances de esta gran iniciativa enfocada en modernizar las instalaciones de nuestra Facultad para beneficio de la comunidad estudiantil.',
+        'excerpt' => 'Conoce la distribución de fondos de esta gran iniciativa enfocada en modernizar las instalaciones de nuestra Facultad para beneficio de la comunidad estudiantil.',
         'boton' => 'Ver más'
     ],
     [
         'enlace' => 'docs/concurso_ensayo_SEFCA_25.pdf',
         'imagen' => 'img/concurso_ensayo.jpg',
-        'tag_icono' => 'bi-pen',
         'tag_color' => '#112f4b', // Azul UNAM
         'tag_bg' => '#e2e7ec',
-        'tag_texto' => 'Convocatoria • 2025',
         'titulo' => 'Concurso de Ensayo SEFCA 2025',
         'excerpt' => 'Participa, demuestra tus conocimientos y gana reconocimiento en esta edición de nuestro prestigioso concurso anual de ensayo.',
         'boton' => 'Ver más'
@@ -32,10 +28,8 @@ $cards_eventos = [
     [
         'enlace' => 'evento.php?evento=alfredo_helu',
         'imagen' => 'img/250324_Visita_de_Alfredo_Harp_Helu.jpg',
-        'tag_icono' => 'bi-star-fill',
         'tag_color' => '#EAA636',
         'tag_bg' => '#fdf0d9',
-        'tag_texto' => 'Visitante Distinguido',
         'titulo' => 'Visita de Alfredo Harp Helú',
         'excerpt' => 'Revive los mejores momentos del recorrido realizado en nuestras instalaciones por uno de los egresados más ilustres de la UNAM.',
         'boton' => 'Ver más'
@@ -43,10 +37,8 @@ $cards_eventos = [
     [
         'enlace' => 'docs/toma_protesta_2024-2026.pdf',
         'imagen' => 'img/toma_protesta_2024.jpg',
-        'tag_icono' => 'bi-people',
         'tag_color' => '#112f4b',
         'tag_bg' => '#e2e7ec',
-        'tag_texto' => 'Institucional • SEFCA',
         'titulo' => 'Toma de protesta 2024-2026',
         'excerpt' => 'Ceremonia oficial y toma de protesta de la nueva mesa directiva trabajando por el constante desarrollo  de los egresados de la FCA.',
         'boton' => 'Ver más'
@@ -54,10 +46,8 @@ $cards_eventos = [
     [
         'enlace' => 'docs/informe_actividades.pdf',
         'imagen' => 'img/informe_actividades.jpg',
-        'tag_icono' => 'bi-file-earmark-text',
         'tag_color' => '#2a6a42', // Verde
         'tag_bg' => '#e5f3eb',
-        'tag_texto' => 'Reporte • Anual',
         'titulo' => 'Informe de actividades 2022-2023',
         'excerpt' => 'Consulta el resumen oficial de actividades, resultados financieros y todos los hitos y logros alcanzados durante el periodo documentado.',
         'boton' => 'Ver más'

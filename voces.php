@@ -30,7 +30,7 @@
     <!-- Contenido principal -->
     <div class="section-gap">
         <div class="container">
-            <?php include("includes/enlaces_relacionados.php"); ?>
+            <?php include("includes/entrevistas.php"); ?>
         </div>
     </div>
 

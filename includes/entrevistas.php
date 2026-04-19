@@ -27,6 +27,25 @@
 
     <!-- ENLACE 1 -->
     <div class="enlaces-relacionados-item">
+        <a href="https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
+            <div class="link-card-header">
+                <span class="badge link-card-badge-oscuro">Video</span>
+            </div>
+            <div class="link-card-cuerpo">
+                <h4 class="link-card-titulo">Lic. Isaac Chertorivski</h4>
+                <p class="link-card-texto">Acervo histórico en video sobre el desarrollo y visión de nuestra sociedad y exalumnos distinguidos.</p>
+            </div>
+            <div class="link-card-imagen-contenedor">
+                <img src="img/entrevistas/isaac_chertorivski_shkoorman.png" alt="Portada de la entrevista a Lic. Isaac Chertorivski">
+                <div class="link-card-imagen-placeholder">
+                    <p class="link-card-ubicacion"><i class="fab fa-youtube"></i> Entrevista en YouTube</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- ENLACE 2 -->
+    <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/EKT3XU1IW5Q?si=JZuTA5O95GbwRkkG" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
                 <span class="badge link-card-badge-oscuro">Video</span>
@@ -45,7 +64,7 @@
         </a>
     </div>
 
-    <!-- ENLACE 2 -->
+    <!-- ENLACE 3 -->
     <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/sbFi8vZTgXY?si=8tZzBsgipxRfUdaU" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
@@ -64,7 +83,7 @@
         </a>
     </div>
 
-    <!-- ENLACE 3 -->
+    <!-- ENLACE 4 -->
     <div class="enlaces-relacionados-item">
         <a href="https://youtu.be/SZlp8znMxzs?si=O5_SFya7HVQ7N7qK" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
             <div class="link-card-header">
@@ -76,25 +95,6 @@
             </div>
             <div class="link-card-imagen-contenedor">
                 <img src="img/entrevistas/maria_elena_garcia_hernandez.png" alt="Portada de la entrevista a María Elena García Hernández">
-                <div class="link-card-imagen-placeholder">
-                    <p class="link-card-ubicacion"><i class="fab fa-youtube"></i> Entrevista en YouTube</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <!-- ENLACE 4 -->
-    <div class="enlaces-relacionados-item">
-        <a href="https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF" target="_blank" rel="noopener noreferrer" class="link-card text-decoration-none">
-            <div class="link-card-header">
-                <span class="badge link-card-badge-oscuro">Video</span>
-            </div>
-            <div class="link-card-cuerpo">
-                <h4 class="link-card-titulo">Lic. Isaac Chertorivski</h4>
-                <p class="link-card-texto">Acervo histórico en video sobre el desarrollo y visión de nuestra sociedad y exalumnos distinguidos.</p>
-            </div>
-            <div class="link-card-imagen-contenedor">
-                <img src="img/entrevistas/isaac_chertorivski_shkoorman.png" alt="Portada de la entrevista a Lic. Isaac Chertorivski">
                 <div class="link-card-imagen-placeholder">
                     <p class="link-card-ubicacion"><i class="fab fa-youtube"></i> Entrevista en YouTube</p>
                 </div>
