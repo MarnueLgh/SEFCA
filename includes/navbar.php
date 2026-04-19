@@ -19,14 +19,14 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="navbar-nav ms-auto px-4 py-2 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">Inicio</a>
                 <a href="nosotros.php" class="nav-item nav-link">Directiva</a>
                 <a href="voces.php" class="nav-item nav-link">Voces</a>
                 <a href="eventos.php" class="nav-item nav-link">Eventos</a>
                 <a href="proyectos.php" class="nav-item nav-link">Proyectos</a>
+                <a href="docs/afiliate_v2.pdf" class="afiliacion-btn" target="_blank">¡Afíliate!</a>
             </div>
-            <a href="afiliacion.php" class="nav-item nav-link afiliacion-btn">¡Afíliate!</a>
         </div>
     </nav>
     <!-- Navbar End -->

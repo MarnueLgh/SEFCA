@@ -10,11 +10,11 @@
         }, 500);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
-    
+
     /*
         Fecha: 06/04/2026
         Descripción: Cambio de color del navbar al hacer scroll y su desaparición COMENTADO
@@ -34,13 +34,13 @@
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+            $('.back-to-top').stop(true, true).fadeIn(200);
         } else {
-            $('.back-to-top').fadeOut('slow');
+            $('.back-to-top').stop(true, true).fadeOut(200);
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').stop().animate({ scrollTop: 0 }, 200, 'easeInOutExpo');
         return false;
     });
 
@@ -53,7 +53,7 @@
         nav: true,
         dots: false,
         items: 1,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ]
@@ -65,35 +65,6 @@
         delay: 10,
         time: 2000
     });
-
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1000,
-        margin: 25,
-        loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
-
-    
 })(jQuery);
 
 /* ==========================================
@@ -126,27 +97,27 @@
 /* ==========================================
    CARRUSEL DE EVENTOS RECIENTES
    ========================================== */
-    $(".eventos-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1000,
-        margin: 25,
-        loop: true,
-        center: true,
-        nav: true,
-        dots: false,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
+$(".eventos-carousel").owlCarousel({
+    autoplay: false,
+    smartSpeed: 1000,
+    margin: 25,
+    loop: true,
+    center: true,
+    nav: true,
+    dots: false,
+    navText: [
+        '<i class="bi bi-chevron-left"></i>',
+        '<i class="bi bi-chevron-right"></i>'
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        992: {
+            items: 3
         }
-    });
+    }
+});
