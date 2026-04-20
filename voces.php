@@ -27,12 +27,8 @@
     <!-- Homenajes (Movido desde index.php) -->
     <?php include("includes/homenajes.php"); ?>
 
-    <!-- Contenido principal -->
-    <div class="section-gap">
-        <div class="container">
-            <?php include("includes/entrevistas.php"); ?>
-        </div>
-    </div>
+    <!-- Entrevistas (carrusel) -->
+    <?php include("includes/entrevistas.php"); ?>
 
     <!-- Video Celebración 30 años -->
     <div class="section-gap">

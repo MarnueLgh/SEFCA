@@ -3,7 +3,8 @@
     --alto-navbar: 110px;
     --fuente-titulo: 'Playfair Display', serif;
     --fuente-texto: 'Roboto', sans-serif;
-    --dorado-unam: #EAA636;
+    /* --dorado-unam: #EAA636; */
+    --dorado-unam: #D59F0F;
     /* Color institucional UNAM*/
     --azul_unam: #112f4b;
     /* Color institucional UNAM*/
@@ -1125,7 +1126,7 @@ footer {
    SECCIÓN DE CITA
    ========================================== */
 .cita-section {
-    background: var(--carta-gold);
+    background: var(--dorado-unam);
     padding: 1.8rem 0; /* Antes: 5rem 0 */
 
 }
@@ -2443,7 +2444,7 @@ footer {
    SECCIÓN DE ESTATUTOS (full width, dark)
    ============================================ */
     .carta-estatutos {
-        background-color: var(--carta-gold);
+        background-color: var(--dorado-unam);
         padding: 2.4rem 2rem;
         text-align: center;
         position: relative;
@@ -2533,6 +2534,53 @@ footer {
     animation-delay: 0.35s;
 }
 
+
+/* == Seccion: Entrevistas (carrusel Voces) =========== */
+.entrevistas-seccion {
+    background-color: var(--light);
+    padding: 4rem 0;
+}
+
+.entrevistas-seccion .enlaces-relacionados-item {
+    flex: unset;
+    max-width: unset;
+    display: flex;
+    padding: 0 2px;
+}
+
+.entrevistas-seccion .link-card {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* Flechas de navegación del carrusel de entrevistas */
+.entrevistas-carousel .owl-nav button.owl-prev,
+.entrevistas-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.92) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,.10);
+    color: var(--azul_unam) !important;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s, box-shadow .25s;
+    z-index: 5;
+}
+
+.entrevistas-carousel .owl-nav button.owl-prev { left: 12px; }
+.entrevistas-carousel .owl-nav button.owl-next { right: 12px; }
+
+.entrevistas-carousel .owl-nav button.owl-prev:hover,
+.entrevistas-carousel .owl-nav button.owl-next:hover {
+    background: #fff !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+}
 
 /* == Seccion: Link Cards ============================ */
 .enlaces-relacionados-contenedor {
