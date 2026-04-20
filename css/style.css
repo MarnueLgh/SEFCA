@@ -228,7 +228,7 @@ h6,
 }
 
 .evento-card-enlace-secundario {
-    margin-top: 0.3rem;
+    margin-top: 0;
 }
 
 h4,
@@ -1778,7 +1778,7 @@ footer {
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    height: 225px;
+    height: 250px;
 }
 
 .evento-card:hover {
@@ -1788,14 +1788,16 @@ footer {
 
 /* Imagen de la card */
 .evento-card-img {
-    flex: 0 0 340px;
-    max-width: 340px;
+    flex: 0 0 320px;
+    max-width: 320px;
+    height: 100%;
     overflow: hidden;
 }
 
 .evento-card-img img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -1807,10 +1809,20 @@ footer {
 /* Contenido de la card */
 .evento-card-cuerpo {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 1.4rem;
+    row-gap: 0.35rem;
+    align-items: start;
+    height: 100%;
     padding: 1.8rem 2rem;
+}
+
+.evento-card-meta,
+.evento-card-titulo,
+.evento-card-desc {
+    grid-column: 1;
 }
 
 .evento-card-titulo {
@@ -1827,18 +1839,31 @@ footer {
     color: #545454;
     text-align: justify;
     line-height: 1.6;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
+    line-clamp: 5;
     overflow: hidden;
+}
+
+.evento-card-acciones {
+    grid-column: 2;
+    grid-row: 1 / span 3;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
 }
 
 .evento-card-enlace {
     display: inline-flex;
-    justify-content: right;
+    justify-content: flex-end;
     align-items: center;
     gap: 6px;
+    text-align: right;
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--dorado-unam);
@@ -2901,6 +2926,7 @@ footer {
     .evento-card {
         flex-direction: column;
         height: auto;
+        min-height: 0;
     }
 
     .evento-card-img {
@@ -2910,7 +2936,30 @@ footer {
     }
 
     .evento-card-cuerpo {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 0.55rem;
+        height: auto;
         padding: 1.3rem 1.5rem;
+    }
+
+    .evento-card-acciones {
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: start;
+        align-items: flex-start;
+        margin-top: 0.1rem;
+        align-self: start;
+    }
+
+    .evento-card-enlace {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .evento-card-desc {
+        display: block;
+        overflow: visible;
     }
 
     .evento-card-titulo {

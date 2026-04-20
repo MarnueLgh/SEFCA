@@ -112,9 +112,11 @@
 							<p class="evento-card-desc">
 								Convocatoria del Concurso de Ensayo SEFCA 2025 para egresados y comunidad FCA interesada en proponer ideas con impacto académico y social.
 							</p>
-                            <a class="evento-card-enlace" href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="docs/concurso_ensayo_SEFCA_25.pdf" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -131,9 +133,11 @@
 							<p class="evento-card-desc">
 								Visita de Alfredo Harp Helú a la FCA para dialogar sobre liderazgo, compromiso social y el papel de la educación en el desarrollo del país.
 							</p>
-                            <a class="evento-card-enlace" href="evento.php?evento=alfredo_helu">
-                                Ver galería <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="evento.php?evento=alfredo_helu">
+                                    Ver galería <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -150,9 +154,11 @@
 							<p class="evento-card-desc">
 								Ceremonia de toma de protesta de la mesa directiva de la SEFCA para el periodo 2024-2026, con la participación de autoridades y egresados.
 							</p>
-                            <a class="evento-card-enlace" href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="docs/toma_protesta_2024-2026.pdf" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -169,9 +175,11 @@
 							<p class="evento-card-desc">
 								Informe de actividades SEFCA 2022-2023 con resultados, logros institucionales y acciones para fortalecer la vinculación con la comunidad.
 							</p>
-                            <a class="evento-card-enlace" href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="docs/informe_actividades.pdf" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -188,9 +196,11 @@
 							<p class="evento-card-desc">
 								Entrega de reconocimiento a Paola Reynoso por su trayectoria y por obtener el primer lugar del Premio Internacional Universia Santander.
 							</p>
-                            <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -207,12 +217,14 @@
 							<p class="evento-card-desc">
 								Celebración del 30 aniversario de la SEFCA en el Palacio de Autonomía, conmemorando su historia y compromiso con la comunidad de egresados.
 							</p>
-                            <a class="evento-card-enlace" href="evento.php?evento=30_aniversario">
-                                Ver galería <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="img/articulo_30_aniversario_gaceta.jpg" target="_blank" rel="noopener noreferrer">
-                                Ver en Gaceta UNAM <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="evento.php?evento=30_aniversario">
+                                    Ver galería <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a class="evento-card-enlace evento-card-enlace-secundario" href="img/articulo_30_aniversario_gaceta.jpg" target="_blank" rel="noopener noreferrer">
+                                    Ver en Gaceta UNAM <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -229,12 +241,14 @@
 							<p class="evento-card-desc">
 								Primer ciclo de conferencias magistrales con ponentes invitados que compartieron experiencias y aprendizajes clave para la comunidad FCA.
 							</p>
-                            <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=-VPJKdsu_wQ&list=PLEcS-HQTcBAoY--ot6Kw53cZOxbaTi_H8" target="_blank" rel="noopener noreferrer">
-                                Ver en Youtube <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=-VPJKdsu_wQ&list=PLEcS-HQTcBAoY--ot6Kw53cZOxbaTi_H8" target="_blank" rel="noopener noreferrer">
+                                    Ver en Youtube <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -251,12 +265,14 @@
 							<p class="evento-card-desc">
 								Segundo ciclo de conferencias magistrales con especialistas que abordaron tendencias, desafíos y oportunidades del entorno profesional.
 							</p>
-                            <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
-                            <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=HyzQ4AvFVjM&list=PLEcS-HQTcBAqe98ozaZYXusliQhWq8Wmx" target="_blank" rel="noopener noreferrer">
-                                Ver en Youtube <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=HyzQ4AvFVjM&list=PLEcS-HQTcBAqe98ozaZYXusliQhWq8Wmx" target="_blank" rel="noopener noreferrer">
+                                    Ver en Youtube <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
@@ -273,9 +289,11 @@
 							<p class="evento-card-desc">
 								Conferencia magistral del Lic. Isaac Chertorivski sobre estrategia empresarial y decisiones clave para dirigir una empresa en tiempos de crisis.
 							</p>
-                            <a class="evento-card-enlace" href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank" rel="noopener noreferrer">
-                                Ver más <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="img/Cartel_Conferencia_Lic_Isaac_Chertorivski.jpg" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
                         </div>
                     </article>
 
