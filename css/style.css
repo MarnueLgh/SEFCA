@@ -1438,7 +1438,7 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     color: #ffffff;
-    background: var(--azul_unam);
+    background: var(--light);
     position: relative;
 }
 
@@ -1446,14 +1446,14 @@ footer {
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 2rem;
-    color: #ffffff;
+    color: var(--azul_unam);
     text-align: center;
     letter-spacing: 1px;
 }
 
 .bento-fila-texto {
     font-size: 0.95rem;
-    color: #cccccc;
+    color: #1E1916;
     line-height: 1.8;
     margin-bottom: 2rem;
     text-align: justify;
@@ -1465,7 +1465,7 @@ footer {
     /* Texto de enlace más ancho */
     align-self: flex-end;
     margin-top: auto;
-    color: #ffffff;
+    color: var(--dorado-unam);
     font-size: 0.88rem;
     text-decoration: none;
     display: flex;
@@ -1474,7 +1474,7 @@ footer {
 }
 
 .bento-fila-enlace:hover {
-    color: var(--dorado-unam);
+    color: var(--dark);
     gap: 10px;
 }
 
