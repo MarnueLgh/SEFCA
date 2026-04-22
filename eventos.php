@@ -141,6 +141,27 @@
                         </div>
                     </article>
 
+                    <!-- ========== Video 30 Aniversario ========== -->
+                    <article class="evento-card" data-tipo="evento" data-mes="2" data-anio="2025">
+                        <div class="evento-card-img">
+                            <img src="img/30_aniversario.jpg" alt="Video conmemorativo 30 años">
+                        </div>
+                        <div class="evento-card-cuerpo">
+                            <div class="evento-card-meta">
+                                <span class="evento-card-tag">19 de Febrero de 2025</span>
+                            </div>
+							<h2 class="evento-card-titulo">Video conmemorativo: 30 años de historia</h2>
+							<p class="evento-card-desc">
+								Celebramos nuestros más de 30 años de historia y compromiso con la comunidad de egresados de la FCA en este video conmemorativo.
+							</p>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=3RzU-kjkvRo" target="_blank" rel="noopener noreferrer">
+                                    Ver en Youtube <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- ========== Toma de protesta 2024-2026 ========== -->
                     <article class="evento-card" data-tipo="evento" data-mes="10" data-anio="2024">
                         <div class="evento-card-img">
@@ -199,27 +220,6 @@
                             <div class="evento-card-acciones">
                                 <a class="evento-card-enlace" href="img/agradecimiento_paola.jpg" target="_blank" rel="noopener noreferrer">
                                     Ver más <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ========== Video 30 Aniversario ========== -->
-                    <article class="evento-card" data-tipo="evento" data-mes="3" data-anio="2023">
-                        <div class="evento-card-img">
-                            <img src="img/30_aniversario.jpg" alt="Video conmemorativo 30 años">
-                        </div>
-                        <div class="evento-card-cuerpo">
-                            <div class="evento-card-meta">
-                                <span class="evento-card-tag">Marzo de 2023</span>
-                            </div>
-							<h2 class="evento-card-titulo">Video conmemorativo: 30 años de historia</h2>
-							<p class="evento-card-desc">
-								Celebramos nuestros más de 30 años de historia y compromiso con la comunidad de egresados de la FCA en este video conmemorativo.
-							</p>
-                            <div class="evento-card-acciones">
-                                <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=3RzU-kjkvRo" target="_blank" rel="noopener noreferrer">
-                                    Ver en Youtube <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
