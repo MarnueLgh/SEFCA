@@ -68,6 +68,107 @@
 })(jQuery);
 
 /* ==========================================
+   TYPEWRITER: CITA DE INDEX
+   ========================================== */
+(function inicializar_typewriter_cita() {
+	var cita = document.querySelector('.cita-typewriter');
+	if (!cita) {
+		return;
+	}
+
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		return;
+	}
+
+	var velocidad = parseInt(cita.getAttribute('data-typewriter-speed'), 10) || 22;
+	var retraso = parseInt(cita.getAttribute('data-typewriter-delay'), 10) || 250;
+
+	var texto_accesible = cita.textContent.replace(/\s+/g, ' ').trim();
+	if (texto_accesible) {
+		cita.setAttribute('aria-label', texto_accesible);
+	}
+
+	var contenedor_texto = document.createElement('span');
+	contenedor_texto.className = 'cita-typewriter-text';
+	contenedor_texto.setAttribute('aria-hidden', 'true');
+	contenedor_texto.innerHTML = cita.innerHTML;
+
+	cita.innerHTML = '';
+	cita.appendChild(contenedor_texto);
+
+	var caracteres = [];
+
+	function envolver_textos(nodo) {
+		var hijos = Array.prototype.slice.call(nodo.childNodes);
+
+		hijos.forEach(function (hijo) {
+			if (hijo.nodeType === Node.TEXT_NODE) {
+				var texto = hijo.textContent;
+				if (!texto) {
+					return;
+				}
+
+				var fragmento = document.createDocumentFragment();
+				for (var i = 0; i < texto.length; i++) {
+					var caracter = document.createElement('span');
+					caracter.className = 'cita-typewriter-char';
+					caracter.textContent = texto.charAt(i);
+					fragmento.appendChild(caracter);
+					caracteres.push(caracter);
+				}
+
+				hijo.parentNode.replaceChild(fragmento, hijo);
+				return;
+			}
+
+			if (hijo.nodeType === Node.ELEMENT_NODE) {
+				envolver_textos(hijo);
+			}
+		});
+	}
+
+	envolver_textos(contenedor_texto);
+
+	function iniciar_animacion() {
+		if (contenedor_texto.classList.contains('cita-typewriter-iniciada')) {
+			return;
+		}
+
+		contenedor_texto.classList.add('cita-typewriter-iniciada', 'cita-typewriter-activa');
+
+		setTimeout(function () {
+			var indice = 0;
+			var temporizador = setInterval(function () {
+				if (indice >= caracteres.length) {
+					clearInterval(temporizador);
+					contenedor_texto.classList.remove('cita-typewriter-activa');
+					return;
+				}
+
+				caracteres[indice].style.display = 'inline';
+				indice++;
+			}, velocidad);
+		}, retraso);
+	}
+
+	if ('IntersectionObserver' in window) {
+		var observador = new IntersectionObserver(function (entradas, obs) {
+			entradas.forEach(function (entrada) {
+				if (entrada.isIntersecting) {
+					iniciar_animacion();
+					obs.disconnect();
+				}
+			});
+		}, { threshold: 0.45 });
+
+		observador.observe(cita);
+		return;
+	}
+
+	iniciar_animacion();
+})();
+
+/* ==========================================
    COMPENSACIÓN DE NAVBAR FIJO
    ========================================== */
 (function compensarNavbarFijo() {

@@ -1153,10 +1153,44 @@ footer {
     font-weight: 700;
 }
 
+.cita-typewriter {
+	min-height: 4.8em;
+}
+
+.cita-typewriter-text {
+	display: inline;
+}
+
+.cita-typewriter-text.cita-typewriter-activa {
+	border-right: 2px solid rgba(253, 248, 242, 0.92);
+	animation: cita-caret 0.8s steps(1, end) infinite;
+}
+
+.cita-typewriter-char {
+	display: none;
+}
+
+@keyframes cita-caret {
+	50% {
+		border-right-color: transparent;
+	}
+}
+
 @media (max-width: 991.98px) {
     .cita-section-quote {
         font-size: clamp(1.1rem, 2vw, 1.3rem);
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cita-typewriter {
+		min-height: auto;
+	}
+
+	.cita-typewriter-text.cita-typewriter-activa {
+		animation: none;
+		border-right: none;
+	}
 }
 
 
