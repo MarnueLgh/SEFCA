@@ -56,47 +56,48 @@ $cards_eventos = [
 ?>
 <!-- === ESTILOS INSERTADOS TEMPORALMENTE (SE RECOMIENDA MOVER A STYLE.CSS) === -->
 <style>
-/* Estilos extra si style.css no toma el cambio temporalmente */
+    /* Estilos extra si style.css no toma el cambio temporalmente */
 </style>
 
 <section class="carrusel-eventos section-gap">
     <div class="container-fluid px-0">
         <div>
             <h2 class="carrusel-marquee-header-title text-center mb-5">Eventos Recientes</h2>
-            
+
             <div class="owl-carousel eventos-carousel owl-theme">
                 <?php
-                    $eventos_mostrar = array_slice($cards_eventos, 0, 8);
-                    foreach ($eventos_mostrar as $card) {
-                        $target = strpos($card['enlace'], 'docs/') !== false ? 'target="_blank" rel="noopener noreferrer"' : '';
-                            // To match design "Analyse Vulnerability"
-                            $btnText = $card['boton'];
-                            if ($btnText === 'Analyse Event') {
-                                $btnText = 'Ver Galería';
-                            }
-                            if ($btnText === 'Analyse Data') {
-                                $btnText = 'Ver Evento';
-                            }
-                            ?>
-                            <a href="<?= $card['enlace'] ?>" <?= $target ?> class="carrusel-cyber-card">
-                                <div class="carrusel-cyber-card-img-wrap">
-                                    <img src="<?= $card['imagen'] ?>" alt="<?= htmlspecialchars($card['titulo']) ?>" class="carrusel-cyber-card-img">
-                                </div>
-                                <div class="carrusel-cyber-card-body">
-                                    <h3 class="carrusel-cyber-title"><?= $card['titulo'] ?></h3>
-                                    <p class="carrusel-cyber-excerpt"><?= $card['excerpt'] ?></p>
-                                    
-                                    <!-- Boton estilo pill delineado -->
-                                    <div class="carrusel-cyber-btn-wrapper mt-auto">
-                                        <span class="carrusel-cyber-btn">
-                                            <i class="bi bi-arrow-return-right me-1"></i> <?= $btnText ?>
-                                        </span>
-                                    </div>
-                                </div>
-                            </a>
-                            <?php
-                        }
+                $eventos_mostrar = array_slice($cards_eventos, 0, 8);
+                foreach ($eventos_mostrar as $card) {
+                    $target = strpos($card['enlace'], 'docs/') !== false ? 'target="_blank" rel="noopener noreferrer"' : '';
+                    // To match design "Analyse Vulnerability"
+                    $btnText = $card['boton'];
+                    if ($btnText === 'Analyse Event') {
+                        $btnText = 'Ver Galería';
+                    }
+                    if ($btnText === 'Analyse Data') {
+                        $btnText = 'Ver Evento';
+                    }
                     ?>
+                    <a href="<?= $card['enlace'] ?>" <?= $target ?> class="carrusel-cyber-card">
+                        <div class="carrusel-cyber-card-img-wrap">
+                            <img src="<?= $card['imagen'] ?>" alt="<?= htmlspecialchars($card['titulo']) ?>"
+                                class="carrusel-cyber-card-img">
+                        </div>
+                        <div class="carrusel-cyber-card-body">
+                            <h3 class="carrusel-cyber-title"><?= $card['titulo'] ?></h3>
+                            <p class="carrusel-cyber-excerpt"><?= $card['excerpt'] ?></p>
+
+                            <!-- Boton estilo pill delineado -->
+                            <div class="carrusel-cyber-btn-wrapper mt-auto">
+                                <span class="carrusel-cyber-btn">
+                                    <i class="bi bi-arrow-return-right me-1"></i> <?= $btnText ?>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <?php
+                }
+                ?>
             </div>
         </div>
     </div>

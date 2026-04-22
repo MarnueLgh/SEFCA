@@ -33,9 +33,8 @@
       <!-- SLIDE 1 -->
       <div class="carousel-item active">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/Banner_SEFCA_orgullo_cuadrado.jpg">
-          <img src="img/banner_principal/Banner_SEFCA_orgullo_rectangulo.jpg"
-            alt="Facultad de Contaduría y Administración UNAM" class="c-img"
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_orgullo_cuadrado.jpeg">
+          <img src="img/banner_principal/SEFCA_BANNER_orgullo_rectangulo.jpeg" alt="Facultad de Contaduría y Administración UNAM" class="c-img"
             onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Sociedad de Egresados de la FCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
@@ -43,8 +42,8 @@
       <!-- SLIDE 2 -->
       <div class="carousel-item">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/Banner_SEFCA_cuadrado.jpg">
-          <img src="img/banner_principal/Banner_SEFCA_rectangulo.jpg" alt="Aulas dignas para la FCA" class="c-img"
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_cuadrado.jpeg">
+          <img src="img/banner_principal/SEFCA_BANNER_rectangulo.jpeg" alt="Aulas dignas para la FCA" class="c-img"
             onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Aulas dignas para la FCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>

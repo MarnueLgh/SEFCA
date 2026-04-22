@@ -1180,6 +1180,9 @@ footer {
     .cita-section-quote {
         font-size: clamp(1.1rem, 2vw, 1.3rem);
     }
+    .bento-card-left {
+        min-height: 600px !important;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1400,8 +1403,6 @@ footer {
 }
 
 .bento-card {
-    background: #111111;
-    border: 1px solid #333333;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -1410,12 +1411,14 @@ footer {
 
 /* Panel Izquierdo (Carta) */
 .bento-card-left {
-    min-height: 380px;
+    min-height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url('../img/carta_acreditacion.jpg');
-    background-size: cover;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-color: #fff;
     background-position: center;
 }
 
