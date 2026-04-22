@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Afiliación SEFCA</title>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/diseno_afiliacion.css">
+	<link rel="stylesheet" href="../css/diseno_afiliacion.css">
 </head>
 <body>
 <div class="wrapper">
