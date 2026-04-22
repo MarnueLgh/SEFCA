@@ -25,7 +25,7 @@
                 <a href="voces.php" class="nav-item nav-link">Voces</a>
                 <a href="eventos.php" class="nav-item nav-link">Eventos</a>
                 <a href="proyectos.php" class="nav-item nav-link">Proyectos</a>
-                <a href="docs/afiliate_v2.pdf" class="afiliacion-btn" target="_blank">¡Afíliate!</a>
+                <a href="afiliacion.php" class="afiliacion-btn" target="_blank">¡Afíliate!</a>
             </div>
         </div>
     </nav>

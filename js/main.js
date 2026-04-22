@@ -123,29 +123,79 @@ $(".eventos-carousel").owlCarousel({
 });
 
 /* ==========================================
-   CARRUSEL DE ENTREVISTAS (VOCES)
+   CARRUSEL DE ENTREVISTAS
    ========================================== */
-$(".entrevistas-carousel").owlCarousel({
-    autoplay: false,
-    smartSpeed: 1000,
-    margin: 25,
-    loop: true,
-    center: true,
-    nav: true,
-    dots: false,
-    navText: [
-        '<i class="bi bi-chevron-left"></i>',
-        '<i class="bi bi-chevron-right"></i>'
-    ],
-    responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2
-        },
-        992: {
-            items: 3
-        }
+(function inicializar_carrusel_entrevistas($) {
+    if (!$('.entrevistas-carousel').length) {
+        return;
     }
-});
+
+    function obtener_items_visibles_entrevistas() {
+        var ancho_ventana = window.innerWidth || document.documentElement.clientWidth;
+
+        if (ancho_ventana >= 992) {
+            return 3;
+        }
+
+        if (ancho_ventana >= 768) {
+            return 2;
+        }
+
+        return 1;
+    }
+
+    function actualizar_navegacion_entrevistas(carrusel_entrevistas, cantidad_entrevistas) {
+        var items_visibles = obtener_items_visibles_entrevistas();
+        var mostrar_navegacion = cantidad_entrevistas > items_visibles;
+
+        carrusel_entrevistas.toggleClass('entrevistas-sin-navegacion', !mostrar_navegacion);
+    }
+
+    $('.entrevistas-carousel').each(function () {
+        var carrusel_entrevistas = $(this);
+        var cantidad_entrevistas = carrusel_entrevistas.children('.entrevista-slide').length;
+        var activar_bucle = cantidad_entrevistas > 3;
+        var activar_centro = cantidad_entrevistas > 3;
+        var activar_navegacion = cantidad_entrevistas > 1;
+
+        if (!cantidad_entrevistas) {
+            return;
+        }
+
+        carrusel_entrevistas.toggleClass('entrevistas-sin-centro', !activar_centro);
+
+        carrusel_entrevistas.owlCarousel({
+            autoplay: false,
+            smartSpeed: 1000,
+            margin: 25,
+            loop: activar_bucle,
+            center: activar_centro,
+            nav: activar_navegacion,
+            dots: false,
+            navText: [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            },
+            onInitialized: function () {
+                actualizar_navegacion_entrevistas(carrusel_entrevistas, cantidad_entrevistas);
+            },
+            onResized: function () {
+                actualizar_navegacion_entrevistas(carrusel_entrevistas, cantidad_entrevistas);
+            },
+            onRefreshed: function () {
+                actualizar_navegacion_entrevistas(carrusel_entrevistas, cantidad_entrevistas);
+            }
+        });
+    });
+})(jQuery);

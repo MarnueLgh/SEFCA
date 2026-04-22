@@ -10,7 +10,7 @@
 - Additional routed pages: `evento.php?evento=<clave>` and standalone `carta_estrategica.php` (not in current navbar).
 - Reusable fragments belong in `includes/`; full pages stay in repo root.
 - `antiguo/` is legacy snapshots; avoid editing unless explicitly requested.
-- `seguimiento/SeguimientoEgresados.php` is standalone and not linked from the main site.
+- `afiliacion/afiliacion.php` is standalone and not linked from the main site.
 
 ## Page Wiring Contract
 - Keep this page order: `includes/head.php` -> `includes/spinner.php` -> `includes/navbar.php` -> page content -> `includes/footer.php` -> back-to-top button -> `includes/scripts.php`.

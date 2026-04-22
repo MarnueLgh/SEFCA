@@ -1,7 +1,7 @@
 <!-- ==========================================
      HOMENAJES (Componente estilo Card)
      ========================================== -->
-<div class="section-gap">
+<div class="section-gap section-homenajes">
     <div class="container">
 
 
@@ -51,7 +51,7 @@
                 </div>
 
                 <!-- HOMENAJE 2: R. Kalach (Video Izquierda, Texto Derecha) -->
-                <div class="row align-items-center mt-5 mb-5 homenajes-item">
+                <div class="row align-items-center mt-5 mb-0 homenajes-item">
                     <!-- Columna Izquierda en Escritorio (Video) -->
                     <div class="col-lg-5 order-2 order-lg-1 text-center">
                         <div class="homenaje-video-container shadow-lg mx-auto">

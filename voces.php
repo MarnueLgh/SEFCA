@@ -18,17 +18,21 @@
 
     <!-- Variables para el hero -->
     <?php
-        $heroTitulo = "Voces";
-        $heroTexto  = "Conoce a los integrantes que dan vida a la SEFCA.";
-        $heroClase  = "hero-pagina--carta";
-        include("includes/hero-pagina.php");
+    $heroTitulo = "Voces";
+    $heroTexto = "Conoce a los integrantes que dan vida a la SEFCA.";
+    $heroClase = "hero-pagina--carta";
+    include("includes/hero-pagina.php");
     ?>
 
     <!-- Homenajes (Movido desde index.php) -->
     <?php include("includes/homenajes.php"); ?>
 
-    <!-- Entrevistas (carrusel) -->
-    <?php include("includes/entrevistas.php"); ?>
+    <!-- Contenido principal -->
+    <div class="section-gap">
+        <div class="container">
+            <?php include("includes/entrevistas.php"); ?>
+        </div>
+    </div>
 
     <!-- Video Celebración 30 años -->
     <div class="section-gap">

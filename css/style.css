@@ -399,7 +399,8 @@ h6,
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color: var(--dorado-unam);
-    text-shadow: 0 0 10px rgba(184, 150, 85, .5); /* Sombra dorada en los links del nav*/
+    text-shadow: 0 0 10px rgba(184, 150, 85, .5);
+    /* Sombra dorada en los links del nav*/
 }
 
 /* Animated Underline */
@@ -449,7 +450,8 @@ h6,
         padding: 0 0 1.5rem 0;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
         z-index: 1000;
-        border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea sutil en vez de hr roto */
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        /* Línea sutil en vez de hr roto */
     }
 
     /* Ocultar underline animado en mobile */
@@ -1127,7 +1129,8 @@ footer {
    ========================================== */
 .cita-section {
     background: var(--dorado-unam);
-    padding: 1.8rem 0; /* Antes: 5rem 0 */
+    padding: 1.8rem 0;
+    /* Antes: 5rem 0 */
 
 }
 
@@ -2006,7 +2009,8 @@ footer {
    ============================================= */
 
 .carrusel-eventos {
-    background-color: var(--carta-crema); /* Fondo principal de la sección */
+    background-color: var(--carta-crema);
+    /* Fondo principal de la sección */
     padding-bottom: 2rem;
 }
 
@@ -2036,11 +2040,12 @@ footer {
     border-radius: 20px;
     padding: 12px;
     text-decoration: none;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    height: 250px; /* Asegura que tomen toda la altura del row */
-    min-height: 380px; 
+    height: 250px;
+    /* Asegura que tomen toda la altura del row */
+    min-height: 380px;
     margin: 20px auto;
     width: 95%;
 }
@@ -2060,7 +2065,8 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
-    background: #f4f4f4; /* Placeholder color */
+    background: #f4f4f4;
+    /* Placeholder color */
 }
 
 .carrusel-cyber-card-img {
@@ -2102,7 +2108,8 @@ footer {
     opacity: 0.5;
     transform: scale(0.85);
     transition: all 0.4s ease;
-    filter: grayscale(30%); /* Opcional: añade un poco de escala de grises para apagarlo más */
+    filter: grayscale(30%);
+    /* Opcional: añade un poco de escala de grises para apagarlo más */
 }
 
 .eventos-carousel .owl-item.center {
@@ -2443,13 +2450,13 @@ footer {
 /* ============================================
    SECCIÓN DE ESTATUTOS (full width, dark)
    ============================================ */
-    .carta-estatutos {
-        background-color: var(--dorado-unam);
-        padding: 2.4rem 2rem;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
+.carta-estatutos {
+    background-color: var(--dorado-unam);
+    padding: 2.4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
 /* Glow decorativo */
 .carta-estatutos::before {
@@ -2534,53 +2541,6 @@ footer {
     animation-delay: 0.35s;
 }
 
-
-/* == Seccion: Entrevistas (carrusel Voces) =========== */
-.entrevistas-seccion {
-    background-color: var(--light);
-    padding: 4rem 0;
-}
-
-.entrevistas-seccion .enlaces-relacionados-item {
-    flex: unset;
-    max-width: unset;
-    display: flex;
-    padding: 0 2px;
-}
-
-.entrevistas-seccion .link-card {
-    background-color: #ffffff;
-    width: 100%;
-}
-
-/* Flechas de navegación del carrusel de entrevistas */
-.entrevistas-carousel .owl-nav button.owl-prev,
-.entrevistas-carousel .owl-nav button.owl-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255,255,255,.92) !important;
-    box-shadow: 0 2px 12px rgba(0,0,0,.10);
-    color: var(--azul_unam) !important;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background .25s, box-shadow .25s;
-    z-index: 5;
-}
-
-.entrevistas-carousel .owl-nav button.owl-prev { left: 12px; }
-.entrevistas-carousel .owl-nav button.owl-next { right: 12px; }
-
-.entrevistas-carousel .owl-nav button.owl-prev:hover,
-.entrevistas-carousel .owl-nav button.owl-next:hover {
-    background: #fff !important;
-    box-shadow: 0 4px 20px rgba(0,0,0,.15);
-}
 
 /* == Seccion: Link Cards ============================ */
 .enlaces-relacionados-contenedor {
@@ -2775,6 +2735,92 @@ footer {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+/* == Seccion: Carrusel entrevistas ============================ */
+.carrusel-entrevistas {
+    overflow: hidden;
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-item {
+    display: flex;
+    height: auto;
+    opacity: 0.5;
+    transform: scale(0.85);
+    transition: all 0.4s ease;
+    filter: grayscale(30%);
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-item.center {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(0%);
+    z-index: 10;
+}
+
+.carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-centro .owl-item,
+.carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-centro .owl-item.center {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+.carrusel-entrevistas .entrevista-slide {
+    display: flex;
+    width: 100%;
+    padding: 20px 2px;
+}
+
+.carrusel-entrevistas .link-card {
+    width: 100%;
+    height: 100%;
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-prev,
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-next {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    padding: 0;
+    margin: 0;
+    border: 1.5px solid #d5d5d5;
+    background: #fff;
+    color: #555;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-prev:hover,
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-next:hover {
+    border-color: var(--azul_unam);
+    color: var(--azul_unam);
+    background: rgba(17, 47, 75, 0.04);
+}
+
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-prev i,
+.carrusel-entrevistas .entrevistas-carousel .owl-nav .owl-next i {
+    font-size: 0.7rem;
+}
+
+.carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-navegacion .owl-nav {
+    display: none;
 }
 
 
@@ -3241,6 +3287,13 @@ footer {
     margin-bottom: 5rem;
 }
 
+.section-homenajes {
+    padding-bottom: 1.5rem; /* antes 3rem por section-gap */
+}
+.section-homenajes .homenajes-item:last-child {
+    margin-bottom: 0 !important;
+}
+
 .subtitle-gold {
     letter-spacing: 0.15em;
     font-size: 0.85rem;
@@ -3270,12 +3323,12 @@ footer {
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .homenaje-thumbnail:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .homenaje-video-container {
