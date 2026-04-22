@@ -1796,6 +1796,36 @@ footer {
     max-width: 320px;
     height: 100%;
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.evento-card-img::after {
+    content: '\f00e';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.evento-card:hover .evento-card-img::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .evento-card-img img {
@@ -1971,6 +2001,61 @@ footer {
     color: #aaa;
     font-size: 0.9rem;
     user-select: none;
+}
+
+/* ==========================================
+   LIGHTBOX OVERLAY (ZOOM IMAGENES EVENTOS)
+   ========================================== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.activo .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-cerrar:hover {
+    color: #fff;
+    transform: scale(1.1);
 }
 
 /* Bento responsive */

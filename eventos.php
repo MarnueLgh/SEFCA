@@ -330,6 +330,12 @@
     </div>
     <!-- /.galeria-layout -->
 
+    <!-- ====== Lightbox Overlay ====== -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-cerrar" id="lightboxCerrar">&times;</div>
+        <img src="" alt="Zoom" class="lightbox-img" id="lightboxImg">
+    </div>
+
     <!-- ====== Footer ====== -->
     <?php require_once("includes/footer.php"); ?>
 
@@ -524,6 +530,35 @@
 
         /* Inicializar */
         filtrarYPaginar();
+
+        /* ==========================================
+           LIGHTBOX LOGIC
+           ========================================== */
+        var lightboxOverlay = document.getElementById('lightboxOverlay');
+        var lightboxImg = document.getElementById('lightboxImg');
+        var lightboxCerrar = document.getElementById('lightboxCerrar');
+        var imagenesEvento = document.querySelectorAll('.evento-card-img');
+
+        imagenesEvento.forEach(function (imgContainer) {
+            imgContainer.addEventListener('click', function () {
+                var img = this.querySelector('img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxOverlay.classList.add('activo');
+                }
+            });
+        });
+
+        lightboxCerrar.addEventListener('click', function () {
+            lightboxOverlay.classList.remove('activo');
+        });
+
+        lightboxOverlay.addEventListener('click', function (e) {
+            if (e.target === lightboxOverlay) {
+                lightboxOverlay.classList.remove('activo');
+            }
+        });
+
     });
     </script>
 </body>
