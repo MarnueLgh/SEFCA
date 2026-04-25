@@ -6,7 +6,8 @@
 <!-- Inicio de cita -->
 <section class="cita-section">
 	<div class="container">
-		<blockquote class="cita-section-quote cita-typewriter" data-typewriter-speed="22" data-typewriter-delay="250">Somos una <strong>red de interacción</strong> donde la experiencia y la retribución de los egresados impulsa el <strong>desarrollo académico y profesional</strong> de las <strong>nuevas generaciones</strong> de estudiantes.</blockquote>
+		<hr>
+		<!-- <blockquote class="cita-section-quote cita-typewriter" data-typewriter-speed="22" data-typewriter-delay="250">La <strong>SEFCA</strong> es el puente entre quienes egresaron de la FCA y quienes aún construyen su camino. Son <strong>más de 30 años</strong> de comunidad, <strong>mentoría</strong> y compromiso con el <strong>espíritu universitario</strong>.</blockquote> -->
 	</div>
 </section>
 <!-- Fin de cita -->

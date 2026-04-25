@@ -1,18 +1,14 @@
 <?php
 /*
- * Autor: MarnueLgh
  * Fecha: 20/04/2026
- * Versión: 1.1
  * Descripción: Carrusel de entrevistas de la página Voces.
  */
-
-$descripcion_entrevista = 'Acervo histórico en video sobre el desarrollo y visión de nuestra sociedad y exalumnos distinguidos.';
 
 $entrevistas = [
     [
         'url' => 'https://youtu.be/Gpkj5xKvccc?si=SxUuWKPISnsH2SuF',
         'titulo' => 'Lic. Isaac Chertorivski',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Isaac Chertorivski, economista y político mexicano, destaca el compromiso de SEFCA de retribuir a la facultad compartiendo su valiosa experiencia profesional.',
         'imagen' => 'img/entrevistas/isaac_chertorivski_shkoorman.png',
         'alt' => 'Portada de la entrevista a Lic. Isaac Chertorivski',
         'badge' => 'Video',
@@ -21,7 +17,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/EKT3XU1IW5Q?si=JZuTA5O95GbwRkkG',
         'titulo' => 'Héctor Alfonso Bolio Arciniega',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Héctor Alfonso Bolio Arciniega felicita a la facultad y agradece las sólidas bases profesionales que recibió durante su formación.',
         'imagen' => 'img/entrevistas/hector_alfonso_bolio_arciniega.png',
         'alt' => 'Portada de la entrevista a Héctor Alfonso Bolio Arciniega',
         'badge' => 'Video',
@@ -30,7 +26,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/sbFi8vZTgXY?si=8tZzBsgipxRfUdaU',
         'titulo' => 'Marcela J. Peñaloza Báez',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Marcela J. Peñaloza Báez, especialista en impuestos, resalta la historia de la facultad e impulsa el liderazgo de las mujeres en informática.',
         'imagen' => 'img/entrevistas/marcela_j_penaloza_baez.png',
         'alt' => 'Portada de la entrevista a Marcela J. Peñaloza Báez',
         'badge' => 'Video',
@@ -39,7 +35,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/SZlp8znMxzs?si=O5_SFya7HVQ7N7qK',
         'titulo' => 'María Elena García Hernández',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'María Elena García Hernández celebra 45 años de trayectoria y el profundo orgullo de pertenecer a la comunidad FCA.',
         'imagen' => 'img/entrevistas/maria_elena_garcia_hernandez.png',
         'alt' => 'Portada de la entrevista a María Elena García Hernández',
         'badge' => 'Video',
@@ -48,7 +44,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/sstW5kG18ko?si=17a8AxQW6O_MB27i',
         'titulo' => 'Armando Espinoza Álvarez',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Armando Espinoza Álvarez explica cómo la contaduría impulsó su crecimiento profesional y sus viajes por todo el mundo.',
         'imagen' => 'img/entrevistas/armando_espinoza_alvarez.png',
         'alt' => 'Portada de la entrevista a Armando Espinoza Álvarez',
         'badge' => 'Video',
@@ -57,7 +53,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/aP2MgWw6gAg?si=vP-mGNW11bWiu-y3',
         'titulo' => 'Arturo Velázquez Jiménez',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Arturo Velázquez Jiménez describe la misión de SEFCA de compartir experiencia profesional con las nuevas generaciones de estudiantes.',
         'imagen' => 'img/entrevistas/arturo_velazquez_jimenez.png',
         'alt' => 'Portada de la entrevista a Arturo Velázquez Jiménez',
         'badge' => 'Video',
@@ -66,7 +62,7 @@ $entrevistas = [
     [
         'url' => 'https://youtu.be/cVdH-aO-OuM?si=z0-W82tBotL23I9g',
         'titulo' => 'Felipe Pérez Cervantes',
-        'descripcion' => $descripcion_entrevista,
+        'descripcion' => 'Felipe Pérez Cervantes destaca la innovación constante de la facultad y el orgullo de pertenecer a esta institución..',
         'imagen' => 'img/entrevistas/felipe_perez_cervantes.png',
         'alt' => 'Portada de la entrevista a Felipe Pérez Cervantes',
         'badge' => 'Video',

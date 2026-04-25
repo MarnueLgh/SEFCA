@@ -19,7 +19,7 @@
 
     <!-- Hero -->
     <?php include("includes/hero_index.php"); ?>
-    
+
     <!-- Cita -->
     <?php include("includes/cita.php"); ?>
 

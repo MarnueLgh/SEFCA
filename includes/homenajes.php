@@ -21,12 +21,15 @@
                                     Murrieta</h3>
                                 <div class="biografia-doble text-muted">
                                     <p><strong>Humberto Murrieta Necoechea (1936–2011)</strong>, encarnó como pocos la
-                                        vocación de servicio a la Contaduría Pública. Presidió casi simultáneamente el
+                                        <strong>vocación de servicio</strong> a la Contaduría Pública. Presidió casi
+                                        simultáneamente el
                                         <strong>Instituto Mexicano de Contadores Públicos</strong> y la
                                         <strong>Asociación Interamericana de Contabilidad</strong>, fundó los Seminarios
-                                        Regionales Interamericanos en Bogotá e impulsó el Boletín Semanal del Colegio,
-                                        todo ello con la energía de quien ejerce su profesión como misión. En los foros
-                                        de la Federación Internacional de Contadores defendió la capacidad técnica de la
+                                        <strong>Regionales Interamericanos</strong> en Bogotá e impulsó el Boletín
+                                        Semanal del Colegio, todo ello con la energía de quien ejerce su profesión como
+                                        <strong>misión</strong>. En los foros de la
+                                        <strong>Federación Internacional de Contadores</strong> defendió la capacidad
+                                        técnica de la
                                         región con una frase que resume su carácter: <i>"My English is better than your
                                             Spanish"</i>.
                                     </p>
@@ -35,7 +38,7 @@
                                         hombre que escribía corridos para las convenciones nacionales y que en su
                                         columna <strong><i>Testigo del pasado</i></strong> recordaba que dictaminar es,
                                         ante todo, un acto de
-                                        integridad.</p>
+                                        <strong>integridad</strong>.</p>
                                 </div>
                             </div>
                         </div>
@@ -71,16 +74,18 @@
                                 </h3>
                                 <div class="biografia-doble text-muted">
                                     <p>Rafael Moisés Kalach Mizrahi representa una figura singular en el empresariado
-                                        mexicano: la del líder que construye en silencio y deja que los resultados
-                                        hablen. Como Presidente del Consejo de Administración de Grupo Kaltex, se
-                                        consolidó como la voz más influyente del sector textil en México, presencia que
+                                        mexicano: la del <strong>líder que construye en silencio</strong> y deja que los
+                                        resultados hablen. Como Presidente del Consejo de Administración de
+                                        <strong>Grupo Kaltex</strong>, se consolidó como la voz más influyente del
+                                        <strong>sector textil en México</strong>, presencia que
                                         se refleja en su aparición recurrente entre los 300 líderes más influyentes del
                                         país. Pero su influencia no se detiene ahí: con un perfil discreto y de alto
-                                        impacto, ha participado en los consejos de administración de América Móvil,
-                                        Grupo Carso e Inmuebles Carso, llevando su visión estratégica a las
+                                        impacto, ha participado en los <strong>consejos de administración</strong> de
+                                        América Móvil, Grupo Carso e Inmuebles Carso, llevando su
+                                        <strong>visión estratégica</strong> a las
                                         telecomunicaciones, el desarrollo industrial y el sector inmobiliario. Su
                                         trayectoria es la de un arquitecto silencioso cuyas decisiones han contribuido a
-                                        moldear la estructura económica contemporánea de México.</p>
+                                        moldear la <strong>estructura económica contemporánea de México</strong>.</p>
                                 </div>
                             </div>
                         </div>

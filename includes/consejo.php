@@ -182,7 +182,7 @@
                 <div class="consejo-semblanzas">
                     <span class="consejo-semblanzas-titulo">Resumen de Semblanzas</span>
                     <a href="docs/semblanzas_consejo_sefca.pdf" target="_blank" rel="noopener noreferrer" class="consejo-semblanzas-btn">
-                        Abrir PDF <i class="fas fa-arrow-right ms-2"></i>
+                        Abrir <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
             </div>

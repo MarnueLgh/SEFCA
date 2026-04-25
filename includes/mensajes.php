@@ -18,7 +18,11 @@
         <div class="bento-grid">
             
             <!-- Bloque Izquierdo: Carta Acreditación -->
-            <a href="img/carta_acreditacion.jpg" target="_blank" rel="noopener noreferrer" class="bento-card bento-card-left"></a>
+            <a href="img/carta_acreditacion.jpg" target="_blank" rel="noopener noreferrer" class="bento-card bento-card-left">
+                <div class="carta-acreditacion-wrapper">
+                    <img src="img/carta_acreditacion.jpg" alt="Carta de Acreditación SEFCA" class="carta-acreditacion-img">
+                </div>
+            </a>
 
             <!-- Bloque Derecho: Mensajes (Stack) -->
             <div class="bento-stack">
@@ -43,7 +47,7 @@
                         <img src="img/fca/busto_Armando_Tome_FCA.png" alt="Armando Tomé" class="bento-fila-img">
                     </div>
                     <div class="bento-fila-contenido">
-                        <h3 class="bento-fila-nombre">Dr. Armando Tomé González</h3>
+                        <h3 class="bento-fila-nombre">Dr. Armando Tomé</h3>
                         <p class="bento-fila-texto">
                             Mensaje oficial del presidente honorario de la SEFCA, dirigido a toda la comunidad de egresados de la FCA. Su liderazgo y experiencia nos guían hacia un futuro consolidado.
                         </p>

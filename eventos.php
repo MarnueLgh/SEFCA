@@ -263,9 +263,6 @@
 								Primer ciclo de conferencias magistrales con ponentes invitados que compartieron experiencias y aprendizajes clave para la comunidad FCA.
 							</p>
                             <div class="evento-card-acciones">
-                                <a class="evento-card-enlace" href="img/ciclo1.jpg" target="_blank" rel="noopener noreferrer">
-                                    Ver más <i class="fas fa-arrow-right"></i>
-                                </a>
                                 <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=-VPJKdsu_wQ&list=PLEcS-HQTcBAoY--ot6Kw53cZOxbaTi_H8" target="_blank" rel="noopener noreferrer">
                                     Ver en Youtube <i class="fas fa-arrow-right"></i>
                                 </a>
@@ -287,9 +284,6 @@
 								Segundo ciclo de conferencias magistrales con especialistas que abordaron tendencias, desafíos y oportunidades del entorno profesional.
 							</p>
                             <div class="evento-card-acciones">
-                                <a class="evento-card-enlace" href="img/ciclo2.jpg" target="_blank" rel="noopener noreferrer">
-                                    Ver más <i class="fas fa-arrow-right"></i>
-                                </a>
                                 <a class="evento-card-enlace evento-card-enlace-secundario" href="https://www.youtube.com/watch?v=HyzQ4AvFVjM&list=PLEcS-HQTcBAqe98ozaZYXusliQhWq8Wmx" target="_blank" rel="noopener noreferrer">
                                     Ver en Youtube <i class="fas fa-arrow-right"></i>
                                 </a>

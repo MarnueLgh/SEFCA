@@ -1,8 +1,6 @@
 <?php
 /*
- * Autor: MarnueLgh
  * Fecha: 20/04/2026
- * Versión: 1.0
  * Descripción: Formulario de afiliación para socios SEFCA (Sociedad de Egresados FCA, UNAM).
  *              Recoge datos personales, profesionales y categoría de aportación.
  */
