@@ -2257,6 +2257,7 @@ footer {
     margin-bottom: 16px;
     font-family: 'Inter', var(--fuente-texto);
     font-weight: 400;
+    text-align: justify;
 }
 
 /* Efecto de centrado para el carrusel de eventos (Owl Carousel Center Mode) */
@@ -2795,6 +2796,7 @@ footer {
 }
 
 .link-card-texto {
+    text-align: justify;
     color: #999;
     font-size: 0.95rem;
     line-height: 1.6;
