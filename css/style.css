@@ -1803,23 +1803,20 @@ footer {
 
 /* ---- Tags de categoría dentro de cada card ---- */
 .evento-card-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     margin-bottom: 0.5rem;
-    flex-wrap: wrap;
 }
 
 .evento-card-tag {
     display: inline-block;
     font-size: 0.68rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 3px 10px;
-    border-radius: 50px;
-    background: rgba(234, 166, 54, 0.15);
-    color: #b8841f;
+    padding: 5px 14px;
+    border-radius: 6px;
+    background: var(--dorado-unam);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 /* ---- Grid de cards de noticias ---- */
@@ -1832,12 +1829,16 @@ footer {
 /* ---- Card individual (estilo noticia) ---- */
 .evento-card {
     display: flex;
+    align-items: stretch;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    height: 250px;
+    height: 260px;
+    padding: 1rem;
+    gap: 1.5rem;
+    position: relative;
 }
 
 .evento-card:hover {
@@ -1847,12 +1848,14 @@ footer {
 
 /* Imagen de la card */
 .evento-card-img {
-    flex: 0 0 320px;
-    max-width: 320px;
+    flex: 0 0 340px;
+    max-width: 340px;
     height: 100%;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    border-radius: 14px;
+    border: 1px solid var(--dorado-unam);
 }
 
 .evento-card-img::after {
@@ -1898,20 +1901,11 @@ footer {
 /* Contenido de la card */
 .evento-card-cuerpo {
     flex: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-rows: auto auto 1fr;
-    column-gap: 1.4rem;
-    row-gap: 0.35rem;
-    align-items: start;
-    height: 100%;
-    padding: 1.8rem 2rem;
-}
-
-.evento-card-meta,
-.evento-card-titulo,
-.evento-card-desc {
-    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem 0.5rem 0;
+    min-width: 0;
 }
 
 .evento-card-titulo {
@@ -1919,7 +1913,7 @@ footer {
     font-size: 1.35rem;
     font-weight: 600;
     color: #1E1916;
-    margin-bottom: 0.65rem;
+    margin-bottom: 0.5rem;
     line-height: 1.35;
 }
 
@@ -1927,24 +1921,23 @@ footer {
     font-size: 0.92rem;
     color: #545454;
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    line-clamp: 5;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
 }
 
 .evento-card-acciones {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-    justify-self: end;
-    align-self: end;
+    margin-top: auto;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.3rem;
+    gap: 0.15rem;
+    padding-top: 0.5rem;
 }
 
 .evento-card-enlace {
@@ -1957,13 +1950,11 @@ footer {
     font-weight: 600;
     color: var(--dorado-unam);
     text-decoration: none;
-    transition: gap 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .evento-card-enlace:hover {
     color: #1E1916;
-    gap: 10px;
-    transform: translateX(4px);
 }
 
 .evento-card-enlace i {
@@ -3156,29 +3147,26 @@ footer {
         flex-direction: column;
         height: auto;
         min-height: 0;
+        padding: 0.75rem;
+        gap: 0;
     }
 
     .evento-card-img {
         flex: 0 0 220px;
         max-width: 100%;
         height: 220px;
+        border-radius: 14px;
     }
 
     .evento-card-cuerpo {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        row-gap: 0.55rem;
+        padding: 1rem 0.5rem 0.5rem;
         height: auto;
-        padding: 1.3rem 1.5rem;
     }
 
+
     .evento-card-acciones {
-        grid-column: 1;
-        grid-row: auto;
-        justify-self: start;
+        align-self: flex-start;
         align-items: flex-start;
-        margin-top: 0.1rem;
-        align-self: start;
     }
 
     .evento-card-enlace {
@@ -3187,6 +3175,8 @@ footer {
     }
 
     .evento-card-desc {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
         display: block;
         overflow: visible;
     }
