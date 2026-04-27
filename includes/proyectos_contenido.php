@@ -30,8 +30,8 @@ $proyectos = [
 <section class="proyectos-section section-gap">
     <div class="container">
         <?php foreach ($proyectos as $i => $p): ?>
-            <article class="proyecto-split <?= $i % 2 !== 0 ? 'proyecto-split-invertido' : '' ?>"
-                id="proyecto-<?= htmlspecialchars($p['clave']) ?>">
+            <article class="proyecto-split wow fadeIn <?= $i % 2 !== 0 ? 'proyecto-split-invertido' : '' ?>"
+                id="proyecto-<?= htmlspecialchars($p['clave']) ?>" data-wow-duration="1.5s" data-wow-delay="0.1s">
 
                 <!-- Imagen -->
                 <div class="proyecto-split-img-col">
