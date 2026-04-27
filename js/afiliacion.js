@@ -18,100 +18,52 @@ const tabDone = { 1: false, 2: false };
 // ══════════════════════════════════════════════════════════════
 
 /**
- * Genera la lista completa de generaciones desde 1929 en bloques de 4 años.
- * La última generación es 2026-2030.
+ * Genera la lista completa de generaciones desde 1929.
+ * Cada generación dura 4 años y cada 2 años inicia una nueva.
+ * Ejemplo: 1929-1933, 1931-1935, 1933-1937, …
+ * La última generación termina en 2030.
  */
 function generarGeneraciones() {
-	const generaciones = [];
-	const ANIO_INICIO = 1929;
-	const ULTIMA_GEN_INICIO = 2026;
-	const BLOQUE = 4;
+	var generaciones = [];
+	var ANIO_INICIO = 1930;
+	var ULTIMA_GEN_FIN = 2030;
+	var DURACION = 4;
+	var PASO = 2;
 
-	// Anclar desde la última generación (2026-2030) y generar hacia atrás
-	for (let inicio = ULTIMA_GEN_INICIO; inicio >= ANIO_INICIO; inicio -= BLOQUE) {
-		const fin = inicio + BLOQUE;
-		generaciones.unshift(`${inicio}-${fin}`);
+	for (var inicio = ANIO_INICIO; inicio + DURACION <= ULTIMA_GEN_FIN; inicio += PASO) {
+		var fin = inicio + DURACION;
+		generaciones.push(inicio + '-' + fin);
 	}
 
 	return generaciones;
 }
 
 /**
- * Inicializa el picker de generaciones con scroll y navegación.
- * Muestra las 10 más recientes inicialmente, pero permite navegar
- * a todas las demás con la barra de scroll y las flechas.
+ * Inicializa el select de generaciones, poblando las opciones
+ * con las más recientes primero.
  */
 function inicializarGeneracionPicker() {
-	const track = document.getElementById('gen-track');
-	const navLeft = document.getElementById('gen-nav-left');
-	const navRight = document.getElementById('gen-nav-right');
-	if (!track) return;
+	var select = document.getElementById('generacion');
+	if (!select || select.tagName !== 'SELECT') return;
 
-	const generaciones = generarGeneraciones();
+	var generaciones = generarGeneraciones();
 
-	// Crear chips
-	generaciones.forEach(function (gen) {
-		const chip = document.createElement('button');
-		chip.type = 'button';
-		chip.className = 'gen-chip';
-		chip.textContent = gen;
-		chip.setAttribute('data-gen', gen);
-		chip.addEventListener('click', function () {
-			seleccionarGeneracion(gen);
-		});
-		track.appendChild(chip);
+	// Insertar en orden inverso (más recientes primero)
+	for (var i = generaciones.length - 1; i >= 0; i--) {
+		var opt = document.createElement('option');
+		opt.value = generaciones[i];
+		opt.textContent = generaciones[i];
+		select.appendChild(opt);
+	}
+
+	// Limpiar error al seleccionar
+	select.addEventListener('change', function () {
+		if (select.value) {
+			var errEl = document.getElementById('err-generacion');
+			if (errEl) errEl.classList.remove('visible');
+			select.classList.remove('invalid');
+		}
 	});
-
-	// Scroll a las 10 más recientes (al final del track)
-	requestAnimationFrame(function () {
-		track.scrollLeft = track.scrollWidth;
-		actualizarNavButtons();
-	});
-
-	// Navegación con flechas
-	var scrollStep = 260;
-	navLeft.addEventListener('click', function () {
-		track.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-	});
-	navRight.addEventListener('click', function () {
-		track.scrollBy({ left: scrollStep, behavior: 'smooth' });
-	});
-
-	// Actualizar visibilidad de flechas al scrollear
-	track.addEventListener('scroll', actualizarNavButtons);
-}
-
-function actualizarNavButtons() {
-	var track = document.getElementById('gen-track');
-	var navLeft = document.getElementById('gen-nav-left');
-	var navRight = document.getElementById('gen-nav-right');
-	if (!track || !navLeft || !navRight) return;
-
-	navLeft.style.opacity = track.scrollLeft > 10 ? '1' : '0.3';
-	navLeft.style.pointerEvents = track.scrollLeft > 10 ? 'auto' : 'none';
-
-	var maxScroll = track.scrollWidth - track.clientWidth;
-	navRight.style.opacity = track.scrollLeft < maxScroll - 10 ? '1' : '0.3';
-	navRight.style.pointerEvents = track.scrollLeft < maxScroll - 10 ? 'auto' : 'none';
-}
-
-function seleccionarGeneracion(gen) {
-	// Desmarcar todas
-	var chips = document.querySelectorAll('.gen-chip');
-	chips.forEach(function (c) {
-		c.classList.remove('selected');
-	});
-
-	// Marcar la seleccionada
-	var chip = document.querySelector('.gen-chip[data-gen="' + gen + '"]');
-	if (chip) chip.classList.add('selected');
-
-	// Actualizar campo oculto
-	document.getElementById('generacion').value = gen;
-
-	// Limpiar error
-	var errEl = document.getElementById('err-generacion');
-	if (errEl) errEl.classList.remove('visible');
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -371,10 +323,12 @@ function validateTab1() {
 	if (!genEl || !genEl.value) {
 		var errGen = document.getElementById('err-generacion');
 		if (errGen) errGen.classList.add('visible');
+		if (genEl) genEl.classList.add('invalid');
 		ok = false;
 	} else {
 		var errGen = document.getElementById('err-generacion');
 		if (errGen) errGen.classList.remove('visible');
+		if (genEl) genEl.classList.remove('invalid');
 	}
 
 	return ok;

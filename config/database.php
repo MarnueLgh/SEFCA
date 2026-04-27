@@ -18,7 +18,7 @@ class Database
     /* ── Parámetros de conexión (ajustar cuando la BD esté en producción) ── */
     private $host     = "localhost";
     private $port     = "5432";
-    private $db_name  = "sefca_db";
+    private $db_name  = "sefca";
     private $username = "postgres";
     private $password = "";
 

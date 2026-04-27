@@ -354,9 +354,23 @@ textarea {
   font-size: 0.95rem;
   color: var(--azul-oscuro);
   background: var(--gris-suave);
-  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s, opacity 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s, opacity 0.2s, color 0.2s;
   outline: none;
   cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8a9abf;
+  opacity: 1;
+}
+
+select:invalid {
+  color: #8a9abf;
+}
+
+select option {
+  color: var(--azul-oscuro);
 }
 
 select:disabled {
@@ -364,6 +378,17 @@ select:disabled {
   color: #999;
   cursor: not-allowed;
   opacity: 0.65;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23002B7A' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 40px;
 }
 
 select:enabled {
@@ -955,91 +980,7 @@ input[type="tel"].invalid {
   }
 }
 
-/* ---- GENERACIÓN PICKER ---- */
-.generacion-picker {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-}
-
-.generacion-nav {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1.5px solid var(--gris-linea);
-  background: var(--blanco);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.25s;
-}
-
-.generacion-nav:hover {
-  background: var(--azul);
-  border-color: var(--azul);
-}
-
-.generacion-nav svg {
-  width: 16px;
-  height: 16px;
-  fill: none;
-  stroke: var(--azul);
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: stroke 0.25s;
-}
-
-.generacion-nav:hover svg {
-  stroke: var(--blanco);
-}
-
-.generacion-track {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  flex: 1;
-  padding: 8px 4px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.generacion-track::-webkit-scrollbar {
-  display: none;
-}
-
-.gen-chip {
-  flex-shrink: 0;
-  padding: 8px 16px;
-  border: 1.5px solid var(--gris-linea);
-  border-radius: 20px;
-  background: var(--gris-suave);
-  color: var(--azul-oscuro);
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s;
-  white-space: nowrap;
-}
-
-.gen-chip:hover {
-  background: var(--azul);
-  color: var(--blanco);
-  border-color: var(--azul);
-  transform: translateY(-1px);
-}
-
-.gen-chip.selected {
-  background: var(--azul);
-  color: var(--dorado);
-  border-color: var(--dorado);
-  box-shadow: 0 3px 12px rgba(0, 43, 122, 0.3);
-}
+/* ---- GENERACIÓN (usa el estilo global de select) ---- */
 
 /* ---- CONTADOR DE CARACTERES ---- */
 .char-counter {

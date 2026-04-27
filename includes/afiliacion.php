@@ -221,7 +221,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 							<div class="field-group">
 								<label for="carrera_egreso">Carrera de Egreso <span class="req">*</span></label>
 								<select id="carrera_egreso" name="carrera_egreso" required>
-									<option value="">— Seleccione una carrera —</option>
+									<option value="" disabled selected hidden>Seleccione una carrera</option>
 									<option value="contaduria">Contaduría</option>
 									<option value="administracion">Administración</option>
 									<option value="informatica">Informática</option>
@@ -240,27 +240,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 							</div>
 						</div>
 
-						<!-- Generación con navegación scrollable -->
+						<!-- Generación (lista desplegable) -->
 						<div class="field-group">
 							<label for="generacion">Generación <span class="req">*</span></label>
-							<input type="hidden" id="generacion" name="generacion" required>
-							<div class="generacion-picker" id="generacion-picker">
-								<button type="button" class="generacion-nav generacion-nav-left" id="gen-nav-left"
-									title="Generaciones anteriores">
-									<svg viewBox="0 0 24 24">
-										<polyline points="15 18 9 12 15 6" />
-									</svg>
-								</button>
-								<div class="generacion-track" id="gen-track">
-									<!-- Generaciones se llenan con JS -->
-								</div>
-								<button type="button" class="generacion-nav generacion-nav-right" id="gen-nav-right"
-									title="Generaciones recientes">
-									<svg viewBox="0 0 24 24">
-										<polyline points="9 6 15 12 9 18" />
-									</svg>
-								</button>
-							</div>
+							<select id="generacion" name="generacion" required>
+								<option value="" disabled selected hidden>Seleccione su generación</option>
+								<!-- Opciones generadas dinámicamente con JS -->
+							</select>
 							<div class="error-msg" id="err-generacion">Seleccione su generación.</div>
 						</div>
 

@@ -1522,14 +1522,14 @@ footer {
     color: var(--dorado-unam);
     font-size: 0.88rem;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
+    transition: color 0.3s ease;
 }
 
 .bento-fila-enlace:hover {
-    color: var(--dark);
-    gap: 10px;
+    color: #1E1916;
 }
 
 .bento-fila-enlace i {
