@@ -273,6 +273,35 @@ h6,
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     overflow: hidden;
     transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: consejo-item-entrada 0.6s ease forwards;
+    animation-play-state: paused;
+}
+
+.consejo .accordion-item.is-visible { animation-play-state: running; }
+
+.consejo .accordion-item:nth-child(1) { animation-delay: 0.30s; }
+.consejo .accordion-item:nth-child(2) { animation-delay: 0.40s; }
+.consejo .accordion-item:nth-child(3) { animation-delay: 0.50s; }
+.consejo .accordion-item:nth-child(4) { animation-delay: 0.60s; }
+.consejo .accordion-item:nth-child(5) { animation-delay: 0.70s; }
+.consejo .accordion-item:nth-child(6) { animation-delay: 0.80s; }
+.consejo .accordion-item:nth-child(7) { animation-delay: 0.90s; }
+.consejo .accordion-item:nth-child(8) { animation-delay: 1.00s; }
+.consejo .accordion-item:nth-child(9) { animation-delay: 1.10s; }
+.consejo .accordion-item:nth-child(10) { animation-delay: 1.20s; }
+
+@keyframes consejo-item-entrada {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .consejo .accordion-item {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .consejo .accordion-item:hover {
@@ -3110,6 +3139,14 @@ footer {
 @media (max-width: 991px) {
     .consejo_grid {
         grid-template-columns: 1fr;
+    }
+
+    .consejo-accordion-col {
+        order: 2;
+    }
+
+    .consejo-imagen-col {
+        order: 1;
     }
 
     .consejo_heading {

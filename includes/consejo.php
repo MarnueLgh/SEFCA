@@ -177,7 +177,7 @@
             </div>
 
             <!-- Columna derecha: Foto + Semblanzas -->
-            <div class="consejo-imagen-col">
+            <div class="consejo-imagen-col wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.3s">
                 <img src="img/30_aniversario/consejo_completo_30.jpg" alt="Consejo Directivo SEFCA" class="consejo_img">
                 <div class="consejo-semblanzas">
                     <span class="consejo-semblanzas-titulo">Resumen de Semblanzas</span>

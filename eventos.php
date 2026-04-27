@@ -390,27 +390,35 @@
 
         /* Filtrar + paginar */
         function filtrarYPaginar() {
-            var filtradas = obtenerFiltradas();
-            var totalPaginas = Math.ceil(filtradas.length / POR_PAGINA) || 1;
+            var grid = document.getElementById('eventos-grid');
+            grid.style.transition = 'opacity 0.3s ease';
+            grid.style.opacity    = '0';
 
-            /* Asegurar que la página actual sea válida */
-            if (paginaActual > totalPaginas) paginaActual = totalPaginas;
-            if (paginaActual < 1) paginaActual = 1;
+            setTimeout(function() {
+                var filtradas = obtenerFiltradas();
+                var totalPaginas = Math.ceil(filtradas.length / POR_PAGINA) || 1;
 
-            var inicio = (paginaActual - 1) * POR_PAGINA;
-            var fin    = inicio + POR_PAGINA;
+                /* Asegurar que la página actual sea válida */
+                if (paginaActual > totalPaginas) paginaActual = totalPaginas;
+                if (paginaActual < 1) paginaActual = 1;
 
-            /* Ocultar todas, luego mostrar solo las de la página actual */
-            tarjetas.forEach(function (t) { t.style.display = 'none'; });
-            filtradas.forEach(function (tarjeta, i) {
-                tarjeta.style.display = (i >= inicio && i < fin) ? '' : 'none';
-            });
+                var inicio = (paginaActual - 1) * POR_PAGINA;
+                var fin    = inicio + POR_PAGINA;
 
-            /* Mensaje vacío */
-            mensajeVacio.style.display = (filtradas.length === 0) ? 'block' : 'none';
+                /* Ocultar todas, luego mostrar solo las de la página actual */
+                tarjetas.forEach(function (t) { t.style.display = 'none'; });
+                filtradas.forEach(function (tarjeta, i) {
+                    tarjeta.style.display = (i >= inicio && i < fin) ? '' : 'none';
+                });
 
-            /* Renderizar paginación */
-            renderPaginacion(totalPaginas, filtradas.length);
+                /* Mensaje vacío */
+                mensajeVacio.style.display = (filtradas.length === 0) ? 'block' : 'none';
+
+                /* Renderizar paginación */
+                renderPaginacion(totalPaginas, filtradas.length);
+
+                grid.style.opacity = '1';
+            }, 300);
         }
 
         /* Renderizar barra de paginación */

@@ -300,3 +300,24 @@ $(".eventos-carousel").owlCarousel({
         });
     });
 })(jQuery);
+
+/* ==========================================
+   ANIMACIÓN DE ACORDEÓN (CONSEJO)
+   ========================================== */
+(function() {
+    var acordeon = document.querySelector('.consejo .custom-accordion');
+    if (!acordeon) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                acordeon.querySelectorAll('.accordion-item').forEach(function(item) {
+                    item.classList.add('is-visible');
+                });
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.15 });
+
+    observer.observe(acordeon);
+})();

@@ -18,7 +18,7 @@
         <div class="bento-grid">
             
             <!-- Bloque Izquierdo: Carta Acreditación -->
-            <a href="img/carta_acreditacion.jpg" target="_blank" rel="noopener noreferrer" class="bento-card bento-card-left">
+            <a href="img/carta_acreditacion.jpg" target="_blank" rel="noopener noreferrer" class="bento-card bento-card-left wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.1s">
                 <div class="carta-acreditacion-wrapper">
                     <img src="img/carta_acreditacion.jpg" alt="Carta de Acreditación SEFCA" class="carta-acreditacion-img">
                 </div>
@@ -28,7 +28,7 @@
             <div class="bento-stack">
                 
                 <!-- Fila 1: Lic. Isaac Chertorivski -->
-                <div class="bento-card bento-card-fila">
+                <div class="bento-card bento-card-fila wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.3s">
                     <div class="bento-fila-img-col">
                         <img src="img/fca/busto_Isaac_Chertorivski_Shkoorman.png" alt="Isaac Chertorivski" class="bento-fila-img">
                     </div>
@@ -42,7 +42,7 @@
                 </div>
 
                 <!-- Fila 2: Dr. Armando Tomé -->
-                <div class="bento-card bento-card-fila">
+                <div class="bento-card bento-card-fila wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.5s">
                     <div class="bento-fila-img-col">
                         <img src="img/fca/busto_Armando_Tome_FCA.png" alt="Armando Tomé" class="bento-fila-img">
                     </div>

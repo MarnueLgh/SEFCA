@@ -11,7 +11,7 @@
                 <!-- HOMENAJE 1: H. Murrieta (Texto Izquierda, Video Derecha) -->
                 <div class="row align-items-center mb-5 pb-5 homenajes-item border-bottom">
                     <!-- Columna Izquierda: Texto y Miniaturas -->
-                    <div class="col-lg-7 pe-lg-5 mb-4 mb-lg-0">
+                    <div class="col-lg-7 pe-lg-5 mb-4 mb-lg-0 wow fadeInLeft" data-wow-duration="1.2s" data-wow-delay="0.1s">
                         <div class="d-flex flex-column flex-md-row gap-4">
                             <!-- Contenido de Texto -->
                             <div class="flex-grow-1">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <!-- Columna Derecha: Video -->
-                    <div class="col-lg-5 text-center">
+                    <div class="col-lg-5 text-center wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.4s">
                         <div class="homenaje-video-container shadow-lg mx-auto">
                             <video controls class="w-100 h-100">
                                 <source src="img/video_hMurrieta.mp4" type="video/mp4">
@@ -56,7 +56,7 @@
                 <!-- HOMENAJE 2: R. Kalach (Video Izquierda, Texto Derecha) -->
                 <div class="row align-items-center mt-5 mb-0 homenajes-item">
                     <!-- Columna Izquierda en Escritorio (Video) -->
-                    <div class="col-lg-5 order-2 order-lg-1 text-center">
+                    <div class="col-lg-5 order-2 order-lg-1 text-center wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.1s">
                         <div class="homenaje-video-container shadow-lg mx-auto">
                             <video controls class="w-100 h-100">
                                 <source src="img/video_rKalach.mp4" type="video/mp4">
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <!-- Columna Derecha en Escritorio (Texto y Miniaturas) -->
-                    <div class="col-lg-7 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0">
+                    <div class="col-lg-7 order-1 order-lg-2 ps-lg-5 mb-4 mb-lg-0 wow fadeInRight" data-wow-duration="1.2s" data-wow-delay="0.4s">
                         <div class="d-flex flex-column flex-md-row gap-4">
                             <!-- Contenido de Texto -->
                             <div class="flex-grow-1">
