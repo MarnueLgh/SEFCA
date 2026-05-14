@@ -33,30 +33,30 @@
       <!-- SLIDE 1 -->
       <div class="carousel-item active">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_orgullo_cuadrado.jpeg">
-          <img src="img/banner_principal/SEFCA_BANNER_orgullo_rectangulo.jpeg" alt="Facultad de Contaduría y Administración UNAM" class="c-img"
-            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Sociedad de Egresados de la FCA</h2><div class=c-ph__line></div></div>'">
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_TEST.png">
+          <img src="img/banner_principal/SEFCA_BANNER_orgullo_rectangulo.png" alt="Lema de orgullo de la SEFCA" class="c-img"
+            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Lema de orgullo de la SEFCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
 
       <!-- SLIDE 2 -->
       <div class="carousel-item">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_cuadrado.jpeg">
-          <img src="img/banner_principal/SEFCA_BANNER_rectangulo.jpeg" alt="Aulas dignas para la FCA" class="c-img"
-            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Aulas dignas para la FCA</h2><div class=c-ph__line></div></div>'">
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_concurso_de_ensayo_rectangulo.png">
+          <img src="img/banner_principal/SEFCA_BANNER_concurso_de_ensayo_cuadrado.jpg" alt="Ganadores del concurso de ensayo de la SEFCA" class="c-img"
+            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Ganadores del concurso de ensayo de la SEFCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
 
       <!-- SLIDE 3 -->
-      <div class="carousel-item">
+      <!-- <div class="carousel-item">
         <picture>
           <source media="(max-width: 768px)"
-            srcset="img/banner_principal_cuadrado/Concurso_SEFCA_FCA_2025_sep_cuadrada.jpg">
-          <img src="img/banner_principal/Concurso_SEFCA_FCA_2025_sep.jpg" alt="Biblioteca de la FCA UNAM" class="c-img"
-            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Biblioteca de la FCA</h2><div class=c-ph__line></div></div>'">
+            srcset="img/banner_principal_cuadrado/AGREGAR IMG CUADRADO.jpg">
+          <img src="img/banner_principal/AGREGAR IMG RECTANGULAR.jpg" alt="Concurso SEFCA FCA 2025" class="c-img"
+            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Concurso SEFCA FCA 2025</h2><div class=c-ph__line></div></div>'">
         </picture>
-      </div>
+      </div> -->
 
     </div><!-- /.carousel-inner -->
 

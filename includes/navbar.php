@@ -10,7 +10,7 @@
             <img src="img/fca-unam-logo.png" alt="FCA" class="navbar-logo navbar-logo-fca">
         </a>
         <a href="index.php" class="navbar-logo-link">
-            <img src="img/logo_sefca.png" alt="SEFCA" class="navbar-logo navbar-logo-sefca">
+            <img src="img/SEFCA_DORADO.png" alt="SEFCA" class="navbar-logo navbar-logo-sefca">
         </a>
     </div>
 

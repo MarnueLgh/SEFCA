@@ -10,20 +10,20 @@
                 <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
                     <div class="footer-visitas">
                         <p class="footer-visitas-item">&rarr; Número de visitas: <strong>
-                            <?php
+                                <?php
                                 $archivo_contador = "includes/contador.txt";
                                 if (!file_exists($archivo_contador)) {
                                     file_put_contents($archivo_contador, "0");
                                 }
-                                $visitas = (int)file_get_contents($archivo_contador);
+                                $visitas = (int) file_get_contents($archivo_contador);
                                 // Incrementar solo en la página principal
                                 if (basename($_SERVER['PHP_SELF']) === 'index.php') {
                                     $visitas++;
                                     file_put_contents($archivo_contador, $visitas);
                                 }
                                 echo number_format($visitas);
-                            ?>
-                        </strong></p>
+                                ?>
+                            </strong></p>
                         <p class="footer-visitas-item">&rarr; Desde: 01/03/2026</p>
                     </div>
                 </div>
@@ -32,10 +32,11 @@
                 <div class="col-md-4 text-center mb-3 mb-md-0">
                     <p class="footer-redes-titulo">Síguenos en</p>
                     <div class="footer-redes">
-                        <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="Facebook">
+                        <a href="https://www.facebook.com/SEFCAUNAM" target="_blank" rel="noopener noreferrer"
+                            class="footer-redes-enlace" aria-label="Facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
-                    <!--                         
+                        <!--                         
                         <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
@@ -44,7 +45,8 @@
                         </a> 
                     -->
 
-                        <a href="https://www.youtube.com/@SEFCA" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="YouTube">
+                        <a href="https://www.youtube.com/@SEFCA" target="_blank" rel="noopener noreferrer"
+                            class="footer-redes-enlace" aria-label="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -52,7 +54,8 @@
 
                 <!-- Logo UNAM -->
                 <div class="col-md-4 text-center text-md-end">
-                    <img src="img/unam_gran_universidad.png" alt="UNAM - Nuestra gran Universidad" class="footer-unam-logo">
+                    <img src="img/unam_gran_universidad.png" alt="UNAM - Nuestra gran Universidad"
+                        class="footer-unam-logo">
                 </div>
 
             </div>
@@ -69,13 +72,22 @@
                     D.R. &copy;
                     <?php echo date('Y'); ?>
                 </div>
-                <div class="col-md-10 text-center text-md-end">
-                    Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se
-                    cite la fuente completa y su dirección electrónica. De otra forma requiere permiso previo
-                    por escrito de la institución.
-                    <a href="https://www.fca.unam.mx/docs/aviso_privacidad.pdf" target="_blank" rel="noopener noreferrer">AVISO DE PRIVACIDAD</a>.
+                <div class="col-md-10 text-center text-md-start justify">
+                    Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la
+                    fuente completa y su dirección electrónica. De otra forma requiere permiso previo por escrito de la
+                    institución.
+                    <a href="https://www.fca.unam.mx/docs/aviso_privacidad.pdf" target="_blank"
+                        rel="noopener noreferrer">AVISO DE PRIVACIDAD</a>.
                     Sitio web administrado por el Centro de Informática de la Facultad de Contaduría y
-                    Administración (<a href="https://cifca.fca.unam.mx/" target="_blank" rel="noopener noreferrer">CIFCA</a>).
+                    Administración (<a href="https://cifca.fca.unam.mx/" target="_blank"
+                        rel="noopener noreferrer">CIFCA</a>).
+                    <br>
+                    <a href="https://www.fca.unam.mx/docs/permanentes/seguridad.pdf" target="_blank"
+                        rel="noopener noreferrer">Documento de seguridad</a> |
+                    <a href="https://www.fca.unam.mx/docs/permanentes/aws.pdf" target="_blank"
+                        rel="noopener noreferrer">Instrumento jurídico</a> |
+                    <a href="https://www.fca.unam.mx/docs/permanentes/aviso_simplificado.pdf">Aviso de privacidad
+                        simplificado</a>
                 </div>
             </div>
         </div>
