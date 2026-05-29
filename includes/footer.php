@@ -61,11 +61,18 @@
                 </div>
 
                 <!-- Logo UNAM -->
+                <!-- Logo UNAM -->
                 <div class="col-md-4 text-center text-md-end">
-                    <img src="img/unam_gran_universidad.png" alt="UNAM - Nuestra gran Universidad"
-                        class="footer-unam-logo">
-                </div>
+                    <div class="footer-logo-dorado" 
+                        style="width: 150px; -webkit-mask-image: url('img/unam_gran_universidad_dorado.png'); mask-image: url('img/unam_gran_universidad_dorado.png');" 
+                        role="img" aria-label="UNAM - Nuestra gran Universidad">
+                    </div>
 
+                    <div class="footer-logo-dorado" 
+                        style="width: 150px; -webkit-mask-image: url('img/475_logo_dorado.png'); mask-image: url('img/475_logo_dorado.png');" 
+                        role="img" aria-label="475+ años de historia">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

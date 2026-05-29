@@ -877,6 +877,26 @@ h6,
     object-fit: contain;
 }
 
+.footer-logo-dorado {
+    /* El alto sigue siendo el mismo de tu footer */
+    height: 80px;
+    width: auto;
+    
+    /* Pinta el fondo interno del color del sitio */
+    background-color: var(--dorado-unam);
+    
+    /* Aplica la imagen transparente como un recorte (máscara) */
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    
+    /* Esta línea es solo para que los elementos se alinien uno al lado de otro */
+    display: inline-block; 
+}
+
 /*** Footer — Copyright ***/
 footer {
     width: 100%;
