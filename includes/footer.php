@@ -15,11 +15,19 @@
                                 if (!file_exists($archivo_contador)) {
                                     file_put_contents($archivo_contador, "0");
                                 }
-                                $visitas = (int) file_get_contents($archivo_contador);
+                                $visitas = (int) file_get_contents(
+                                    $archivo_contador,
+                                );
                                 // Incrementar solo en la página principal
-                                if (basename($_SERVER['PHP_SELF']) === 'index.php') {
+                                if (
+                                    basename($_SERVER["PHP_SELF"]) ===
+                                    "index.php"
+                                ) {
                                     $visitas++;
-                                    file_put_contents($archivo_contador, $visitas);
+                                    file_put_contents(
+                                        $archivo_contador,
+                                        $visitas,
+                                    );
                                 }
                                 echo number_format($visitas);
                                 ?>
@@ -36,13 +44,13 @@
                             class="footer-redes-enlace" aria-label="Facebook">
                             <i class="bi bi-facebook"></i>
                         </a>
-                        <!--                         
+                        <!--
                         <a href="https://x.com/FCAUNAMOFICIAL" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="X (Twitter)">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="https://www.instagram.com/fcaunamoficial/" target="_blank" rel="noopener noreferrer" class="footer-redes-enlace" aria-label="Instagram">
                             <i class="fab fa-instagram"></i>
-                        </a> 
+                        </a>
                     -->
 
                         <a href="https://www.youtube.com/@SEFCA" target="_blank" rel="noopener noreferrer"
@@ -70,7 +78,7 @@
                     Hecho en México
                     <br>
                     D.R. &copy;
-                    <?php echo date('Y'); ?>
+                    <?php echo date("Y"); ?>
                 </div>
                 <div class="col-md-10 text-center text-md-start justify">
                     Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la

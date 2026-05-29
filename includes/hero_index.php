@@ -15,7 +15,7 @@
     </div>
     <div class="carousel-inner">
 
-<!-- 
+<!--
      ==============================
       PLANTILLA PARA NUEVOS SLIDES
      ==============================
@@ -33,8 +33,8 @@
       <!-- SLIDE 1 -->
       <div class="carousel-item active">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_TEST.png">
-          <img src="img/banner_principal/SEFCA_BANNER_orgullo_rectangulo.png" alt="Lema de orgullo de la SEFCA" class="c-img"
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/banner_experiencia_orgullo_cuadrado.jpeg">
+          <img src="img/banner_principal/banner_experiencia_orgullo_rectangulo.jpeg" alt="Lema de orgullo de la SEFCA" class="c-img"
             onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Lema de orgullo de la SEFCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
@@ -42,8 +42,8 @@
       <!-- SLIDE 2 -->
       <div class="carousel-item">
         <picture>
-          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/SEFCA_BANNER_concurso_de_ensayo_rectangulo.png">
-          <img src="img/banner_principal/SEFCA_BANNER_concurso_de_ensayo_cuadrado.jpg" alt="Ganadores del concurso de ensayo de la SEFCA" class="c-img"
+          <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/banner_resultado_concurso_ensayo_cuadrado.jpeg">
+          <img src="img/banner_principal/banner_resultado_concurso_ensayo_cuadrado.jpeg" alt="Ganadores del concurso de ensayo de la SEFCA" class="c-img"
             onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Ganadores del concurso de ensayo de la SEFCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
