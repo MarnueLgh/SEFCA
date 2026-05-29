@@ -14,6 +14,15 @@ $proyectos = [
         'enlace' => 'docs/resumen_aulas.pdf',          // URL destino (cuando exista página propia)
         'enlace_texto' => 'Conoce más', // Texto del botón
     ],
+    [
+        'clave' => 'proyecto-suayed',
+        'titulo' => 'Proyecto Suayed.',
+        'descripcion' => 'Descripción del nuevo proyecto de Suayed, el cual estaremos desarrollando una vez que se nos envíe la información.',
+        'imagen' => 'img/fca/suayed_proyecto.png',
+        'alt' => 'Imagen del proyecto Suayed',
+        'enlace' => 'docs/resumen_suayed.pdf',          // URL destino (cuando exista página propia)
+        'enlace_texto' => 'Conoce más', // Texto del botón
+    ],
     // Para agregar otro proyecto, copia el bloque anterior y edita los valores:
     // [
     //     'clave'       => 'otro-proyecto',
