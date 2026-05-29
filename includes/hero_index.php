@@ -40,6 +40,30 @@
       </div>
 
       <!-- SLIDE 2 -->
+       <div class="carousel-item">
+        <a href="https://www.fca.unam.mx/docs/avisos/20260527_SEFCA_CONCURSO_NOTA.pdf" target="_blank">
+          <picture>
+            <source media="(max-width: 768px)"
+              srcset="img/banner_principal_cuadrado/20260527_SEFCA_CONCURSO_BANNER_2_cuadrado.jpg">
+            <img src="img/banner_principal/20260527_SEFCA_CONCURSO_BANNER_1_rectangulo.jpg" alt="Concurso SEFCA FCA 2025" class="c-img"
+              onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Concurso SEFCA FCA 2025</h2><div class=c-ph__line></div></div>'">
+          </picture>
+        </a>
+      </div>
+
+      <!-- SLIDE 3 -->
+       <div class="carousel-item">
+        <a href="https://www.fca.unam.mx/docs/avisos/CONCURSO_ENSAYO_FCA_SOCIEDAD_EGRESADOS_2025_4.pdf" target="_blank">
+          <picture>
+            <source media="(max-width: 768px)"
+              srcset="img/banner_principal_cuadrado/BANNERS_GANADORES_SEFCA_B-02_cuadrado.jpg">
+            <img src="img/banner_principal/BANNERS_GANADORES_SEFCA_B-01_rectangulo.jpg" alt="Concurso SEFCA FCA 2025" class="c-img"
+              onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Concurso SEFCA FCA 2025</h2><div class=c-ph__line></div></div>'">
+          </picture>
+        </a>
+      </div>
+
+      <!-- SLIDE 4 -->
       <div class="carousel-item">
         <picture>
           <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/banner_resultado_concurso_ensayo_cuadrado.jpeg">
@@ -47,16 +71,6 @@
             onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Ganadores del concurso de ensayo de la SEFCA</h2><div class=c-ph__line></div></div>'">
         </picture>
       </div>
-
-      <!-- SLIDE 3 -->
-      <!-- <div class="carousel-item">
-        <picture>
-          <source media="(max-width: 768px)"
-            srcset="img/banner_principal_cuadrado/AGREGAR IMG CUADRADO.jpg">
-          <img src="img/banner_principal/AGREGAR IMG RECTANGULAR.jpg" alt="Concurso SEFCA FCA 2025" class="c-img"
-            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Concurso SEFCA FCA 2025</h2><div class=c-ph__line></div></div>'">
-        </picture>
-      </div> -->
 
     </div><!-- /.carousel-inner -->
 
