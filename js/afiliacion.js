@@ -272,6 +272,36 @@ function validarTelefono(id, errorId) {
 	return true;
 }
 
+function validarComprobantePago() {
+	var el = document.getElementById('comprobante_pago');
+	var errEl = document.getElementById('err-comprobante');
+	var tiposPermitidos = ['image/jpeg', 'image/png', 'image/webp'];
+	var tamanoMaximo = 5 * 1024 * 1024;
+
+	if (!el || !el.files || el.files.length === 0) {
+		if (errEl) errEl.textContent = 'Adjunte una imagen del comprobante de pago.';
+		mostrarError('comprobante_pago', 'err-comprobante');
+		return false;
+	}
+
+	var archivo = el.files[0];
+
+	if (tiposPermitidos.indexOf(archivo.type) === -1) {
+		if (errEl) errEl.textContent = 'El comprobante debe ser una imagen JPG, PNG o WEBP.';
+		mostrarError('comprobante_pago', 'err-comprobante');
+		return false;
+	}
+
+	if (archivo.size > tamanoMaximo) {
+		if (errEl) errEl.textContent = 'El comprobante no debe superar los 5 MB.';
+		mostrarError('comprobante_pago', 'err-comprobante');
+		return false;
+	}
+
+	limpiarError('comprobante_pago', 'err-comprobante');
+	return true;
+}
+
 function validateTab1() {
 	var ok = true;
 
@@ -364,6 +394,9 @@ function validateTab2() {
 	// Referencia de pago
 	if (!validarCampoTexto('referencia_pago', 'err-referencia')) ok = false;
 
+	// Imagen del comprobante de pago
+	if (!validarComprobantePago()) ok = false;
+
 	return ok;
 }
 
@@ -443,6 +476,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		cuentaInput.addEventListener('input', function () {
 			this.value = this.value.replace(/\D/g, '');
 		});
+	}
+
+	// Validacion del comprobante
+	var comprobanteInput = document.getElementById('comprobante_pago');
+	if (comprobanteInput) {
+		comprobanteInput.addEventListener('change', validarComprobantePago);
 	}
 
 	// Limpieza de errores en tiempo real

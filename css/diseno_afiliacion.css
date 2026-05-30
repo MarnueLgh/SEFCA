@@ -424,6 +424,50 @@ textarea.invalid {
   display: block;
 }
 
+.field-help {
+  font-size: 0.78rem;
+  color: #5a6a8a;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+.comprobante-archivo input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px dashed var(--gris-linea);
+  border-radius: 9px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.92rem;
+  color: var(--azul-oscuro);
+  background: var(--gris-suave);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.comprobante-archivo input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 7px;
+  background: var(--azul);
+  color: var(--blanco);
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comprobante-archivo input[type="file"]:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(0, 43, 122, 0.1);
+  background: var(--blanco);
+  outline: none;
+}
+
+.comprobante-archivo input[type="file"].invalid {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.08);
+}
+
 textarea {
   resize: vertical;
   min-height: 80px;

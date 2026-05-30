@@ -8,13 +8,63 @@
 
 $registrado = false;
 $nombre_completo = '';
+$ruta_comprobante_pago = '';
+$error_comprobante_pago = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
-	$registrado = true;
 	$nombre = trim(isset($_POST['nombre']) ? $_POST['nombre'] : '');
 	$apellido_p = trim(isset($_POST['apellido_paterno']) ? $_POST['apellido_paterno'] : '');
 	$apellido_m = trim(isset($_POST['apellido_materno']) ? $_POST['apellido_materno'] : '');
 	$nombre_completo = "$nombre $apellido_p $apellido_m";
+	$comprobante_pago = isset($_FILES['comprobante_pago']) ? $_FILES['comprobante_pago'] : null;
+	$tamano_maximo_comprobante = 5 * 1024 * 1024;
+	$tipos_comprobante_permitidos = [
+		'image/jpeg' => 'jpg',
+		'image/png' => 'png',
+		'image/webp' => 'webp',
+	];
+
+	if (!$comprobante_pago || $comprobante_pago['error'] === UPLOAD_ERR_NO_FILE) {
+		$error_comprobante_pago = 'Adjunte una imagen del comprobante de pago.';
+	} elseif ($comprobante_pago['error'] !== UPLOAD_ERR_OK) {
+		$error_comprobante_pago = 'No se pudo cargar el comprobante. Intente nuevamente.';
+	} elseif ($comprobante_pago['size'] > $tamano_maximo_comprobante) {
+		$error_comprobante_pago = 'El comprobante no debe superar los 5 MB.';
+	} else {
+		$mime_comprobante = '';
+
+		if (function_exists('finfo_open')) {
+			$finfo = finfo_open(FILEINFO_MIME_TYPE);
+			$mime_comprobante = $finfo ? finfo_file($finfo, $comprobante_pago['tmp_name']) : '';
+			if ($finfo) {
+				finfo_close($finfo);
+			}
+		} elseif (function_exists('mime_content_type')) {
+			$mime_comprobante = mime_content_type($comprobante_pago['tmp_name']);
+		}
+
+		if (!isset($tipos_comprobante_permitidos[$mime_comprobante])) {
+			$error_comprobante_pago = 'El comprobante debe ser una imagen JPG, PNG o WEBP.';
+		} else {
+			$directorio_comprobantes = __DIR__ . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . 'comprobantes';
+
+			if (!is_dir($directorio_comprobantes) && !mkdir($directorio_comprobantes, 0755, true)) {
+				$error_comprobante_pago = 'No se pudo preparar la carpeta para guardar el comprobante.';
+			} else {
+				$extension_comprobante = $tipos_comprobante_permitidos[$mime_comprobante];
+				$token_comprobante = bin2hex(random_bytes(6));
+				$nombre_archivo_comprobante = 'comprobante_' . date('Ymd_His') . '_' . $token_comprobante . '.' . $extension_comprobante;
+				$ruta_destino_comprobante = $directorio_comprobantes . DIRECTORY_SEPARATOR . $nombre_archivo_comprobante;
+
+				if (move_uploaded_file($comprobante_pago['tmp_name'], $ruta_destino_comprobante)) {
+					$ruta_comprobante_pago = 'uploads/comprobantes/' . $nombre_archivo_comprobante;
+					$registrado = true;
+				} else {
+					$error_comprobante_pago = 'No se pudo guardar el comprobante. Intente nuevamente.';
+				}
+			}
+		}
+	}
 
 	/*
 	 * ── Preparación para PostgreSQL ──────────────────────────────────
@@ -31,13 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	 *                 fecha_nacimiento, tel_celular, tel_oficina,
 	 *                 carrera_egreso, correo, generacion, no_cuenta,
 	 *                 compania, cargo_actual, trayectoria,
-	 *                 monto_aportacion, categoria_socio, referencia_pago
+	 *                 monto_aportacion, categoria_socio, referencia_pago, ruta_comprobante_pago
 	 *             ) VALUES (
 	 *                 :nombre, :apellido_paterno, :apellido_materno,
 	 *                 :fecha_nacimiento, :tel_celular, :tel_oficina,
 	 *                 :carrera_egreso, :correo, :generacion, :no_cuenta,
 	 *                 :compania, :cargo_actual, :trayectoria,
-	 *                 :monto_aportacion, :categoria_socio, :referencia_pago
+	 *                 :monto_aportacion, :categoria_socio, :referencia_pago, :ruta_comprobante_pago
 	 *             )";
 	 *
 	 *     $stmt = $conn->prepare($sql);
@@ -58,6 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	 *         ':monto_aportacion'  => $_POST['monto_aportacion'] ?? '',
 	 *         ':categoria_socio'   => $_POST['categoria_socio'] ?? '',
 	 *         ':referencia_pago'   => $_POST['referencia_pago'] ?? '',
+	 *         ':ruta_comprobante_pago' => $ruta_comprobante_pago,
 	 *     ]);
 	 * }
 	 */
@@ -73,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	<link
 		href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
 		rel="stylesheet">
-	<link rel="stylesheet" href="../css/diseno_afiliacion.css">
+	<link rel="stylesheet" href="css/diseno_afiliacion.css">
 </head>
 
 <body>
@@ -108,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 		</div>
 
 		<!-- ── Formulario principal ───────────────────────────── -->
-		<form method="POST" id="main-form" class="form-container <?= $registrado ? 'hide' : '' ?>">
+		<form method="POST" id="main-form" class="form-container <?= $registrado ? 'hide' : '' ?>" enctype="multipart/form-data">
 
 			<!-- ===================== TAB 1: DATOS PERSONALES Y ACADÉMICOS ===================== -->
 			<div class="tab open" id="tab-1">
@@ -345,6 +396,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 							<div class="error-msg" id="err-referencia">Ingrese la referencia de su pago.</div>
 						</div>
 
+						<!-- Imagen del comprobante de pago -->
+						<div class="field-group comprobante-archivo">
+							<label for="comprobante_pago">Imagen del Comprobante <span class="req">*</span></label>
+							<input type="file" id="comprobante_pago" name="comprobante_pago"
+								accept="image/jpeg,image/png,image/webp" required>
+							<div class="field-help">Formatos permitidos: JPG, PNG o WEBP. Tama&ntilde;o m&aacute;ximo: 5 MB.</div>
+							<div class="error-msg <?= $error_comprobante_pago !== '' ? 'visible' : '' ?>" id="err-comprobante">
+								<?= htmlspecialchars($error_comprobante_pago !== '' ? $error_comprobante_pago : 'Adjunte una imagen JPG, PNG o WEBP menor a 5 MB.', ENT_QUOTES, 'UTF-8') ?>
+							</div>
+						</div>
+
 						<!-- Datos bancarios -->
 						<div class="datos-bancarios">
 							<div class="datos-bancarios-titulo">
@@ -420,7 +482,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 		</form>
 	</div><!-- /.wrapper -->
 
-	<script src="../js/afiliacion.js"></script>
+	<script src="js/afiliacion.js"></script>
 
 	<?php if ($registrado): ?>
 		<script>

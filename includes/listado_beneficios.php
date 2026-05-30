@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $categorias_beneficios = [
     [
         'titulo' => 'Finanzas',
@@ -552,11 +552,6 @@ $escapar_html = static function ($valor) {
 
 <div class="swiss-benefits-module">
     <div class="swiss-outer-canvas">
-        
-        <!-- Encabezado audaz de alto contraste -->
-        <h1 class="swiss-main-headline">
-            Pasos positivos que ya se están dando para asegurar tu bienestar universitario.
-        </h1>
 
         <!-- Barra de pestañas horizontal ultra-limpia -->
         <nav class="swiss-category-bar" aria-label="Categorías de beneficios">
