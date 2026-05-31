@@ -6,10 +6,12 @@ $categorias_beneficios = [
             [
                 'titulo' => 'BBVA',
                 'descripcion' => 'En BBVA encontrarás una alternativa financiera vinculada con la comunidad universitaria, pensada para quienes buscan una tarjeta de crédito con beneficios prácticos y un lazo con la UNAM. Permite acceder a ventajas exclusivas en el uso cotidiano y contribuye al apoyo institucional.',
+                'enlace' => 'https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html',
             ],
             [
                 'titulo' => 'Quálitas Seguros',
                 'descripcion' => 'Quálitas ofrece a la comunidad UNAM opciones de protección vehicular mediante esquemas preferenciales que facilitan la contratación de un seguro de auto con atención especializada y condiciones dirigidas a integrantes de la Universidad.',
+                'enlace' => 'https://oplinea.qualitas.com.mx/q.php?EXAUNAM',
             ],
         ],
     ],
@@ -19,10 +21,12 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Palacio de Minería',
                 'descripcion' => 'La Academia de Música del Palacio de Minería acerca a la comunidad UNAM a experiencias culturales de alto valor en el ámbito de la música sinfónica, facilitando el acceso a conciertos que enriquecen la formación cultural.',
+                'enlace' => 'https://boletoscultura.unam.mx/default.asp?invalid',
             ],
             [
                 'titulo' => 'El Sótano Librerías',
                 'descripcion' => 'El Sótano brinda a la comunidad UNAM una opción para adquirir libros, material escolar y productos editoriales mediante condiciones preferenciales que promueven el acceso al estudio y la lectura.',
+                'enlace' => 'https://www.elsotano.com/convenio-comunidad-unam',
             ],
         ],
     ],
@@ -32,6 +36,7 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Harmon Hall',
                 'descripcion' => 'Harmon Hall ofrece a la comunidad UNAM una oportunidad para continuar su preparación académica a través del aprendizaje del idioma inglés con programas educativos accesibles y horarios flexibles.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf',
             ],
         ],
     ],
@@ -41,26 +46,32 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Acuario Inbursa',
                 'descripcion' => 'El Acuario Inbursa ofrece una experiencia recreativa y educativa para conocer distintas especies marinas en un espacio diseñado para combinar entretenimiento, conocimiento y contacto con la biodiversidad acuática.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/acuarioinbursa/E5WFfJLYuwmbTC5OIOyDwg05xQwceMCZ3Vrr8R4q.jpg',
             ],
             [
                 'titulo' => 'Algostudio',
                 'descripcion' => 'Algostudio acerca a la comunidad UNAM a una experiencia inmersiva inspirada en la vida y obra de Frida Kahlo, combinando recursos visuales, narrativos y tecnológicos para crear una experiencia única.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/algostudio/BJdHNBNMB93FDBqN74n45dJGrnZy5rHU64RkEG8A.pdf',
             ],
             [
                 'titulo' => 'Bioparque Estrella',
                 'descripcion' => 'Bioparque Estrella ofrece una alternativa de entretenimiento al aire libre para convivir con la naturaleza y conocer distintas especies animales en un entorno familiar recreativo único.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/bioparque/OV4SNsF6piqZLR8RMLfA7Ghln9Z0FrgWRUEU6mWE.jpg',
             ],
             [
                 'titulo' => 'Boliches AMF',
                 'descripcion' => 'Boliches AMF brinda una opción de entretenimiento social para disfrutar con amigos o familiares, permitiendo acceder a una actividad recreativa sencilla, ideal para convivir fuera de la rutina.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/amf/rLkuQ2HxUx2EqXSYJXoOGVQC6qFWERVGyEAuMHkf.jpg',
             ],
             [
                 'titulo' => 'Mejor Teatro',
                 'descripcion' => 'Mejor Teatro acerca a la comunidad UNAM a las mejores propuestas escénicas de cartelera. Facilita el acceso a producciones teatrales de gran formato con beneficios exclusivos en taquilla.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/mejorteatro/4ofK9QaVMhybeXCKFZV2l2CyUR4ByZHSDg7m4nvj.png',
             ],
             [
                 'titulo' => 'Six Flags',
                 'descripcion' => 'Six Flags ofrece una opción de entretenimiento extrema para disfrutar de atracciones y espectáculos en un parque temático de nivel internacional bajo condiciones preferenciales de acceso.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/sixflags/VIKknNxt25tAYvqe5hIxXbyU5qwyiSOygbc6V60n.jpeg',
             ],
         ],
     ],
@@ -70,6 +81,7 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Sportium',
                 'descripcion' => 'Sportium ofrece a la comunidad UNAM una alternativa para cuidar la salud física mediante clubes deportivos de primer nivel, albercas climatizadas y equipamiento de acondicionamiento de vanguardia.',
+                'enlace' => 'https://sportium.activehosted.com/f/29',
             ],
         ],
     ],
@@ -79,18 +91,72 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Camino Real',
                 'descripcion' => 'Camino Real ofrece opciones de hospedaje premium con condiciones preferenciales en destinos de perfil ejecutivo y turístico, ideales para estancias de descanso o actividades académicas.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/caminoreal/UpWalq5UEeaASg9TpHLug7raCHcUZKbx39uryewT.png',
             ],
             [
                 'titulo' => 'City Express',
                 'descripcion' => 'City Express brinda alternativas de hospedaje prácticas para viajes de negocios o estudio, ofreciendo confort, conectividad y servicios funcionales pensados en la eficiencia del viajero.',
+                'enlace' => 'https://www.marriott.com/es/offers/packages/cala-convenios-hoteles-unam.mi',
             ],
             [
                 'titulo' => 'Fiesta Americana',
                 'descripcion' => 'Fiesta Americana ofrece una experiencia de hospedaje icónica con enfoque en comodidad, calidez y atención al detalle, ideal para viajes familiares, de descanso o estancias institucionales.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'Fiesta Americana Grand',
+                'descripcion' => 'Fiesta Americana Grand ofrece una experiencia de hospedaje icónica con enfoque en comodidad, calidez y atención al detalle, ideal para viajes familiares, de descanso o estancias institucionales.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
             ],
             [
                 'titulo' => 'Fiesta Inn',
                 'descripcion' => 'Fiesta Inn ofrece hospedaje funcional y cómodo optimizado para viajes de trabajo o estudio, equilibrando perfectamente conectividad, confort y tarifas exclusivas para la comunidad.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'Fiesta Inn Loft',
+                'descripcion' => 'Fiesta Inn Loft ofrece hospedaje funcional y cómodo optimizado para viajes de trabajo o estudio, equilibrando perfectamente conectividad, confort y tarifas exclusivas para la comunidad.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'Gamma',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'RIU - Plaza GDL',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/riu/liKSsnvah0nJBwBnIDCamcKaIwY1L5vye8s7wrjr.jpg',
+            ],
+            [
+                'titulo' => 'Misión',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/mision/SLjMqUGvuKBXPkEyXOYUj3zplAJJNnnX71eKVo76.png',
+            ],
+            [
+                'titulo' => 'Live Aqua',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'One',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'Real Inn',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/caminoreal/UpWalq5UEeaASg9TpHLug7raCHcUZKbx39uryewT.png',
+            ],
+            [
+                'titulo' => 'The Explorean Kohunlich',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+            ],
+            [
+                'titulo' => 'NH',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/nhhoteles/oY6VHTLgNFyXHhhMsIFbc8V7Y95WfGcWkFuzwdbD.png',
             ],
         ],
     ],
@@ -100,10 +166,17 @@ $categorias_beneficios = [
             [
                 'titulo' => 'Ópticas Arista',
                 'descripcion' => 'Ópticas Arista ofrece a la comunidad UNAM alternativas integrales para el cuidado de la salud visual, facilitando el acceso a exámenes profesionales, lentes graduados y armazones de tendencia.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/arista/HSTGFpHkyRYCE59Zp2Qhs7u60hjQOLDjXE6VcbNi.jpg',
             ],
             [
                 'titulo' => 'Ópticas LUX',
                 'descripcion' => 'Ópticas LUX brinda soluciones de alta gama para la salud ocular, permitiendo acceder a condiciones preferenciales en cristales graduados, lentes de contacto y marcas internacionales seleccionadas.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/lux/F1ex5VmUc4FqKtJY0F3fv8R0URbISnNzwi1rnhSQ.pdf',
+            ],
+            [
+                'titulo' => 'Ópticas +visión',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/masvision/IZnPwM2GPojUQf5GNjHSihO9AJJu5TWGY8uUv14q.jpg',
             ],
         ],
     ],
@@ -111,16 +184,29 @@ $categorias_beneficios = [
         'titulo' => 'Restaurantes',
         'beneficios' => [
             [
+                'titulo' => 'Hooters',
+                'descripcion' => 'Hooters ofrece una experiencia gastronómica única con su famosa comida de pollo y bebidas, incluyendo descuentos especiales para estudiantes y egresados de la Universidad.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/hooters/Xm6STWXEgQig0Jvv1q7kLOVN6nXMdK02aF5Jtqvc.pdf',
+            ],
+            [
                 'titulo' => 'IHOP',
                 'descripcion' => 'IHOP brinda una excelente propuesta gastronómica para desayunos y comidas en un ambiente casual y familiar, ofreciendo descuentos especiales para estudiantes y egresados de la Universidad.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/ihop/3LRIg6Ydgax530A7DIv18mKevmfxPIOl7xaDOSl3.pdf',
             ],
             [
                 'titulo' => 'La Casa del Pastor',
                 'descripcion' => 'La Casa del Pastor deleita a la comunidad con el auténtico sabor de los tacos al pastor y platillos tradicionales mexicanos en espacios cómodos y con tarifas exclusivas en consumo general.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/lacasadelpastor/dOIhwmm6px7MiX5iB0OmE0y4itY92dN1VmWKUBnH.png',
             ],
             [
-                'titulo' => 'Restaurante Palominos',
+                'titulo' => 'Madero',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/maderorestaurante/7CwViwciRfJYCWiCYQGqVLwh0vSXxdI5wkylZVNa.pdf',
+            ],
+            [
+                'titulo' => 'Palominos',
                 'descripcion' => 'Palominos ofrece una propuesta culinaria de alta gama inspirada en los cortes de carne de Sonora, perfecta para celebraciones especiales o encuentros corporativos en condiciones preferenciales.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/1/oFEqkIPvcsjqbcyy8XwEsqNJ3gUq5y0t0TRg6NqX.jpg',
             ],
         ],
     ],
@@ -128,16 +214,59 @@ $categorias_beneficios = [
         'titulo' => 'Salud',
         'beneficios' => [
             [
-                'titulo' => 'Laboratorios Polanco',
-                'descripcion' => 'Laboratorios Polanco ofrece estudios de análisis clínicos y gabinete preventivos con la mayor precisión técnica y tarifas altamente preferenciales para toda la comunidad universitaria.',
+                'titulo' => 'Barreda y Asociados - Radiología e Imagen',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/grupobarreda/99NDJNtHRipOYrd73QKNG48itslMAvO1D1pYwSEM.png',
             ],
             [
                 'titulo' => 'Grupo Diagnóstico Aries',
                 'descripcion' => 'Grupo Diagnóstico Aries brinda soluciones integrales en estudios médicos preventivos y de diagnóstico, facilitando el cuidado oportuno de la salud mediante servicios accesibles.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/aries/rNMLvpJ7RMxy7xekhZ8B9VQmsiYokRlvakIKjSN3.png',
+            ],
+            [
+                'titulo' => 'Laboratorios Polanco',
+                'descripcion' => 'Laboratorios Polanco ofrece estudios de análisis clínicos y gabinete preventivos con la mayor precisión técnica y tarifas altamente preferenciales para toda la comunidad universitaria.',
+                'enlace' => 'https://lmpolanco.com/',
+            ],
+            [
+                'titulo' => 'Médica Vial',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/medicavial/f5dlfnoz340wpuzEVENsEbpHbXbZZ7c18UIaAaEv.pdf',
+            ],
+            [
+                'titulo' => 'Ortopedia Mostkoff',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://mostkoff.com/',
             ],
             [
                 'titulo' => 'SODEIN Servicios Dentales',
                 'descripcion' => 'SODEIN ofrece tratamientos odontológicos preventivos y correctivos especializados, apoyando la salud bucal de los universitarios con atención clínica profesional y planes de pago.',
+                'enlace' => 'https://implantes.sodein.com/',
+            ],
+        ],
+    ],
+    [
+        'titulo' => 'Tiendas',
+        'beneficios' => [
+            [
+                'titulo' => 'DABO - Papelera',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/dabo/7RGAA9p9mD9Gl4JSe7cT1iZaR7FBKxK0385chIWF.jpg',
+            ],
+            [
+                'titulo' => 'Kurian - Ropa para caballero',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/1/RGZBV7BbfRLSHAvKXqdY4wujvOuOON98zaDWbyMw.pdf',
+            ],
+            [
+                'titulo' => 'SpeeDee - Servicio automotriz',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/speedee/kKNKWR8Gh5W5o45gc89IbEOlzbKbFLQusPDs8WzF.pdf',
+            ],
+            [
+                'titulo' => 'Tintorerías Max',
+                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'enlace' => 'https://beneficios.pveaju.unam.mx/storage/tintoreriasmx/7V7cTEdOWXE4mPxMbVDSPQ9ReyqYVSL2wcWvqk6c.pdf',
             ],
         ],
     ],
@@ -148,20 +277,15 @@ $escapar_html = static function ($valor) {
 };
 ?>
 
-<!-- Tipografías específicas para este módulo -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
 <style>
     /* El contenedor wrapper aisla todas las variables y estilos para no contaminar el resto de la web */
     .swiss-benefits-module {
-        --swiss-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        --swiss-font-mono: 'Space Mono', monospace;
+        --swiss-font-sans: var(--fuente-texto, 'Roboto', sans-serif);
+        --swiss-font-mono: var(--fuente-texto, 'Roboto', sans-serif);
         --swiss-bg-card: #f5f5f5;
-        --swiss-text-dark: #000000;
-        --swiss-text-muted: #666666;
-        --swiss-border-subtle: rgba(0, 0, 0, 0.08);
+        --swiss-text-dark: var(--azul_unam, #11304b);
+        --swiss-text-muted: var(--secondary, #545454);
+        --swiss-border-subtle: rgba(17, 48, 75, 0.08);
 
         width: 100%;
         font-family: var(--swiss-font-sans);
@@ -191,8 +315,9 @@ $escapar_html = static function ($valor) {
 
     /* Titular de diseño suizo editorial */
     .swiss-benefits-module .swiss-main-headline {
+        font-family: var(--fuente-titulo, serif);
         font-size: 52px;
-        font-weight: 800;
+        font-weight: 500;
         line-height: 1.08;
         letter-spacing: -0.04em;
         max-width: 820px;
@@ -232,13 +357,13 @@ $escapar_html = static function ($valor) {
     }
 
     .swiss-benefits-module .swiss-category-btn:hover {
-        color: var(--swiss-text-dark);
-        background-color: rgba(0, 0, 0, 0.03);
+        color: var(--dorado-unam, #9c6e09);
+        background-color: rgba(156, 110, 9, 0.05);
     }
 
     .swiss-benefits-module .swiss-category-btn.is-active {
-        color: var(--swiss-text-dark);
-        background-color: rgba(0, 0, 0, 0.06);
+        color: #ffffff;
+        background-color: var(--swiss-text-dark);
     }
 
     .swiss-benefits-module .swiss-benefits-viewport {
@@ -307,29 +432,28 @@ $escapar_html = static function ($valor) {
 
     /* Esferas de iluminación orgánica por desenfoque */
     .swiss-benefits-module .swiss-sphere-glow {
-        width: 280px;
-        height: 280px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        filter: blur(80px);
+        filter: blur(115px);
         position: absolute;
         transition: transform 0.6s ease;
     }
 
-        .swiss-benefits-module .palette-rose {
-            /* Dorado UNAM brillante */
-            background: radial-gradient(circle, rgba(234, 166, 54, 0.95) 0%, rgba(184, 140, 60, 0.7) 50%, rgba(184, 140, 60, 0.1) 100%);
-        }
+    .swiss-benefits-module .palette-rose {
+        /* Dorado UNAM brillante */
+        background: radial-gradient(circle, rgba(234, 166, 54, 0.95) 0%, rgba(184, 140, 60, 0.7) 50%, rgba(184, 140, 60, 0.1) 100%);
+    }
 
-        .swiss-benefits-module .palette-blue {
-            /* Dorado Carta Estratégica */
-            background: radial-gradient(circle, rgba(212, 160, 57, 0.95) 0%, rgba(170, 125, 40, 0.7) 50%, rgba(170, 125, 40, 0.1) 100%);
-        }
+    .swiss-benefits-module .palette-blue {
+        /* Dorado Carta Estratégica */
+        background: radial-gradient(circle, rgba(212, 160, 57, 0.95) 0%, rgba(170, 125, 40, 0.7) 50%, rgba(170, 125, 40, 0.1) 100%);
+    }
 
-        .swiss-benefits-module .palette-bronze {
-            /* Dorado UNAM oscuro */
-            background: radial-gradient(circle, rgba(184, 150, 85, 0.95) 0%, rgba(140, 110, 60, 0.7) 50%, rgba(140, 110, 60, 0.1) 100%);
-        }
-
+    .swiss-benefits-module .palette-bronze {
+        /* Dorado UNAM oscuro */
+        background: radial-gradient(circle, rgba(184, 150, 85, 0.95) 0%, rgba(140, 110, 60, 0.7) 50%, rgba(140, 110, 60, 0.1) 100%);
+    }
 
     .swiss-benefits-module .swiss-sphere-label {
         font-family: var(--swiss-font-sans);
@@ -369,10 +493,7 @@ $escapar_html = static function ($valor) {
         line-height: 1.6;
         color: var(--swiss-text-muted);
         margin-bottom: 25px;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
+        text-align: justify;
     }
 
     .swiss-benefits-module .swiss-card-title-link {
@@ -384,119 +505,14 @@ $escapar_html = static function ($valor) {
         color: var(--swiss-text-dark);
         text-decoration: underline;
         text-underline-offset: 4px;
-        transition: opacity 0.2s ease;
+        transition: color 0.2s ease, opacity 0.2s ease;
         display: inline-block;
         cursor: pointer;
     }
 
     .swiss-benefits-module .swiss-card-title-link:hover {
-        opacity: 0.6;
-    }
-
-    /* Modal - Ajustes para no heredar fondos invasivos */
-    .swiss-benefits-module .swiss-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* Backdrop semitransparente oscuro clásico para mayor contraste */
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 99999;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        padding: 20px;
-    }
-
-    .swiss-benefits-module .swiss-modal.is-open {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .swiss-benefits-module .swiss-modal-box {
-        background-color: #ffffff;
-        max-width: 620px;
-        width: 100%;
-        border-radius: 28px;
-        padding: 50px;
-        border: 1px solid var(--swiss-border-subtle);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-        position: relative;
-        transform: translateY(20px);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .swiss-benefits-module .swiss-modal.is-open .swiss-modal-box {
-        transform: translateY(0);
-    }
-
-    .swiss-benefits-module .swiss-modal-close {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        background: none;
-        border: none;
-        font-size: 20px;
-        color: var(--swiss-text-dark);
-        cursor: pointer;
-        opacity: 0.4;
-        transition: opacity 0.25s;
-    }
-
-    .swiss-benefits-module .swiss-modal-close:hover {
-        opacity: 1;
-    }
-
-    .swiss-benefits-module .swiss-modal-meta {
-        font-family: var(--swiss-font-mono);
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--swiss-text-muted);
-        margin-bottom: 16px;
-        display: block;
-    }
-
-    .swiss-benefits-module .swiss-modal-title {
-        font-size: 36px;
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.03em;
-        margin-bottom: 24px;
-        color: var(--swiss-text-dark);
-    }
-
-    .swiss-benefits-module .swiss-modal-desc {
-        font-size: 16px;
-        line-height: 1.7;
-        color: var(--swiss-text-muted);
-        margin-bottom: 36px;
-    }
-
-    .swiss-benefits-module .swiss-modal-action-btn {
-        display: inline-block;
-        background-color: var(--swiss-text-dark);
-        color: #ffffff;
-        font-family: var(--swiss-font-sans);
-        font-size: 13px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        padding: 16px 32px;
-        border: none;
-        border-radius: 40px;
-        cursor: pointer;
-        transition: background-color 0.25s, transform 0.2s;
-    }
-
-    .swiss-benefits-module .swiss-modal-action-btn:hover {
-        background-color: #333333;
-        transform: scale(1.02);
+        color: var(--dorado-unam, #9c6e09);
+        opacity: 0.95;
     }
 
     .swiss-benefits-module .swiss-fade {
@@ -545,13 +561,6 @@ $escapar_html = static function ($valor) {
             line-height: 1.15;
         }
 
-        .swiss-benefits-module .swiss-modal-box {
-            padding: 30px 20px;
-        }
-
-        .swiss-benefits-module .swiss-modal-title {
-            font-size: 26px;
-        }
     }
 </style>
 
@@ -580,16 +589,6 @@ $escapar_html = static function ($valor) {
 
     </div>
 
-    <!-- Modal de visualización -->
-    <div class="swiss-modal" id="swiss_benefit_modal" role="dialog" aria-modal="true">
-        <div class="swiss-modal-box">
-            <button class="swiss-modal-close" id="swiss_modal_close_btn" aria-label="Cerrar ventana">✕</button>
-            <span class="swiss-modal-meta" id="swiss_modal_meta_tag">CONVENIO UNAM</span>
-            <h2 class="swiss-modal-title" id="swiss_modal_title">Título del beneficio</h2>
-            <p class="swiss-modal-desc" id="swiss_modal_desc">Descripción completa detallada.</p>
-            <button class="swiss-modal-action-btn" id="swiss_modal_action_btn">Acceder al convenio</button>
-        </div>
-    </div>
 </div>
 
 <script>
@@ -604,14 +603,6 @@ $escapar_html = static function ($valor) {
         const categoryButtons = wrapper.querySelectorAll('.swiss-category-btn');
         const benefitsContainer = wrapper.querySelector('#swiss_benefits_container');
         
-        // Elementos DOM del Modal
-        const benefitModal = wrapper.querySelector('#swiss_benefit_modal');
-        const modalCloseBtn = wrapper.querySelector('#swiss_modal_close_btn');
-        const modalMeta = wrapper.querySelector('#swiss_modal_meta_tag');
-        const modalTitle = wrapper.querySelector('#swiss_modal_title');
-        const modalDesc = wrapper.querySelector('#swiss_modal_desc');
-        const modalActionBtn = wrapper.querySelector('#swiss_modal_action_btn');
-
         let activeCategoryIndex = 0;
 
         // Paletas de color asociadas de forma cíclica (Terracota, Océano, Bronce)
@@ -646,17 +637,15 @@ $escapar_html = static function ($valor) {
 
                     <div class="swiss-card-details">
                         <p class="swiss-card-desc">${escapeHtml(beneficio.descripcion)}</p>
-                        <span class="swiss-card-title-link" data-title="${escapeHtml(beneficio.titulo)}" data-desc="${escapeHtml(beneficio.descripcion)}">
+                        <a class="swiss-card-title-link" href="${escapeHtml(beneficio.enlace.trim())}" target="_blank" rel="noopener noreferrer">
                             ${escapeHtml(beneficio.titulo)}
-                        </span>
+                        </a>
                     </div>
                 `;
 
                 benefitsContainer.appendChild(card);
             });
 
-            // Re-vincular los eventos de clic de los títulos/enlaces "Read more" de la referencia
-            vincularEventosDetalle();
         }
 
         // Generador matemático de onda sinusoidal SVG continua para enlazar los orbes cromáticos
@@ -668,23 +657,6 @@ $escapar_html = static function ($valor) {
             }
         }
 
-        function vincularEventosDetalle() {
-            const links = wrapper.querySelectorAll('.swiss-card-title-link');
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    const title = e.currentTarget.getAttribute('data-title');
-                    const desc = e.currentTarget.getAttribute('data-desc');
-                    const catTitle = datasetBeneficios[activeCategoryIndex].titulo;
-
-                    modalMeta.textContent = `Convenio de ${catTitle} — UNAM`;
-                    modalTitle.textContent = title;
-                    modalDesc.textContent = desc;
-
-                    benefitModal.classList.add('is-open');
-                });
-            });
-        }
-
         // Manejo de la interactividad del menú de pestañas
         categoryButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -694,33 +666,6 @@ $escapar_html = static function ($valor) {
                 const index = parseInt(e.currentTarget.getAttribute('data-index'), 10);
                 renderBenefits(index);
             });
-        });
-
-        // Funciones del Modal de visualización
-        function cerrarModal() {
-            benefitModal.classList.remove('is-open');
-        }
-
-        modalCloseBtn.addEventListener('click', cerrarModal);
-        
-        benefitModal.addEventListener('click', (e) => {
-            if (e.target === benefitModal) cerrarModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && benefitModal.classList.contains('is-open')) {
-                cerrarModal();
-            }
-        });
-
-        modalActionBtn.addEventListener('click', () => {
-            modalActionBtn.textContent = '¡Redireccionando al portal UNAM!';
-            modalActionBtn.style.backgroundColor = '#16a085';
-            setTimeout(() => {
-                cerrarModal();
-                modalActionBtn.textContent = 'Acceder al convenio';
-                modalActionBtn.style.backgroundColor = 'var(--swiss-text-dark)';
-            }, 1500);
         });
 
         // Sanitización segura de caracteres especiales HTML
