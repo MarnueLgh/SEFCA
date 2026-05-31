@@ -210,6 +210,7 @@ $escapar_html = static function ($valor) {
         overflow-x: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        justify-content: space-between;
     }
 
     .swiss-benefits-module .swiss-category-bar::-webkit-scrollbar {
@@ -306,25 +307,29 @@ $escapar_html = static function ($valor) {
 
     /* Esferas de iluminación orgánica por desenfoque */
     .swiss-benefits-module .swiss-sphere-glow {
-        width: 140px;
-        height: 140px;
+        width: 280px;
+        height: 280px;
         border-radius: 50%;
-        filter: blur(24px);
+        filter: blur(80px);
         position: absolute;
         transition: transform 0.6s ease;
     }
 
-    .swiss-benefits-module .palette-rose {
-        background: radial-gradient(circle, rgba(229, 169, 164, 0.95) 0%, rgba(197, 126, 128, 0.8) 50%, rgba(197, 126, 128, 0.2) 100%);
-    }
+        .swiss-benefits-module .palette-rose {
+            /* Dorado UNAM brillante */
+            background: radial-gradient(circle, rgba(234, 166, 54, 0.95) 0%, rgba(184, 140, 60, 0.7) 50%, rgba(184, 140, 60, 0.1) 100%);
+        }
 
-    .swiss-benefits-module .palette-blue {
-        background: radial-gradient(circle, rgba(100, 160, 210, 0.95) 0%, rgba(58, 114, 164, 0.8) 50%, rgba(30, 61, 89, 0.2) 100%);
-    }
+        .swiss-benefits-module .palette-blue {
+            /* Dorado Carta Estratégica */
+            background: radial-gradient(circle, rgba(212, 160, 57, 0.95) 0%, rgba(170, 125, 40, 0.7) 50%, rgba(170, 125, 40, 0.1) 100%);
+        }
 
-    .swiss-benefits-module .palette-bronze {
-        background: radial-gradient(circle, rgba(220, 180, 150, 0.95) 0%, rgba(185, 147, 122, 0.8) 50%, rgba(140, 98, 73, 0.2) 100%);
-    }
+        .swiss-benefits-module .palette-bronze {
+            /* Dorado UNAM oscuro */
+            background: radial-gradient(circle, rgba(184, 150, 85, 0.95) 0%, rgba(140, 110, 60, 0.7) 50%, rgba(140, 110, 60, 0.1) 100%);
+        }
+
 
     .swiss-benefits-module .swiss-sphere-label {
         font-family: var(--swiss-font-sans);
@@ -635,15 +640,8 @@ $escapar_html = static function ($valor) {
                 const card = document.createElement('div');
                 card.className = 'swiss-benefit-card';
                 card.innerHTML = `
-                    <div class="swiss-svg-connection">
-                        <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                            ${generarCurvaConectoraSVG(idx, isOdd)}
-                        </svg>
-                    </div>
-
                     <div class="swiss-sphere-wrapper" style="${spherePositionStyle}">
                         <div class="swiss-sphere-glow ${selectedPalette}"></div>
-                        <span class="swiss-sphere-label">${stepNumber}</span>
                     </div>
 
                     <div class="swiss-card-details">

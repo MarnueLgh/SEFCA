@@ -30,7 +30,7 @@
                 <!-- Fila 1: Lic. Isaac Chertorivski -->
                 <div class="bento-card bento-card-fila wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.3s">
                     <div class="bento-fila-img-col">
-                        <img src="img/fca/busto_Isaac_Chertorivski_Shkoorman.png" alt="Isaac Chertorivski" class="bento-fila-img">
+                        <img src="img/fca/busto_isaac_chertorivski.png" alt="Isaac Chertorivski" class="bento-fila-img">
                     </div>
                     <div class="bento-fila-contenido">
                         <h3 class="bento-fila-nombre">Lic. Isaac Chertorivski</h3>
@@ -44,7 +44,7 @@
                 <!-- Fila 2: Dr. Armando Tomé -->
                 <div class="bento-card bento-card-fila wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.5s">
                     <div class="bento-fila-img-col">
-                        <img src="img/fca/busto_Armando_Tome_FCA.png" alt="Armando Tomé" class="bento-fila-img">
+                        <img src="img/fca/busto_armando_tome.png" alt="Armando Tomé" class="bento-fila-img">
                     </div>
                     <div class="bento-fila-contenido">
                         <h3 class="bento-fila-nombre">Dr. Armando Tomé</h3>

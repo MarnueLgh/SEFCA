@@ -55,13 +55,22 @@ $eventos = [
     ],
     'conferencias_magistrales' => [
         'titulo'      => 'Conferencias Magistrales',
-        'fecha'       => '',
-        'descripcion' => 'Galería fotográfica de las Conferencias Magistrales organizadas por la SEFCA UNAM.',
         'carpeta'     => 'img/conferencias_magistrales',
         'extension'   => 'JPG',
         'fotos'       => [
             '02.JPG', '03.JPG', '04.JPG', '05.JPG', '06.JPG', '07.JPG', '08.JPG', '09.JPG',
             '11.JPG', '12.JPG', '13.JPG', '14.JPG', '15.JPG', '16.JPG', '17.JPG', '18.JPG', '19.JPG', '20.JPG',
+        ],
+    ],
+    'premiacion_concurso_sefca' => [
+        'titulo'      => 'Premiación del Concurso de Ensayos FCA-SEFCA',
+        'carpeta'     => 'img/premiacion_ensayos_2026',
+        'extension'   => 'jpg',
+        'fotos'       => [
+            'reconocimiento_ensayo1.jpg', 'reconocimiento_ensayo2.jpg', 'reconocimiento_ensayo3.jpg', 'reconocimiento_ensayo4.jpg',
+            'reconocimiento_ensayo5.jpg', 'reconocimiento_ensayo6.jpg', 'reconocimiento_ensayo7.jpg', 'reconocimiento_ensayo8.jpg',
+            'reconocimiento_ensayo9.jpg', 'reconocimiento_ensayo10.jpg', 'reconocimiento_ensayo11.jpg', 'reconocimiento_ensayo12.jpg',
+            'reconocimiento_ensayo13.jpg', 'reconocimiento_ensayo14.jpg', 'reconocimiento_ensayo15.jpg',
         ],
     ],
 ];

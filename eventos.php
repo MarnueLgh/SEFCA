@@ -99,6 +99,27 @@
                      ========================================== -->
                 <div class="eventos-grid" id="eventos-grid">
 
+                    <!-- ========== Premiación a Estudiantes ganadores en el Concurso de Ensayos FCA-SEFCA 2025 ========== -->
+                    <article class="evento-card" data-tipo="evento" data-mes="5" data-anio="2026">
+                        <div class="evento-card-img">
+                            <img src="img/premiacion_ensayos_2026/reconocimiento_ensayo1.jpg" alt="Concurso de Ensayo SEFCA 2025">
+                        </div>
+                        <div class="evento-card-cuerpo">
+                            <div class="evento-card-meta">
+                                <span class="evento-card-tag">27 de mayo de 2026</span>
+                            </div>
+							<h2 class="evento-card-titulo">Premiación del Concurso de Ensayos FCA-SEFCA 2025</h2>
+							<p class="evento-card-desc">
+								Entrega de galardones a los autores de los mejores ensayos de 2025, celebrando el talento y la visión de nuestros estudiantes.
+							</p>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="evento.php?evento=premiacion_concurso_sefca" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- ========== Concurso de Ensayo SEFCA 2025 ========== -->
                     <article class="evento-card" data-tipo="convocatoria" data-mes="9" data-anio="2025">
                         <div class="evento-card-img">

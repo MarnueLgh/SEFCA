@@ -7,10 +7,11 @@
 <?php require_once("includes/head.php"); ?>
 
 <body>
+    <!-- Spinner -->
     <?php include("includes/spinner.php"); ?>
-
+    <!-- Navbar -->
     <?php include("includes/navbar.php"); ?>
-
+    <!-- Hero pagina -->
     <?php
         $heroTitulo = "Beneficios";
         $heroTexto  = "Descubre todo lo que ofrece la SEFCA para ti.";
