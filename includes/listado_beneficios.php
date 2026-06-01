@@ -278,18 +278,14 @@ $escapar_html = static function ($valor) {
 ?>
 
 <style>
-    /* El contenedor wrapper aisla todas las variables y estilos para no contaminar el resto de la web */
+    /* El contenedor principal aisla todas las variables y estilos para no contaminar el resto de la web */
     .swiss-benefits-module {
-        --swiss-font-sans: var(--fuente-texto, 'Roboto', sans-serif);
-        --swiss-font-mono: var(--fuente-texto, 'Roboto', sans-serif);
-        --swiss-bg-card: #f5f5f5;
-        --swiss-text-dark: var(--azul_unam, #11304b);
-        --swiss-text-muted: var(--secondary, #545454);
-        --swiss-border-subtle: rgba(17, 48, 75, 0.08);
+        --beneficios-fondo-tarjeta: #f5f5f5;
+        --beneficios-borde-sutil: rgba(17, 48, 75, 0.08);
 
         width: 100%;
-        font-family: var(--swiss-font-sans);
-        color: var(--swiss-text-dark);
+        font-family: var(--fuente-texto);
+        color: var(--azul_unam);
         -webkit-font-smoothing: antialiased;
     }
 
@@ -313,23 +309,11 @@ $escapar_html = static function ($valor) {
         overflow: hidden;
     }
 
-    /* Titular de diseño suizo editorial */
-    .swiss-benefits-module .swiss-main-headline {
-        font-family: var(--fuente-titulo, serif);
-        font-size: 52px;
-        font-weight: 500;
-        line-height: 1.08;
-        letter-spacing: -0.04em;
-        max-width: 820px;
-        margin-bottom: 50px;
-        color: var(--swiss-text-dark);
-    }
-
     /* Menú superior de categorías */
     .swiss-benefits-module .swiss-category-bar {
         display: flex;
         gap: 20px;
-        border-bottom: 1px solid var(--swiss-border-subtle);
+        border-bottom: 1px solid var(--beneficios-borde-sutil);
         padding-bottom: 20px;
         margin-bottom: 50px;
         overflow-x: auto;
@@ -345,10 +329,10 @@ $escapar_html = static function ($valor) {
     .swiss-benefits-module .swiss-category-btn {
         background: none;
         border: none;
-        font-family: var(--swiss-font-sans);
+        font-family: var(--fuente-texto);
         font-size: 14px;
         font-weight: 600;
-        color: var(--swiss-text-muted);
+        color: var(--secondary);
         cursor: pointer;
         padding: 8px 16px;
         border-radius: 20px;
@@ -363,7 +347,7 @@ $escapar_html = static function ($valor) {
 
     .swiss-benefits-module .swiss-category-btn.is-active {
         color: #ffffff;
-        background-color: var(--swiss-text-dark);
+        background-color: var(--azul_unam);
     }
 
     .swiss-benefits-module .swiss-benefits-viewport {
@@ -403,7 +387,7 @@ $escapar_html = static function ($valor) {
         flex: 0 0 calc(33.333% - 22px);
         min-width: 320px;
         max-width: 380px;
-        background-color: var(--swiss-bg-card);
+        background-color: var(--beneficios-fondo-tarjeta);
         border-radius: 24px;
         padding: 40px;
         min-height: 480px;
@@ -455,33 +439,6 @@ $escapar_html = static function ($valor) {
         background: radial-gradient(circle, rgba(184, 150, 85, 0.95) 0%, rgba(140, 110, 60, 0.7) 50%, rgba(140, 110, 60, 0.1) 100%);
     }
 
-    .swiss-benefits-module .swiss-sphere-label {
-        font-family: var(--swiss-font-sans);
-        font-size: 15px;
-        font-weight: 500;
-        color: #ffffff;
-        z-index: 3;
-        letter-spacing: 0.05em;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .swiss-benefits-module .swiss-svg-connection {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    .swiss-benefits-module .swiss-svg-path {
-        stroke: rgba(0, 0, 0, 0.15);
-        stroke-width: 1.5;
-        stroke-dasharray: 3 4;
-        fill: none;
-    }
-
     .swiss-benefits-module .swiss-card-details {
         position: relative;
         z-index: 3;
@@ -491,18 +448,18 @@ $escapar_html = static function ($valor) {
     .swiss-benefits-module .swiss-card-desc {
         font-size: 14px;
         line-height: 1.6;
-        color: var(--swiss-text-muted);
+        color: var(--secondary);
         margin-bottom: 25px;
         text-align: justify;
     }
 
     .swiss-benefits-module .swiss-card-title-link {
-        font-family: var(--swiss-font-sans);
+        font-family: var(--fuente-texto);
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        color: var(--swiss-text-dark);
+        color: var(--azul_unam);
         text-decoration: underline;
         text-underline-offset: 4px;
         transition: color 0.2s ease, opacity 0.2s ease;
@@ -516,10 +473,10 @@ $escapar_html = static function ($valor) {
     }
 
     .swiss-benefits-module .swiss-fade {
-        animation: swissFadeEffect 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: aparicion-beneficios 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    @keyframes swissFadeEffect {
+    @keyframes aparicion-beneficios {
         from {
             opacity: 0;
             transform: scale(0.98);
@@ -537,11 +494,6 @@ $escapar_html = static function ($valor) {
             border-radius: 24px;
         }
 
-        .swiss-benefits-module .swiss-main-headline {
-            font-size: 36px;
-            margin-bottom: 35px;
-        }
-
         .swiss-benefits-module .swiss-benefit-card {
             flex: 0 0 85%;
             min-width: 280px;
@@ -554,11 +506,6 @@ $escapar_html = static function ($valor) {
         .swiss-benefits-module .swiss-outer-canvas {
             padding: 30px 16px;
             border-radius: 20px;
-        }
-
-        .swiss-benefits-module .swiss-main-headline {
-            font-size: 28px;
-            line-height: 1.15;
         }
 
     }
@@ -594,83 +541,73 @@ $escapar_html = static function ($valor) {
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         // Traspaso de información del modelo de PHP a JSON seguro
-        const datasetBeneficios = <?php echo json_encode($categorias_beneficios); ?>;
+        const categorias_beneficios = <?php echo json_encode($categorias_beneficios); ?>;
         
         // Elementos DOM de interacción (localizados para evitar conflictos globales)
-        const wrapper = document.querySelector('.swiss-benefits-module');
-        if (!wrapper) return;
+        const modulo_beneficios = document.querySelector('.swiss-benefits-module');
+        if (!modulo_beneficios) return;
 
-        const categoryButtons = wrapper.querySelectorAll('.swiss-category-btn');
-        const benefitsContainer = wrapper.querySelector('#swiss_benefits_container');
+        const botones_categorias = modulo_beneficios.querySelectorAll('.swiss-category-btn');
+        const contenedor_beneficios = modulo_beneficios.querySelector('#swiss_benefits_container');
         
-        let activeCategoryIndex = 0;
+        let indice_categoria_activa = 0;
 
-        // Paletas de color asociadas de forma cíclica (Terracota, Océano, Bronce)
-        const paletteClasses = ['palette-rose', 'palette-blue', 'palette-bronze'];
+        // Paletas de color asociadas de forma cíclica
+        const clases_paletas = ['palette-rose', 'palette-blue', 'palette-bronze'];
 
         // Función para renderizar el set de tarjetas según la categoría
-        function renderBenefits(index) {
-            activeCategoryIndex = index;
-            const currentData = datasetBeneficios[activeCategoryIndex];
+        function renderizar_beneficios(indice_categoria) {
+            indice_categoria_activa = indice_categoria;
+            const categoria_actual = categorias_beneficios[indice_categoria_activa];
             
             // Limpieza del contenedor con efecto sutil de transición
-            benefitsContainer.innerHTML = '';
-            benefitsContainer.classList.remove('swiss-fade');
-            void benefitsContainer.offsetWidth; // Disparador de reflujo de CSS para reiniciar animación
-            benefitsContainer.classList.add('swiss-fade');
+            contenedor_beneficios.innerHTML = '';
+            contenedor_beneficios.classList.remove('swiss-fade');
+            void contenedor_beneficios.offsetWidth; // Disparador de reflujo de CSS para reiniciar animación
+            contenedor_beneficios.classList.add('swiss-fade');
 
-            currentData.beneficios.forEach((beneficio, idx) => {
-                const stepNumber = String(idx + 1).padStart(2, '0');
-                const selectedPalette = paletteClasses[idx % paletteClasses.length];
+            categoria_actual.beneficios.forEach((beneficio, indice_beneficio) => {
+                const clase_paleta_seleccionada = clases_paletas[indice_beneficio % clases_paletas.length];
                 
-                // Determinamos la altura relativa del orbe para dar el staggered curve de la referencia
-                const isOdd = idx % 2 === 0;
-                const spherePositionStyle = isOdd ? 'top: 55%;' : 'top: 35%;';
+                // Determinamos la altura relativa del orbe para alternar la posición
+                const es_indice_par = indice_beneficio % 2 === 0;
+                const estilo_posicion_esfera = es_indice_par ? 'top: 55%;' : 'top: 35%;';
 
-                // Generación de la tarjeta con SVG de conector sinuoso dinámico e infinito
-                const card = document.createElement('div');
-                card.className = 'swiss-benefit-card';
-                card.innerHTML = `
-                    <div class="swiss-sphere-wrapper" style="${spherePositionStyle}">
-                        <div class="swiss-sphere-glow ${selectedPalette}"></div>
+                // Generación de la tarjeta de beneficio
+                const tarjeta = document.createElement('div');
+                tarjeta.className = 'swiss-benefit-card';
+                tarjeta.innerHTML = `
+                    <div class="swiss-sphere-wrapper" style="${estilo_posicion_esfera}">
+                        <div class="swiss-sphere-glow ${clase_paleta_seleccionada}"></div>
                     </div>
 
                     <div class="swiss-card-details">
-                        <p class="swiss-card-desc">${escapeHtml(beneficio.descripcion)}</p>
-                        <a class="swiss-card-title-link" href="${escapeHtml(beneficio.enlace.trim())}" target="_blank" rel="noopener noreferrer">
-                            ${escapeHtml(beneficio.titulo)}
+                        <p class="swiss-card-desc">${escapar_html(beneficio.descripcion)}</p>
+                        <a class="swiss-card-title-link" href="${escapar_html(beneficio.enlace.trim())}" target="_blank" rel="noopener noreferrer">
+                            ${escapar_html(beneficio.titulo)}
                         </a>
                     </div>
                 `;
 
-                benefitsContainer.appendChild(card);
+                contenedor_beneficios.appendChild(tarjeta);
             });
 
         }
 
-        // Generador matemático de onda sinusoidal SVG continua para enlazar los orbes cromáticos
-        function generarCurvaConectoraSVG(idx, isOdd) {
-            if (isOdd) {
-                return `<path class="swiss-svg-path" d="M 0,35 C 25,55 35,55 50,55 C 65,55 75,45 100,35" />`;
-            } else {
-                return `<path class="swiss-svg-path" d="M 0,35 C 25,20 35,15 50,35 C 65,55 75,45 100,35" />`;
-            }
-        }
-
         // Manejo de la interactividad del menú de pestañas
-        categoryButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                categoryButtons.forEach(b => b.classList.remove('is-active'));
-                e.currentTarget.classList.add('is-active');
+        botones_categorias.forEach(boton_categoria => {
+            boton_categoria.addEventListener('click', (evento) => {
+                botones_categorias.forEach(boton => boton.classList.remove('is-active'));
+                evento.currentTarget.classList.add('is-active');
                 
-                const index = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-                renderBenefits(index);
+                const indice_categoria = parseInt(evento.currentTarget.getAttribute('data-index'), 10);
+                renderizar_beneficios(indice_categoria);
             });
         });
 
         // Sanitización segura de caracteres especiales HTML
-        function escapeHtml(text) {
-            return text
+        function escapar_html(texto) {
+            return texto
                 .replace(/&/g, '&amp;')
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
@@ -679,6 +616,6 @@ $escapar_html = static function ($valor) {
         }
 
         // Renderizado e inicio del primer set en carga inicial
-        renderBenefits(0);
+        renderizar_beneficios(0);
     });
 </script>
