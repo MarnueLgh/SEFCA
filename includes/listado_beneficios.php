@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $categorias_beneficios = [
     [
         'titulo' => 'Finanzas',
@@ -7,11 +7,13 @@ $categorias_beneficios = [
                 'titulo' => 'BBVA',
                 'descripcion' => 'En BBVA encontrarás una alternativa financiera vinculada con la comunidad universitaria, pensada para quienes buscan una tarjeta de crédito con beneficios prácticos y un lazo con la UNAM. Permite acceder a ventajas exclusivas en el uso cotidiano y contribuye al apoyo institucional.',
                 'enlace' => 'https://www.bbva.mx/personas/productos/tarjetas-de-credito/tarjeta-de-credito-afinidad-unam.html',
+                'logo' => 'img/beneficios_logos/bbva.png',
             ],
             [
                 'titulo' => 'Quálitas Seguros',
                 'descripcion' => 'Quálitas ofrece a la comunidad UNAM opciones de protección vehicular mediante esquemas preferenciales que facilitan la contratación de un seguro de auto con atención especializada y condiciones dirigidas a integrantes de la Universidad.',
                 'enlace' => 'https://oplinea.qualitas.com.mx/q.php?EXAUNAM',
+                'logo' => 'img/beneficios_logos/qualitas.png',
             ],
         ],
     ],
@@ -22,11 +24,13 @@ $categorias_beneficios = [
                 'titulo' => 'Palacio de Minería',
                 'descripcion' => 'La Academia de Música del Palacio de Minería acerca a la comunidad UNAM a experiencias culturales de alto valor en el ámbito de la música sinfónica, facilitando el acceso a conciertos que enriquecen la formación cultural.',
                 'enlace' => 'https://boletoscultura.unam.mx/default.asp?invalid',
+                'logo' => 'img/beneficios_logos/palacio_mineria.png',
             ],
             [
                 'titulo' => 'El Sótano Librerías',
                 'descripcion' => 'El Sótano brinda a la comunidad UNAM una opción para adquirir libros, material escolar y productos editoriales mediante condiciones preferenciales que promueven el acceso al estudio y la lectura.',
                 'enlace' => 'https://www.elsotano.com/convenio-comunidad-unam',
+                'logo' => 'img/beneficios_logos/libreria_el_sotano.png',
             ],
         ],
     ],
@@ -37,6 +41,7 @@ $categorias_beneficios = [
                 'titulo' => 'Harmon Hall',
                 'descripcion' => 'Harmon Hall ofrece a la comunidad UNAM una oportunidad para continuar su preparación académica a través del aprendizaje del idioma inglés con programas educativos accesibles y horarios flexibles.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf',
+                'logo' => 'img/beneficios_logos/harmon_hall.png',
             ],
         ],
     ],
@@ -47,31 +52,37 @@ $categorias_beneficios = [
                 'titulo' => 'Acuario Inbursa',
                 'descripcion' => 'El Acuario Inbursa ofrece una experiencia recreativa y educativa para conocer distintas especies marinas en un espacio diseñado para combinar entretenimiento, conocimiento y contacto con la biodiversidad acuática.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/acuarioinbursa/E5WFfJLYuwmbTC5OIOyDwg05xQwceMCZ3Vrr8R4q.jpg',
+                'logo' => 'img/beneficios_logos/acuario_inbursa.png',
             ],
             [
                 'titulo' => 'Algostudio',
                 'descripcion' => 'Algostudio acerca a la comunidad UNAM a una experiencia inmersiva inspirada en la vida y obra de Frida Kahlo, combinando recursos visuales, narrativos y tecnológicos para crear una experiencia única.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/algostudio/BJdHNBNMB93FDBqN74n45dJGrnZy5rHU64RkEG8A.pdf',
+                'logo' => 'img/beneficios_logos/algostudio_fever.png',
             ],
             [
                 'titulo' => 'Bioparque Estrella',
                 'descripcion' => 'Bioparque Estrella ofrece una alternativa de entretenimiento al aire libre para convivir con la naturaleza y conocer distintas especies animales en un entorno familiar recreativo único.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/bioparque/OV4SNsF6piqZLR8RMLfA7Ghln9Z0FrgWRUEU6mWE.jpg',
+                'logo' => 'img/beneficios_logos/bioparque_estrella.png',
             ],
             [
                 'titulo' => 'Boliches AMF',
                 'descripcion' => 'Boliches AMF brinda una opción de entretenimiento social para disfrutar con amigos o familiares, permitiendo acceder a una actividad recreativa sencilla, ideal para convivir fuera de la rutina.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/amf/rLkuQ2HxUx2EqXSYJXoOGVQC6qFWERVGyEAuMHkf.jpg',
+                'logo' => 'img/beneficios_logos/boliches_amf.png',
             ],
             [
                 'titulo' => 'Mejor Teatro',
                 'descripcion' => 'Mejor Teatro acerca a la comunidad UNAM a las mejores propuestas escénicas de cartelera. Facilita el acceso a producciones teatrales de gran formato con beneficios exclusivos en taquilla.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/mejorteatro/4ofK9QaVMhybeXCKFZV2l2CyUR4ByZHSDg7m4nvj.png',
+                'logo' => 'img/beneficios_logos/mejor_teatro.webp',
             ],
             [
                 'titulo' => 'Six Flags',
                 'descripcion' => 'Six Flags ofrece una opción de entretenimiento extrema para disfrutar de atracciones y espectáculos en un parque temático de nivel internacional bajo condiciones preferenciales de acceso.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/sixflags/VIKknNxt25tAYvqe5hIxXbyU5qwyiSOygbc6V60n.jpeg',
+                'logo' => 'img/beneficios_logos/six_flags.png',
             ],
         ],
     ],
@@ -82,6 +93,7 @@ $categorias_beneficios = [
                 'titulo' => 'Sportium',
                 'descripcion' => 'Sportium ofrece a la comunidad UNAM una alternativa para cuidar la salud física mediante clubes deportivos de primer nivel, albercas climatizadas y equipamiento de acondicionamiento de vanguardia.',
                 'enlace' => 'https://sportium.activehosted.com/f/29',
+                'logo' => 'img/beneficios_logos/sportium.png',
             ],
         ],
     ],
@@ -92,71 +104,85 @@ $categorias_beneficios = [
                 'titulo' => 'Camino Real',
                 'descripcion' => 'Camino Real ofrece opciones de hospedaje premium con condiciones preferenciales en destinos de perfil ejecutivo y turístico, ideales para estancias de descanso o actividades académicas.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/caminoreal/UpWalq5UEeaASg9TpHLug7raCHcUZKbx39uryewT.png',
+                'logo' => 'img/beneficios_logos/camino_real.png',
             ],
             [
                 'titulo' => 'City Express',
                 'descripcion' => 'City Express brinda alternativas de hospedaje prácticas para viajes de negocios o estudio, ofreciendo confort, conectividad y servicios funcionales pensados en la eficiencia del viajero.',
                 'enlace' => 'https://www.marriott.com/es/offers/packages/cala-convenios-hoteles-unam.mi',
+                'logo' => 'img/beneficios_logos/city_express_hoteles.png',
             ],
             [
                 'titulo' => 'Fiesta Americana',
                 'descripcion' => 'Fiesta Americana ofrece una experiencia de hospedaje icónica con enfoque en comodidad, calidez y atención al detalle, ideal para viajes familiares, de descanso o estancias institucionales.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/fiesta_americana.png',
             ],
             [
                 'titulo' => 'Fiesta Americana Grand',
                 'descripcion' => 'Fiesta Americana Grand ofrece una experiencia de hospedaje icónica con enfoque en comodidad, calidez y atención al detalle, ideal para viajes familiares, de descanso o estancias institucionales.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/fiesta_americana_grand.png',
             ],
             [
                 'titulo' => 'Fiesta Inn',
                 'descripcion' => 'Fiesta Inn ofrece hospedaje funcional y cómodo optimizado para viajes de trabajo o estudio, equilibrando perfectamente conectividad, confort y tarifas exclusivas para la comunidad.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/fiesta_inn.png',
             ],
             [
                 'titulo' => 'Fiesta Inn Loft',
                 'descripcion' => 'Fiesta Inn Loft ofrece hospedaje funcional y cómodo optimizado para viajes de trabajo o estudio, equilibrando perfectamente conectividad, confort y tarifas exclusivas para la comunidad.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Gamma',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => '',
             ],
             [
                 'titulo' => 'RIU - Plaza GDL',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/riu/liKSsnvah0nJBwBnIDCamcKaIwY1L5vye8s7wrjr.jpg',
+                'logo' => 'img/beneficios_logos/riu.png',
             ],
             [
                 'titulo' => 'Misión',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/mision/SLjMqUGvuKBXPkEyXOYUj3zplAJJNnnX71eKVo76.png',
+                'logo' => 'img/beneficios_logos/mision_hoteles.png',
             ],
             [
                 'titulo' => 'Live Aqua',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/live_aqua.webp',
             ],
             [
                 'titulo' => 'One',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/one_hoteles.webp',
             ],
             [
                 'titulo' => 'Real Inn',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/caminoreal/UpWalq5UEeaASg9TpHLug7raCHcUZKbx39uryewT.png',
+                'logo' => 'img/beneficios_logos/real_inn.png',
             ],
             [
                 'titulo' => 'The Explorean Kohunlich',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
+                'logo' => 'img/beneficios_logos/the_explorean_kohunlich.webp',
             ],
             [
                 'titulo' => 'NH',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/nhhoteles/oY6VHTLgNFyXHhhMsIFbc8V7Y95WfGcWkFuzwdbD.png',
+                'logo' => 'img/beneficios_logos/nh_hoteles.png',
             ],
         ],
     ],
@@ -167,16 +193,19 @@ $categorias_beneficios = [
                 'titulo' => 'Ópticas Arista',
                 'descripcion' => 'Ópticas Arista ofrece a la comunidad UNAM alternativas integrales para el cuidado de la salud visual, facilitando el acceso a exámenes profesionales, lentes graduados y armazones de tendencia.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/arista/HSTGFpHkyRYCE59Zp2Qhs7u60hjQOLDjXE6VcbNi.jpg',
+                'logo' => 'img/beneficios_logos/opticas_arista.webp',
             ],
             [
                 'titulo' => 'Ópticas LUX',
                 'descripcion' => 'Ópticas LUX brinda soluciones de alta gama para la salud ocular, permitiendo acceder a condiciones preferenciales en cristales graduados, lentes de contacto y marcas internacionales seleccionadas.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/lux/F1ex5VmUc4FqKtJY0F3fv8R0URbISnNzwi1rnhSQ.pdf',
+                'logo' => 'img/beneficios_logos/opticas_lux.png',
             ],
             [
                 'titulo' => 'Ópticas +visión',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/masvision/IZnPwM2GPojUQf5GNjHSihO9AJJu5TWGY8uUv14q.jpg',
+                'logo' => 'img/beneficios_logos/optica_mas_vision.avif',
             ],
         ],
     ],
@@ -185,28 +214,33 @@ $categorias_beneficios = [
         'beneficios' => [
             [
                 'titulo' => 'Hooters',
-                'descripcion' => 'Hooters ofrece una experiencia gastronómica única con su famosa comida de pollo y bebidas, incluyendo descuentos especiales para estudiantes y egresados de la Universidad.',
+                'descripcion' => 'Hooters ofrece una experiencia gastronomógica única con su famosa comida de pollo y bebidas, incluyendo descuentos especiales para estudiantes y egresados de la Universidad.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/hooters/Xm6STWXEgQig0Jvv1q7kLOVN6nXMdK02aF5Jtqvc.pdf',
+                'logo' => 'img/beneficios_logos/hooters.webp',
             ],
             [
                 'titulo' => 'IHOP',
-                'descripcion' => 'IHOP brinda una excelente propuesta gastronómica para desayunos y comidas en un ambiente casual y familiar, ofreciendo descuentos especiales para estudiantes y egresados de la Universidad.',
+                'descripcion' => 'IHOP brinda una excelente propuesta gastronomónica para desayunos y comidas en un ambiente casual y familiar, ofreciendo descuentos especiales para estudiantes y egresados de la Universidad.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/ihop/3LRIg6Ydgax530A7DIv18mKevmfxPIOl7xaDOSl3.pdf',
+                'logo' => 'img/beneficios_logos/ihop.png',
             ],
             [
                 'titulo' => 'La Casa del Pastor',
                 'descripcion' => 'La Casa del Pastor deleita a la comunidad con el auténtico sabor de los tacos al pastor y platillos tradicionales mexicanos en espacios cómodos y con tarifas exclusivas en consumo general.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/lacasadelpastor/dOIhwmm6px7MiX5iB0OmE0y4itY92dN1VmWKUBnH.png',
+                'logo' => 'img/beneficios_logos/la_casa_del_pastor.png',
             ],
             [
                 'titulo' => 'Madero',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/maderorestaurante/7CwViwciRfJYCWiCYQGqVLwh0vSXxdI5wkylZVNa.pdf',
+                'logo' => 'img/beneficios_logos/restaurante_madero.png',
             ],
             [
                 'titulo' => 'Palominos',
                 'descripcion' => 'Palominos ofrece una propuesta culinaria de alta gama inspirada en los cortes de carne de Sonora, perfecta para celebraciones especiales o encuentros corporativos en condiciones preferenciales.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/1/oFEqkIPvcsjqbcyy8XwEsqNJ3gUq5y0t0TRg6NqX.jpg',
+                'logo' => 'img/beneficios_logos/palominos.png',
             ],
         ],
     ],
@@ -217,31 +251,37 @@ $categorias_beneficios = [
                 'titulo' => 'Barreda y Asociados - Radiología e Imagen',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/grupobarreda/99NDJNtHRipOYrd73QKNG48itslMAvO1D1pYwSEM.png',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Grupo Diagnóstico Aries',
                 'descripcion' => 'Grupo Diagnóstico Aries brinda soluciones integrales en estudios médicos preventivos y de diagnóstico, facilitando el cuidado oportuno de la salud mediante servicios accesibles.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/aries/rNMLvpJ7RMxy7xekhZ8B9VQmsiYokRlvakIKjSN3.png',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Laboratorios Polanco',
                 'descripcion' => 'Laboratorios Polanco ofrece estudios de análisis clínicos y gabinete preventivos con la mayor precisión técnica y tarifas altamente preferenciales para toda la comunidad universitaria.',
                 'enlace' => 'https://lmpolanco.com/',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Médica Vial',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/medicavial/f5dlfnoz340wpuzEVENsEbpHbXbZZ7c18UIaAaEv.pdf',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Ortopedia Mostkoff',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://mostkoff.com/',
+                'logo' => '',
             ],
             [
                 'titulo' => 'SODEIN Servicios Dentales',
                 'descripcion' => 'SODEIN ofrece tratamientos odontológicos preventivos y correctivos especializados, apoyando la salud bucal de los universitarios con atención clínica profesional y planes de pago.',
                 'enlace' => 'https://implantes.sodein.com/',
+                'logo' => '',
             ],
         ],
     ],
@@ -252,21 +292,25 @@ $categorias_beneficios = [
                 'titulo' => 'DABO - Papelera',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/dabo/7RGAA9p9mD9Gl4JSe7cT1iZaR7FBKxK0385chIWF.jpg',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Kurian - Ropa para caballero',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/1/RGZBV7BbfRLSHAvKXqdY4wujvOuOON98zaDWbyMw.pdf',
+                'logo' => '',
             ],
             [
                 'titulo' => 'SpeeDee - Servicio automotriz',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/speedee/kKNKWR8Gh5W5o45gc89IbEOlzbKbFLQusPDs8WzF.pdf',
+                'logo' => '',
             ],
             [
                 'titulo' => 'Tintorerías Max',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/tintoreriasmx/7V7cTEdOWXE4mPxMbVDSPQ9ReyqYVSL2wcWvqk6c.pdf',
+                'logo' => '',
             ],
         ],
     ],
@@ -424,6 +468,21 @@ $escapar_html = static function ($valor) {
         transition: transform 0.6s ease;
     }
 
+    /* Logotipos de marcas */
+    .swiss-benefits-module .swiss-benefit-logo {
+        max-width: 75%;
+        max-height: 120px;
+        object-fit: contain;
+        position: relative;
+        z-index: 3;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .swiss-benefits-module .swiss-benefit-card:hover .swiss-benefit-logo {
+        transform: scale(1.06);
+    }
+
     .swiss-benefits-module .palette-rose {
         /* Dorado UNAM brillante */
         background: radial-gradient(circle, rgba(234, 166, 54, 0.95) 0%, rgba(184, 140, 60, 0.7) 50%, rgba(184, 140, 60, 0.1) 100%);
@@ -573,12 +632,15 @@ $escapar_html = static function ($valor) {
                 const es_indice_par = indice_beneficio % 2 === 0;
                 const estilo_posicion_esfera = es_indice_par ? 'top: 55%;' : 'top: 35%;';
 
+                const logoHtml = beneficio.logo ? `<img src="${escapar_html(beneficio.logo)}" alt="${escapar_html(beneficio.titulo)}" class="swiss-benefit-logo">` : '';
+
                 // Generación de la tarjeta de beneficio
                 const tarjeta = document.createElement('div');
                 tarjeta.className = 'swiss-benefit-card';
                 tarjeta.innerHTML = `
-                    <div class="swiss-sphere-wrapper" style="${estilo_posicion_esfera}">
-                        <div class="swiss-sphere-glow ${clase_paleta_seleccionada}"></div>
+                    <div class="swiss-sphere-wrapper">
+                        <div class="swiss-sphere-glow ${clase_paleta_seleccionada}" style="${estilo_posicion_esfera}"></div>
+                        ${logoHtml}
                     </div>
 
                     <div class="swiss-card-details">
