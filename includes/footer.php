@@ -16,7 +16,7 @@
                                     file_put_contents($archivo_contador, "0");
                                 }
                                 $visitas = (int) file_get_contents(
-                                    $archivo_contador,
+                                    $archivo_contador
                                 );
                                 // Incrementar solo en la página principal
                                 if (

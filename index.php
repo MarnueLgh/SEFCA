@@ -30,7 +30,7 @@
     <?php include("includes/carrusel.php"); ?>
 
     <!-- Footer -->
-    <?php require_once("includes/footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 
     <!-- Volver a inicio -->
     <a href="#inicio" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top shadow">
