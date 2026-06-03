@@ -9,7 +9,7 @@
 $cards_eventos = [
     [
         'enlace' => 'docs/resumen_aulas.pdf',
-        'imagen' => 'img/fca/aulas_proyecto.jpg',
+        'imagen' => 'img/fca/aulas_dignas_harv.jpg',
         'tag_color' => '#EAA636', // Dorado UNAM
         'tag_bg' => '#fdf0d9',
         'titulo' => 'Aulas dignas de la FCA',

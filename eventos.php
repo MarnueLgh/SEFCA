@@ -99,8 +99,30 @@
                      ========================================== -->
                 <div class="eventos-grid" id="eventos-grid">
 
+                    <!-- ========== Memoria con los 9 Ensayos Premiados en el Concurso de Ensayos FCA-SEFCA ========== -->
+                    <article class="evento-card" data-tipo="evento" data-mes="5" data-anio="2026">
+                        <div class="evento-card-img">
+                            <img src="img/banner_principal/BANNERS_GANADORES_SEFCA_B-01_rectangulo.jpg" alt="Concurso de Ensayo SEFCA 2025">
+                        </div>
+                        <div class="evento-card-cuerpo">
+                            <div class="evento-card-meta">
+                                <span class="evento-card-tag">27 de mayo de 2026</span>
+                            </div>
+							<h2 class="evento-card-titulo">Ensayos Premiados en el Concurso de Ensayo FCA-SEFCA</h2>
+							<p class="evento-card-desc">
+								Conoce los 9 ensayos galardonados en esta edición del Concurso de Ensayo FCA-SEFCA 2025.
+							</p>
+                            <div class="evento-card-acciones">
+                                <a class="evento-card-enlace" href="https://www.fca.unam.mx/docs/avisos/CONCURSO_ENSAYO_FCA_SOCIEDAD_EGRESADOS_2025_4.pdf" target="_blank" rel="noopener noreferrer">
+                                    Ver más <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
                     <!-- ========== Premiación a Estudiantes ganadores en el Concurso de Ensayos FCA-SEFCA 2025 ========== -->
                     <article class="evento-card" data-tipo="evento" data-mes="5" data-anio="2026">
+                        
                         <div class="evento-card-img">
                             <img src="img/premiacion_ensayos_2026/reconocimiento_ensayo1.jpg" alt="Concurso de Ensayo SEFCA 2025">
                         </div>
@@ -114,7 +136,7 @@
 							</p>
                             <div class="evento-card-acciones">
                                 <a class="evento-card-enlace" href="evento.php?evento=premiacion_concurso_sefca" target="_blank" rel="noopener noreferrer">
-                                    Ver más <i class="fas fa-arrow-right"></i>
+                                    Ver galería <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>

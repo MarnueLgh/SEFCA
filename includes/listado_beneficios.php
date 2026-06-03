@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $categorias_beneficios = [
     [
         'titulo' => 'Finanzas',
@@ -134,53 +134,53 @@ $categorias_beneficios = [
                 'titulo' => 'Fiesta Inn Loft',
                 'descripcion' => 'Fiesta Inn Loft ofrece hospedaje funcional y cómodo optimizado para viajes de trabajo o estudio, equilibrando perfectamente conectividad, confort y tarifas exclusivas para la comunidad.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/fiesta_inn_loft.png',
             ],
             [
                 'titulo' => 'Gamma',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Gamma ofrece a la comunidad UNAM una opción de hospedaje con servicios pensados para distintas necesidades de viaje. Este beneficio facilita el acceso a hoteles con condiciones preferenciales, útiles tanto para actividades institucionales como para viajes personales.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/gamma_hoteles.png',
             ],
             [
                 'titulo' => 'RIU - Plaza GDL',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Hotel RIU Plaza Guadalajara ofrece una alternativa de hospedaje en una ubicación estratégica para quienes visitan la ciudad por motivos académicos, profesionales o personales. Este beneficio permite a la comunidad UNAM acceder a condiciones preferenciales en un hotel con servicios orientados a una estancia cómoda.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/riu/liKSsnvah0nJBwBnIDCamcKaIwY1L5vye8s7wrjr.jpg',
                 'logo' => 'img/beneficios_logos/riu.png',
             ],
             [
                 'titulo' => 'Misión',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Hoteles Misión ofrece a la comunidad UNAM opciones de hospedaje con un enfoque tradicional, cómodo y accesible en distintos destinos. Este convenio es una alternativa útil para quienes buscan alojamiento durante viajes familiares, académicos o laborales, con servicios pensados para una estancia práctica.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/mision/SLjMqUGvuKBXPkEyXOYUj3zplAJJNnnX71eKVo76.png',
                 'logo' => 'img/beneficios_logos/mision_hoteles.png',
             ],
             [
                 'titulo' => 'Live Aqua',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Live Aqua ofrece una experiencia de hospedaje orientada al descanso, la comodidad y el servicio de alta calidad. Este beneficio permite a la comunidad UNAM acceder a condiciones preferenciales en espacios pensados para quienes buscan una estancia más exclusiva y cuidada.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
                 'logo' => 'img/beneficios_logos/live_aqua.webp',
             ],
             [
                 'titulo' => 'One',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'One Hoteles brinda una opción de hospedaje sencilla, práctica y funcional para viajes cortos o estancias de trabajo. Este beneficio está dirigido a la comunidad UNAM y resulta útil para quienes buscan alojamiento cómodo, accesible y bien ubicado.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
                 'logo' => 'img/beneficios_logos/one_hoteles.webp',
             ],
             [
                 'titulo' => 'Real Inn',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Real Inn ofrece a la comunidad UNAM una alternativa de hospedaje enfocada en viajes ejecutivos, académicos o personales. Este convenio facilita el acceso a hoteles con servicios formales y condiciones preferenciales, pensados para estancias cómodas y eficientes.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/caminoreal/UpWalq5UEeaASg9TpHLug7raCHcUZKbx39uryewT.png',
                 'logo' => 'img/beneficios_logos/real_inn.png',
             ],
             [
                 'titulo' => 'The Explorean Kohunlich',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'The Explorean Kohunlich ofrece una experiencia de hospedaje enfocada en el descanso, la naturaleza y la exploración. Este beneficio permite a la comunidad UNAM acceder a una opción distinta de alojamiento, ideal para quienes buscan combinar viaje, tranquilidad y contacto con el entorno natural.',
                 'enlace' => 'https://www.pveaju.unam.mx/pdfs/beneficioscredencial.pdf#page=5&zoom=200',
                 'logo' => 'img/beneficios_logos/the_explorean_kohunlich.webp',
             ],
             [
                 'titulo' => 'NH',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'NH Hoteles brinda a la comunidad UNAM opciones de hospedaje con enfoque urbano, cómodo y funcional. Este convenio permite acceder a condiciones preferenciales en hoteles adecuados para viajes de trabajo, actividades académicas o estancias personales.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/nhhoteles/oY6VHTLgNFyXHhhMsIFbc8V7Y95WfGcWkFuzwdbD.png',
                 'logo' => 'img/beneficios_logos/nh_hoteles.png',
             ],
@@ -193,7 +193,7 @@ $categorias_beneficios = [
                 'titulo' => 'Ópticas Arista',
                 'descripcion' => 'Ópticas Arista ofrece a la comunidad UNAM alternativas integrales para el cuidado de la salud visual, facilitando el acceso a exámenes profesionales, lentes graduados y armazones de tendencia.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/arista/HSTGFpHkyRYCE59Zp2Qhs7u60hjQOLDjXE6VcbNi.jpg',
-                'logo' => 'img/beneficios_logos/opticas_arista.webp',
+                'logo' => 'img/beneficios_logos/opticas_arista.png',
             ],
             [
                 'titulo' => 'Ópticas LUX',
@@ -203,7 +203,7 @@ $categorias_beneficios = [
             ],
             [
                 'titulo' => 'Ópticas +visión',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Ópticas +visión ofrece alternativas para el cuidado visual mediante servicios y productos ópticos accesibles. Este beneficio está pensado para apoyar a la comunidad UNAM en la atención de sus necesidades visuales, desde la revisión hasta la adquisición de lentes y armazones.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/masvision/IZnPwM2GPojUQf5GNjHSihO9AJJu5TWGY8uUv14q.jpg',
                 'logo' => 'img/beneficios_logos/optica_mas_vision.avif',
             ],
@@ -232,7 +232,7 @@ $categorias_beneficios = [
             ],
             [
                 'titulo' => 'Madero',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Madero Restaurante brinda una opción gastronómica para quienes buscan un espacio cómodo para comer, reunirse o convivir en un ambiente casual y familiar.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/maderorestaurante/7CwViwciRfJYCWiCYQGqVLwh0vSXxdI5wkylZVNa.pdf',
                 'logo' => 'img/beneficios_logos/restaurante_madero.png',
             ],
@@ -251,37 +251,37 @@ $categorias_beneficios = [
                 'titulo' => 'Barreda y Asociados - Radiología e Imagen',
                 'descripcion' => '// Por analizar y completar descripción de beneficios.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/grupobarreda/99NDJNtHRipOYrd73QKNG48itslMAvO1D1pYwSEM.png',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/barreda_asociados.png',
             ],
             [
                 'titulo' => 'Grupo Diagnóstico Aries',
                 'descripcion' => 'Grupo Diagnóstico Aries brinda soluciones integrales en estudios médicos preventivos y de diagnóstico, facilitando el cuidado oportuno de la salud mediante servicios accesibles.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/aries/rNMLvpJ7RMxy7xekhZ8B9VQmsiYokRlvakIKjSN3.png',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/grupo_diagnostico_aries.png',
             ],
             [
                 'titulo' => 'Laboratorios Polanco',
                 'descripcion' => 'Laboratorios Polanco ofrece estudios de análisis clínicos y gabinete preventivos con la mayor precisión técnica y tarifas altamente preferenciales para toda la comunidad universitaria.',
                 'enlace' => 'https://lmpolanco.com/',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/laboratorio_medico_polanco.png',
             ],
             [
                 'titulo' => 'Médica Vial',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Médica Vial ofrece servicios relacionados con atención médica y apoyo en situaciones vinculadas con la movilidad. Este beneficio está pensado para brindar respaldo a la comunidad UNAM mediante soluciones de salud y asistencia bajo condiciones preferenciales.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/medicavial/f5dlfnoz340wpuzEVENsEbpHbXbZZ7c18UIaAaEv.pdf',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/medica_vial.png',
             ],
             [
                 'titulo' => 'Ortopedia Mostkoff',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Ortopedia Mostkoff ofrece productos y servicios especializados en apoyo ortopédico, movilidad y bienestar físico. Este convenio permite a la comunidad UNAM acceder a soluciones pensadas para mejorar la comodidad, la postura y la calidad de vida.',
                 'enlace' => 'https://mostkoff.com/',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/ortopedia_mostkoff.png',
             ],
             [
                 'titulo' => 'SODEIN Servicios Dentales',
                 'descripcion' => 'SODEIN ofrece tratamientos odontológicos preventivos y correctivos especializados, apoyando la salud bucal de los universitarios con atención clínica profesional y planes de pago.',
                 'enlace' => 'https://implantes.sodein.com/',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/sodein_clinica_dental.png',
             ],
         ],
     ],
@@ -290,27 +290,27 @@ $categorias_beneficios = [
         'beneficios' => [
             [
                 'titulo' => 'DABO - Papelera',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'DABO Papelera ofrece a la comunidad UNAM una opción para adquirir artículos de papelería, materiales escolares y productos de uso cotidiano. Este beneficio es útil para estudiantes, académicos, egresados y trabajadores que requieren insumos para actividades académicas, laborales o personales.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/dabo/7RGAA9p9mD9Gl4JSe7cT1iZaR7FBKxK0385chIWF.jpg',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/dabo_papeleria.png',
             ],
             [
                 'titulo' => 'Kurian - Ropa para caballero',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Kurian ofrece ropa formal y de vestir para caballero, pensada para quienes buscan prendas adecuadas para contextos profesionales, académicos o eventos especiales. Este beneficio permite a la comunidad UNAM acceder a opciones de vestimenta con condiciones preferenciales.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/1/RGZBV7BbfRLSHAvKXqdY4wujvOuOON98zaDWbyMw.pdf',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/kurian.png',
             ],
             [
                 'titulo' => 'SpeeDee - Servicio automotriz',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'SpeeDee brinda servicios automotrices para el mantenimiento y cuidado del vehículo. Este convenio permite a la comunidad UNAM acceder a una alternativa de servicio práctico para conservar el auto en buenas condiciones y atender necesidades mecánicas básicas o preventivas.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/speedee/kKNKWR8Gh5W5o45gc89IbEOlzbKbFLQusPDs8WzF.pdf',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/speedee.png',
             ],
             [
                 'titulo' => 'Tintorerías Max',
-                'descripcion' => '// Por analizar y completar descripción de beneficios.',
+                'descripcion' => 'Tintorerías Max ofrece servicios de limpieza y cuidado de prendas, así como soluciones para artículos del hogar. Este beneficio está pensado para apoyar a la comunidad UNAM en tareas cotidianas de mantenimiento, limpieza y conservación de ropa y textiles.',
                 'enlace' => 'https://beneficios.pveaju.unam.mx/storage/tintoreriasmx/7V7cTEdOWXE4mPxMbVDSPQ9ReyqYVSL2wcWvqk6c.pdf',
-                'logo' => '',
+                'logo' => 'img/beneficios_logos/tintoreria_max.webp',
             ],
         ],
     ],
@@ -470,13 +470,19 @@ $escapar_html = static function ($valor) {
 
     /* Logotipos de marcas */
     .swiss-benefits-module .swiss-benefit-logo {
-        max-width: 75%;
-        max-height: 120px;
+        width: 180px;
+        height: 95px;
         object-fit: contain;
         position: relative;
         z-index: 3;
         filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
         transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Logotipos que requieren mayor presencia visual */
+    .swiss-benefits-module .swiss-benefit-logo.swiss-logo--large {
+        width: 220px;
+        height: 115px;
     }
 
     .swiss-benefits-module .swiss-benefit-card:hover .swiss-benefit-logo {
@@ -632,7 +638,26 @@ $escapar_html = static function ($valor) {
                 const es_indice_par = indice_beneficio % 2 === 0;
                 const estilo_posicion_esfera = es_indice_par ? 'top: 55%;' : 'top: 35%;';
 
-                const logoHtml = beneficio.logo ? `<img src="${escapar_html(beneficio.logo)}" alt="${escapar_html(beneficio.titulo)}" class="swiss-benefit-logo">` : '';
+                // Estandarizar logos específicos haciéndolos un poco más grandes
+                const logosGrandes = [
+                    'qualitas', 
+                    'acuario_inbursa', 
+                    'bioparque_estrella', 
+                    'sportium', 
+                    'camino_real', 
+                    'opticas_arista', 
+                    'masvision', 
+                    'la_casa_del_pastor'
+                ];
+                let claseExtraLogo = '';
+                if (beneficio.logo) {
+                    const nombreArchivo = beneficio.logo.split('/').pop().toLowerCase();
+                    if (logosGrandes.some(nombre => nombreArchivo.includes(nombre))) {
+                        claseExtraLogo = ' swiss-logo--large';
+                    }
+                }
+
+                const logoHtml = beneficio.logo ? `<img src="${escapar_html(beneficio.logo)}" alt="${escapar_html(beneficio.titulo)}" class="swiss-benefit-logo${claseExtraLogo}">` : '';
 
                 // Generación de la tarjeta de beneficio
                 const tarjeta = document.createElement('div');
