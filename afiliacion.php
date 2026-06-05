@@ -11,6 +11,24 @@ $nombre_completo = '';
 $ruta_comprobante_pago = '';
 $error_comprobante_pago = '';
 
+function generar_token_comprobante($longitud_bytes = 6)
+{
+	if (function_exists('openssl_random_pseudo_bytes')) {
+		$bytes = openssl_random_pseudo_bytes($longitud_bytes);
+
+		if ($bytes !== false && strlen($bytes) === $longitud_bytes) {
+			return bin2hex($bytes);
+		}
+	}
+
+	$bytes = '';
+	for ($i = 0; $i < $longitud_bytes; $i++) {
+		$bytes .= chr(mt_rand(0, 255));
+	}
+
+	return bin2hex($bytes);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	$nombre = trim(isset($_POST['nombre']) ? $_POST['nombre'] : '');
 	$apellido_p = trim(isset($_POST['apellido_paterno']) ? $_POST['apellido_paterno'] : '');
@@ -52,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 				$error_comprobante_pago = 'No se pudo preparar la carpeta para guardar el comprobante.';
 			} else {
 				$extension_comprobante = $tipos_comprobante_permitidos[$mime_comprobante];
-				$token_comprobante = bin2hex(random_bytes(6));
+				$token_comprobante = generar_token_comprobante(6);
 				$nombre_archivo_comprobante = 'comprobante_' . date('Ymd_His') . '_' . $token_comprobante . '.' . $extension_comprobante;
 				$ruta_destino_comprobante = $directorio_comprobantes . DIRECTORY_SEPARATOR . $nombre_archivo_comprobante;
 
@@ -145,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 		</div>
 
 		<!-- ── Pantalla de éxito ──────────────────────────────── -->
-		<div class="success-screen <?= $registrado ? 'show' : '' ?>" id="success-screen">
+		<div class="success-screen <?php echo $registrado ? 'show' : ''; ?>" id="success-screen">
 			<div class="success-icon">
 				<svg viewBox="0 0 24 24">
 					<polyline points="20 6 9 17 4 12" />
@@ -153,13 +171,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 			</div>
 			<h2>¡Solicitud Enviada!</h2>
 			<div class="name-display" id="success-name">
-				<?= htmlspecialchars($nombre_completo) ?>
+				<?php echo htmlspecialchars($nombre_completo); ?>
 			</div>
 			<p>Su solicitud de afiliación ha sido recibida.<br>Bienvenido a la comunidad de egresados SEFCA.</p>
 		</div>
 
 		<!-- ── Formulario principal ───────────────────────────── -->
-		<form method="POST" id="main-form" class="form-container <?= $registrado ? 'hide' : '' ?>" enctype="multipart/form-data">
+		<form method="POST" id="main-form" class="form-container <?php echo $registrado ? 'hide' : ''; ?>" enctype="multipart/form-data">
 
 			<!-- ===================== TAB 1: DATOS PERSONALES Y ACADÉMICOS ===================== -->
 			<div class="tab open" id="tab-1">
@@ -402,8 +420,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 							<input type="file" id="comprobante_pago" name="comprobante_pago"
 								accept="image/jpeg,image/png,image/webp" required>
 							<div class="field-help">Formatos permitidos: JPG, PNG o WEBP. Tama&ntilde;o m&aacute;ximo: 5 MB.</div>
-							<div class="error-msg <?= $error_comprobante_pago !== '' ? 'visible' : '' ?>" id="err-comprobante">
-								<?= htmlspecialchars($error_comprobante_pago !== '' ? $error_comprobante_pago : 'Adjunte una imagen JPG, PNG o WEBP menor a 5 MB.', ENT_QUOTES, 'UTF-8') ?>
+							<div class="error-msg <?php echo $error_comprobante_pago !== '' ? 'visible' : ''; ?>" id="err-comprobante">
+								<?php echo htmlspecialchars($error_comprobante_pago !== '' ? $error_comprobante_pago : 'Adjunte una imagen JPG, PNG o WEBP menor a 5 MB.', ENT_QUOTES, 'UTF-8'); ?>
 							</div>
 						</div>
 

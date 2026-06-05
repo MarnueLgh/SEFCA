@@ -316,7 +316,7 @@ $categorias_beneficios = [
     ],
 ];
 
-$escapar_html = static function ($valor) {
+$escapar_html = function ($valor) {
     return htmlspecialchars($valor, ENT_QUOTES, 'UTF-8');
 };
 ?>

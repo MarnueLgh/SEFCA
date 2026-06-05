@@ -24,6 +24,44 @@
     --carta-border: rgba(0, 0, 0, 0.06);
 }
 
+/* Diseño de carga del spinner */
+@keyframes logoGrow {
+    0% { transform: scale(0.85); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(0.85); opacity: 0.5; }
+}
+
+.spinner-custom-grow {
+    animation: logoGrow 2.5s ease-in-out infinite;
+}
+
+/* Diseño del botón volver arriba */
+.btn-gold {
+    background-color: #9c6e09 !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: 0 4px 14px rgba(156, 110, 9, 0.4) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.btn-gold:hover {
+    background-color: #805a06 !important; /* Un dorado un poco más oscuro para dar contraste */
+    color: #ffffff !important;
+    transform: translateY(-5px); /* El botón se eleva sutilmente */
+    /* La sombra se expande cuando el botón se eleva */
+    box-shadow: 0 8px 22px rgba(156, 110, 9, 0.6) !important;
+}
+
+/* Asegura que el icono de Bootstrap quede perfectamente centrado */
+.btn-lg-square {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ==========================================
    GLOBAL: prevenir barra horizontal por carrusel arco
    ========================================== */

@@ -142,11 +142,10 @@ if (isset($evento['fotos'])) {
 
     <?php require_once __DIR__ . "/footer.php"; ?>
 
-    <!-- Volver a inicio -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
+    <!-- Botón para volver arriba -->
+    <?php include("includes/volver_arriba_btn.php"); ?>
 
+    <!-- Scripts -->
     <?php require_once __DIR__ . "/scripts.php"; ?>
 </body>
 

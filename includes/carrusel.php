@@ -78,19 +78,19 @@ $cards_eventos = [
                         $btnText = 'Ver Evento';
                     }
                     ?>
-                    <a href="<?= $card['enlace'] ?>" <?= $target ?> class="carrusel-cyber-card">
+                    <a href="<?php echo $card['enlace']; ?>" <?php echo $target; ?> class="carrusel-cyber-card">
                         <div class="carrusel-cyber-card-img-wrap">
-                            <img src="<?= $card['imagen'] ?>" alt="<?= htmlspecialchars($card['titulo']) ?>"
+                            <img src="<?php echo $card['imagen']; ?>" alt="<?php echo htmlspecialchars($card['titulo']); ?>"
                                 class="carrusel-cyber-card-img">
                         </div>
                         <div class="carrusel-cyber-card-body">
-                            <h3 class="carrusel-cyber-title"><?= $card['titulo'] ?></h3>
-                            <p class="carrusel-cyber-excerpt"><?= $card['excerpt'] ?></p>
+                            <h3 class="carrusel-cyber-title"><?php echo $card['titulo']; ?></h3>
+                            <p class="carrusel-cyber-excerpt"><?php echo $card['excerpt']; ?></p>
 
                             <!-- Boton estilo pill delineado -->
                             <div class="carrusel-cyber-btn-wrapper mt-auto">
                                 <span class="carrusel-cyber-btn">
-                                    <i class="bi bi-arrow-return-right me-1"></i> <?= $btnText ?>
+                                    <i class="bi bi-arrow-return-right me-1"></i> <?php echo $btnText; ?>
                                 </span>
                             </div>
                         </div>

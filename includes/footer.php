@@ -26,7 +26,7 @@
                                     $visitas++;
                                     file_put_contents(
                                         $archivo_contador,
-                                        $visitas,
+                                        $visitas
                                     );
                                 }
                                 echo number_format($visitas);

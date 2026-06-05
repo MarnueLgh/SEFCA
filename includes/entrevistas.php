@@ -93,24 +93,24 @@ $entrevistas = [
     <div class="owl-carousel entrevistas-carousel owl-theme">
         <?php foreach ($entrevistas as $entrevista) { ?>
             <div class="entrevista-slide">
-                <a href="<?= htmlspecialchars($entrevista['url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank"
+                <a href="<?php echo htmlspecialchars($entrevista['url'], ENT_QUOTES, 'UTF-8'); ?>" target="_blank"
                     rel="noopener noreferrer" class="link-card text-decoration-none">
                     <div class="link-card-header">
                         <span
-                            class="badge link-card-badge-oscuro"><?= htmlspecialchars($entrevista['badge'], ENT_QUOTES, 'UTF-8') ?></span>
+                            class="badge link-card-badge-oscuro"><?php echo htmlspecialchars($entrevista['badge'], ENT_QUOTES, 'UTF-8'); ?></span>
                     </div>
                     <div class="link-card-cuerpo">
-                        <h4 class="link-card-titulo"><?= htmlspecialchars($entrevista['titulo'], ENT_QUOTES, 'UTF-8') ?>
+                        <h4 class="link-card-titulo"><?php echo htmlspecialchars($entrevista['titulo'], ENT_QUOTES, 'UTF-8'); ?>
                         </h4>
-                        <p class="link-card-texto"><?= htmlspecialchars($entrevista['descripcion'], ENT_QUOTES, 'UTF-8') ?>
+                        <p class="link-card-texto"><?php echo htmlspecialchars($entrevista['descripcion'], ENT_QUOTES, 'UTF-8'); ?>
                         </p>
                     </div>
                     <div class="link-card-imagen-contenedor">
-                        <img src="<?= htmlspecialchars($entrevista['imagen'], ENT_QUOTES, 'UTF-8') ?>"
-                            alt="<?= htmlspecialchars($entrevista['alt'], ENT_QUOTES, 'UTF-8') ?>">
+                        <img src="<?php echo htmlspecialchars($entrevista['imagen'], ENT_QUOTES, 'UTF-8'); ?>"
+                            alt="<?php echo htmlspecialchars($entrevista['alt'], ENT_QUOTES, 'UTF-8'); ?>">
                         <div class="link-card-imagen-placeholder">
                             <p class="link-card-ubicacion"><i class="fab fa-youtube"></i>
-                                <?= htmlspecialchars($entrevista['plataforma'], ENT_QUOTES, 'UTF-8') ?></p>
+                                <?php echo htmlspecialchars($entrevista['plataforma'], ENT_QUOTES, 'UTF-8'); ?></p>
                         </div>
                     </div>
                 </a>

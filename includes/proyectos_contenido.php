@@ -39,23 +39,23 @@ $proyectos = [
 <section class="proyectos-section section-gap">
     <div class="container">
         <?php foreach ($proyectos as $i => $p): ?>
-            <article class="proyecto-split wow fadeIn <?= $i % 2 !== 0 ? 'proyecto-split-invertido' : '' ?>"
-                id="proyecto-<?= htmlspecialchars($p['clave']) ?>" data-wow-duration="1.5s" data-wow-delay="0.1s">
+            <article class="proyecto-split wow fadeIn <?php echo $i % 2 !== 0 ? 'proyecto-split-invertido' : ''; ?>"
+                id="proyecto-<?php echo htmlspecialchars($p['clave']); ?>" data-wow-duration="1.5s" data-wow-delay="0.1s">
 
                 <!-- Imagen -->
                 <div class="proyecto-split-img-col">
-                    <img src="<?= htmlspecialchars($p['imagen']) ?>" alt="<?= htmlspecialchars($p['alt']) ?>"
+                    <img src="<?php echo htmlspecialchars($p['imagen']); ?>" alt="<?php echo htmlspecialchars($p['alt']); ?>"
                         class="proyecto-split-img" loading="lazy">
                 </div>
 
                 <!-- Contenido -->
                 <div class="proyecto-split-contenido">
-                    <h2 class="proyecto-split-titulo"><?= $p['titulo'] ?></h2>
-                    <p class="proyecto-split-desc"><?= $p['descripcion'] ?></p>
+                    <h2 class="proyecto-split-titulo"><?php echo $p['titulo']; ?></h2>
+                    <p class="proyecto-split-desc"><?php echo $p['descripcion']; ?></p>
 
                     <?php if (!empty($p['enlace']) && $p['enlace'] !== '#'): ?>
-                        <a href="<?= htmlspecialchars($p['enlace']) ?>" class="boton-sm" target="_blank" rel="noopener noreferrer">
-                            <?= htmlspecialchars($p['enlace_texto']) ?>
+                        <a href="<?php echo htmlspecialchars($p['enlace']); ?>" class="boton-sm" target="_blank" rel="noopener noreferrer">
+                            <?php echo htmlspecialchars($p['enlace_texto']); ?>
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     <?php endif; ?>

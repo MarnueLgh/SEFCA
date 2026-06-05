@@ -43,19 +43,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 	</div>
 
 	<!-- ── Pantalla de éxito ──────────────────────────────── -->
-	<div class="success-screen <?= $registrado ? 'show' : '' ?>" id="success-screen">
+	<div class="success-screen <?php echo $registrado ? 'show' : ''; ?>" id="success-screen">
 		<div class="success-icon">
 			<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
 		</div>
 		<h2>¡Solicitud Enviada!</h2>
 		<div class="name-display" id="success-name">
-			<?= htmlspecialchars($nombre_completo) ?>
+			<?php echo htmlspecialchars($nombre_completo); ?>
 		</div>
 		<p>Su solicitud de afiliación ha sido recibida.<br>Bienvenido a la comunidad de egresados SEFCA.</p>
 	</div>
 
 	<!-- ── Formulario principal ───────────────────────────── -->
-	<form method="POST" id="main-form" class="form-container <?= $registrado ? 'hide' : '' ?>">
+	<form method="POST" id="main-form" class="form-container <?php echo $registrado ? 'hide' : ''; ?>">
 
 		<!-- ===================== TAB 1: DATOS PERSONALES ===================== -->
 		<div class="tab open" id="tab-1">
