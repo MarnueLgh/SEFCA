@@ -1,4 +1,4 @@
-﻿/********** Template CSS **********/
+/********** Template CSS **********/
 :root {
     --alto-navbar: 110px;
     --fuente-titulo: "Playfair Display", serif;
@@ -919,6 +919,7 @@ h6,
     /* El alto sigue siendo el mismo de tu footer */
     height: 80px;
     width: auto;
+    max-width: 45%;
     
     /* Pinta el fondo interno del color del sitio */
     background-color: var(--dorado-unam);
@@ -945,6 +946,10 @@ footer {
     background: var(--azul_unam);
     font-size: 0.85rem;
     width: 100%;
+}
+
+.justify {
+    text-align: justify !important;
 }
 
 .copyright a {

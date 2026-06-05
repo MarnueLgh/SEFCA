@@ -62,15 +62,17 @@
 
                 <!-- Logo UNAM -->
                 <!-- Logo UNAM -->
-                <div class="col-md-4 text-center text-md-end">
-                    <div class="footer-logo-dorado" 
-                        style="width: 150px; -webkit-mask-image: url('img/unam_gran_universidad_dorado.png'); mask-image: url('img/unam_gran_universidad_dorado.png');" 
-                        role="img" aria-label="UNAM - Nuestra gran Universidad">
-                    </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-nowrap justify-content-center justify-content-md-end align-items-center gap-3">
+                        <div class="footer-logo-dorado" 
+                            style="width: 150px; -webkit-mask-image: url('img/unam_gran_universidad_dorado.png'); mask-image: url('img/unam_gran_universidad_dorado.png');" 
+                            role="img" aria-label="UNAM - Nuestra gran Universidad">
+                        </div>
 
-                    <div class="footer-logo-dorado" 
-                        style="width: 150px; -webkit-mask-image: url('img/475_logo_dorado.png'); mask-image: url('img/475_logo_dorado.png');" 
-                        role="img" aria-label="475+ años de historia">
+                        <div class="footer-logo-dorado" 
+                            style="width: 150px; -webkit-mask-image: url('img/475_logo_dorado.png'); mask-image: url('img/475_logo_dorado.png');" 
+                            role="img" aria-label="475+ años de historia">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,7 +89,7 @@
                     D.R. &copy;
                     <?php echo date("Y"); ?>
                 </div>
-                <div class="col-md-10 text-center text-md-start justify">
+                <div class="col-md-10 justify">
                     Esta página puede ser reproducida con fines no lucrativos, siempre y cuando no se mutile, se cite la
                     fuente completa y su dirección electrónica. De otra forma requiere permiso previo por escrito de la
                     institución.
