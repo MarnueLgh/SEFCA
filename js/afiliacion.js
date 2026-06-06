@@ -97,32 +97,23 @@ function actualizarCategoria() {
 		badge.className = 'categoria-badge cat-azul-oro';
 		hidden.value = 'azul_oro';
 	} 
-	else if (monto >= 5000 && monto <= 5999) 
+	else if (monto >= 5000)
 	{
 		badge.textContent = '🥇 Oro';
 		badge.className = 'categoria-badge cat-oro';
 		hidden.value = 'oro';
 	} 
-	else if (monto >= 2500 && monto <= 4999) 
+	else if (monto >= 2500)
 	{
 		badge.textContent = '🥈 Plata';
 		badge.className = 'categoria-badge cat-plata';
 		hidden.value = 'plata';
 	} 
-	else if (monto >= 1000 && monto <= 2499) 
+	else if (monto >= 1000)
 	{
 		badge.textContent = '🥉 Bronce';
 		badge.className = 'categoria-badge cat-bronce';
 		hidden.value = 'bronce';
-	} 
-	else 
-	{
-		// Montos entre 6000 y 9999 no encajan exactamente en las reglas dadas
-		// Los asignamos a Plata ya que $6,000-$9,999 > Oro ($5,000-$5,999)
-		// pero < Azul y Oro ($10,000+). Ajustable según negocio.
-		badge.textContent = '🥈 Plata';
-		badge.className = 'categoria-badge cat-plata';
-		hidden.value = 'plata';
 	}
 }
 

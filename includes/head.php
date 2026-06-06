@@ -34,8 +34,4 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Tiny-slider -->
-    <link rel="stylesheet" href="css/tiny-slider.css">
-
-
 </head>

@@ -2,7 +2,12 @@
     Fecha: 13/04/2026
     Descripción: Carta estratégica de la SEFCA
 -->
+
 <div class="carta-main">
+
+    <div class="section-gap">
+        <hr>
+    </div>
 
     <!-- ============================
              MISIÓN — Texto izq, imagen der
