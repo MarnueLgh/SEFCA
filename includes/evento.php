@@ -47,15 +47,22 @@ if (!function_exists('escapar_evento')) {
     }
 }
 ?>
+
+<!-- Estructura html -->
 <!DOCTYPE html>
 <html lang="es">
 
-<?php require_once __DIR__ . "/head.php"; ?>
+    <!-- Head -->
+    <?php require_once __DIR__ . "/head.php"; ?>
 
 <body>
+    <!-- Spinner -->
     <?php include __DIR__ . "/spinner.php"; ?>
+
+    <!-- Navbar -->
     <?php include __DIR__ . "/navbar.php"; ?>
 
+    <!-- Hero pagina -->
     <?php
         $heroTitulo = $eventoTitulo;
         $heroTexto = !empty($eventoFecha) ? $eventoFecha : 'Galería fotográfica del evento.';
@@ -87,8 +94,13 @@ if (!function_exists('escapar_evento')) {
         </div>
     </div>
 
+    <!-- Footer -->
     <?php require_once __DIR__ . "/footer.php"; ?>
+
+    <!-- Botón volver arriba -->
     <?php include __DIR__ . "/volver_arriba_btn.php"; ?>
+
+    <!-- Scripts -->
     <?php require_once __DIR__ . "/scripts.php"; ?>
 </body>
 

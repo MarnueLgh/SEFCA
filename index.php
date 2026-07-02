@@ -20,6 +20,9 @@
     <!-- Hero -->
     <?php include("includes/hero_index.php"); ?>
 
+    <!-- Hook de afiliación -->
+    <?php include("includes/hook_afiliacion.php"); ?>
+
     <!-- Carta estratégica -->
     <?php include("includes/carta_estrategica.php"); ?>
 

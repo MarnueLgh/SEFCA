@@ -1,4 +1,4 @@
-/********** Template CSS **********/
+﻿/********** Template CSS **********/
 :root {
     --alto-navbar: 110px;
     --fuente-titulo: "Playfair Display", serif;
@@ -20,7 +20,8 @@
     --carta-gold: #d4a039;
     --carta-gold-light: rgba(212, 160, 57, 0.12);
     --carta-text: #3d3831;
-    --carta-muted: #8a7f72;
+    /* --carta-muted: #8a7f72; */
+    --carta-muted: #332421;
     --carta-border: rgba(0, 0, 0, 0.06);
 }
 
@@ -570,8 +571,43 @@ h6,
     min-height: var(--alto-navbar);
 }
 
-/* ── Navbar: responsive mobile (< lg) ── */
-@media (max-width: 991.98px) {
+/* ── Navbar: responsive desktop (>= 1210px) ── */
+@media (min-width: 1210px) {
+    .navbar-expand-custom {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom .navbar-nav-scroll {
+        overflow: visible;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+    .px-custom-5 {
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+    }
+    .p-custom-0 {
+        padding: 0 !important;
+    }
+}
+
+/* ── Navbar: responsive mobile (< 1210px) ── */
+@media (max-width: 1209.98px) {
     /* Margen a los logos para que no estén pegados a la izquierda */
     .navbar-logos {
         margin-left: 1rem;
@@ -1232,7 +1268,7 @@ footer {
 
 .bento-fila-texto {
     font-size: 0.85rem;
-    color: #1e1916;
+    color: var(--carta-muted);
     line-height: 1.6;
     margin-bottom: 0.8rem;
     text-align: justify;
