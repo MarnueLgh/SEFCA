@@ -2428,7 +2428,7 @@ footer {
 .carta-section-cuerpo {
     font-family: var(--carta-sans);
     font-size: 0.95rem;
-    color: var(--carta-muted);
+    color: var(--secondary);
     line-height: 1.85;
     max-width: 460px;
     font-weight: 300;

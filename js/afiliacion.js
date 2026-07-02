@@ -3,7 +3,7 @@
  * Fecha: 22/04/2026
  * Versión: 2.0
  * Descripción: Lógica de formulario de afiliación SEFCA.
- *              - Generación dinámica de generaciones (FCA fundada 1929, bloques de 4 años)
+ *              - Generación dinámica de generaciones (primera generación 1929-1933, anuales)
  *              - Categoría de socio automática según monto
  *              - Validación completa de todos los campos
  *              - Clipboard para datos bancarios
@@ -18,17 +18,16 @@ const tabDone = { 1: false, 2: false };
 // ══════════════════════════════════════════════════════════════
 
 /**
- * Genera la lista completa de generaciones desde 1929.
- * Cada generación dura 4 años y cada 2 años inicia una nueva.
- * Ejemplo: 1929-1933, 1931-1935, 1933-1937, …
- * La última generación termina en 2030.
+ * Genera la lista completa de generaciones.
+ * Cada año entra una generación nueva, la primera es 1929-1933,
+ * y la última en salir graduada es la 2026-2030.
  */
 function generarGeneraciones() {
 	var generaciones = [];
-	var ANIO_INICIO = 1930;
+	var ANIO_INICIO = 1929;
 	var ULTIMA_GEN_FIN = 2030;
 	var DURACION = 4;
-	var PASO = 2;
+	var PASO = 1;
 
 	for (var inicio = ANIO_INICIO; inicio + DURACION <= ULTIMA_GEN_FIN; inicio += PASO) {
 		var fin = inicio + DURACION;
