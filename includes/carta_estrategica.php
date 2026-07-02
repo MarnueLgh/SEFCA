@@ -3,11 +3,7 @@
     Descripción: Carta estratégica de la SEFCA
 -->
 
-<div class="carta-main">
-
-    <div class="section-gap">
-        <hr>
-    </div>
+<div class="carta-main section-gap">
 
     <!-- ============================
              MISIÓN — Texto izq, imagen der
@@ -75,7 +71,7 @@
     <!-- ============================
              EJES — Card izq, texto der
              ============================ -->
-    <section class="carta-section carta-section-reversa">
+    <section class="carta-section carta-section-reversa section-gap">
         <div class="carta-section-texto wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
                 Ejes <em>Estratégicos</em>

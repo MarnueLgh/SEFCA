@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
     "use strict";
 
     // Spinner
@@ -200,3 +200,62 @@ $(".eventos-carousel").owlCarousel({
 
     observer.observe(acordeon);
 })();
+
+/* ==========================================
+   MENÚ MÓVIL DESLIZABLE (SLIDING PANELS)
+   ========================================== */
+(function ($) {
+    "use strict";
+
+    $(document).ready(function () {
+        // Al hacer clic en un toggle de dropdown en mobile, deslizar hacia la izquierda
+        $('.navbar .dropdown-toggle').on('click', function (e) {
+            if (window.innerWidth < 1210) {
+                var $collapse = $(this).closest('.navbar-collapse');
+                $collapse.addClass('submenu-open');
+            }
+        });
+
+        // Al hacer clic en el botón de volver atrás, deslizar hacia la derecha y cerrar el dropdown
+        $('.navbar .dropdown-back').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            var $collapse = $(this).closest('.navbar-collapse');
+            $collapse.removeClass('submenu-open');
+
+            // Cerrar el dropdown de Bootstrap programáticamente
+            var $toggle = $(this).closest('.dropdown').find('.dropdown-toggle');
+            if ($toggle.length) {
+                var dropdownInstance = bootstrap.Dropdown.getInstance($toggle[0]);
+                if (dropdownInstance) {
+                    dropdownInstance.hide();
+                }
+            }
+        });
+
+        // Gestionar la clase nav-open en el body para impedir el scroll
+        // y suavizar la entrada/salida vertical del overlay móvil.
+        var $collapse = $('#navbarCollapse');
+        if ($collapse.length) {
+            $collapse.on('show.bs.collapse', function () {
+                document.body.classList.add('nav-open');
+                $(this).removeClass('is-closing');
+            });
+
+            $collapse.on('hide.bs.collapse', function () {
+                $(this).removeClass('submenu-open').addClass('is-closing');
+            });
+
+            $collapse.on('hidden.bs.collapse', function () {
+                document.body.classList.remove('nav-open');
+                $(this).removeClass('is-closing submenu-open');
+
+                // Dejar todos los dropdowns cerrados para que la siguiente apertura
+                // del menú vuelva siempre al panel principal.
+                $(this).find('.dropdown-menu.show').removeClass('show');
+                $(this).find('.dropdown-toggle[aria-expanded="true"]').attr('aria-expanded', 'false');
+            });
+        }
+    });
+})(jQuery);
