@@ -19,6 +19,24 @@ if (!function_exists('obtener_eventos_sefca')) {
                     'target_blank' => true,
                 ],
             ],
+            'asamblea_general_ordinaria_2026' => [
+                'titulo' => 'Asamblea General Ordinaria',
+                'fecha_etiqueta' => '27 de mayo de 2026',
+                'descripcion' => 'Convocatoria a la Asamblea General Ordinaria de la SEFCA, invitando a todos los asociados a participar.',
+                'imagen' => 'img/asamblea_general_ordinaria_mayo.png',
+                'imagen_alt' => 'Asamblea General Ordinaria SEFCA',
+                'tipo' => 'evento',
+                'mes' => 5,
+                'anio' => 2026,
+                'listado' => true,
+                'acciones' => [
+                    [
+                        'texto' => 'Ver más',
+                        'url' => 'https://sefca.fca.unam.mx/docs/Convocatoria_Asamblea_27_mayo26-1.pdf',
+                        'target_blank' => true,
+                    ],
+                ],
+            ],
             'ensayos_premiados_2026' => [
                 'titulo' => 'Ensayos Premiados en el Concurso de Ensayo FCA-SEFCA',
                 'fecha_etiqueta' => '27 de mayo de 2026',

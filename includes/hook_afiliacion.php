@@ -1,7 +1,3 @@
-<div class="section-gap">
-    <hr>
-</div>
-
 <?php
 /**
  * Hook de afiliación listo para usarse como include.
@@ -57,29 +53,47 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 
 <style>
     .hook-afiliacion {
-        --hook-color-bg: var(--card_bg_color);
-        --hook-color-title: var(--azul_unam);
-        --hook-color-text: var(--secondary);
-        --hook-color-btn-bg: var(--azul_unam);
-        --hook-color-btn-border: var(--azul_unam);
-        --hook-color-btn-text: #ffffff;
-        --hook-color-btn-bg-hover: var(--dorado-unam);
-        --hook-color-btn-border-hover: var(--dorado-unam);
-        --hook-color-btn-text-hover: #ffffff;
+        /* 
+         * =========================================================================
+         *  CONFIGURACIÓN DEL FONDO PARALLAX / PARALLAX BACKGROUND CONFIGURATION
+         * =========================================================================
+         * 
+         * 1. RUTA DE LA IMAGEN DE FONDO (Reemplaza 'img/parallax.jpg' por la tuya)
+         */
+        --hook-bg-image: url('img/parallax_nv_generacion.png');
+        
+        /* 
+         * 2. COLOR DE SUPERPOSICIÓN (Overlay para asegurar la legibilidad del texto)
+         *    Usa rgba(r, g, b, opacidad) o cambia a 'transparent' si no la quieres.
+         */
+        --hook-overlay-color: rgba(18, 30, 49, 0.65); /* Azul oscuro de la UNAM con opacidad */
+
+        /* 
+         * 3. COLORES DEL TEXTO (Ajusta según convenga con tu imagen de fondo)
+         */
+        --hook-color-title: #ffffff; /* Blanco para destacar sobre fondo oscuro */
+        --hook-color-text: #f0f2f5;  /* Gris muy claro */
+        
         --hook-font-title: var(--fuente-titulo);
         --hook-font-main: var(--fuente-texto);
 
         box-sizing: border-box;
         width: 100%;
-        min-height: 313px;
-        background-color: var(--hook-color-bg);
+        min-height: 380px;
+        background-color: #121e31; /* Respaldo de fondo oscuro */
+        background-image: var(--hook-bg-image);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         color: var(--hook-color-text);
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         font-family: var(--hook-font-main);
-        padding: 3rem 0;
+        padding: 4.5rem 0;
+        position: relative; /* Necesario para posicionar la superposición */
     }
 
     .hook-afiliacion,
@@ -87,11 +101,25 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
         box-sizing: border-box;
     }
 
+    /* Capa de overlay/superposición */
+    .hook-afiliacion::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--hook-overlay-color);
+        z-index: 1;
+    }
+
     .hook-afiliacion__inner {
         width: 100%;
         max-width: 900px;
         padding: 20px 24px;
         text-align: center;
+        position: relative;
+        z-index: 2; /* Coloca el contenido por encima del overlay */
     }
 
     .hook-afiliacion__title {
@@ -102,6 +130,7 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
         font-weight: 600;
         line-height: 1.2;
         letter-spacing: -0.02em;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para mejorar el contraste */
     }
 
     .hook-afiliacion__title-line {
@@ -116,44 +145,7 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
         font-size: clamp(1.1rem, 2.2vw, 1.3rem);
         font-weight: 300;
         line-height: 1.6;
-    }
-
-    .hook-afiliacion__button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 140px;
-        height: 46px;
-        padding: 11px 28px;
-        border: 2px solid var(--hook-color-btn-border);
-        border-radius: 50px;
-        background-color: var(--hook-color-btn-bg);
-        color: var(--hook-color-btn-text);
-        font-family: var(--hook-font-main);
-        font-size: 0.95rem;
-        font-weight: 500;
-        line-height: 1;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease,
-                    border-color 0.3s ease,
-                    color 0.3s ease,
-                    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-                    box-shadow 0.3s ease;
-    }
-
-    .hook-afiliacion__button:hover {
-        background-color: var(--hook-color-btn-bg-hover);
-        border-color: var(--hook-color-btn-border-hover);
-        color: var(--hook-color-btn-text-hover);
-        text-decoration: none;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(156, 110, 9, 0.25);
-    }
-
-    .hook-afiliacion__button:active {
-        transform: translateY(1px);
-        box-shadow: 0 2px 6px rgba(156, 110, 9, 0.15);
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para mejorar el contraste */
     }
 
     .hook-afiliacion__icon {
@@ -166,16 +158,21 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
         transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .hook-afiliacion__button:hover .hook-afiliacion__icon {
+    /* Animación del ícono al pasar el mouse por encima del botón */
+    .hook-afiliacion a:hover .hook-afiliacion__icon {
         transform: translateX(3px);
     }
 
-    @media (max-width: 768px) {
+    /* Fallback para dispositivos móviles/tablets (el scroll parallax suele fallar en iOS/Android) */
+    @media (max-width: 1024px) {
         .hook-afiliacion {
-            min-height: 300px;
-            padding: 2rem 0;
+            background-attachment: scroll;
+            padding: 3.5rem 0;
+            min-height: 320px;
         }
+    }
 
+    @media (max-width: 768px) {
         .hook-afiliacion__inner {
             padding: 20px;
         }
@@ -183,17 +180,21 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 
     @media (max-width: 480px) {
         .hook-afiliacion {
-            min-height: 280px;
+            min-height: 300px;
         }
 
-        .hook-afiliacion__button {
+        .hook-afiliacion .boton-sm-blanco {
             width: 100%;
             max-width: 300px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 </style>
 
-<section class="hook-afiliacion" aria-labelledby="hook-afiliacion-title">
+<section class="hook-afiliacion section-gap" aria-labelledby="hook-afiliacion-title">
+    
     <div class="hook-afiliacion__inner">
         <h2 class="hook-afiliacion__title" id="hook-afiliacion-title">
             <span class="hook-afiliacion__title-line"><?php echo $hook_titulo_1; ?></span>
@@ -202,7 +203,7 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 
         <p class="hook-afiliacion__subtitle"><?php echo $hook_subtitulo; ?></p>
 
-        <a class="boton-sm" href="<?php echo $hook_boton_enlace; ?>">
+        <a class="boton-sm-blanco" href="<?php echo $hook_boton_enlace; ?>">
             <span><?php echo $hook_boton_texto; ?></span>
             <svg class="hook-afiliacion__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -211,7 +212,3 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
         </a>
     </div>
 </section>
-
-<div class="section-gap">
-    <hr>
-</div>

@@ -4156,3 +4156,562 @@ footer {
         display: none !important;
     }
 }
+
+/* =============================================
+   BENEFICIOS SEFCA — Cards adaptadas al diseño de referencia
+   Pegar este bloque al final de style.css
+   ============================================= */
+
+.swiss-benefits-module {
+    --beneficios-bg-page: #ffffff;
+    --beneficios-bg-card: #ffffff;
+    --beneficios-bg-image: #ffffff;
+    --beneficios-text-primary: #1e1e1e;
+    --beneficios-text-muted: #555555;
+    --beneficios-border: rgba(17, 48, 75, 0.1);
+
+    width: 100%;
+    padding: clamp(2.5rem, 5vw, 4.5rem) 1.25rem;
+    background: #ffffff;
+    color: var(--beneficios-text-primary);
+    font-family: var(--fuente-texto);
+    -webkit-font-smoothing: antialiased;
+}
+
+.swiss-benefits-module,
+.swiss-benefits-module * {
+    box-sizing: border-box;
+}
+
+.swiss-benefits-module .swiss-outer-canvas {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/* Menú superior de beneficios: se conserva la funcionalidad original */
+.swiss-benefits-module .swiss-category-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 0 auto 2rem;
+    padding: 0 0 1.1rem;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--beneficios-border);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.swiss-benefits-module .swiss-category-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.swiss-benefits-module .swiss-category-btn {
+    appearance: none;
+    flex: 0 0 auto;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--azul_unam);
+    border-radius: 999px;
+    padding: 0.62rem 1rem;
+    font-family: var(--fuente-texto);
+    font-size: 0.86rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.swiss-benefits-module .swiss-category-btn:hover {
+    color: var(--dorado-unam);
+    border-color: rgba(156, 110, 9, 0.22);
+    background: rgba(17, 48, 75, 0.035);
+}
+
+.swiss-benefits-module .swiss-category-btn.is-active {
+    color: #ffffff;
+    border-color: var(--azul_unam);
+    background: var(--azul_unam);
+    box-shadow: 0 8px 20px rgba(17, 48, 75, 0.16);
+}
+
+.swiss-benefits-module .swiss-category-btn:focus-visible {
+    outline: 2px solid var(--dorado-unam);
+    outline-offset: 3px;
+}
+
+.swiss-benefits-module .swiss-benefits-viewport {
+    position: relative;
+    width: 100%;
+}
+
+/* Rejilla de cards estilo referencia */
+.swiss-benefits-module .swiss-benefits-scrollrow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.swiss-benefits-module .swiss-benefit-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(17, 48, 75, 0.08);
+    border-radius: 25px;
+    background: var(--beneficios-bg-card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.018);
+    transition:
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.swiss-benefits-module .swiss-benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(156, 110, 9, 0.16);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.055);
+}
+
+.swiss-benefits-module .swiss-benefit-image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #E8E8E8;
+    border-bottom: 1px solid rgba(17, 48, 75, 0.07);
+}
+
+.swiss-benefits-module .swiss-benefit-image-bg {
+    display: none;
+}
+
+.swiss-benefits-module .swiss-benefit-logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    max-width: 72%;
+    max-height: 58%;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.08));
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swiss-benefits-module .swiss-benefit-card:hover .swiss-benefit-logo {
+    transform: scale(1.04);
+}
+
+.swiss-benefits-module .swiss-benefit-logo-placeholder {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border: 1px solid rgba(30, 30, 30, 0.2);
+    border-radius: 50%;
+    color: var(--beneficios-text-primary);
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.swiss-benefits-module .swiss-benefit-card-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.swiss-benefits-module .swiss-benefit-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.6rem;
+    margin: 0 0 1rem;
+    color: var(--beneficios-text-primary);
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.35rem, 2.2vw, 1.62rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.swiss-benefits-module .swiss-benefit-description {
+    flex: 1 1 auto;
+    width: 100%;
+    margin: 0 0 1.55rem;
+    color: var(--beneficios-text-muted);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.58;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.swiss-benefits-module .swiss-benefit-action {
+    align-self: center;
+    margin-top: auto;
+}
+
+.swiss-benefits-module .swiss-fade {
+    animation: sefca-benefits-fade 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes sefca-benefits-fade {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.985);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 992px) {
+    .swiss-benefits-module .swiss-category-bar {
+        justify-content: flex-start;
+    }
+
+    .swiss-benefits-module .swiss-benefits-scrollrow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 680px) {
+    .swiss-benefits-module {
+        padding: 2rem 1rem;
+    }
+
+    .swiss-benefits-module .swiss-category-bar {
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.85rem;
+    }
+
+    .swiss-benefits-module .swiss-category-btn {
+        padding: 0.58rem 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    .swiss-benefits-module .swiss-benefits-scrollrow {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .swiss-benefits-module .swiss-benefit-card-body {
+        padding: 2rem 1.25rem 1.8rem;
+    }
+
+    .swiss-benefits-module .swiss-benefit-title {
+        min-height: auto;
+        font-size: 1.38rem;
+    }
+
+    .swiss-benefits-module .swiss-benefit-description {
+        margin-bottom: 1.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .swiss-benefits-module .swiss-benefit-card,
+    .swiss-benefits-module .swiss-benefit-logo,
+    .swiss-benefits-module .swiss-fade {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ==========================================
+   CONSEJO DIRECTIVO — DISTRIBUCIÓN ACTUALIZADA
+   Texto + semblanzas a la izquierda / imagen a la derecha
+   Accordion inferior en una sola columna
+   ========================================== */
+
+.consejo {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(17, 48, 75, 0.08), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(156, 110, 9, 0.10), transparent 32%),
+        var(--carta-crema);
+}
+
+.consejo > .container {
+    width: 100%;
+    max-width: 1320px;
+}
+
+.consejo-feature-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(1rem, 2vw, 1.6rem);
+    align-items: stretch;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: clamp(1.6rem, 3vw, 2.5rem);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 24px 70px rgba(17, 48, 75, 0.10);
+    overflow: hidden;
+}
+
+.consejo-info-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(2.2rem, 5vw, 4.8rem);
+}
+
+.consejo-info-title {
+    max-width: 600px;
+    margin-bottom: 1.25rem;
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2rem, 4.8vw, 3.55rem);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -1.2px;
+    color: var(--azul_unam);
+}
+
+.consejo-info-text {
+    max-width: 620px;
+    margin-bottom: 0;
+    color: var(--secondary);
+    font-size: 0.97rem;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.consejo-semblanzas-left {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(17, 48, 75, 0.045);
+    padding: 1.35rem 1.5rem;
+    border-radius: 18px;
+    border: 1px solid rgba(17, 48, 75, 0.08);
+    box-shadow: none;
+}
+
+.consejo-semblanzas-left .consejo-semblanzas-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--azul_unam);
+}
+
+.consejo-semblanzas-left .consejo-semblanzas-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 0.7rem 1.8rem;
+    border: 2px solid var(--dorado-unam);
+    background: transparent;
+    color: var(--dorado-unam);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.35s ease;
+}
+
+.consejo-semblanzas-left .consejo-semblanzas-btn:hover {
+    background: var(--dorado-unam);
+    color: #ffffff;
+}
+
+.consejo-feature-card .consejo-imagen-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(156, 110, 9, 0.18), transparent 28%),
+        radial-gradient(circle at 80% 70%, rgba(17, 48, 75, 0.14), transparent 34%),
+        #f7f8fb;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+.consejo-feature-card .consejo_img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: none;
+}
+
+.consejo-accordion-bloque {
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: clamp(1.6rem, 3vw, 2.5rem);
+    background: #ffffff;
+    border-radius: 26px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 18px 55px rgba(17, 48, 75, 0.08);
+}
+
+.consejo-accordion-header {
+    max-width: 780px;
+    margin-bottom: 1.6rem;
+}
+
+.consejo-accordion-title {
+    margin-bottom: 0.55rem;
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.75rem, 3vw, 2.45rem);
+    font-weight: 400;
+    color: var(--azul_unam);
+}
+
+.consejo-accordion-text {
+    margin-bottom: 0;
+    color: var(--secondary);
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.consejo-accordion-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+}
+
+.consejo-accordion-bloque .accordion-item {
+    margin-bottom: 0;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    border-radius: 16px;
+    border: 1px solid rgba(17, 48, 75, 0.08);
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.consejo-accordion-bloque .accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(17, 48, 75, 0.08);
+}
+
+.consejo-accordion-bloque .btn-link {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1rem 1.15rem;
+    color: var(--azul_unam);
+    background: #ffffff;
+    border-left: none;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.consejo-accordion-bloque .btn-link::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--dorado-unam);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.consejo-accordion-bloque .btn-link:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.consejo-accordion-bloque .btn-link:hover,
+.consejo-accordion-bloque .btn-link:focus,
+.consejo-accordion-bloque .btn-link:not(.collapsed) {
+    color: var(--azul_unam);
+    background: rgba(17, 48, 75, 0.055);
+    border-left-color: transparent;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.consejo-accordion-bloque .accordion-body {
+    padding: 0.35rem 1.15rem 1rem;
+    background: #ffffff;
+}
+
+.consejo-accordion-bloque .consejo-miembro {
+    padding: 0.7rem 0;
+}
+
+.consejo-info-datos,
+.consejo-info-dato,
+.consejo-eyebrow {
+    display: none !important;
+}
+
+@media (max-width: 991.98px) {
+    .consejo > .container {
+        max-width: 960px;
+    }
+
+    .consejo-feature-card {
+        grid-template-columns: 1fr;
+    }
+
+    .consejo-info-col {
+        padding: 2.2rem 1.6rem;
+    }
+
+    .consejo-feature-card .consejo_img {
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .consejo-feature-card {
+        padding: 1.2rem;
+        border-radius: 22px;
+        gap: 1rem;
+    }
+
+    .consejo-info-title {
+        font-size: 2rem;
+    }
+
+    .consejo-info-text {
+        text-align: left;
+    }
+
+    .consejo-semblanzas-left {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem;
+    }
+
+    .consejo-semblanzas-left .consejo-semblanzas-btn {
+        width: 100%;
+    }
+
+    .consejo-accordion-bloque {
+        padding: 1.2rem;
+        border-radius: 20px;
+    }
+}
