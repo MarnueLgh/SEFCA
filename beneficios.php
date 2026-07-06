@@ -12,12 +12,12 @@
     <!-- Navbar -->
     <?php include("includes/navbar.php"); ?>
     <!-- Hero pagina -->
-    <?php
+    <!-- <?php
         $heroTitulo = "Beneficios";
         $heroTexto  = "Descubre todo lo que ofrece la SEFCA para ti.";
         $heroClase  = "hero-pagina--beneficios";
         include("includes/hero-pagina.php");
-    ?>
+    ?> -->
     
     <!-- Listado de beneficios -->
     <?php include("includes/listado_beneficios.php"); ?>

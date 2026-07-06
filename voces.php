@@ -17,12 +17,12 @@
     <?php include("includes/navbar.php"); ?>
 
     <!-- Variables para el hero -->
-    <?php
+    <!-- <?php
     $heroTitulo = "Voces";
     $heroTexto = "Conoce a los integrantes que dan vida a la SEFCA.";
     $heroClase = "hero-pagina--carta";
     include("includes/hero-pagina.php");
-    ?>
+    ?> -->
 
     <!-- Homenajes (Movido desde index.php) -->
     <?php include("includes/homenajes.php"); ?>

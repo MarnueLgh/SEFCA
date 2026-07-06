@@ -16,12 +16,12 @@
     <?php include("includes/navbar.php"); ?>
 
     <!-- Variables para el hero -->
-    <?php
+    <!-- <?php
         $heroTitulo = "Proyectos";
         $heroTexto  = "Conoce más sobre los proyectos de la SEFCA.";
         $heroClase  = "hero-pagina--carta";
         include("includes/hero-pagina.php");
-    ?>
+    ?> -->
 
     <!-- Contenido de los proyectos -->
     <?php include("includes/proyectos_contenido.php"); ?>

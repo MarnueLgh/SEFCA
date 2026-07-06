@@ -11,12 +11,12 @@
 
     <?php include("includes/navbar.php"); ?>
 
-    <?php
+    <!-- <?php
         $heroTitulo = "Directiva";
         $heroTexto  = "Conoce más sobre los miembros directivos que conforman la SEFCA.";
         $heroClase  = "hero-pagina--carta";
         include("includes/hero-pagina.php");
-    ?>
+    ?> -->
     
     <!-- Consejo directivo -->
     <?php include("includes/consejo.php"); ?>

@@ -30,11 +30,11 @@ if (!function_exists('escapar_eventos')) {
     <?php include("includes/spinner.php"); ?>
     <?php include("includes/navbar.php"); ?>
 
-    <?php
+    <!-- <?php
         $heroTitulo = "Eventos";
         $heroTexto  = "Actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
         include("includes/hero-pagina.php");
-    ?>
+    ?> -->
 
     <div class="galeria-layout">
         <aside class="galeria-sidebar" id="galeria-sidebar">
