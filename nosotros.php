@@ -24,6 +24,9 @@
     <!-- Mensajes -->
     <?php include("includes/mensajes.php"); ?>
 
+    <!-- Estatutos -->
+    <?php include("includes/estatutos.php"); ?>
+
     <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 

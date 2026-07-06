@@ -394,28 +394,44 @@ if (!function_exists('obtener_eventos_carrusel')) {
     function obtener_eventos_carrusel()
     {
         $cards = [];
+        $index = 0;
 
         foreach (obtener_eventos_sefca() as $evento) {
-            if (empty($evento['home']['mostrar'])) {
+            // Only include events with registered dates
+            if (empty($evento['anio']) || empty($evento['mes'])) {
                 continue;
             }
 
             $accion = isset($evento['acciones'][0]) ? $evento['acciones'][0] : [];
-            $home = $evento['home'];
+            $home = isset($evento['home']) ? $evento['home'] : [];
+
+            // Skip if explicitly marked as hidden on home
+            if (isset($home['mostrar']) && !$home['mostrar']) {
+                continue;
+            }
 
             $cards[] = [
-                'orden' => isset($home['orden']) ? (int) $home['orden'] : 999,
-                'enlace' => isset($home['enlace']) ? $home['enlace'] : $accion['url'],
+                'index' => $index++,
+                'anio' => (int) $evento['anio'],
+                'mes' => (int) $evento['mes'],
+                'enlace' => isset($home['enlace']) ? $home['enlace'] : (isset($accion['url']) ? $accion['url'] : '#'),
                 'imagen' => isset($home['imagen']) ? $home['imagen'] : $evento['imagen'],
                 'titulo' => isset($home['titulo']) ? $home['titulo'] : $evento['titulo'],
-                'excerpt' => isset($home['excerpt']) ? $home['excerpt'] : $evento['descripcion'],
-                'boton' => isset($home['boton']) ? $home['boton'] : 'Ver más',
+                'excerpt' => isset($home['excerpt']) ? $home['excerpt'] : (isset($evento['descripcion']) ? $evento['descripcion'] : ''),
+                'boton' => isset($home['boton']) ? $home['boton'] : (isset($accion['texto']) ? $accion['texto'] : 'Ver más'),
                 'target_blank' => !empty($home['target_blank']) || !empty($accion['target_blank']),
             ];
         }
 
+        // Sort by year descending, then by month descending, preserving order of appearance
         usort($cards, function ($a, $b) {
-            return $a['orden'] - $b['orden'];
+            if ($b['anio'] !== $a['anio']) {
+                return $b['anio'] - $a['anio'];
+            }
+            if ($b['mes'] !== $a['mes']) {
+                return $b['mes'] - $a['mes'];
+            }
+            return $a['index'] - $b['index'];
         });
 
         return $cards;
