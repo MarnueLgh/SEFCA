@@ -1,2 +1,0 @@
-lol que mal.
-
