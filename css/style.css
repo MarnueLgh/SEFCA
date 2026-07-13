@@ -1,4 +1,4 @@
-﻿/********** Template CSS **********/
+/********** Template CSS **********/
 :root {
     --alto-navbar: 110px;
     --fuente-titulo: "Playfair Display", serif;
@@ -27,9 +27,20 @@
 
 /* Diseño de carga del spinner */
 @keyframes logoGrow {
-    0% { transform: scale(0.85); opacity: 0.5; }
-    50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(0.85); opacity: 0.5; }
+    0% {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
 }
 
 .spinner-custom-grow {
@@ -47,9 +58,11 @@
 
 /* Efecto al pasar el mouse por encima (Hover) */
 .btn-gold:hover {
-    background-color: #805a06 !important; /* Un dorado un poco más oscuro para dar contraste */
+    background-color: #805a06 !important;
+    /* Un dorado un poco más oscuro para dar contraste */
     color: #ffffff !important;
-    transform: translateY(-5px); /* El botón se eleva sutilmente */
+    transform: translateY(-5px);
+    /* El botón se eleva sutilmente */
     /* La sombra se expande cuando el botón se eleva */
     box-shadow: 0 8px 22px rgba(156, 110, 9, 0.6) !important;
 }
@@ -150,11 +163,9 @@ h6,
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        ellipse 60% 80% at 30% 50%,
-        rgba(184, 150, 85, 0.07) 0%,
-        transparent 60%
-    );
+    background: radial-gradient(ellipse 60% 80% at 30% 50%,
+            rgba(184, 150, 85, 0.07) 0%,
+            transparent 60%);
 }
 
 .c-ph__tag {
@@ -193,12 +204,10 @@ h6,
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        var(--dorado-unam),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            var(--dorado-unam),
+            transparent);
     opacity: 0.4;
 }
 
@@ -257,11 +266,9 @@ h6,
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(
-        to bottom,
-        rgba(35, 38, 42, 0.75) 10%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(35, 38, 42, 0.75) 10%,
+            rgba(0, 0, 0, 0.5) 100%);
 }
 
 .hero-pagina-imagen,
@@ -377,30 +384,39 @@ h6,
 .consejo .accordion-item:nth-child(1) {
     animation-delay: 0.3s;
 }
+
 .consejo .accordion-item:nth-child(2) {
     animation-delay: 0.4s;
 }
+
 .consejo .accordion-item:nth-child(3) {
     animation-delay: 0.5s;
 }
+
 .consejo .accordion-item:nth-child(4) {
     animation-delay: 0.6s;
 }
+
 .consejo .accordion-item:nth-child(5) {
     animation-delay: 0.7s;
 }
+
 .consejo .accordion-item:nth-child(6) {
     animation-delay: 0.8s;
 }
+
 .consejo .accordion-item:nth-child(7) {
     animation-delay: 0.9s;
 }
+
 .consejo .accordion-item:nth-child(8) {
     animation-delay: 1s;
 }
+
 .consejo .accordion-item:nth-child(9) {
     animation-delay: 1.1s;
 }
+
 .consejo .accordion-item:nth-child(10) {
     animation-delay: 1.2s;
 }
@@ -587,30 +603,38 @@ h6,
         flex-flow: row nowrap;
         justify-content: flex-start;
     }
+
     .navbar-expand-custom .navbar-nav {
         flex-direction: row;
     }
+
     .navbar-expand-custom .navbar-nav .dropdown-menu {
         position: absolute;
     }
+
     .navbar-expand-custom .navbar-nav .nav-link {
         padding-right: .5rem;
         padding-left: .5rem;
     }
+
     .navbar-expand-custom .navbar-nav-scroll {
         overflow: visible;
     }
+
     .navbar-expand-custom .navbar-collapse {
         display: flex !important;
         flex-basis: auto;
     }
+
     .navbar-expand-custom .navbar-toggler {
         display: none;
     }
+
     .px-custom-5 {
         padding-right: 3rem !important;
         padding-left: 3rem !important;
     }
+
     .p-custom-0 {
         padding: 0 !important;
     }
@@ -618,6 +642,7 @@ h6,
 
 /* ── Navbar: responsive mobile (< 1210px) ── */
 @media (max-width: 1209.98px) {
+
     /* Margen a los logos para que no estén pegados a la izquierda */
     .navbar-logos {
         margin-left: 1rem;
@@ -704,10 +729,12 @@ h6,
         /* Asegurarse de que el panel colapsable utilice transform para su animación */
         transition-property: transform;
     }
+
     .navbar .navbar-collapse.collapse:not(.show) {
         /* Inicialmente oculto: fuera de la pantalla en la parte superior */
         transform: translateY(-100%);
     }
+
     .navbar .navbar-collapse.collapse.show {
         /* Visible: colocado en su lugar */
         transform: translateY(0);
@@ -766,7 +793,7 @@ h6,
         visibility: visible !important;
         display: none !important;
     }
-    
+
     .navbar .nav-item .dropdown-menu.show {
         display: block !important;
     }
@@ -780,13 +807,13 @@ h6,
         background: transparent;
         transition: all 0.3s ease;
     }
-    
+
     .navbar .nav-item .dropdown-item:hover,
     .navbar .nav-item .dropdown-item:focus {
         color: var(--dorado-unam);
         background-color: rgba(255, 255, 255, 0.05);
     }
-    
+
     .navbar .nav-item .dropdown-item.active {
         color: var(--dorado-unam);
         background-color: transparent;
@@ -803,7 +830,7 @@ h6,
     }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -940,10 +967,10 @@ h6,
     height: 80px;
     width: auto;
     max-width: 45%;
-    
+
     /* Pinta el fondo interno del color del sitio */
     background-color: var(--dorado-unam);
-    
+
     /* Aplica la imagen transparente como un recorte (máscara) */
     -webkit-mask-size: contain;
     mask-size: contain;
@@ -951,9 +978,9 @@ h6,
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
-    
+
     /* Esta línea es solo para que los elementos se alinien uno al lado de otro */
-    display: inline-block; 
+    display: inline-block;
 }
 
 /*** Footer — Copyright ***/
@@ -1009,11 +1036,9 @@ footer {
 .hero_cobertura {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(17, 47, 75, 0.55) 0%,
-        rgba(0, 0, 0, 0.45) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(17, 47, 75, 0.55) 0%,
+            rgba(0, 0, 0, 0.45) 100%);
 }
 
 .hero_contenido {
@@ -1535,6 +1560,7 @@ footer {
 
 /* ---- Responsive ---- */
 @media (max-width: 991.98px) {
+
     .proyecto-split,
     .proyecto-split-invertido {
         flex-direction: column;
@@ -2530,11 +2556,9 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(212, 160, 57, 0.08) 0%,
-        transparent 60%
-    );
+    background: radial-gradient(circle,
+            rgba(212, 160, 57, 0.08) 0%,
+            transparent 60%);
     filter: blur(60px);
 }
 
@@ -2788,11 +2812,9 @@ footer {
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.6) 0%,
-        transparent 100%
-    );
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.6) 0%,
+            transparent 100%);
     z-index: 1;
 }
 
@@ -2836,9 +2858,7 @@ footer {
 }
 
 .carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-centro .owl-item,
-.carrusel-entrevistas
-    .entrevistas-carousel.entrevistas-sin-centro
-    .owl-item.center {
+.carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-centro .owl-item.center {
     opacity: 1;
     transform: scale(1);
     filter: grayscale(0%);
@@ -2893,9 +2913,7 @@ footer {
     font-size: 0.7rem;
 }
 
-.carrusel-entrevistas
-    .entrevistas-carousel.entrevistas-sin-navegacion
-    .owl-nav {
+.carrusel-entrevistas .entrevistas-carousel.entrevistas-sin-navegacion .owl-nav {
     display: none;
 }
 
@@ -3083,6 +3101,7 @@ footer {
 
 /* Responsive galería */
 @media (max-width: 768px) {
+
     .galeria-item,
     .galeria-item:nth-child(5n + 1),
     .galeria-item:nth-child(5n + 2),
@@ -3095,6 +3114,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
     .galeria-item,
     .galeria-item:nth-child(5n + 1),
     .galeria-item:nth-child(5n + 2),
@@ -3192,8 +3212,10 @@ footer {
 }
 
 .section-homenajes {
-    padding-bottom: 1.5rem; /* antes 3rem por section-gap */
+    padding-bottom: 1.5rem;
+    /* antes 3rem por section-gap */
 }
+
 .section-homenajes .homenajes-item:last-child {
     margin-bottom: 0 !important;
 }
@@ -3690,6 +3712,7 @@ footer {
         from {
             clip-path: inset(0 0 100% 0);
         }
+
         to {
             clip-path: inset(0 0 0 0);
         }
@@ -3699,6 +3722,7 @@ footer {
         from {
             clip-path: inset(0 0 0 0);
         }
+
         to {
             clip-path: inset(0 0 100% 0);
         }
@@ -3765,7 +3789,7 @@ footer {
         gap: 1rem;
     }
 
-    .navbar .navbar-nav .dropdown-toggle > i {
+    .navbar .navbar-nav .dropdown-toggle>i {
         display: none !important;
     }
 
@@ -3856,6 +3880,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .navbar .navbar-collapse,
     .navbar .navbar-collapse.collapsing,
     .navbar .navbar-collapse.is-closing,
@@ -3906,16 +3931,16 @@ footer {
         content: none !important;
     }
 
-    .navbar .navbar-nav .dropdown-toggle > i {
+    .navbar .navbar-nav .dropdown-toggle>i {
         display: inline-block !important;
         color: currentColor;
         font-size: 0.78rem;
         transition: transform 0.25s ease;
     }
 
-    .navbar .nav-item.dropdown:hover > .nav-link > i,
-    .navbar .nav-item.dropdown:focus-within > .nav-link > i,
-    .navbar .nav-item.dropdown > .nav-link.show > i {
+    .navbar .nav-item.dropdown:hover>.nav-link>i,
+    .navbar .nav-item.dropdown:focus-within>.nav-link>i,
+    .navbar .nav-item.dropdown>.nav-link.show>i {
         transform: rotate(180deg);
     }
 
@@ -3959,9 +3984,9 @@ footer {
         content: none !important;
     }
 
-    .navbar .nav-item.dropdown:hover > .dropdown-menu,
-    .navbar .nav-item.dropdown:focus-within > .dropdown-menu,
-    .navbar .nav-item.dropdown > .dropdown-menu.show {
+    .navbar .nav-item.dropdown:hover>.dropdown-menu,
+    .navbar .nav-item.dropdown:focus-within>.dropdown-menu,
+    .navbar .nav-item.dropdown>.dropdown-menu.show {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -3994,9 +4019,9 @@ footer {
             padding-left 0.2s ease;
     }
 
-    .navbar .nav-item .dropdown-item + .dropdown-item,
-    .navbar .dropdown-menu-desktop .dropdown-item + .dropdown-item,
-    .navbar-expand-custom .navbar-nav .dropdown-menu .dropdown-item + .dropdown-item {
+    .navbar .nav-item .dropdown-item+.dropdown-item,
+    .navbar .dropdown-menu-desktop .dropdown-item+.dropdown-item,
+    .navbar-expand-custom .navbar-nav .dropdown-menu .dropdown-item+.dropdown-item {
         border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -4017,6 +4042,7 @@ footer {
 }
 
 @media (max-width: 1209.98px) {
+
     /* Evita que Bootstrap/underline convierta la flecha del dropdown en una línea dorada. */
     .navbar .navbar-nav .dropdown-toggle::after {
         position: static !important;
@@ -4108,6 +4134,7 @@ footer {
 }
 
 @media (min-width: 1210px) {
+
     /* Más aire entre Inicio, Nosotros, Iniciativas y el botón. */
     .navbar .navbar-nav {
         align-items: center;
@@ -4125,13 +4152,14 @@ footer {
     }
 
     /* Mantener la flecha real de los dropdowns usando el ícono <i>, no pseudo-elementos. */
-    .navbar .navbar-nav .dropdown-toggle > i {
+    .navbar .navbar-nav .dropdown-toggle>i {
         display: inline-block !important;
         margin-left: 0.35rem !important;
     }
 }
 
 @media (max-width: 1209.98px) {
+
     /* En móvil se conserva el panel lateral, pero sin subrayados raros. */
     .navbar .navbar-collapse .navbar-nav .nav-link::after,
     .navbar .navbar-collapse .navbar-nav .dropdown-toggle::after {
@@ -4139,7 +4167,7 @@ footer {
         content: none !important;
     }
 
-    .navbar .navbar-collapse .navbar-nav .dropdown-toggle > i {
+    .navbar .navbar-collapse .navbar-nav .dropdown-toggle>i {
         display: inline-block !important;
         margin-left: 0.35rem !important;
     }
@@ -4380,6 +4408,7 @@ footer {
         opacity: 0;
         transform: translateY(8px) scale(0.985);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -4432,6 +4461,7 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .swiss-benefits-module .swiss-benefit-card,
     .swiss-benefits-module .swiss-benefit-logo,
     .swiss-benefits-module .swiss-fade {
@@ -4453,7 +4483,7 @@ footer {
         var(--carta-crema);
 }
 
-.consejo > .container {
+.consejo>.container {
     width: 100%;
     max-width: 1320px;
 }
@@ -4668,7 +4698,7 @@ footer {
 }
 
 @media (max-width: 991.98px) {
-    .consejo > .container {
+    .consejo>.container {
         max-width: 960px;
     }
 
