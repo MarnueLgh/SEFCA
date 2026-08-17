@@ -25,7 +25,7 @@ $hook_afiliacion_default = array(
     'subtitulo'      => 'Únete a una comunidad que impulsa a la siguiente generación.',
     'boton'          => array(
         'texto'  => 'Afíliate',
-        'enlace' => '#'
+        'enlace' => 'afiliacion_forms.php'
     )
 );
 
@@ -53,27 +53,27 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 
 <style>
     .hook-afiliacion {
-        /* 
+        /*
          * =========================================================================
          *  CONFIGURACIÓN DEL FONDO PARALLAX / PARALLAX BACKGROUND CONFIGURATION
          * =========================================================================
-         * 
+         *
          * 1. RUTA DE LA IMAGEN DE FONDO (Reemplaza 'img/parallax.jpg' por la tuya)
          */
         --hook-bg-image: url('img/parallax_nv_generacion.png');
-        
-        /* 
+
+        /*
          * 2. COLOR DE SUPERPOSICIÓN (Overlay para asegurar la legibilidad del texto)
          *    Usa rgba(r, g, b, opacidad) o cambia a 'transparent' si no la quieres.
          */
         --hook-overlay-color: rgba(18, 30, 49, 0.65); /* Azul oscuro de la UNAM con opacidad */
 
-        /* 
+        /*
          * 3. COLORES DEL TEXTO (Ajusta según convenga con tu imagen de fondo)
          */
         --hook-color-title: #ffffff; /* Blanco para destacar sobre fondo oscuro */
         --hook-color-text: #f0f2f5;  /* Gris muy claro */
-        
+
         --hook-font-title: var(--fuente-titulo);
         --hook-font-main: var(--fuente-texto);
 
@@ -194,7 +194,7 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 </style>
 
 <section class="hook-afiliacion section-gap" aria-labelledby="hook-afiliacion-title">
-    
+
     <div class="hook-afiliacion__inner">
         <h2 class="hook-afiliacion__title" id="hook-afiliacion-title">
             <span class="hook-afiliacion__title-line"><?php echo $hook_titulo_1; ?></span>

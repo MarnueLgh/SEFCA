@@ -63,7 +63,7 @@ $activo_iniciativas = in_array($pagina_actual, array('eventos.php', 'proyectos.p
                 </div>
             </div>
 
-            <a href="afiliacion.php" class="afiliacion-btn" target="_blank">¡Compartir!</a>
+            <a href="afiliacion_forms.php" class="afiliacion-btn" target="_blank">¡Compartir!</a>
         </div>
     </div>
 </nav>
