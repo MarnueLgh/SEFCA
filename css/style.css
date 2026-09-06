@@ -4733,8 +4733,7 @@ footer {
         height: var(--morph-alto, 0);
         background: #fff;
         border: 1px solid rgba(17, 48, 75, 0.06);
-        border-top: 0;
-        border-radius: 0 0 24px 24px;
+        border-radius: 8px;
         box-shadow: 0 18px 45px rgba(17, 48, 75, 0.18);
         opacity: 0;
         pointer-events: none;
@@ -4785,6 +4784,9 @@ footer {
     .navbar .nav-item .dropdown-menu,
     .navbar .dropdown-menu-desktop,
     .navbar-expand-custom .navbar-nav .dropdown-menu {
+        /* El nav-item no llega al borde inferior del navbar: --desfase-panel
+           (lo mide js/main.js) baja el panel para que no se encime sobre la barra. */
+        top: calc(100% + var(--desfase-panel, 0px));
         background: transparent;
         border: 0;
         border-radius: 0;

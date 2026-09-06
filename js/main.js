@@ -375,6 +375,20 @@ $(".eventos-carousel").owlCarousel({
         clearTimeout(temporizador_ocultar);
     }
 
+    // Descripción: El .nav-item no llega hasta abajo del navbar (queda centrado),
+    //              así que "top: 100%" dejaría el panel encimado sobre la barra.
+    //              Aquí se mide ese hueco para bajar el panel hasta el borde.
+    function actualizar_desfase_panel() {
+        if (!es_escritorio()) {
+            return;
+        }
+
+        var caja_navbar = navbar.getBoundingClientRect();
+        var caja_item = items_dropdown[0].getBoundingClientRect();
+
+        navbar.style.setProperty('--desfase-panel', (caja_navbar.bottom - caja_item.bottom) + 'px');
+    }
+
     for (var i = 0; i < items_dropdown.length; i++) {
         (function (item) {
             function abrir() {
@@ -401,6 +415,17 @@ $(".eventos-carousel").owlCarousel({
 
     navbar.addEventListener('mouseenter', cancelar_ocultar);
     navbar.addEventListener('mouseleave', programar_ocultar);
+
+    // El alto del navbar depende de los logos, así que se remide cuando ya
+    // cargaron y en cada cambio de tamaño (mismo debounce que compensarNavbarFijo).
+    var temporizador_desfase = null;
+
+    actualizar_desfase_panel();
+    window.addEventListener('load', actualizar_desfase_panel);
+    window.addEventListener('resize', function () {
+        clearTimeout(temporizador_desfase);
+        temporizador_desfase = setTimeout(actualizar_desfase_panel, 120);
+    });
 
     // Al bajar del umbral de escritorio el morph deja de aplicar.
     var consulta_escritorio = window.matchMedia(ANCHO_ESCRITORIO);
