@@ -259,3 +259,163 @@ $(".eventos-carousel").owlCarousel({
         }
     });
 })(jQuery);
+
+/* ==========================================
+   DESPLEGABLES DESKTOP: FONDO COMPARTIDO (MORPH)
+   ========================================== */
+// Descripción: Mantiene un único fondo blanco que se desplaza y cambia de
+//              tamaño entre los desplegables del navbar. Solo actúa en
+//              escritorio (>= 1210px); en móvil el menú deslizable no se toca.
+(function () {
+    "use strict";
+
+    var ANCHO_ESCRITORIO = '(min-width: 1210px)';
+    var RETARDO_OCULTAR = 120;
+
+    var navbar = document.querySelector('.navbar.fixed-top');
+
+    if (!navbar) {
+        return;
+    }
+
+    var items_dropdown = navbar.querySelectorAll('.nav-item.dropdown');
+
+    if (!items_dropdown.length) {
+        return;
+    }
+
+    var fondo = document.createElement('div');
+    var flecha = document.createElement('div');
+    var temporizador_ocultar = null;
+
+    fondo.className = 'navbar-morph-fondo';
+    flecha.className = 'navbar-morph-flecha';
+    fondo.setAttribute('aria-hidden', 'true');
+    flecha.setAttribute('aria-hidden', 'true');
+    navbar.appendChild(fondo);
+    navbar.appendChild(flecha);
+
+    // Descripción: Indica si estamos en el ancho donde vive el morph.
+    // Retorna: boolean
+    function es_escritorio() {
+        return window.matchMedia(ANCHO_ESCRITORIO).matches;
+    }
+
+    // Descripción: Copia la caja del panel abierto al fondo compartido.
+    // Parámetros: item (Element) — el .nav-item.dropdown que se va a mostrar
+    function activar_panel(item) {
+        var panel = item.querySelector('.dropdown-menu');
+        var disparador = item.querySelector('.dropdown-toggle');
+
+        if (!panel || !disparador) {
+            return;
+        }
+
+        var caja_navbar = navbar.getBoundingClientRect();
+        var caja_panel = panel.getBoundingClientRect();
+        var caja_disparador = disparador.getBoundingClientRect();
+
+        // Sin ancho medible el panel aún no está en el layout: no hay nada que copiar.
+        if (!caja_panel.width) {
+            return;
+        }
+
+        var centro_disparador = (caja_disparador.left - caja_navbar.left) + (caja_disparador.width / 2);
+        var ya_visible = fondo.classList.contains('activo');
+
+        // Primera apertura: colocar sin animar para que aparezca en su sitio
+        // y no viaje desde la esquina del navbar. Entre paneles sí se anima.
+        if (!ya_visible) {
+            fondo.classList.add('sin-transicion');
+            flecha.classList.add('sin-transicion');
+        }
+
+        fondo.style.setProperty('--morph-x', (caja_panel.left - caja_navbar.left) + 'px');
+        fondo.style.setProperty('--morph-y', (caja_panel.top - caja_navbar.top) + 'px');
+        fondo.style.setProperty('--morph-ancho', caja_panel.width + 'px');
+        fondo.style.setProperty('--morph-alto', caja_panel.height + 'px');
+
+        // La flecha va centrada bajo el enlace y medio cuerpo por encima del panel.
+        flecha.style.setProperty('--morph-flecha-x', (centro_disparador - 6) + 'px');
+        flecha.style.setProperty('--morph-flecha-y', ((caja_panel.top - caja_navbar.top) - 6) + 'px');
+
+        for (var i = 0; i < items_dropdown.length; i++) {
+            items_dropdown[i].classList.toggle('morph-activo', items_dropdown[i] === item);
+        }
+
+        if (!ya_visible) {
+            // Forzar reflow para que el navegador acepte la posición sin transición.
+            void fondo.offsetWidth;
+            fondo.classList.remove('sin-transicion');
+            flecha.classList.remove('sin-transicion');
+        }
+
+        fondo.classList.add('activo');
+        flecha.classList.add('activo');
+    }
+
+    // Descripción: Apaga el fondo compartido y libera los paneles.
+    function ocultar_morph() {
+        fondo.classList.remove('activo');
+        flecha.classList.remove('activo');
+
+        for (var i = 0; i < items_dropdown.length; i++) {
+            items_dropdown[i].classList.remove('morph-activo');
+        }
+    }
+
+    // Descripción: Oculta con un margen de gracia para que el fondo no
+    //              parpadee al cruzar el hueco entre dos enlaces del navbar.
+    function programar_ocultar() {
+        clearTimeout(temporizador_ocultar);
+        temporizador_ocultar = setTimeout(ocultar_morph, RETARDO_OCULTAR);
+    }
+
+    function cancelar_ocultar() {
+        clearTimeout(temporizador_ocultar);
+    }
+
+    for (var i = 0; i < items_dropdown.length; i++) {
+        (function (item) {
+            function abrir() {
+                if (!es_escritorio()) {
+                    return;
+                }
+
+                cancelar_ocultar();
+                activar_panel(item);
+            }
+
+            item.addEventListener('mouseenter', abrir);
+            item.addEventListener('focusin', abrir);
+
+            // Apertura por clic o teclado: Bootstrap avisa cuando el panel ya está visible.
+            item.addEventListener('shown.bs.dropdown', abrir);
+            item.addEventListener('hidden.bs.dropdown', function () {
+                if (es_escritorio()) {
+                    programar_ocultar();
+                }
+            });
+        })(items_dropdown[i]);
+    }
+
+    navbar.addEventListener('mouseenter', cancelar_ocultar);
+    navbar.addEventListener('mouseleave', programar_ocultar);
+
+    // Al bajar del umbral de escritorio el morph deja de aplicar.
+    var consulta_escritorio = window.matchMedia(ANCHO_ESCRITORIO);
+
+    function al_cambiar_ancho(evento) {
+        if (!evento.matches) {
+            cancelar_ocultar();
+            ocultar_morph();
+        }
+    }
+
+    if (consulta_escritorio.addEventListener) {
+        consulta_escritorio.addEventListener('change', al_cambiar_ancho);
+    } else if (consulta_escritorio.addListener) {
+        // Safari anterior a la versión 14.
+        consulta_escritorio.addListener(al_cambiar_ancho);
+    }
+})();

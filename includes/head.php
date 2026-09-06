@@ -32,6 +32,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css?v=4" rel="stylesheet">
+    <link href="css/style.css?v=5" rel="stylesheet">
 
 </head>
