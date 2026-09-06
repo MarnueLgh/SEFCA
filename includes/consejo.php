@@ -394,8 +394,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Felipe Pérez Cervantes</div>
@@ -416,8 +416,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Armando Espinosa Álvarez</div>
@@ -438,8 +438,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Francisco Javier Macías Valadez Treviño</div>
@@ -460,8 +460,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Héctor Guillermo Silva Mayer</div>
@@ -482,8 +482,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Salvador Sánchez Vázquez</div>
@@ -556,8 +556,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">María Elena García Hernández</div>
@@ -578,8 +578,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Victor Manuel Terrones</div>
@@ -628,8 +628,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Elías Lanson</div>
@@ -650,8 +650,8 @@
                     </div>
 
                     <div class="consejo-folder-item">
-                        <div class="consejo-folder-icono icono-oscuro" aria-hidden="true">
-                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#fff"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+                        <div class="consejo-folder-icono icono-claro" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#111"/><path d="M4 20c.8-4.3 4-7 8-7s7.2 2.7 8 7" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/></svg>
                         </div>
                         <div class="consejo-folder-detalles">
                             <div class="consejo-folder-nombre">Juan Carlos Varela Cota</div>

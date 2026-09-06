@@ -4,14 +4,16 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
 
 $activo_inicio = ''; // Inicio ya no queda seleccionado por defecto
 
+$activo_historia = ($pagina_actual == 'historia.php') ? 'active' : '';
 $activo_directiva = ($pagina_actual == 'nosotros.php') ? 'active' : '';
 $activo_voces = ($pagina_actual == 'voces.php') ? 'active' : '';
+$activo_afiliacion = ($pagina_actual == 'afiliacion.php') ? 'active' : '';
 $activo_beneficios = ($pagina_actual == 'beneficios.php') ? 'active' : '';
 
 $activo_eventos = in_array($pagina_actual, array('eventos.php', 'evento.php')) ? 'active' : '';
 $activo_proyectos = ($pagina_actual == 'proyectos.php') ? 'active' : '';
 
-$activo_nosotros = in_array($pagina_actual, array('nosotros.php', 'voces.php', 'beneficios.php')) ? 'active' : '';
+$activo_nosotros = in_array($pagina_actual, array('historia.php', 'nosotros.php', 'voces.php', 'afiliacion.php', 'beneficios.php')) ? 'active' : '';
 $activo_iniciativas = in_array($pagina_actual, array('eventos.php', 'proyectos.php', 'evento.php')) ? 'active' : '';
 ?>
 <!-- Navbar Start -->
@@ -45,8 +47,10 @@ $activo_iniciativas = in_array($pagina_actual, array('eventos.php', 'proyectos.p
                 </a>
                 <div class="dropdown-menu dropdown-menu-desktop">
                     <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
+                    <a href="historia.php" class="dropdown-item <?php echo $activo_historia; ?>">Historia</a>
                     <a href="nosotros.php" class="dropdown-item <?php echo $activo_directiva; ?>">Directiva</a>
                     <a href="voces.php" class="dropdown-item <?php echo $activo_voces; ?>">Voces</a>
+                    <a href="afiliacion.php" class="dropdown-item <?php echo $activo_afiliacion; ?>">Afiliación</a>
                     <a href="beneficios.php" class="dropdown-item <?php echo $activo_beneficios; ?>">Beneficios</a>
                 </div>
             </div>
