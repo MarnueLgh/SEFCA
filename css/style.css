@@ -920,6 +920,17 @@ h6,
     color: var(--dorado-unam);
 }
 
+.footer-visitas-item a {
+    color: var(--dorado-unam);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-visitas-item a:hover {
+    color: var(--azul_unam);
+    text-decoration: underline;
+}
+
 .footer-redes-titulo {
     color: var(--dark);
     font-size: 1.1rem;

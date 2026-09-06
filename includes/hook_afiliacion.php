@@ -12,7 +12,7 @@
  *     'titulo_linea_2' => 'Compártela, multiplícala.',
  *     'subtitulo'      => 'Únete a una comunidad que impulsa a la siguiente generación.',
  *     'boton'          => array(
- *         'texto'  => 'Afíliate',
+ *         'texto'  => '¡Sé parte de SEFCA!',
  *         'enlace' => '#'
  *     )
  * );
@@ -24,7 +24,7 @@ $hook_afiliacion_default = array(
     'titulo_linea_2' => 'Compártela, multiplícala.',
     'subtitulo'      => 'Únete a una comunidad que impulsa a la siguiente generación.',
     'boton'          => array(
-        'texto'  => 'Afíliate',
+        'texto'  => '¡Sé parte de SEFCA!',
         'enlace' => 'afiliacion_forms.php'
     )
 );

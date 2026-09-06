@@ -6,17 +6,17 @@
 <div class="carta-main section-gap">
 
     <!-- ============================
-             MISIÓN — Texto izq, imagen der
+             Somos SEFCA — Texto izq, imagen der
              ============================ -->
     <section class="carta-section">
         <div class="carta-section-texto wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
-                Nuestra <em>Misión</em>
+                Somos <em>SEFCA</em>
             </h2>
             <p class="carta-section-cuerpo">
-                Representar con fuerza y compromiso a quienes egresan de la FCA. Apoyar a nuestra
-                Universidad y nuestra Facultad en los temas prioritarios que se nos convoque; así como
-                hacer sugerencias de iniciativas valiosas.
+                Como personas egresadas de la Facultad de Contaduría y Administración de la UNAM,
+                seguimos siendo parte de su comunidad, a través de su Sociedad de Egresados:
+                descubre qué es y quiénes <i>Somos SEFCA</i>.
             </p>
         </div>
         <div class="carta-section-visual carta-section-visual-mision wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
@@ -27,18 +27,17 @@
     <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
-             VISIÓN — Card izq, texto der
+             Experiencia y orgullo — Card izq, texto der
              ============================ -->
     <section class="carta-section carta-section-reversa">
         <div class="carta-section-texto wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
-                Nuestra <em>Visión</em>
+                Experiencia y <em>Orgullo</em>
             </h2>
             <p class="carta-section-cuerpo">
-                Para el término de nuestro primer periodo 2022-2024 tener afiliados 500 universitarios que
-                hayan aportado su cuota. Desarrollar acciones para atraer los recursos necesarios para los
-                proyectos en que se nos invite a participar. Compartir con egresados y todo el alumnado de la
-                FCA nuestra experiencia y orgullo.
+                En cada encuentro y en cada conferencia, las personas egresadas de la FCA celebramos
+                nuestro amor por la Facultad y por la UNAM, y compartimos con la comunidad del alumnado en
+                formación lo que hemos aprendido en el ejercicio profesional.
             </p>
         </div>
         <div class="carta-section-visual carta-section-visual-vision wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
@@ -49,16 +48,18 @@
     <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
-             VALORES — Texto izq, card der
+             Proyectos 2022 - 2026 — Texto izq, card der
              ============================ -->
     <section class="carta-section">
         <div class="carta-section-texto wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
-                Nuestros <em>Valores</em>
+                Proyectos <em>2022 - 2026</em>
             </h2>
             <p class="carta-section-cuerpo">
-                La integridad, el compromiso, la fortaleza y el orgullo constituyen los pilares que definen la identidad
-                y el actuar de la Sociedad de Egresados de la FCA en cada una de sus iniciativas.
+                El Consejo Directivo de SEFCA presidido desde el año 2022 por el Lic. Isaac Chertorivski
+                ha impulsado apoyos de gran valor para la comunidad del alumnado de la Facultad de
+                Contaduría y Administración, porque la experiencia y el orgullo, se comparte y nos motiva
+                a responder con gratitud a la FCA.
             </p>
         </div>
         <div class="carta-section-visual carta-section-visual-valores wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.3s">
@@ -69,17 +70,17 @@
     <div class="carta-divider wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s"></div>
 
     <!-- ============================
-             EJES — Card izq, texto der
+             Conoce nuestras historias — Card izq, texto der
              ============================ -->
     <section class="carta-section carta-section-reversa section-gap">
         <div class="carta-section-texto wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.1s">
             <h2 class="carta-section-titulo">
-                Ejes <em>Estratégicos</em>
+                Conoce nuestras <em>historias</em>
             </h2>
             <p class="carta-section-cuerpo">
-                La afiliación y registro de sus miembros, la experiencia y el orgullo compartido, la vinculación con el
-                sector productivo y la atracción de recursos para proyectos prioritarios constituyen las líneas de
-                acción que orientan el trabajo de la SEFCA para cumplir su misión y alcanzar su visión a largo plazo.
+                Lo que estudiamos en la FCA ha transformado nuestras vidas: personas, trayectorias,
+                reconocimientos. Las personas egresadas comparten con SEFCA sus aportaciones y experiencia;
+                todos comenzamos en las aulas de la Facultad de Contaduría y Administración.
             </p>
         </div>
         <div class="carta-section-visual carta-section-visual-ejes wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">

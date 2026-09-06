@@ -19,7 +19,7 @@ if (!function_exists('escapar_carrusel_eventos')) {
 <section class="carrusel-eventos section-gap">
     <div class="container-fluid px-0">
         <div>
-            <h2 class="carrusel-marquee-header-title text-center mb-5">Eventos Recientes</h2>
+            <h2 class="carrusel-marquee-header-title text-center mb-5">Lo más reciente de la comunidad SEFCA</h2>
 
             <div class="owl-carousel eventos-carousel owl-theme">
                 <?php foreach ($cards_eventos as $card): ?>

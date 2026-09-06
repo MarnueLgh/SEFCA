@@ -187,6 +187,7 @@
                                 ?>
                             </strong></p>
                         <p class="footer-visitas-item">&rarr; Desde: 01/03/2026</p>
+                        <p class="footer-visitas-item">&rarr; Tramita tu credencial de egresado <a href="https://www.pveaju.unam.mx/credencial/" target="_blank" rel="noopener noreferrer">aquí</a></p>
                     </div>
                 </div>
 

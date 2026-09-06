@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['enviar'])) {
 		<div class="header">
 			<div class="escudo">🎓</div>
 			<h1>Afiliación SEFCA</h1>
-			<p>Sociedad de Egresados de la FCA, UNAM &mdash; Complete los pasos para finalizar su registro</p>
+			<p>Sociedad de Egresados de la FCA, UNAM &mdash; Sigue formando parte de tu Facultad, son dos sencillos pasos:</p>
 		</div>
 
 		<!-- ── Barra de progreso (2 pasos) ────────────────────── -->
