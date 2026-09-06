@@ -3,9 +3,9 @@
 <!--
     Autor: Anuar Manuel Olvera Ramirez
     Fecha: 06/09/2026
-    Versión: 2.0
-    Descripción: Página "Eventos" (rubro Experiencia y orgullo).
-    El listado completo lo arma includes/listado_eventos.php.
+    Versión: 1.0
+    Descripción: Página "Tomas de protesta" (rubro Somos SEFCA).
+    Reutiliza includes/listado_eventos.php filtrando por tipo 'toma_protesta'.
 -->
 <?php require_once("includes/head.php"); ?>
 
@@ -17,17 +17,17 @@
 
     <!-- Hero pagina -->
     <?php
-        $heroTitulo = "Eventos";
-        $heroTexto  = "Experiencia y orgullo: actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
+        $heroTitulo = "Tomas de protesta";
+        $heroTexto  = "Somos SEFCA: las ceremonias en las que cada mesa directiva asume el compromiso con la comunidad de egresadas y egresados de la FCA.";
         include("includes/hero-pagina.php");
     ?>
 
-    <!-- Listado de eventos -->
+    <!-- Listado de tomas de protesta -->
     <?php
         require_once __DIR__ . '/includes/datos_eventos.php';
 
-        $eventos_a_listar = obtener_eventos_listado();
-        $eventos_vacio_texto = 'No se encontraron eventos con los filtros seleccionados.';
+        $eventos_a_listar = obtener_eventos_listado('toma_protesta');
+        $eventos_vacio_texto = 'No se encontraron tomas de protesta con los filtros seleccionados.';
 
         include("includes/listado_eventos.php");
     ?>

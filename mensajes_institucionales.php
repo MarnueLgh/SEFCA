@@ -3,9 +3,9 @@
 <!--
     Autor: Anuar Manuel Olvera Ramirez
     Fecha: 06/09/2026
-    Versión: 2.0
-    Descripción: Página "Eventos" (rubro Experiencia y orgullo).
-    El listado completo lo arma includes/listado_eventos.php.
+    Versión: 1.0
+    Descripción: Página "Mensajes institucionales" (rubro Somos SEFCA).
+    Se separó de nosotros.php, donde compartía página con el Consejo Directivo.
 -->
 <?php require_once("includes/head.php"); ?>
 
@@ -17,20 +17,13 @@
 
     <!-- Hero pagina -->
     <?php
-        $heroTitulo = "Eventos";
-        $heroTexto  = "Experiencia y orgullo: actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
+        $heroTitulo = "Mensajes institucionales";
+        $heroTexto  = "Somos SEFCA: comunicados y cartas de nuestras autoridades a la comunidad de egresadas y egresados de la FCA.";
         include("includes/hero-pagina.php");
     ?>
 
-    <!-- Listado de eventos -->
-    <?php
-        require_once __DIR__ . '/includes/datos_eventos.php';
-
-        $eventos_a_listar = obtener_eventos_listado();
-        $eventos_vacio_texto = 'No se encontraron eventos con los filtros seleccionados.';
-
-        include("includes/listado_eventos.php");
-    ?>
+    <!-- Mensajes -->
+    <?php include("includes/mensajes.php"); ?>
 
     <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>

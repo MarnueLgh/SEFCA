@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<!-- 
-    Fecha: 01/04/2026
-    Descripción: Página "Nosotros"
--->
-<?php require_once("includes/head.php"); ?>
+<?php
+/*
+	Autor: Anuar Manuel Olvera Ramirez
+	Fecha: 06/09/2026
+	Versión: 2.0
+	Descripción: nosotros.php se dividió en consejo_directivo.php y
+	mensajes_institucionales.php al reestructurar el menú. Se conserva
+	únicamente como redirección permanente para no romper enlaces externos.
+*/
 
-<body>
-    <?php include("includes/spinner.php"); ?>
-
-    <?php include("includes/navbar.php"); ?>
-
-    <!-- <?php
-        $heroTitulo = "Directiva";
-        $heroTexto  = "Conoce más sobre los miembros directivos que conforman la SEFCA.";
-        $heroClase  = "hero-pagina--carta";
-        include("includes/hero-pagina.php");
-    ?> -->
-    
-    <!-- Consejo directivo -->
-    <?php include("includes/consejo.php"); ?>
-
-    <!-- Mensajes -->
-    <?php include("includes/mensajes.php"); ?>
-
-    <!-- Estatutos -->
-    <?php include("includes/estatutos.php"); ?>
-
-    <!-- Footer -->
-    <?php require_once("includes/footer.php"); ?>
-
-    <!-- Botón para volver arriba -->
-    <?php include("includes/volver_arriba_btn.php"); ?>
-
-    <?php require_once("includes/scripts.php"); ?>
-</body>
-
-</html>
+header('Location: consejo_directivo.php', true, 301);
+exit;

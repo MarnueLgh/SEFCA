@@ -125,7 +125,7 @@ if (!function_exists('obtener_eventos_sefca')) {
                 'descripcion' => 'Visita de Alfredo Harp Helú a la FCA para dialogar sobre liderazgo, compromiso social y el papel de la educación en el desarrollo del país.',
                 'imagen' => 'img/250324_Visita_de_Alfredo_Harp_Helu.jpg',
                 'imagen_alt' => 'Visita de Alfredo Harp Helú',
-                'tipo' => 'evento',
+                'tipo' => 'egresado_distinguido',
                 'mes' => 3,
                 'anio' => 2025,
                 'listado' => true,
@@ -171,13 +171,33 @@ if (!function_exists('obtener_eventos_sefca')) {
                     ],
                 ],
             ],
+            // PENDIENTE SEFCA: entrada creada a partir de material que estaba sin usar
+            // (docs/toma_protesta_2022-2024.jpg y docs/toma_protesta_2022-2024.docx).
+            // Faltan por confirmar: la fecha exacta de la ceremonia y si img/toma_protesta.jpg
+            // corresponde de verdad a este periodo. Sin 'mes'/'anio' hasta tenerlos.
+            'toma_protesta_2022' => [
+                'titulo' => 'Toma de protesta de la mesa directiva 2022-2024',
+                'fecha_etiqueta' => 'Fecha por confirmar',
+                'descripcion' => 'Ceremonia de toma de protesta de la mesa directiva de la SEFCA para el periodo 2022-2024.',
+                'imagen' => 'img/toma_protesta.jpg',
+                'imagen_alt' => 'Toma de protesta de la mesa directiva 2022-2024',
+                'tipo' => 'toma_protesta',
+                'listado' => true,
+                'acciones' => [
+                    [
+                        'texto' => 'Ver más',
+                        'url' => 'docs/toma_protesta_2022-2024.jpg',
+                        'target_blank' => true,
+                    ],
+                ],
+            ],
             'toma_protesta_2024' => [
                 'titulo' => 'Toma de protesta de la mesa directiva 2024-2026',
                 'fecha_etiqueta' => '17 de octubre de 2024',
                 'descripcion' => 'Ceremonia de toma de protesta de la mesa directiva de la SEFCA para el periodo 2024-2026, con la participación de autoridades y egresados.',
                 'imagen' => 'img/toma_protesta_2024.jpg',
                 'imagen_alt' => 'Toma de protesta de la mesa directiva 2024-2026',
-                'tipo' => 'evento',
+                'tipo' => 'toma_protesta',
                 'mes' => 10,
                 'anio' => 2024,
                 'listado' => true,
@@ -228,7 +248,7 @@ if (!function_exists('obtener_eventos_sefca')) {
                 'descripcion' => 'Entrega de reconocimiento a Paola Reynoso por su trayectoria y por obtener el primer lugar del Premio Internacional Universia Santander.',
                 'imagen' => 'img/paola1.jpg',
                 'imagen_alt' => 'Entrega de Reconocimiento a Paola Reynoso',
-                'tipo' => 'evento',
+                'tipo' => 'egresado_distinguido',
                 'mes' => 6,
                 'anio' => 2023,
                 'listado' => true,
@@ -325,12 +345,23 @@ if (!function_exists('obtener_eventos_sefca')) {
                     ],
                 ],
             ],
+            // PENDIENTE SEFCA: falta la fecha real de este ciclo. Mientras no la tenga
+            // no se definen 'mes' ni 'anio', por lo que la tarjeta se muestra siempre
+            // pero no coincide con ningún filtro por año.
             'conferencias_magistrales' => [
                 'titulo' => 'Conferencias Magistrales',
+                'fecha_etiqueta' => 'Fecha por confirmar',
                 'descripcion' => 'Galería fotográfica de conferencias magistrales.',
                 'imagen' => 'img/conferencias_magistrales/02.JPG',
                 'imagen_alt' => 'Conferencias Magistrales',
-                'listado' => false,
+                'tipo' => 'conferencia',
+                'listado' => true,
+                'acciones' => [
+                    [
+                        'texto' => 'Ver galería',
+                        'url' => 'evento.php?evento=conferencias_magistrales',
+                    ],
+                ],
                 'galeria' => [
                     'carpeta' => 'img/conferencias_magistrales',
                     'extension' => 'JPG',
@@ -360,15 +391,30 @@ if (!function_exists('obtener_eventos_sefca')) {
     }
 }
 
+/*
+    Devuelve los eventos que se muestran en un listado.
+
+    $tipo (opcional) restringe el resultado a un solo valor de 'tipo'
+    ('conferencia', 'toma_protesta', 'egresado_distinguido', 'evento',
+    'convocatoria'). Sin argumento devuelve el listado completo, igual que antes.
+*/
 if (!function_exists('obtener_eventos_listado')) {
-    function obtener_eventos_listado()
+    function obtener_eventos_listado($tipo = null)
     {
         $eventos = [];
 
         foreach (obtener_eventos_sefca() as $clave => $evento) {
-            if (!empty($evento['listado'])) {
-                $eventos[$clave] = $evento;
+            if (empty($evento['listado'])) {
+                continue;
             }
+
+            $tipo_evento = isset($evento['tipo']) ? $evento['tipo'] : '';
+
+            if ($tipo !== null && $tipo_evento !== $tipo) {
+                continue;
+            }
+
+            $eventos[$clave] = $evento;
         }
 
         return $eventos;

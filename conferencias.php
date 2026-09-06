@@ -3,9 +3,9 @@
 <!--
     Autor: Anuar Manuel Olvera Ramirez
     Fecha: 06/09/2026
-    Versión: 2.0
-    Descripción: Página "Eventos" (rubro Experiencia y orgullo).
-    El listado completo lo arma includes/listado_eventos.php.
+    Versión: 1.0
+    Descripción: Página "Conferencias" (rubro Experiencia y orgullo).
+    Reutiliza includes/listado_eventos.php filtrando por tipo 'conferencia'.
 -->
 <?php require_once("includes/head.php"); ?>
 
@@ -17,17 +17,17 @@
 
     <!-- Hero pagina -->
     <?php
-        $heroTitulo = "Eventos";
-        $heroTexto  = "Experiencia y orgullo: actividades, reconocimientos y celebraciones de la Sociedad de Egresados de la FCA.";
+        $heroTitulo = "Conferencias";
+        $heroTexto  = "Experiencia y orgullo: los ciclos de conferencias magistrales que la SEFCA lleva a la comunidad de la FCA.";
         include("includes/hero-pagina.php");
     ?>
 
-    <!-- Listado de eventos -->
+    <!-- Listado de conferencias -->
     <?php
         require_once __DIR__ . '/includes/datos_eventos.php';
 
-        $eventos_a_listar = obtener_eventos_listado();
-        $eventos_vacio_texto = 'No se encontraron eventos con los filtros seleccionados.';
+        $eventos_a_listar = obtener_eventos_listado('conferencia');
+        $eventos_vacio_texto = 'No se encontraron conferencias con los filtros seleccionados.';
 
         include("includes/listado_eventos.php");
     ?>

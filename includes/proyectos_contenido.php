@@ -15,14 +15,23 @@ $proyectos = [
         'enlace_texto' => 'Conoce más', // Texto del botón
     ],
     [
-        'clave' => 'proyecto-suayed',
-        'titulo' => 'Proyecto Suayed.',
-        'descripcion' => 'Descripción del nuevo proyecto de Suayed, el cual estaremos desarrollando una vez que se nos envíe la información.',
-        'imagen' => 'img/fca/suayed_proyecto.png',
-        'alt' => 'Imagen del proyecto Suayed',
-        'enlace' => 'docs/resumen_suayed.pdf',          // URL destino (cuando exista página propia)
-        'enlace_texto' => 'Conoce más', // Texto del botón
+        'clave' => 'concurso-ensayo',
+        'titulo' => 'Concurso de ensayo 2025.',
+        'descripcion' => 'El Concurso de Ensayo FCA-SEFCA invita a la comunidad de egresadas y egresados a proponer ideas con impacto para la Facultad y para el país. En su edición 2025 se galardonaron nueve ensayos, cuyos autores recibieron su reconocimiento en una ceremonia organizada por la Sociedad de Egresados.',
+        'imagen' => 'img/banner_principal/BANNERS_GANADORES_SEFCA_B-01_rectangulo.jpg',
+        'alt' => 'Ganadores del Concurso de Ensayo FCA-SEFCA 2025',
+        'enlace' => 'evento.php?evento=premiacion_concurso_sefca',
+        'enlace_texto' => 'Ver la premiación',
     ],
+    // [
+    //     'clave' => 'proyecto-suayed',
+    //     'titulo' => 'Proyecto Suayed.',
+    //     'descripcion' => 'Descripción del nuevo proyecto de Suayed, el cual estaremos desarrollando una vez que se nos envíe la información.',
+    //     'imagen' => 'img/fca/suayed_proyecto.png',
+    //     'alt' => 'Imagen del proyecto Suayed',
+    //     'enlace' => 'docs/resumen_suayed.pdf',          // URL destino (cuando exista página propia)
+    //     'enlace_texto' => 'Conoce más', // Texto del botón
+    // ],
     // Para agregar otro proyecto, copia el bloque anterior y edita los valores:
     // [
     //     'clave'       => 'otro-proyecto',

@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- 
-    Fecha: 14/04/2026
-    Descripción: Página "Proyectos"
+<!--
+    Autor: Anuar Manuel Olvera Ramirez
+    Fecha: 06/09/2026
+    Versión: 2.0
+    Descripción: Página "Proyectos 2022-2026".
+    Cada proyecto tiene ancla propia (#proyecto-<clave>), que es a donde
+    apunta el menú en vez de crear una página por proyecto.
 -->
 
 <!-- Head -->
@@ -15,13 +19,12 @@
     <!-- Navbar -->
     <?php include("includes/navbar.php"); ?>
 
-    <!-- Variables para el hero -->
-    <!-- <?php
-        $heroTitulo = "Proyectos";
-        $heroTexto  = "Conoce más sobre los proyectos de la SEFCA.";
-        $heroClase  = "hero-pagina--carta";
+    <!-- Hero pagina -->
+    <?php
+        $heroTitulo = "Proyectos 2022-2026";
+        $heroTexto  = "Las iniciativas que la Sociedad de Egresados impulsa para la Facultad y su comunidad.";
         include("includes/hero-pagina.php");
-    ?> -->
+    ?>
 
     <!-- Contenido de los proyectos -->
     <?php include("includes/proyectos_contenido.php"); ?>

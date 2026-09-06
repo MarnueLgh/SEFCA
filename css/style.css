@@ -4852,3 +4852,440 @@ footer {
         transform: translateX(-50%) !important;
     }
 }
+
+
+/* ============================================================
+   PANELES DEL MENÚ — TÍTULO DE RUBRO Y COLUMNAS
+   ------------------------------------------------------------
+   SEFCA pidió rubros con nombres largos ("Somos SEFCA",
+   "Experiencia y orgullo", "Proyectos 2022-2026", "Conoce
+   nuestras historias"). En la barra van etiquetas cortas para
+   que el menú no colapse a hamburguesa en laptops de 1366px;
+   el nombre completo vive aquí, como título del panel.
+
+   "Proyectos 2022-2026" no ocupa un lugar propio en la barra:
+   es la segunda columna del panel de Experiencia.
+   ============================================================ */
+
+.navbar-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.navbar-panel-titulo {
+    margin: 0;
+    padding: 0.35rem 1.35rem 0.5rem;
+    font-family: var(--fuente-titulo);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.35;
+}
+
+/* Regla dorada corta bajo el título: lo ata a la identidad y deja
+   claro que encabeza, no que es una opción más de la lista. */
+.navbar-panel-titulo::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin-top: 0.45rem;
+    background: var(--dorado-unam);
+}
+
+/* Único título que sí es enlace (lleva a la página del rubro). */
+.navbar-panel-enlace {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar-panel-enlace:hover,
+.navbar-panel-enlace:focus,
+.navbar-panel-enlace.active {
+    color: var(--dorado-unam);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---- Escritorio: panel blanco, una o dos columnas ---- */
+@media (min-width: 1210px) {
+    .navbar .navbar-panel-titulo {
+        color: rgba(17, 48, 75, 0.55);
+    }
+
+    .navbar .navbar-panel-doble {
+        /* 240px es lo que necesita "Experiencia y orgullo" para no partirse
+           en dos renglones y desalinear el primer item de cada columna. */
+        grid-template-columns: repeat(2, minmax(240px, 1fr));
+        column-gap: 0.5rem;
+    }
+
+    /* Seguro por si un rubro futuro sí llega a ocupar dos renglones:
+       ambos títulos reservan la misma altura y los items siguen alineados. */
+    .navbar .navbar-panel-doble .navbar-panel-titulo {
+        min-height: 3.6rem;
+    }
+
+    /* Separador entre columnas, del mismo peso que el de los items. */
+    .navbar .navbar-panel-doble .navbar-panel-columna+.navbar-panel-columna {
+        border-left: 1px solid rgba(17, 48, 75, 0.08);
+    }
+
+    /* El borde superior encadena items hermanos; al abrir una segunda
+       columna hay que cortar el que quedaría bajo su título. */
+    .navbar .navbar-panel-columna .navbar-panel-titulo+.dropdown-item {
+        border-top: 0;
+    }
+
+    /* Un panel de dos columnas no debe rebasar el borde de la ventana. */
+    .navbar .nav-item .dropdown-menu:has(.navbar-panel-doble) {
+        max-width: min(620px, calc(100vw - 3rem));
+    }
+}
+
+/* ---- Móvil: el drill-down apila las columnas ---- */
+@media (max-width: 1209.98px) {
+    .navbar .navbar-panel-titulo {
+        color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* En el overlay no hay espacio para dos columnas: se apilan,
+       conservando ambos títulos para no perder el rubro. */
+    .navbar .navbar-panel,
+    .navbar .navbar-panel-doble {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar .navbar-panel-columna+.navbar-panel-columna {
+        margin-top: 0.75rem;
+    }
+}
+
+/* ---- Banda 1210-1400px: comprimir para que quepan los 5 rubros ----
+   Es la palanca que evita subir el punto de colapso por encima de
+   1210px ahora que la barra tiene un rubro más que antes. */
+@media (min-width: 1210px) and (max-width: 1400px) {
+    .navbar .navbar-nav .nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        column-gap: 0.6rem;
+    }
+
+    .navbar-logos {
+        gap: 8px;
+    }
+
+    .navbar-logo-unam {
+        height: 48px;
+    }
+
+    .navbar-logo-fca {
+        height: 56px;
+    }
+
+    .navbar-logo-sefca {
+        height: 42px;
+    }
+}
+
+/* ============================================================
+   ANCLAS DE PROYECTO
+   El navbar es fixed, así que un salto a #proyecto-* dejaría el
+   título debajo de la barra. --alto-navbar lo mide js/main.js.
+   ============================================================ */
+.proyecto-split[id] {
+    scroll-margin-top: calc(var(--alto-navbar) + 1.5rem);
+}
+
+/* ============================================================
+   CONTACTO
+   Correo y ubicación en una sola página, a dos columnas.
+   ============================================================ */
+
+.contacto-rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.contacto-bloque {
+    background: #fff;
+    border: 1px solid var(--carta-border);
+    border-radius: 20px;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contacto-bloque-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 400;
+    color: var(--azul_unam);
+    margin: 0.35rem 0 1.5rem;
+}
+
+.contacto-dato {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 0.9rem;
+    word-break: break-word;
+}
+
+.contacto-dato a {
+    color: var(--azul_unam);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contacto-dato a:hover,
+.contacto-dato a:focus {
+    color: var(--dorado-unam);
+    border-bottom-color: var(--dorado-unam);
+}
+
+.contacto-icono {
+    flex: 0 0 auto;
+    color: var(--dorado-unam);
+}
+
+.contacto-boton {
+    margin-top: 0.5rem;
+}
+
+.contacto-redes-titulo {
+    margin: 2rem 0 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(17, 48, 75, 0.55);
+}
+
+.contacto-redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.contacto-red {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--carta-border);
+    border-radius: 50px;
+    color: var(--azul_unam);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.contacto-red:hover,
+.contacto-red:focus {
+    color: var(--dorado-unam);
+    border-color: var(--dorado-unam);
+    background: var(--carta-gold-light);
+}
+
+.contacto-mapa {
+    margin-top: 1.25rem;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.contacto-mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estado sin datos: visible a propósito, para que no se publique vacío. */
+.contacto-mapa-pendiente,
+.contacto-pendiente,
+.historia-pendiente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background: var(--carta-gold-light);
+    border: 1px dashed var(--dorado-unam);
+    border-radius: 14px;
+    color: var(--carta-muted);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.contacto-pendiente,
+.historia-pendiente {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    aspect-ratio: auto;
+}
+
+.contacto-mapa-pendiente i {
+    font-size: 2rem;
+    color: var(--dorado-unam);
+}
+
+.contacto-mapa-pendiente p {
+    margin: 0;
+}
+
+.contacto-pendiente code,
+.historia-pendiente code,
+.contacto-mapa-pendiente code {
+    background: rgba(17, 48, 75, 0.07);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+    font-size: 0.9em;
+    color: var(--azul_unam);
+}
+
+/* ============================================================
+   HISTORIA — cronología derivada del catálogo de eventos
+   ============================================================ */
+
+.historia-intro-texto {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.historia-intro-texto .carta-section-cuerpo {
+    max-width: none;
+    text-align: left;
+}
+
+.historia-hitos {
+    list-style: none;
+    margin: 3rem auto 0;
+    padding: 0;
+    max-width: 860px;
+    position: relative;
+}
+
+/* Riel vertical de la línea de tiempo. */
+.historia-hitos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    width: 2px;
+    background: linear-gradient(to bottom,
+            var(--dorado-unam),
+            rgba(156, 110, 9, 0.15));
+}
+
+.historia-hito {
+    position: relative;
+    padding-left: 2.75rem;
+    padding-bottom: 2.75rem;
+}
+
+/* Punto sobre el riel. */
+.historia-hito::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--dorado-unam);
+}
+
+.historia-hito-anio {
+    display: block;
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--azul_unam);
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.historia-hito-cuerpo {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid var(--carta-border);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+}
+
+.historia-hito-img {
+    flex: 0 0 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.historia-hito-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.historia-hito-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.historia-hito-fecha {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dorado-unam);
+    margin-bottom: 0.4rem;
+}
+
+.historia-hito-titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--azul_unam);
+    margin-bottom: 0.5rem;
+}
+
+.historia-hito-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 767px) {
+    .historia-hito-cuerpo {
+        flex-direction: column;
+    }
+
+    .historia-hito-img {
+        flex: none;
+        width: 100%;
+    }
+
+    .historia-hito {
+        padding-left: 2rem;
+    }
+}

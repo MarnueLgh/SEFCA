@@ -444,3 +444,280 @@ $(".eventos-carousel").owlCarousel({
         consulta_escritorio.addListener(al_cambiar_ancho);
     }
 })();
+
+
+/*
+    LISTADO DE EVENTOS: filtros, paginación y lightbox.
+
+    Vive aquí y no en la página para que eventos.php, conferencias.php,
+    tomas_protesta.php y egresados_distinguidos.php compartan un solo bloque
+    de comportamiento en vez de llevar cada una su copia.
+
+    Se activa únicamente si la página renderizó includes/listado_eventos.php.
+    El sidebar de filtros es opcional: cuando la página tiene menos de dos años
+    distintos no se dibuja, y este bloque sigue funcionando sin él.
+*/
+(function () {
+    "use strict";
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var grid = document.getElementById('eventos-grid');
+
+        if (!grid) {
+            return;
+        }
+
+        var gruposPills = document.querySelectorAll('.filtro-pills');
+        var btnLimpiar = document.getElementById('filtro-limpiar');
+        var mensajeVacio = document.getElementById('filtro-vacio');
+        var tarjetas = document.querySelectorAll('#eventos-grid .evento-card');
+        var navPaginacion = document.getElementById('paginacion');
+        var POR_PAGINA = 5;
+        var paginaActual = 1;
+        var filtrosActivos = { tipo: 'todos', mes: 'todos', anio: 'todos' };
+
+        gruposPills.forEach(function (grupo) {
+            var nombreFiltro = grupo.dataset.filter;
+            var botones = grupo.querySelectorAll('.boton-sm-filtro');
+
+            botones.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    botones.forEach(function (boton) { boton.classList.remove('activo'); });
+                    btn.classList.add('activo');
+                    filtrosActivos[nombreFiltro] = btn.dataset.value;
+                    paginaActual = 1;
+                    filtrarYPaginar();
+                });
+            });
+        });
+
+        function obtenerFiltradas() {
+            var resultado = [];
+
+            tarjetas.forEach(function (tarjeta) {
+                var coincideTipo = filtrosActivos.tipo === 'todos' || tarjeta.dataset.tipo === filtrosActivos.tipo;
+                var coincideMes = filtrosActivos.mes === 'todos' || tarjeta.dataset.mes === filtrosActivos.mes;
+                var coincideAnio = filtrosActivos.anio === 'todos' || tarjeta.dataset.anio === filtrosActivos.anio;
+
+                if (coincideTipo && coincideMes && coincideAnio) {
+                    resultado.push(tarjeta);
+                }
+            });
+
+            return resultado;
+        }
+
+        function filtrarYPaginar() {
+            grid.style.transition = 'opacity 0.3s ease';
+            grid.style.opacity = '0';
+
+            setTimeout(function () {
+                var filtradas = obtenerFiltradas();
+                var totalPaginas = Math.ceil(filtradas.length / POR_PAGINA) || 1;
+                var inicio = 0;
+                var fin = 0;
+
+                if (paginaActual > totalPaginas) {
+                    paginaActual = totalPaginas;
+                }
+
+                if (paginaActual < 1) {
+                    paginaActual = 1;
+                }
+
+                inicio = (paginaActual - 1) * POR_PAGINA;
+                fin = inicio + POR_PAGINA;
+
+                tarjetas.forEach(function (tarjeta) { tarjeta.style.display = 'none'; });
+                filtradas.forEach(function (tarjeta, indice) {
+                    tarjeta.style.display = indice >= inicio && indice < fin ? '' : 'none';
+                });
+
+                if (mensajeVacio) {
+                    mensajeVacio.style.display = filtradas.length === 0 ? 'block' : 'none';
+                }
+
+                renderPaginacion(totalPaginas, filtradas.length);
+                grid.style.opacity = '1';
+            }, 300);
+        }
+
+        function renderPaginacion(totalPaginas, totalItems) {
+            if (!navPaginacion) {
+                return;
+            }
+
+            navPaginacion.innerHTML = '';
+
+            if (totalPaginas <= 1) {
+                return;
+            }
+
+            var info = document.createElement('span');
+            var inicio = (paginaActual - 1) * POR_PAGINA + 1;
+            var fin = Math.min(paginaActual * POR_PAGINA, totalItems);
+            var contenedor = document.createElement('div');
+            var btnPrev = document.createElement('button');
+            var paginas = calcularRangoPaginas(paginaActual, totalPaginas);
+            var btnNext = document.createElement('button');
+
+            info.className = 'paginacion-info';
+            info.textContent = inicio + '-' + fin + ' de ' + totalItems;
+            navPaginacion.appendChild(info);
+
+            contenedor.className = 'paginacion-botones';
+
+            btnPrev.className = 'paginacion-btn paginacion-flecha';
+            btnPrev.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            btnPrev.disabled = paginaActual === 1;
+            btnPrev.setAttribute('aria-label', 'Página anterior');
+            btnPrev.addEventListener('click', function () {
+                if (paginaActual > 1) {
+                    paginaActual--;
+                    filtrarYPaginar();
+                    scrollAlGrid();
+                }
+            });
+            contenedor.appendChild(btnPrev);
+
+            paginas.forEach(function (pagina) {
+                if (pagina === '...') {
+                    var puntos = document.createElement('span');
+                    puntos.className = 'paginacion-puntos';
+                    puntos.textContent = '...';
+                    contenedor.appendChild(puntos);
+                    return;
+                }
+
+                var btn = document.createElement('button');
+                btn.className = 'paginacion-btn' + (pagina === paginaActual ? ' paginacion-activa' : '');
+                btn.textContent = pagina;
+                btn.setAttribute('aria-label', 'Ir a la página ' + pagina);
+
+                if (pagina === paginaActual) {
+                    btn.setAttribute('aria-current', 'page');
+                }
+
+                btn.addEventListener('click', function () {
+                    paginaActual = pagina;
+                    filtrarYPaginar();
+                    scrollAlGrid();
+                });
+                contenedor.appendChild(btn);
+            });
+
+            btnNext.className = 'paginacion-btn paginacion-flecha';
+            btnNext.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            btnNext.disabled = paginaActual === totalPaginas;
+            btnNext.setAttribute('aria-label', 'Página siguiente');
+            btnNext.addEventListener('click', function () {
+                if (paginaActual < totalPaginas) {
+                    paginaActual++;
+                    filtrarYPaginar();
+                    scrollAlGrid();
+                }
+            });
+            contenedor.appendChild(btnNext);
+
+            navPaginacion.appendChild(contenedor);
+        }
+
+        function calcularRangoPaginas(actual, total) {
+            var paginas = [1];
+            var inicio = 0;
+            var fin = 0;
+            var i = 0;
+
+            if (total <= 5) {
+                paginas = [];
+
+                for (i = 1; i <= total; i++) {
+                    paginas.push(i);
+                }
+
+                return paginas;
+            }
+
+            if (actual > 3) {
+                paginas.push('...');
+            }
+
+            inicio = Math.max(2, actual - 1);
+            fin = Math.min(total - 1, actual + 1);
+
+            for (i = inicio; i <= fin; i++) {
+                paginas.push(i);
+            }
+
+            if (actual < total - 2) {
+                paginas.push('...');
+            }
+
+            paginas.push(total);
+            return paginas;
+        }
+
+        function scrollAlGrid() {
+            var offset = grid.getBoundingClientRect().top + window.pageYOffset - 100;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+
+        if (btnLimpiar) {
+            btnLimpiar.addEventListener('click', function () {
+                filtrosActivos = { tipo: 'todos', mes: 'todos', anio: 'todos' };
+                paginaActual = 1;
+
+                gruposPills.forEach(function (grupo) {
+                    var botones = grupo.querySelectorAll('.boton-sm-filtro');
+                    botones.forEach(function (boton) { boton.classList.remove('activo'); });
+                    botones[0].classList.add('activo');
+                });
+
+                filtrarYPaginar();
+            });
+        }
+
+        filtrarYPaginar();
+
+        var lightboxOverlay = document.getElementById('lightboxOverlay');
+        var lightboxImg = document.getElementById('lightboxImg');
+        var lightboxCerrar = document.getElementById('lightboxCerrar');
+        var imagenesEvento = document.querySelectorAll('.evento-card-img');
+
+        if (!lightboxOverlay || !lightboxImg) {
+            return;
+        }
+
+        function cerrar_lightbox() {
+            lightboxOverlay.classList.remove('activo');
+        }
+
+        imagenesEvento.forEach(function (imgContainer) {
+            imgContainer.addEventListener('click', function () {
+                var img = this.querySelector('img');
+
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxOverlay.classList.add('activo');
+                }
+            });
+        });
+
+        if (lightboxCerrar) {
+            lightboxCerrar.addEventListener('click', cerrar_lightbox);
+        }
+
+        lightboxOverlay.addEventListener('click', function (e) {
+            if (e.target === lightboxOverlay) {
+                cerrar_lightbox();
+            }
+        });
+
+        // Cerrar con Escape: el lightbox no tenia salida por teclado.
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && lightboxOverlay.classList.contains('activo')) {
+                cerrar_lightbox();
+            }
+        });
+    });
+})();

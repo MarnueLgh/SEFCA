@@ -8,4 +8,4 @@
 <script src="_js/aos.js"></script>
 
 <!-- Template Javascript -->
-<script src="js/main.js?v=4"></script>
+<script src="js/main.js?v=5"></script>

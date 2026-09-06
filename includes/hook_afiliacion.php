@@ -203,7 +203,7 @@ $hook_boton_enlace = htmlspecialchars($hook_afiliacion['boton']['enlace'], ENT_Q
 
         <p class="hook-afiliacion__subtitle"><?php echo $hook_subtitulo; ?></p>
 
-        <a class="boton-sm-blanco" href="<?php echo $hook_boton_enlace; ?>">
+        <a class="boton-sm-blanco" href="<?php echo $hook_boton_enlace; ?>" target="_blank">
             <span><?php echo $hook_boton_texto; ?></span>
             <svg class="hook-afiliacion__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <line x1="5" y1="12" x2="19" y2="12"></line>

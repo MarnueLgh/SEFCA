@@ -1,4 +1,9 @@
-</section>
+<!--
+    Fecha: 06/09/2026
+    Versión: 1.1
+    Descripción: Sección de estatutos. Se eliminó un </section> huérfano inicial
+    que dependía de que mensajes.php se incluyera antes; ahora es autónoma.
+-->
 
     <!-- ============================
              ESTATUTOS

@@ -1,31 +1,27 @@
-<!-- 
-    Fecha: 14/04/2026
-    Descripción: Página "Voces"
--->
-
 <!DOCTYPE html>
 <html lang="es">
-
-<!-- Head -->
+<!--
+    Autor: Anuar Manuel Olvera Ramirez
+    Fecha: 06/09/2026
+    Versión: 2.0
+    Descripción: Página "Voces SEFCA" (rubro Conoce nuestras historias).
+    Los homenajes se movieron a egresados_distinguidos.php; aquí quedan
+    las entrevistas en video a la comunidad.
+-->
 <?php require_once("includes/head.php"); ?>
 
 <body>
     <!-- Spinner -->
     <?php include("includes/spinner.php"); ?>
-
     <!-- Navbar -->
     <?php include("includes/navbar.php"); ?>
 
-    <!-- Variables para el hero -->
-    <!-- <?php
-    $heroTitulo = "Voces";
-    $heroTexto = "Conoce a los integrantes que dan vida a la SEFCA.";
-    $heroClase = "hero-pagina--carta";
-    include("includes/hero-pagina.php");
-    ?> -->
-
-    <!-- Homenajes (Movido desde index.php) -->
-    <?php include("includes/homenajes.php"); ?>
+    <!-- Hero pagina -->
+    <?php
+        $heroTitulo = "Voces SEFCA";
+        $heroTexto  = "Conoce nuestras historias: egresadas y egresados de la FCA comparten en primera persona lo que han construido.";
+        include("includes/hero-pagina.php");
+    ?>
 
     <!-- Contenido principal -->
     <div class="section-gap">
@@ -33,6 +29,7 @@
             <?php include("includes/entrevistas.php"); ?>
         </div>
     </div>
+
     <!-- Footer -->
     <?php require_once("includes/footer.php"); ?>
 
