@@ -1,5 +1,4 @@
 /**
- * Autor: MarnueLgh
  * Fecha: 22/04/2026
  * Versión: 2.0
  * Descripción: Lógica de formulario de afiliación SEFCA.

@@ -1,6 +1,5 @@
 <?php
 /*
-	Autor: Anuar Manuel Olvera Ramirez
 	Fecha: 06/09/2026
 	Versión: 2.0
 	Descripción: nosotros.php se dividió en consejo_directivo.php y

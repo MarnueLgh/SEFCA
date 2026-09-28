@@ -3,7 +3,7 @@ name: convenciones-desarrollo
 description: "SIEMPRE usa esta skill al escribir, modificar o revisar cualquier código (PHP, JS, CSS, HTML, JavaScript). Aplica las convenciones personales de nomenclatura, comentarios y estructura de archivos del desarrollador."
 ---
 
-# Convenciones de Desarrollo — MarnueLgh
+# Convenciones de Desarrollo
 
 Estas son las convenciones personales del desarrollador. Deben aplicarse en **todo el código generado o modificado**, sin excepciones.
 
@@ -137,7 +137,6 @@ Va al inicio de cada archivo, siempre.
 
 ```php
 /*
- * Autor: MarnueLgh
  * Fecha: dd/mm/aaaa
  * Versión: 1.0
  * Descripción: Texto descriptivo de lo que hace este archivo.
@@ -196,10 +195,10 @@ No comentar código que se explica solo. Si el nombre de la variable o función 
 
 Formato: `MAYOR.MENOR` (dos niveles únicamente).
 
-| Versión | Cuándo usarla |
-|---------|--------------|
+| Versión       | Cuándo usarla                                                          |
+| ------------- | ---------------------------------------------------------------------- |
 | `1.0` → `2.0` | Cambio mayor: reescritura de lógica, nueva funcionalidad significativa |
-| `1.0` → `1.1` | Ajuste menor: corrección, pequeña mejora, refactor puntual |
+| `1.0` → `1.1` | Ajuste menor: corrección, pequeña mejora, refactor puntual             |
 
 Actualizar la versión en el encabezado del archivo cada vez que se realice un cambio relevante.
 
@@ -207,22 +206,22 @@ Actualizar la versión en el encabezado del archivo cada vez que se realice un c
 
 ## Resumen rápido
 
-| Elemento | Convención |
-|----------|-----------|
-| Variables/funciones | `snake_case` en español |
-| Clases CSS | `seccion-elemento` con un solo guión medio |
-| Archivos | `nombre_descriptivo.ext` con guión bajo |
-| Idioma | Español (excepto términos universales) |
-| IDs | Solo anclas, label-input y JS; nunca para CSS |
-| Indentación | Tabs en todos los lenguajes |
-| Bootstrap | Base estructural, personalizado con `style.css` |
-| Variables CSS | Definidas en `:root` al inicio de `style.css` |
-| Media queries | Al final de `style.css`, agrupadas con comentario |
-| JS propio | `js/main.js` |
-| JS librerías | `includes/scripts.php` al final del `<body>` |
-| Encabezado de archivo | Autor, Fecha, Versión, Descripción |
-| Encabezado de función | Flexible, solo campos que apliquen |
-| Comentarios | Solo cuando se necesiten o para delimitar secciones |
-| Versionado | `1.0` mayor, `1.1` menor |
-| Páginas PHP | En la raíz del proyecto |
-| Fragmentos PHP | En `includes/` |
+| Elemento              | Convención                                          |
+| --------------------- | --------------------------------------------------- |
+| Variables/funciones   | `snake_case` en español                             |
+| Clases CSS            | `seccion-elemento` con un solo guión medio          |
+| Archivos              | `nombre_descriptivo.ext` con guión bajo             |
+| Idioma                | Español (excepto términos universales)              |
+| IDs                   | Solo anclas, label-input y JS; nunca para CSS       |
+| Indentación           | Tabs en todos los lenguajes                         |
+| Bootstrap             | Base estructural, personalizado con `style.css`     |
+| Variables CSS         | Definidas en `:root` al inicio de `style.css`       |
+| Media queries         | Al final de `style.css`, agrupadas con comentario   |
+| JS propio             | `js/main.js`                                        |
+| JS librerías          | `includes/scripts.php` al final del `<body>`        |
+| Encabezado de archivo | Autor, Fecha, Versión, Descripción                  |
+| Encabezado de función | Flexible, solo campos que apliquen                  |
+| Comentarios           | Solo cuando se necesiten o para delimitar secciones |
+| Versionado            | `1.0` mayor, `1.1` menor                            |
+| Páginas PHP           | En la raíz del proyecto                             |
+| Fragmentos PHP        | En `includes/`                                      |

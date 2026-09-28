@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <!--
-    Autor: Anuar Manuel Olvera Ramirez
     Fecha: 06/09/2026
     Versión: 2.0
     Descripción: Página "Proyectos 2022-2026".

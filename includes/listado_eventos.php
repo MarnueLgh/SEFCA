@@ -1,6 +1,5 @@
 <?php
 /*
-	Autor: Anuar Manuel Olvera Ramirez
 	Fecha: 06/09/2026
 	Versión: 1.0
 	Descripción: Componente único del listado de eventos (sidebar de filtros,
