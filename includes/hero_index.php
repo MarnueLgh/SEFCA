@@ -52,6 +52,19 @@
       </div>
 
       <!-- SLIDE 3 -->
+      <div class="carousel-item">
+        <a href="docs/SEFCA_UNAM_COMUNICADO_examen_admision_2026.pdf" target="_blank">
+        <picture>
+          <source media="(max-width: 768px)"
+            srcset="img/banner_principal_cuadrado/CUADRADO_examen_admision_2026.jpg">
+          <img src="img/banner_principal/RECTANGULAR_examen_admision_2026.jpg" alt="Examen de admisión FCA UNAM" class="c-img"
+            onerror="this.closest('.carousel-item').innerHTML='<div class=c-ph><p class=c-ph__tag>FCA · UNAM</p><h2 class=c-ph__title>Examen de admisión FCA UNAM</h2><div class=c-ph__line></div></div>'">
+        </picture>
+        </a>
+      </div>
+
+
+      <!-- SLIDE 4 -->
        <div class="carousel-item">
         <a href="https://www.fca.unam.mx/docs/avisos/20260527_SEFCA_CONCURSO_NOTA.pdf" target="_blank">
           <picture>
@@ -63,7 +76,7 @@
         </a>
       </div>
 
-      <!-- SLIDE 4 -->
+      <!-- SLIDE 5 -->
        <div class="carousel-item">
         <a href="https://www.fca.unam.mx/docs/avisos/CONCURSO_ENSAYO_FCA_SOCIEDAD_EGRESADOS_2025_4.pdf" target="_blank">
           <picture>
@@ -75,7 +88,7 @@
         </a>
       </div>
 
-      <!-- SLIDE 5 -->
+      <!-- SLIDE 6 -->
       <div class="carousel-item">
         <picture>
           <source media="(max-width: 768px)" srcset="img/banner_principal_cuadrado/banner_resultado_concurso_ensayo_cuadrado.jpeg">

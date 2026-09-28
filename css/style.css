@@ -4944,6 +4944,8 @@ footer {
     .navbar .navbar-panel,
     .navbar .navbar-panel-doble {
         grid-template-columns: 1fr;
+        /* "Volver atrás" va al final: el título necesita aire arriba. */
+        padding-top: 1.1rem;
     }
 
     .navbar .navbar-panel-columna+.navbar-panel-columna {

@@ -26,9 +26,8 @@
     <?php include("includes/homenajes.php"); ?>
 
     <!-- Reconocimientos y visitas registrados como eventos -->
-    <div class="container">
+    <div class="container section-gap">
         <div class="text-center" data-aos="fade-up">
-            <span class="text-uppercase subtitle-gold">Reconocimientos y visitas</span>
             <h2 class="carta-section-titulo">Egresados que <em>regresan</em> a la Facultad</h2>
         </div>
     </div>

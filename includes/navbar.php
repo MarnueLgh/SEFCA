@@ -99,7 +99,6 @@ $activo_historias = (in_array($pagina_actual, array(
                     SEFCA <i class="fa fa-angle-down ms-1"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-desktop">
-                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                     <div class="navbar-panel">
                         <div class="navbar-panel-columna" role="group" aria-labelledby="panel-somos-titulo">
                             <p class="navbar-panel-titulo" id="panel-somos-titulo">Somos SEFCA</p>
@@ -109,6 +108,7 @@ $activo_historias = (in_array($pagina_actual, array(
                             <a href="tomas_protesta.php" class="dropdown-item <?php echo $activo_tomas; ?>">Tomas de protesta</a>
                         </div>
                     </div>
+                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                 </div>
             </div>
 
@@ -118,7 +118,6 @@ $activo_historias = (in_array($pagina_actual, array(
                     Experiencia <i class="fa fa-angle-down ms-1"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-desktop">
-                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                     <div class="navbar-panel navbar-panel-doble">
                         <div class="navbar-panel-columna" role="group" aria-labelledby="panel-experiencia-titulo">
                             <p class="navbar-panel-titulo" id="panel-experiencia-titulo">Experiencia y orgullo</p>
@@ -133,6 +132,7 @@ $activo_historias = (in_array($pagina_actual, array(
                             <a href="proyectos.php#proyecto-concurso-ensayo" class="dropdown-item">Concurso de ensayo 2025</a>
                         </div>
                     </div>
+                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                 </div>
             </div>
 
@@ -142,7 +142,6 @@ $activo_historias = (in_array($pagina_actual, array(
                     Historias <i class="fa fa-angle-down ms-1"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-desktop">
-                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                     <div class="navbar-panel">
                         <div class="navbar-panel-columna" role="group" aria-labelledby="panel-historias-titulo">
                             <p class="navbar-panel-titulo" id="panel-historias-titulo">Conoce nuestras historias</p>
@@ -150,6 +149,7 @@ $activo_historias = (in_array($pagina_actual, array(
                             <a href="voces.php" class="dropdown-item <?php echo $activo_voces; ?>">Voces SEFCA</a>
                         </div>
                     </div>
+                    <a href="#" class="dropdown-item dropdown-back"><i class="fa fa-chevron-left me-2"></i> Volver atrás</a>
                 </div>
             </div>
 
