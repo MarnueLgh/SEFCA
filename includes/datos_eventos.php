@@ -345,6 +345,24 @@ if (!function_exists('obtener_eventos_sefca')) {
                     ],
                 ],
             ],
+            'cuarto_ciclo_conferencias_2026' => [
+                'titulo' => 'Cuarto ciclo de conferencias magistrales',
+                'fecha_etiqueta' => '28 de septiembre de 2026',
+                'descripcion' => 'Conferencia magistral del Lic. Isaac Chertorivski: "Estrategia P. Manejo de una empresa en crisis". Auditorio Mtro. Carlos Pérez del Toro, 9:00 h.',
+                'imagen' => 'img/Cartel_Conferencia_Lic_Isaac_Chertorivski_28092026.jpg',
+                'imagen_alt' => 'Conferencia del Lic. Isaac Chertorivski, 28 de septiembre de 2026',
+                'tipo' => 'conferencia',
+                'mes' => 9,
+                'anio' => 2026,
+                'listado' => true,
+                'acciones' => [
+                    [
+                        'texto' => 'Ver más',
+                        'url' => 'img/Cartel_Conferencia_Lic_Isaac_Chertorivski_28092026.jpg',
+                        'target_blank' => true,
+                    ],
+                ],
+            ],
             // PENDIENTE SEFCA: falta la fecha real de este ciclo. Mientras no la tenga
             // no se definen 'mes' ni 'anio', por lo que la tarjeta se muestra siempre
             // pero no coincide con ningún filtro por año.
