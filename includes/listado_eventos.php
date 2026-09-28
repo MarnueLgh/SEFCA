@@ -1,7 +1,7 @@
 <?php
 /*
 	Fecha: 06/09/2026
-	Versión: 1.0
+	Versión: 1.1
 	Descripción: Componente único del listado de eventos (sidebar de filtros,
 	grid de tarjetas, paginación y lightbox). Lo consumen eventos.php,
 	conferencias.php, tomas_protesta.php y egresados_distinguidos.php,
@@ -12,10 +12,12 @@
 		$eventos_a_listar    → (obligatorio) arreglo de eventos ya filtrado,
 		                       normalmente obtener_eventos_listado('<tipo>')
 		$eventos_vacio_texto → (opcional) mensaje cuando ningún evento coincide
+		$ocultar_filtros     → (opcional) true para omitir el sidebar de filtros
 
 	El filtro por año se construye solo a partir de $eventos_a_listar, así que
 	cada página muestra únicamente sus propios años. Si hay menos de dos años
-	distintos el sidebar se omite y el grid ocupa todo el ancho.
+	distintos, o si $ocultar_filtros es true, el sidebar se omite y el grid
+	ocupa todo el ancho.
 
 	El comportamiento (filtros, paginación y lightbox) vive en js/main.js,
 	que se activa al detectar #eventos-grid en la página.
@@ -53,7 +55,7 @@ foreach ($eventos_a_listar as $evento_listado) {
 
 rsort($anios_eventos, SORT_NUMERIC);
 
-$mostrar_filtros = count($anios_eventos) > 1;
+$mostrar_filtros = count($anios_eventos) > 1 && empty($ocultar_filtros);
 ?>
 
 <div class="galeria-layout">

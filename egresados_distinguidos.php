@@ -2,7 +2,7 @@
 <html lang="es">
 <!--
     Fecha: 06/09/2026
-    Versión: 1.0
+    Versión: 1.1
     Descripción: Página "Egresados distinguidos" (rubro Conoce nuestras historias).
     Combina los homenajes (antes en voces.php) con las fichas de eventos
     marcadas como tipo 'egresado_distinguido', reutilizando el listado único.
@@ -37,6 +37,7 @@
 
         $eventos_a_listar = obtener_eventos_listado('egresado_distinguido');
         $eventos_vacio_texto = 'No se encontraron reconocimientos con los filtros seleccionados.';
+        $ocultar_filtros = true;
 
         include("includes/listado_eventos.php");
     ?>
