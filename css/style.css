@@ -3899,9 +3899,7 @@ footer {
         transition: transform 0.25s ease;
     }
 
-    .navbar .nav-item.dropdown:hover>.nav-link>i,
-    .navbar .nav-item.dropdown:focus-within>.nav-link>i,
-    .navbar .nav-item.dropdown>.nav-link.show>i {
+    .navbar .nav-item.dropdown.morph-activo>.nav-link>i {
         transform: rotate(180deg);
     }
 
@@ -3945,9 +3943,7 @@ footer {
         content: none !important;
     }
 
-    .navbar .nav-item.dropdown:hover>.dropdown-menu,
-    .navbar .nav-item.dropdown:focus-within>.dropdown-menu,
-    .navbar .nav-item.dropdown>.dropdown-menu.show {
+    .navbar .nav-item.dropdown.morph-activo>.dropdown-menu {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -4791,11 +4787,10 @@ footer {
         z-index: 1041;
     }
 
-    /* Cuarta condición de apertura, junto a :hover / :focus-within / .show */
-    .navbar .nav-item.dropdown:hover > .dropdown-menu,
-    .navbar .nav-item.dropdown:focus-within > .dropdown-menu,
-    .navbar .nav-item.dropdown.morph-activo > .dropdown-menu,
-    .navbar .nav-item.dropdown > .dropdown-menu.show {
+    /* Única condición de apertura en escritorio: js/main.js la asigna a un solo
+       item a la vez (mouse, foco o teclado). No usar :hover / :focus-within / .show:
+       quedan pegados tras un clic y encimaban dos paneles. */
+    .navbar .nav-item.dropdown.morph-activo > .dropdown-menu {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
@@ -4841,9 +4836,7 @@ footer {
     }
 
     .navbar .nav-item .dropdown-menu,
-    .navbar .nav-item.dropdown:hover > .dropdown-menu,
-    .navbar .nav-item.dropdown.morph-activo > .dropdown-menu,
-    .navbar .nav-item.dropdown > .dropdown-menu.show {
+    .navbar .nav-item.dropdown.morph-activo > .dropdown-menu {
         transform: translateX(-50%) !important;
     }
 }

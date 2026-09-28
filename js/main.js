@@ -396,6 +396,17 @@ $(".eventos-carousel").owlCarousel({
                     return;
                 }
 
+                // Liberar el estado de Bootstrap (.show / aria-expanded) de los demás items.
+                for (var j = 0; j < items_dropdown.length; j++) {
+                    if (items_dropdown[j] !== item) {
+                        var instancia = bootstrap.Dropdown.getInstance(items_dropdown[j].querySelector('.dropdown-toggle'));
+
+                        if (instancia) {
+                            instancia.hide();
+                        }
+                    }
+                }
+
                 cancelar_ocultar();
                 activar_panel(item);
             }
@@ -403,18 +414,37 @@ $(".eventos-carousel").owlCarousel({
             item.addEventListener('mouseenter', abrir);
             item.addEventListener('focusin', abrir);
 
-            // Apertura por clic o teclado: Bootstrap avisa cuando el panel ya está visible.
+            // Apertura por teclado (flechas): Bootstrap avisa cuando el panel ya está visible.
             item.addEventListener('shown.bs.dropdown', abrir);
             item.addEventListener('hidden.bs.dropdown', function () {
-                if (es_escritorio()) {
+                if (es_escritorio() && item.classList.contains('morph-activo')) {
                     programar_ocultar();
                 }
             });
+
         })(items_dropdown[i]);
     }
 
+    // En escritorio el panel abre por mouse o foco: el clic en el toggle no debe
+    // llegar a Bootstrap (dejaba .show pegado y el segundo clic cerraba el panel).
+    // Bootstrap 5.0 delega el clic en la fase de captura de document, así que
+    // solo se le adelanta un listener de captura en window.
+    window.addEventListener('click', function (evento) {
+        if (es_escritorio() && evento.target.closest && evento.target.closest('.navbar .nav-item.dropdown > .dropdown-toggle')) {
+            evento.preventDefault();
+            evento.stopPropagation();
+        }
+    }, true);
+
     navbar.addEventListener('mouseenter', cancelar_ocultar);
     navbar.addEventListener('mouseleave', programar_ocultar);
+
+    // Con teclado: al sacar el foco del navbar el panel debe cerrarse.
+    navbar.addEventListener('focusout', function (evento) {
+        if (es_escritorio() && !navbar.contains(evento.relatedTarget) && !navbar.matches(':hover')) {
+            programar_ocultar();
+        }
+    });
 
     // El alto del navbar depende de los logos, así que se remide cuando ya
     // cargaron y en cada cambio de tamaño (mismo debounce que compensarNavbarFijo).
