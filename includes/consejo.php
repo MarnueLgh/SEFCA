@@ -77,7 +77,6 @@
                     background-color: #ffffff;
                     border: 1px solid rgba(0, 0, 0, 0.06);
                     border-radius: 22px;
-                    box-shadow: 0 18px 55px rgba(17, 48, 75, 0.08);
                     overflow: hidden;
                     font-family: var(--fuente-texto);
                 }

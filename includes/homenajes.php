@@ -71,7 +71,7 @@
                                 <h3 class="homenaje-titulo">Rafael Kalach
                                 </h3>
                                 <div class="biografia-doble text-muted">
-                                    <p>Rafael Moisés Kalach Mizrahi representa una figura singular en el empresariado
+                                    <p><strong>Rafael Moisés Kalach Mizrahi</strong> representa una figura singular en el empresariado
                                         mexicano: la del <strong>líder que construye en silencio</strong> y deja que los
                                         resultados hablen. Como Presidente del Consejo de Administración de
                                         <strong>Grupo Kaltex</strong>, se consolidó como la voz más influyente del
